@@ -1,0 +1,158 @@
+%\ProvidesPackage{memoriaUSM}[2014]
+\typeout{USM Thesis Style}
+
+%---------------------------------------------------------------------------
+%%% BIBLIOGRAPHY
+\RequirePackage[longnamesfirst]{natbib}
+%---------------------------------------------------------------------------
+
+\usepackage{microtype}
+
+%---------------------------------------------------------------------------
+%%% GEOMETRY
+% Márgenes (USM)
+%\RequirePackage[margin=25mm,left=40mm]{geometry}
+\RequirePackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=30mm,bmargin=30mm,lmargin=40mm,rmargin=30mm}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% LINE SPACING
+\RequirePackage{setspace}
+\linespread{1.5}		% Control del espacio entre lÃ­neas
+% NOTE: This package has to be loaded before chngcntr!
+%---------------------------------------------------------------------------
+
+\RequirePackage[T1]{fontenc}
+
+%---------------------------------------------------------------------------
+% FOOTNOTES
+% By default footnotes number are reset to 1 for each Chapter
+% This provides sequential footnotes numbering, regardless of chapter.
+\RequirePackage{chngcntr}
+\counterwithout{footnote}{chapter}
+% NOTE: This package has to be loaded before hyperref!
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% APPEARANCE
+\RequirePackage{booktabs}  	% for much better looking tables
+\RequirePackage{tabularx}  	% for much better looking tables (might conflict with previous)
+\RequirePackage{multirow}  	% for multirow tables
+\RequirePackage{array}     	% for better arrays (eg matrices) in maths
+\RequirePackage{float}		% for floating figures
+\RequirePackage{textcomp}
+\RequirePackage{endnotes}  	% notes at the end of document
+\RequirePackage{paralist}  	% very flexible & customizable lists (eg. enumerate/itemize, etc.)
+\RequirePackage{framed}    	% create framed boxes
+\RequirePackage{fancybox}
+\RequirePackage{verbatim}  	% adds environment for commenting out blocks of text
+\RequirePackage{fancyvrb}  	% fancy verbatim
+\RequirePackage{listings}
+%\RequirePackage{alltt}		% verbatim with a hint of LaTeX (Experimental!)
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% FIGURES, GRAPHICS AND COLORS
+\RequirePackage{wrapfig}		% flooating Figures and Tables
+\RequirePackage{xcolor}		% custom colors
+	\definecolor{gray80}{gray}{0.80}
+\RequirePackage{graphicx}	% graphics library
+\RequirePackage{subfigure}  	% include more than one captioned figure/table in a single float
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% TIKZ
+%\RequirePackage{tikz}				% to hard to explain ;-)
+%\usetikzlibrary{arrows,positioning,fit,shapes,calc,backgrounds}
+%\usetikzlibrary{decorations.pathreplacing}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% CAPTIONS
+\RequirePackage[font=small,labelfont=bf]{caption}   % Caption Fonts and Weight
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% HEADERS AND FOOTERS
+\RequirePackage{fancyhdr}
+%\newcommand{\hsp}[1][20]{\hspace{#1pt}}
+\fancyhf{}
+%\fancyhead[L]{\scriptsize \rightmark}
+%\fancyfoot[L]{\includegraphics[height=2.5mm]{logousm.png}{\small \hspace{2mm}Departamento de Industrias, Universidad Santa MarÃ­a}}
+
+\fancypagestyle{plain}{%
+	\fancyhf{} % clear all header and footer fields
+	\fancyhead[L]{}
+	\fancyhead[R]{ }
+	\fancyfoot[R]{\thepage} % except the center
+	\fancyfoot[L]{}
+	\renewcommand{\headrulewidth}{0pt}		%Default 0.1pt
+	\renewcommand{\footrulewidth}{0pt}		%Default 0.1pt
+}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% TABLE OF CONTENTS
+% Put the bibliography in the ToC
+\RequirePackage[nottoc,notlof,notlot]{tocbibind}
+%\RequirePackage[section]{placeins}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% MATH
+% Use with caution; might conflict with other packages
+\RequirePackage{amssymb}
+\RequirePackage{amsmath}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% FONTS
+%	Tipo de Letra (Times New Roman).
+\RequirePackage{times}
+%\RequirePackage{txfonts}
+% El tipo de letra debe ser ocupado despuÃ©s de las librerÃ­as matemÃ¡ticas
+% pues contienen macros que son incompatibles con amsmath y amssymb.
+%
+% Alternativas:
+%\RequirePackage{times} 	% No recomendado (Deprecated!)
+% Forzar Times New Roman en fÃ³rmulas matemÃ¡ticas (No recomendado!):
+%\RequirePackage{mathptmx}
+% Las siguientes lineas cambiarÃ¡n el documento a Arial (La USM no lo aprueba!).
+%\renewcommand{\rmdefault}{phv}		% Convert to Arial
+%\renewcommand{\sfdefault}{phv}		% Convert to Arial
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% TABLE ROTATION
+\RequirePackage{rotating}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+%%% SPECIAL COMMANDS (DO NOT DELETE!)
+\newcommand{\inlinecode}[1]{\colorbox{gray!5}{\lstinline[basicstyle=\ttfamily \color{black!100} \small ]|#1|}}
+%---------------------------------------------------------------------------
+
+
+%---------------------------------------------------------------------------
+% Cambiar los TÃ­tulos (sÃ³lo en espaÃ±ol (Chile))
+\addto{\captionsspanish}{\renewcommand{\contentsname}		{\'Indice de Contenidos}}
+\addto{\captionsspanish}{\renewcommand{\listfigurename}		{\'Indice de Figuras}}
+\addto{\captionsspanish}{\renewcommand{\listtablename}			{\'Indice de Tablas}}
+\addto{\captionsspanish}{\renewcommand{\tablename}			{Tabla}}
+\addto{\captionsspanish}{\renewcommand{\appendixname}		{Anexo}}
+%\addto{\captionsspanish}{\renewcommand{\abstractname}		{Resumen Ejecutivo}}
+%---------------------------------------------------------------------------
+
+

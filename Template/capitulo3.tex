@@ -1,0 +1,70 @@
+%!TEX root = memoria.tex
+\chapter{Diseño esquemático en ''Altium Desinger''}
+\lhead[\thepage]{CAPÍTULO \thechapter}
+\rhead[\thepage]{\rightmark}
+
+
+\section{¿Qué es Altium?}
+
+Altium Designer es un software y hardware integrados,  es un conjunto de programas integrados, para el diseño electrónico en todas sus etapas, esto es, creación de esquemas, simulación, diseño de circuitos impresos, implementación de ''FPGA'', entre otros.\\
+
+Este programa tiene la particularidad de poseer una plataforma integrada y necesaria por si sola para todo el desarrollo de un proyecto electrónico, desde los primeros esquemáticos hasta la creación de circuitos impresos. Además de incorporar todas estas herramientas, es posible realizar modificación e incorporación de nuevas bibliotecas para facilitar aún más el desarrollo del proyecto.\\
+
+Algunas de sus características son:
+
+\begin{itemize}
+\item \textbf{Diseño PCB:} Altium Designer unifica el diseño de esquemático hasta el diseño de la tarjeta (circuito impreso). Esto gracias a la interconexión interna de los programas, es decir, al momento de crear un esquemático este se puede llevar facilmente a un modelo de circuito impreso para conectar los nodos de los componentes.
+\item \textbf{Gestión de librerías:} En ocaciones, cuando se esta desarrollando un nuevo proyecto en Altium Designer, se puede elegir un componente obsoleto o fuera de stock, debido a que la electrónica va avanzando muy rápido, lo que a larga puede generar retrasos. Para esto Altium Designer ofrece una amplia gama de herramientas de gestión de datos y recursos de información que le permiten mantener el control sobre el uso de partes, donde se pueden modificar las librerías existentes o se pueden añadir nuevos elementos.
+\item \textbf{Gestión de todo el proceso de desarrollo:} Esta herramienta unifica todo el proceso de diseño, permitiendo gestionar todos los aspectos del desarrollo, otorgando una estructura de administración de proyectos y documentación unificada.
+\end{itemize}
+
+ 
+Para este desarrollo, la herramienta Altium Designer será utilizada en la creación del esquemático y posterior construcción de un circuito impreso. En este capitulo se muestra todo el avance obtenido a través de Altium Designer, desde el esquemático hasta los circuitos impresos.
+
+\section{El esquemático}
+
+El primer paso realizado dentro del desarrollo en Altium Designer es la creación del esquemático a diseñar. Esto se elabora mediante el software y puede verse en la figura \ref{esquematico} contenida en el anexo \ref{imagenes_altium}, este circuito contiene todos los modulos descritos en la sección \ref{circuito_a_utilizar} del capítulo 3.\\
+
+Ahora bien, dentro de la realización del circuito esquemático se utilizaron componentes propios de las librerías de Altium Designer en conjunto con la creación de nuevos elementos que fueron incorporados a la biblioteca del software. El desarrollo completo acerca de la creación de nuevos componentes se encuentra en el anexo \ref{altium}.\\
+
+\begin{figure}[b]
+\centering
+  \includegraphics[width=6cm]{figures/plantilla_1.png}
+  \caption{Plantilla creada en Altium Designer.}
+  \label{plantilla_1}
+\end{figure}
+
+El siguiente paso, una vez creado el esquemático, es asignar las plantillas a cada componente de acuerdo a su plantilla seleccionada previamente a la hora de comprar los componentes, la lista y orden de compra se encuentran en el anexo \ref{orden_compras}. En algunos casos, se utilizaron las plantillas contenidas en las librerías propias del software, en otros casos fue necesaria la creación de una nueva librería, la cual contiene tanto las plantillas propias del programa como las plantillas creadas necesarias para el desarrollo del proyecto, el diseño de una de estas se muestra en la figura \ref{plantilla_1}. En general el proceso de creación viene dado a partir de una plantilla existe, la cual es tomada como base y sobre ella se realizan las modificaciones necesarias para adaptarla al componente que se utilizara en la construcción de la fuente DC autónoma.\\
+
+Una vez asignadas todas las plantillas a los respectivos componentes, estas deben ser verificadas, que la plantilla requerida coincida con la que se utilizara fisicamente y además que los pines correspondan entre componente y plantilla. Posteriormente, se debe verificar y comprobar las etiquetas, estas sirven para minimizar el ''cableado'' en el esquemático, pues incorporando este elemento al circuito, el software es capaz de identificarlos e incorporar un ''cableado ficticio'' entre los puntos que poseen las mismas etiquetas, lo cual visiblemente es más agradable.\\
+
+\begin{figure}[b]
+\centering
+  \includegraphics[width=6cm]{figures/etiqueta_1.png}
+  \caption{Etiquetas utilizadas en Altium Designer.}
+  \label{etiqueta_1}
+\end{figure}
+
+Luego de verificar los pasos anteriores, lo que sigue es llevar el diseño circuital a una tarjeta impresa, como paso previo a la construcción física de la misma, la cual involucra enviar esta tarjeta a un fabricante para la construcción de ella.\\
+
+Para el diseño de la tarjeta impresa, se debe tener en consideración que estas pueden ser multicapas, es decir, la tarjeta pueda estar impresa por ambos lados, por consiguiente los componentes pueden estar contenidos en alguno de estos.\\
+
+Dentro del diseño correspondiente, una de ellas es la inclusión de un disipador de temperatura para los semiconductores de potencia (mosfet), además, se tienen varios componentes de perfil alto, los que ocuparán varios milímetros ó centímetros saliendo del plano de la tarjeta, por lo cual es importante tener en consideración que estos no pueden estar en el mismo lado que los mosfet, pues serán tapados por el disipador de los semiconductores.\\
+
+Los componente de perfil alto dentro de este diseño son principalmente los elementos de potencia, tales como un capacitor y un inductor, junto con potenciometros multivuelta que son los encargados de regular el nivel de tensión en la salida, por lo tanto estos componentes no pueden estar del mismo lado que los mosfet para no ser tapados por el disipador.\\
+
+Dicho sea todo esto, se pueden ver las figuras \ref{tarjeta_impresa_1} y \ref{tarjeta_impresa_2} del anexo \ref{imagenes_altium}, las cuales corresponden a la vista superior e inferior de la tarjeta impresa por crear. Se puede notar con claridad que por un lado se encuentran los componentes de potencia (perfil alto), junto con los potenciometros multivueltas, mientras que del otro costado se encuentran los mosfet y los componentes de perfil bajo (i.e. módulos de control).\\
+
+
+Ahora bien, una vez que se define que componentes se montarán en una capa y cuales se montarán en la otra capa, se procede a realizar el ruteo de las pistas y con esto la última parte del diseño en Altium Designer antes de mandar la tarjeta impresa al fabricante para su construcción final. El ruteo de las pistas y las reglas correspondientes al diseño se encuentran descritos en el anexo \ref{altium} y su implementación final se puede ver en la figura \ref{ruteo_1_2}. Vale destacar que el ruteo de las pistas se realizó a mano, es decir, sin la ayuda del programa, por lo cual quizás no son las pistas más óptimas pero son funcionales.\\
+
+Finalmente, con la tarjeta impresa ya diseñada y ruteada se procede al último paso previo antes de enviar el diseño al fabricante para su posterior creación, esto es, crear los archivos tipo gerber que se enviarán al fabricante. Los archivos tipo gerbers son aquellos que contienen la información para la fabricación de placas de circuito impreso.
+
+
+%\section{Algunas consideraciones}
+
+
+%simulaciones?
+
+
+%%% consideraciones del diseño! q se debe cambiar... con que hay q tener ojo, etc.

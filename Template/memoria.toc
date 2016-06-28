@@ -1,0 +1,13 @@
+\select@language {spanish}
+\contentsline {chapter}{Agradecimientos}{\es@scroman {i}}{chapter*.3}
+\contentsline {chapter}{Dedicatoria}{\es@scroman {ii}}{chapter*.3}
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{chapter*.4}
+\contentsline {chapter}{Abstract}{\es@scroman {iv}}{chapter*.5}
+\contentsline {chapter}{Glosario}{\es@scroman {v}}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Introducci\'on}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Elecci\'on fuente a dise\~nar}{2}{chapter.2}
+\contentsline {chapter}{\numberline {3}Dise\~no conceptual}{3}{chapter.3}
+\contentsline {chapter}{\numberline {4}Conclusiones}{4}{chapter.4}
+\contentsline {chapter}{Bibliograf\'{\i }a}{5}{chapter*.10}
+\contentsline {chapter}{\numberline {A}FUNCIONAMIENTO M\'ODULOS}{6}{appendix.Alph1}
+\contentsline {chapter}{\numberline {B}Compra de componentes}{7}{appendix.Alph2}

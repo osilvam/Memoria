@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{intro}
+Trivi\~no~A. Trujillo~F.D., Pozo~A.
+\newblock Electr\'onica de potencia.
+
+\bibitem{ir21091}
+IRF.com.
+\newblock {\em IR21091(s) and (PbF). Datasheet}.
+
+\bibitem{ir210xx}
+IRF.com.
+\newblock {\em Using Monolithic High Voltage Gate Drivers}.
+
+\bibitem{mosfet}
+CREE.
+\newblock {\em CMF10120D-Silicon Carbide Power MOSFET}.
+
+\bibitem{guia1}
+ECG PLI.
+\newblock {\em Uso b\'asico de protel DXP}.
+
+\bibitem{guia2}
+PLI ECG.
+\newblock {\em Uso avanzado de protel DXP}.
+
+\end{thebibliography}

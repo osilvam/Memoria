@@ -1,0 +1,136 @@
+%!TEX root = memoria.tex
+\chapter{DISEÑO ALTIUM FUENTE DC}
+\lhead[\thepage]{ANEXO \thechapter}
+\rhead[\thepage]{\rightmark}
+\label{altium}
+En este anexo se detallará el diseño de la fuente DC, sus objetivos, los tipos de archivos encontrados,  los pasos a seguir para completar el diseño del esquemático y el funcionamiento del ciruito. Donde el alumno podra ser capaz de entender y modificar, en caso de ser necesario, el circuito para posteriores implementaciones.\\
+
+Para lograr entender este anexo se recomienda leer los manuales \citep{guia1} y \citep{guia2} de altium desarrollados por el departamento de electrónica, área electrónica de potencia. Los cuales explican el uso básico del software, comenzando por los tipos de archivos encontrados, diseño básico de esquemáticos, el PCB, creación de footprints, librerias y modificación de estas, hasta el uso avanzado de este software.
+
+\section{Objetivos}
+%\addcontentsline{toc}{seccion}{Objetivos ff}
+\begin{itemize}
+\item[$\bullet$] Aprender y entender el uso del software aplicado al circuito diseñado.
+\item[$\bullet$] Ser capaz de modificar el diseño.
+\end{itemize} 
+
+\section{Tipos de archivos encontrados}
+
+Inicialmente, al abrir el proyecto ''convertidor DC-DC.PrjPcb'' se encontrarán los archivos mostrados en la figura \ref{altium1}, los cuales son:
+
+\begin{figure}[b]
+\centering
+  \includegraphics[width=6cm]{figures/altium1.png}
+  \caption{Archivos existentes en el proyecto.}
+  \label{altium1}
+\end{figure}
+
+\textbf{Source document}
+\begin{itemize}
+\item[$\bullet$] \textbf{Esquemático.SchDoc:} Este archivo contiene el esquemático del circuito eléctrico que será incluido en el PCB, en el que se muestran en su mayoría componentes existentes en las librerías de altium y otros componentes creados especialmente para este proyecto.
+\item[$\bullet$] \textbf{PCB1.PcbDoc:} En este archivo se encuentra el diseño PCB del archivo  ''esquemático.SchDoc'' el cual corresponde al diseño PCB impreso y utilizado para el desarrollo de esta memoria.
+\item[$\bullet$] \textbf{Layers\_convertidor.Cam:} Se encuentra el archivo que corresponde a todas las capas del archivo ''PCB1.PcbDoc'', este archivo se utiliza para enviar al fabricante luego de terminado el diseño, esto es, una vez que se termina el diseño PCB se debe generar este archivo. 
+\item[$\bullet$] \textbf{Holes\_convertidor.Cam:} Acá se encuentran todos los agujeros del diseño PCB, es decir, todos los hoyos que tendrá que hacer el fabricante de la placa. Al igual que el archivo anterior, este archivo debe generarse una vez que el diseño PCB no recibirá más modificaciones.
+\end{itemize}
+
+\textbf{Libraries}
+
+\begin{itemize}
+\item[$\bullet$] \textbf{Compiled libraries}
+\begin{itemize}
+\item \textbf{Miscellaneous Connectors.IntLib:} Este archivo corresponde a una librería de conectores propia de altium, la cual se incorpora a este para utilizar el conector que se encuentra en el diseño.
+\item \textbf{Miscellanoeus Devices.IntLib:} Al igual que el archivo anterior, esta librería es propia de altium y corresponde a todos los dispositivos (componentes) propios del software, los cuales son utilizados en su mayoría en el esquemático del circuito.
+\end{itemize}
+\item[$\bullet$] \textbf{PCB libraries Documents}
+\begin{itemize}
+\item \textbf{DC-DC.PcbLib:} Como bien el nombre de su carpeta contenedora lo indica, podemos encontrar todos los plantillas utilizados en el diseño del proyecto de titulo, los cuales fueron modificados levemente en comparación a los plantillas encontrados en la librería propia del software, agrandando los pads para poder soldarlos de manera más holgada. 	 
+\end{itemize}
+\item[$\bullet$] \textbf{Schematic Library Documents}
+\begin{itemize}
+\item \textbf{Componentes:} En este archivo, es posible encontrar todos los componentes que han sido modificados o utilizados en el esquemático del proyecto.
+\end{itemize}
+\item[$\bullet$] \textbf{Generated:} Esta carpeta contiene 3 carpetas, que a la vez contienen diversos archivos, estos aparecen producto de los archivos generados para la construcción del PCB.
+\end{itemize}
+
+\section{Esquemático}
+
+En la imagen \ref{esquematico} del anexo B, se encuentra el esquemático completo del circuito diseñado, que es el mismo utilizado en el capitulo \ref{diseño_conceptual}.\\
+
+Ahora bien, para llegar a dicho circuito, el primer paso es comprobar los elementos que se encuentran en las librerías del software, en caso de no encontrar todos los elementos, sera necesario realizar la creación de un elemento y añadir a la biblioteca del proyecto.\\
+
+\subsection{Creación de un elemento}
+ 
+El primer paso para la creación de un componente es dirigirse a la barra de herramientas (tools) y seleccionar nuevo componente (new component), luego de seleccionar el nombre del componente se debe crear el elemento que se estime conveniente, esto es, añadir el cuerpo del componente y los pines del mismo, por ejemplo, la figura \ref{componente1} corresponde a la creación del controlador de disparo que se utilizo en la construcción de la fuente DC autónoma.\\
+
+
+\begin{figure}[htbp]
+\centering
+\subfigure[Elemento]{\includegraphics[width=5cm]{figures/componente_1.eps} 
+\label{componente1}} \hspace{1cm}
+\subfigure[Plantilla]{\includegraphics[width=6cm]{figures/plantilla_1.png}
+\label{plantilla1}}
+\caption{Controlador de disparo.}
+\label{controlador_disparo}
+\end{figure}
+
+Cabe destacar que en el caso de los pines, estos pueden distribuirse en el orden que se estime conveniente, pues al momento de asociar el elemento a su correspondiente plantilla los pines deben tener correlación entre ellos, es decir, el pin 1 del elemento quedara asociado al pin 1 de la plantilla y así sucesivamente. Una vez finalizado este paso, el elemento debe guardarse en la librería del proyecto.\\
+
+\subsection{Creación de una plantilla}
+
+Una vez confeccionado el elemento correspondiente al componente, el paso sucesivo es la creación de la plantilla correspondiente al mismo elemento.\\
+
+Para crear una plantilla se debe dirigir a la librería  de plantillas, luego ir a herramientas y seleccionar nuevo componente en blanco (new blank component), para entonces proceder a crear la plantilla, la figura \ref{plantilla1} muestra a modo de ejemplo la plantilla asociada al controlador de disparo, al igual que para la creación de un elemento debe especificarse cada uno de sus pines, pero en este caso es necesario que la plantilla tenga la forma del empaquetado recomendado por el fabricante, pues esta es la forma que ira en la tarjeta del circuito impreso y por lo tanto debe ser lo más cercana posible a la base del componente.
+
+Cuando ya están creados ambas partes, es decir, el elemento y la plantilla, estas se deben asociar para completar la confección global del componente y así quedará listo para poder utilizar en el proyecto.
+
+\subsection{¿Cómo enlazar un elemento y una plantilla?} 
+
+Con ambas partes finalizadas, lo que resta es unificar el elemento y la plantilla de tal manera que pueda ser usado tanto en el esquemático como en la tarjeta impresa.\\
+
+Para hacer esto es necesario dirigirse a la librería de esquemáticos, luego seleccionar el componente creado y en la parte inferior izquierda de la pantalla aparecerá una pestaña que dice add footprint, se pincha y se añade la plantilla creada al esquemático creado, que debe encontrarse en la librería de plantillas. Luego el elemento esta listo para ser utilizado en el proyecto.
+
+\section{El diseño}
+
+El siguiente paso dentro del desarrollo del proyecto en Altium Designer es confeccionar el esquemático para luego pasar al diseño de tarjeta impresa. Para lo cual, es necesario tener creadas las librerías de esquemáticos y plantillas, tal como se muestra en los manuales \cite{guia1} y \citep{guia2}. Ahora bien, el esquemático realizado es el que se puede observar en la figura \ref{esquematico} del anexo \ref{imagenes_altium}, como se puede ver esté se encuentra construido modularmente, como se explica en el capitulo 3.\\
+
+\begin{figure}[b]
+\centering
+  \includegraphics[width=11cm]{figures/pcb_1.eps}
+  \caption{Plantilla de componentes en tarjeta impresa.}
+  \label{pcb_1}
+\end{figure}
+
+
+Luego de tener el esquemático construido, el paso consecutivo es la creación de la tarjeta de circuito impreso. En primera instancia, al momento de pasar desde el esquemático a la tarjeta impresa aparecerá lo que se puede ver en la figura \ref{pcb_1}, donde se muestran todos los elementos distribuidos en la tarjeta de manera aleatoria y en una sola capa. Por lo cual, ahora deben ordenarse estos elementos para distribuirlos dentro de la tarjeta en dos placas, placa superior (top layer) e inferior (bottom layer), lo cual se puede ver en las figuras \ref{pcb_2} y \ref{pcb_3}.\\
+
+
+\begin{figure}[htbp]
+\centering
+ \subfigure[Vista superior]{\includegraphics[scale=0.52]{figures/pcb_2.eps}
+ \label{pcb_2}}
+ \subfigure[Vista inferior]{\includegraphics[scale=0.57]{figures/pcb_3.eps}
+ \label{pcb_3}}
+  \caption{Tarjeta de circuito impreso}
+  \label{pcb_2_3}
+\end{figure}
+
+Cuando los componentes se encuentran ya posicionados en ambas capas, lo que viene es rutear las pistas, para esto es necesario tener en consideración algunas reglas de diseño para garantizar el correcto funcionamiento final del convertidor en la tarjeta de circuito impreso, lo primero que se debe tener en cuenta es el ancho de las pistas, para las pistas de control el ancho de pista es $0.254mm$ mientras que para las pistas de potencia la relación es $1mm$ por Ampere, es este caso el ancho de pista sera $6mm$. Además, las pistas de potencia están ubicadas en una sola capa de la tarjeta impresa, mientras que las pistas de control se encuentran principalmente en la capa opuesta a las pistas de potencia.\\
+
+Finalmente, la tarjeta impresa con las pistas ruteadas se encuente al final de este anexo en las figuras \ref{ruteo_1} y \ref{ruteo_2}, se puede ver en estas figuras que la tarjeta impresa cuenta con una malla a tierra para evitar las fugas de corriente, donde se ve claramente la distinción entre las pistas de potencia y las pistas de control.
+
+\begin{figure}[htbp]
+\centering
+ \subfigure[Vista superior]{\includegraphics[scale=0.52]{figures/ruteo_1.eps}
+ \label{ruteo_1}}
+ \subfigure[Vista inferior]{\includegraphics[scale=0.57]{figures/ruteo_2.eps}
+ \label{ruteo_2}}
+  \caption{Tarjeta de circuito impreso ruteada.}
+  \label{ruteo_1_2}
+\end{figure}
+
+
+%\section{Consideraciones a futuro}
+
+
+%consideraciones a futuro. 
+
