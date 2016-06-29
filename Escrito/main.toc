@@ -1,0 +1,8 @@
+\select@language {spanish}
+\contentsline {chapter}{\numberline {1.}INTRODUCCI\'ON}{2}
+\contentsline {section}{\numberline {1.1}OBJETIVOS DEL PROYECTO}{2}
+\contentsline {section}{\numberline {1.2}TRABAJOS A DESARROLLAR}{3}
+\contentsline {section}{\numberline {1.3}EVALUACIONES A REALIZAR}{4}
+\contentsline {section}{\numberline {1.4}RESULTADOS ESPERADOS}{4}
+\contentsline {section}{\numberline {1.5}T\'OPICOS A TRATAR}{5}
+\contentsline {section}{\numberline {1.6}TRABAJOS RELACIONADOS CON LOS TEMAS A TRATAR}{6}

@@ -1,4 +1,0 @@
-\select@language {spanish}
-\contentsline {chapter}{\numberline {1.}Cap\IeC {\'\i }tulo 1}{2}
-\contentsline {section}{\numberline {1.1}Cap\IeC {\'\i }tulo 1.1}{2}
-\contentsline {section}{\numberline {1.2}Cap\IeC {\'\i }tulo 1.2}{2}

@@ -1,0 +1,54 @@
+\chapter{INTRODUCCIÓN}
+
+\section{OBJETIVOS DEL PROYECTO}
+
+El Proyecto``\(\tau\)-HyperNEAT: Retardos de Tiempo en una Red HyperNEAT para Aprendizaje de Caminatas en Robots con Extremidades Móviles'' pretende incorporar conceptos temporales en una red neuronal HyperNEAT incluyendo retardos de tiempo adicionales a los pesos en las conexiones entre neuronas, permitiendo así generar caminatas en robots con distinta cantidad de extremidades móviles \ref{robots}, a través de simulaciones en entornos virtuales, de forma más óptima y obteniendo resultados más cercanos a comportamientos encontrados en la naturaleza.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Robots con distinto número de extremidades móviles}
+\label{robots}
+\end{figure}
+
+\begin{description}
+\item[\textbf{Objetivo 1}] Proponer un red neuronal usando HyperNEAT que incluya retardos de tiempo en sus conexiones.
+\item [\textbf{Objetivo 2}] Desarrollar el software necesario para manejar el entorno de simulación a usar en el trascurso del proyecto.
+\item [\textbf{Objetivo 3}] Poner a prueba la nueva red neuronal en tareas de aprendizaje y realizar benchmarks para determinar su desempeño.
+\item [\textbf{Objetivo 4}] Usar la nueva red neuronal en tareas de aprendizaje de caminatas en robots con extremidades móviles.
+\end{description}
+
+\section{TRABAJOS A DESARROLLAR}
+
+El proyecto se inicia en base a estudios e implementaciones previas de redes NEAT y HyperNEAT para la generación de caminatas en robots con extremidades móviles en entornos virtuales de simulación, con las cuales se obtuvieron resultados exitosos. A partir de esto es que se plantea la incorporación de retardos de tiempo a una red HyperNEAT de forma de implementar \(\tau\)-HyperNEAT computacionalmente. Luego se debe comparar el desempeño de \(\tau\)-HyperNEAT versus el desempeño de su predecesor, el cual se espera que sea mejor, para luego entrenar y generar caminatas en los robots. La correcta generación y evolución de caminatas en un entrenamiento está sujeta a una función de desempeño en base a las variables observadas en el robot, por lo que se debe realizar un estudio exhaustivo de cuál es la función de desempeño que mejor describe a una correcta caminata. Para el desarrollo de los entrenamientos de caminatas en los robots se debe implementar un modelo para cada robot en un entorno de simulación con el fin de observar las caminatas generadas y emular correctamente las dinámicas que se presentarían en un entorno real de forma de lograr traspasar posteriormente los resultados obtenidos a los robots reales. Además se debe desarrollar el software necesario para la comunicación con el programa de simulaciones, el cual soporta comunicación por sockets, y que este permita poder exportar directamente el trabajo al entorno real.
+
+\section{EVALUACIONES A REALIZAR}
+
+Una vez obtenidas las caminatas con \(\tau\)-HyperNEAT resta comparar los resultados con los anteriormente obtenidos solo con HyperNEAT, tanto en el aspecto visual final de las caminatas obtenidas, como además en la evolución de dichas caminatas a lo largo del proceso de entrenamiento medida a través de las variables aplicadas para la calificación del desempeño de manera de validar el mejor funcionamiento de \(\tau\)-HyperNEAT. Luego se debe comparar cuan influyentes fueron los retardos de tiempo incluidos en la red HyperNEAT observando la estructura y conexiones de la red \(\tau\)-HyperNEAT finalmente obtenida para obtener las conclusiones del trabajo propuesto. Finalmente se debe evaluar el desempeño final obtenido usando la red final \(\tau\)-HyperNEAT sobre los robots en el entorno real para comprobar el buen funcionamiento de las caminatas en ellos.
+
+\section{RESULTADOS ESPERADOS}
+
+Al culminar el Proyecto ``\(\tau\)-HyperNEAT: Retardos de Tiempo en una Red HyperNEAT para Aprendizaje de Caminatas en Robots con Extremidades Móviles'', se espera poder obtener caminatas naturales y armónicas en robots con extremidades móviles de manera más óptima a las obtenidas solo con una red HyperNEAT, y lograr reproducir los mismos resultados en las plataformas robóticas reales emulando correctamente las dinámicas de los sistemas. De manera más general se pretende obtener una red neuronal más robusta y eficiente que permita resolver problemas reales con dependencias temporales. Además se espera generar un software robusto que permita una correcta comunicación con el entorno de simulación a usar para proveer esta herramienta a proyectos futuros en donde se requiera de emular sistemas reales complejos.
+
+\section{TÓPICOS A TRATAR}
+
+Las redes neuronales artificiales son un campo muy importante dentro de la Inteligencia Artificial. El estudio de las redes neuronales ha estado muy en boca durante las últimas décadas y su uso ha sido de gran relevancia para la solución de problemas difíciles de resolver mediante técnicas algorítmicas convencionales. Uno de estos problemas de difícil solución es la generación de caminatas en robots con extremidades móviles.
+
+Con el objetivo de intentar emular movimientos más naturales en los robots estudiados es que investigadores han propuesto técnicas de neuroevolución, lo cual es una forma de aprendizaje de máquina que usa algoritmos evolutivos para entrenar a una red neuronal. Junto con esto y la implementación de algoritmos genéticos en redes neuronales, una de las líneas más prometedoras de la Inteligencia Artificial, se han logrado obtener los resultados esperados para este problema. Sin embargo lo que se busca en esta memoria es profundizar aún más en la solución a este problema e incorporar todos estos conceptos en una red neuronal adicionando variables temporales al modelo incorporando retardos de tiempo en cada una de las conexiones de la red.
+
+Junto con el problema mismo que es la generación de caminatas en robots con extremidades móviles esta la tarea de simular virtualmente el modelo de cada robot, ya que la mayoría de las veces realizar pruebas en plataformas reales es inalcanzable, por elevados costos de adquisición de los equipos; muy poco práctico ya que requiere de una constante y prolongada intervención de personas; o muy peligroso, ya que cualquier problema o error podría incurrir en el deterioro del equipo o inclusive podría atentar contra la seguridad de las mismas personas que realizan los experimentos. Aun es más difícil poder traspasar los resultados del estudio realizado en un modelo simulado virtualmente al modelo real de forma directa. Es por esto que esta memoria contempla la implementación de una herramienta de software que permita trabajar con modelos virtualizados y reales de forma transparente para el usuario, de manera de dar facilidades para la implementación del modelo en un entorno virtual y luego poder exportar todo el trabajo realizado y los resultados al entorno real con el solo hecho de ajustar los parámetros de trabajo.
+
+Para el trabajo de simulación en el área de la robótica existen variadas opciones con distintos niveles de dificultad y costo de uso dependiendo del público objetivo para el cual está pensado. Es por esto que para el desarrollo de esta memoria se propone el uso de una herramienta de fácil acceso, tanto por el nivel de conocimiento que requiere su uso como su accesibilidad de descarga y sencillo manejo, con el objetivo de que el software a realizar este al alcance de uso de cualquier persona. Esto busca acercar a las personas a trabajar en el área de la robótica incitándolas con herramientas de fácil acceso y manejo.
+
+\section{TRABAJOS RELACIONADOS CON LOS TEMAS A TRATAR}
+
+En el área de redes neuronales que hacen uso de neuroevolución y algoritmos genéticos se puede observar el trabajo realizado por el investigador Kenneth O. Stanley, siendo el primer artículo de interés el que relata el desarrollo de NEAT \cite{neat}, Neuroevolución a través del Aumento de Topologías, el cual supera en pruebas comparativas a redes con topologías fijas en tareas de aprendizaje reforzado. Stanley asume que el aumento en la eficiencia se debe al uso de un método de cruce entre diferentes topologías, a la clasificación por especies de redes diferenciadas por su topología y cambios en ella, y el crecimiento incremental a partir de una estructura mínima.
+
+Una continuación del desarrollo de NEAT es HyperNEAT \cite{hyperneat}, Hipercubo basado en Neuroevolución a través del Aumento de Topologías, igualmente desarrollado por Stanley, el cual emplea una codificación indirecta llamada conectivo Compositional Pattern Producing Network (conectivo CPPNs), que puede producir un patrón de conectividad con simetrías y esquemas repetidos interpretado por el patrón espacial generado dentro de un hipercubo. La ventaja de este enfoque es que es posible explotar la geometría de la tarea mediante el mapeo de sus regularidades en la topología de la red, desplazando con ello la dificultad del problema lejos de la dimensionalidad de este hacia la estructura misma del problema.
+
+En el área de generación de caminatas en robots con extremidades móviles existe una vasta cantidad de investigaciones relacionadas tanto con el uso de HyperNEAT, algoritmos genéticos en general u otro tipo de técnicas que se expondrán a continuación.
+
+Investigadores de la Universidad de Cornell el año 2004 publicaron ``Evolving Dynamic Gaits on a Physical Robot'' \cite{zykov}, en donde formularon un algoritmo genético para entrenar un controlador de lazo abierto para la generación de una caminata en un robot conformado por dos plataformas Stewart, evolucionando en búsqueda de optimizar su velocidad y su patrón de movimiento garantizando al mismo tiempo el ritmo de estos.
+
+Otros investigadores del Centro de Investigación Ames, de la NASA, el año 2005 publicaron``Autonomous Evolution of Dynamic Gaits with Two Quadruped Robot'' \cite{hornby}, en donde relatan cómo han desarrollado un algoritmo de evolución para generar caminatas dinámicas en dos robos cuadrúpedos, OPEN-R y ERS-110 de la marca Sony, midiendo el desempeño de las caminatas con los distintos sensores incorporados en ellos.
+
