@@ -1,0 +1,28 @@
+\section{Discusi\'on y comparaci\'on de los resultados obtenidos}
+En este trabajo de tesis se ha estudiado un problema de estimaci\'on estacionaria sujeto a restricciones de comunicaci\'on. En particular, se ha estudiado un caso en que las mediciones que utiliza el filtro para realizar la estimaci\'on son enviadas a trav\'es de un canal de borrado. Esto implica que dichas mediciones podr\'ian perderse, es decir, podr\'ian no llegar al extremo receptor del canal, con cierta probabilidad. En este contexto, se puede encontrar una gran variedad de tipos de filtros, debiendo hacerse las siguientes preguntas para poder diferenciar correctamente el tipo de filtro que se tiene:
+\begin{itemize}
+\item ¿Es el filtro un MJLS o es un sistema LTI?.
+\item ¿Se supone acceso al estado del canal?, de ser as\'i, ¿esta informaci\'on se supone de obtenci\'on inmediata o est\'a atrasada?.
+\item ¿Se utiliza un esquema de compensaci\'on para los datos perdidos?
+\item ¿El filtro converge a uno estacionario?.
+\item ¿El filtro es \'optimo dentro de su clase?
+\end{itemize}
+Hacer estas diferencias es importante, ya que no es justo comparar el desempe\~no de un filtro frente a otro estimador que pertenece a una clase distinta. De esta manera es natural que, el desempe\~no del filtro desarrollado en el Capitulo \ref{cap:estimacion_mimo} no puede competir con filtros más generales, como el filtro de Kalman variante en el tiempo, donde este tipo de estimadores pertenecen a una clase m\'as amplia de filtros.
+
+Uno de los resultados principales obtenidos en este trabajo de tesis, es la caracterizaci\'on expl\'icita de un filtro estacionario con par\'ametros dependientes del estado del canal. Dicho resultado se ha obtenido considerando un sistema auxiliar, estad\'isticamente equivalente al sistema original, en el cual resulta m\'as f\'acil realizar las tareas de an\'alisis y dise\~no. 
+
+Otro aspecto importante a notar es la estructura del filtro obtenido en el Cap\'itulo \ref{cap:estimacion_mimo}. El problema de dise\~no se pudo separar en dos problemas consecutivos. En la primera etapa, se dise\~na un compensador de los datos perdidos. Este problema es un problema de estimaci\'on \'optima sujeto a una restricci\'on de SNR. El segundo paso, corresponde a un problema de filtraje est\'andar en el que surge una fuente de ruido auxiliar cuya varianza depende del compensador de p\'erdidas utilizado.
+
+Otro resultado importante corresponde a la obtenci\'on de expresiones cerradas que caracterizan la varianza \'optima del ruido auxiliar en el caso de que las mediciones correspondan a una se\~nal escalar. Esto permite analizar de forma inmediata los efectos de los par\'ametros del sistema sobre los resultados obtenidos. De la misma forma, fue posible obtener una expresi\'on muy simple para la m\'inima varianza del error de estimaci\'on en el caso en que la se\~nal que interesa estimar es escalar y corresponde a la misma se\~nal que se env\'ia a trav\'es del canal de borrado. Este caso que parece muy particular, puede resultar de cierto inter\'es para aplicaciones que involucren, por ejemplo, procesamiento de audio, en que se env\'ia cierto sonido y a partir de las mismas mediciones de \'este, se quiere reconstruir el sonido original dado que se perdieron algunas muestras.
+
+Finalmente, fue posible realizar una comparaci\'on entre las estrategias de compensaci\'on de p\'erdida de datos que se han propuesto con mayor frecuencia en la literatura. Se entregan condiciones que garantizan que una de estas estrategias es superior a la otra. En particular, cuando la medici\'on enviada a trav\'es del canal corresponde a una se\~nal escalar, se pueden obtener condiciones necesarias y suficientes, pero cuando esta se\~nal contiene m\'ultiples mediciones, s\'olo se pueden obtener condiciones necesarias.
+
+Con el desarrollo realizado, y en particular con la observaci\'on que involucra la separaci\'on del problema original en dos partes, se mostr\'o que el desempe\~no que logra cierto estimador tiene directa relaci\'on con la estrategia de compensaci\'on para la p\'erdida de datos que se est\'e utilizando. Es relevante notar que un mejor esquema de compensaci\'on, es decir, aquel compensador que involucre una menor varianza para el ruido auxiliar, permitir\'a obtener mejores estimaciones.
+
+\section{Trabajo futuro}
+Dados los resultados obtenidos en este trabajo de tesis, consideramos que los siguientes son temas para trabajo futuro.
+\begin{itemize}
+\item Extender el desarrollo realizado en este documento, al caso en que se env\'ian m\'ultiples mediciones a trav\'es de m\'ultiples canales.
+\item Estudiar el caso de estimaci\'on estacionaria de estado sujeto a p\'erdida de datos en el (los) canal(es), dado que la planta a considerar es de naturaleza inestable. En este caso se espera que un desarrollo no tan complejo entregue condiciones bajo las cuales se pueda proveer de una estimaci\'on con estad\'isticas de segundo orden finitas, para ciertas probabilidades de transmisi\'on $p$.
+\item Analizar el problema estudiado en este trabajo de tesis, para el caso en que coexisten diversas restricciones de comunicaci\'on en el (los) canal(es) presente(s). Por ejemplo, puede ser de inter\'es el caso en que la se\~nal que se env\'ia a trav\'es del canal de borrado ha sido previamente cuantizada.
+\end{itemize} 

@@ -1,0 +1,13 @@
+The framework of this thesis is located at the analysis and design of estimation problems over networked systems. In such scenario, one deals with problems where standard control and estimation objectives have to be traded off against communication constraints. Those constraints could appear as data dropouts, as data-rate limits or propagation delay on the measured signal.
+
+This work is motivated by the recent interest on networks including wireless sensors, which measures local variables and then send them to a central processing node. Since sensors in sensor networks have usually limited power available, high power transmission is not an option. Hence, communication constraints play significant roles in such architectures.
+
+There's different type of estimators, depending on the assumptions made on the scenario, like if there is or not access to the channel's state. Another important difference at the moment of discriminating between diferent types of estimators, is related to the class of filters, it could or not belong to the class of Markov Jump Linear Systems. Once made these differences, one should note if the filters is optimal or sub-optimal, depending on the resulting estimation error variance, the latter means that the resulting variance is not the minimum possible. Then, another relevant aspect is related to the convergence or not to a stationary filter.
+
+In this Thesis, estimation problem based on intermittent observations. It's designed an stationary filter that achieves the minimum estimation error variance, obtaining, in addition, optimal missing data estimation. This allows one to distinguish the proposed compensation schemes commonly found in literature, replacing the missing data by the last successfully received sample or replacing it by zeros.
+
+In order to derive our results mentioned above, it's exploited a recent result, where's given an equivalence between a system that sends data through a certain erasure channel, and a lineal and time-invariant system with additive noise, subject to a signal-to-noise ratio (SNR) constraint. About the structure of the plant, this work has been done assuming stability of the plant and considering it can have multiple outputs and multiple inputs, giving closed form expressions for the particular case when having a single output.
+
+Along this document, there are several examples in order to illustrate the work that has been made, and one can compare these results with other proposed at the literature.
+
+\section*{Keywords:} Optimal filtering, State estimation, Stationary filter, MJLS, Data dropout, SNR, Additive noise, Minimum variance, Discrete-time systems.

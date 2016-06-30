@@ -1,0 +1,253 @@
+\section{Introducci\'on}
+Este cap\'itulo presenta una revisi\'on general de resultados b\'asicos que se utilizar\'an constantemente en los cap\'itulos posteriores. Adem\'as, se definir\'a gran parte de la terminolog\'ia utilizada en las secciones posteriores. 
+
+En la Secci\'on \ref{sec:LTIVE} se presentar\'an conceptos b\'asicos asociados a Sistemas Lineales e Invariantes en el Tiempo (LTI). En la Secci\'on \ref{sec:aleatorios}, se extienden los conceptos presentados en la Secci\'on \ref{sec:LTIVE} al caso de sistemas con entradas aleatorias. Finalmente, en la Secci\'on \ref{sec:KF} se revisar\'a la soluci\'on de un problema de estimaci\'on est\'andar.
+
+\section{Representaci\'on de sistemas LTI en variables de estado} \label{sec:LTIVE}
+Uno de los modelos m\'as simples y m\'as usados para describir la din\'amica de un sistema, viene dado por la representaci\'on de \'este en variables de estado, siendo usado al menos desde mitad del Siglo 20 \cite{alpay2005state}, y proveyendo de una descripci\'on compacta que en el caso de sistemas lineales, puede ser analizada a trav\'es de m\'etodos del \'algebra lineal \cite{zhdogl96}. 
+
+A continuaci\'on se revisar\'an algunos resultados b\'asicos relativos a sistemas lineales con representaci\'on en variables de estado. Estos resultados son ampliamente conocidos, y se pueden encontrar en muchos textos, e.g., \cite{gogrsa01} \'o \cite{kirk2004optimal}. La representaci\'on en variables de estado es una alternativa a la funci\'on de transferencia, que corresponde a la transformada Zeta de la salida de dicho sistema, cuando en la entrada se inyecta un Delta de Kronecker, con condiciones iniciales iguales a cero. Si $u$ es la entrada de un sistema LTI, e $y$ es la salida correspondiente, definimos
+\begin{equation}\label{eq:Gz}
+G(q) = \mathcal{Z}\{y(k)\}|_{\{u(k)=\delta(k),c.i.=0\}},
+\end{equation}
+donde $\mathcal{Z}$ denota la Transformada Zeta, $q$ es el argumento de dicha transformada. La funci\'on de transferencia descrita en \eqref{eq:Gz} permite analizar caracter\'isticas de entrada-salida del sistema, como por ejemplo estabilidad externa y respuesta en frecuencia \cite{gogrsa01}. Cabe notar que, en el caso de sistemas multivariables (MIMO), es decir, sistemas en que se cuenta con m\'ultiples entradas y/o m\'ultiples salidas, se obtendr\'an matrices de transferencia. 
+
+La representaci\'on en variables de estado permite realizar un an\'alisis m\'as profundo sobre las propiedades del sistema en cuesti\'on, a diferencia de las funciones de transferencia que permiten obtener informaci\'on s\'olo sobre la parte completamente controlable y completamente observable \cite{hendricks2009linear}. As\'i, para sistemas de tiempo discreto, que son los ac\'a estudiados, una representaci\'on en variables de estado puede escribirse como \cite{antsaklis2007linear}:
+\begin{subequations}\label{eq:GzVE}
+\begin{align}
+x(k+1)&=A(k)x(k)+B(k)u(k)\\
+y(k)&=C(k)x(k)+D(k)u(k)
+\end{align}
+\end{subequations}
+donde $x \in \mathbb{R}^n$ representa el vector de estado, $u \in \mathbb{R}^m$ representa el vector de entrada (el cual puede ser una se\~nal determin\'istica o aleatoria), $y \in \mathbb{R}^p$ representa el vector de salida, y las matrices de la representaci\'on son de dimensiones apropiadas, es decir:
+\begin{equation}
+A(k) \in \mathbb{R}^{n\times n}\quad ;\quad B(k) \in \mathbb{R}^{n\times m}\quad ; \quad C\in \mathbb{R}^{p\times n}\quad ; \quad D\in \mathbb{R}^{p\times m}
+\end{equation}
+Cabe notar que, para sistemas LTI, estas matrices son constantes, es decir,
+\begin{equation}
+A(k)=A\quad , \quad B(k)=B\quad , \quad C(k)=C\quad , \quad D(k)=D\qquad \forall k
+\end{equation}
+En la mayor\'ia de los sistemas f\'isicos reales, no es posible tener un efecto instant\'aneo de las variables de entrada sobre las salidas. Es decir, los sistemas no poseen paso directo. Esto se refleja en que la matriz $D$ sea la matriz nula, $D=0$, o para el caso de funciones de transferencia, en que \'estas ser\'an estrictamente propias \cite{hinrichsen2005mathematical}.
+
+A continuaci\'on se establece de manera formal la relaci\'on entre el modelo en variables de estado de un sistema y su correspondiente funci\'on de transferencia.
+\begin{lema}\label{lema:VE-transf}{\ \\}
+Sea un sistema LTI de tiempo discreto representado por \eqref{eq:GzVE}, entonces su funci\'on de transferencia est\'a dada por
+\begin{equation}\label{eq:Gtf}
+G(q)=C \left(qI-A\right)^{-1}B+D
+\end{equation}
+Cabe notar que los polos de la funci\'on de transferencia $G(q)$ son elementos del conjunto de los autovalores de $A$ \cite{gogrsa01}.\QED
+\end{lema}
+Es inmediato concluir que, dada una representaci\'on en variables de estado, existe una única funci\'on de transferencia. Sin embargo, dada una funci\'on de transferencia existen infinitas representaciones en variables de estado posibles \cite{zhdogl96}.
+
+\subsection{Estabilidad}
+Un concepto importante en sistemas din\'amicos, es el de estabilidad. Usualmente, cuando se describe un sistema lineal a trav\'es de una funci\'on de transferencia, se entiende estabilidad como estabilidad BIBO, es decir que para toda entrada acotada y para toda condici\'on inicial acotada al sistema, la salida correspondiente tambi\'en ser\'a acotada. A continuaci\'on se revisar\'a la noci\'on de estabilidad para sistemas cuya descripci\'on se encuentra en variables de estado.
+
+\begin{defin}[Estabilidad interna]
+Se dice que un sistema es internamente estable si para toda entrada y estado inicial acotados, la salida de dicho sistema tambi\'en es acotada.
+\end{defin}
+
+\begin{lema}[Estabilidad interna, ver \cite{gogrsa01}]{\ \\}
+El sistema representado por \eqref{eq:GzVE} es asint\'oticamente estable si y s\'olo si se cumple:
+\begin{equation}
+\vert eig(A)\vert <1
+\end{equation}
+donde $eig(A)$ representa a los autovalores de la matriz $A$.\QED
+\end{lema}
+
+\begin{obs}
+Si el sistema descrito por \eqref{eq:GzVE} es asint\'oticamente estable, entonces es estable en sentido BIBO. Mientras que si es estable en sentido BIBO, podr\'ia no ser internamente estable. (Una discusi\'on m\'as acabada hace uso del concepto de controlabilidad y observabilidad \cite{astwit97,zhdogl96}).
+\end{obs}
+
+\subsection{Parametrizaci\'on de Youla-Kucera}\label{sec:youla}
+En esta secci\'on se presentar\'a la parametrizaci\'on de todos los controladores estabilizantes para cierta planta. 
+
+\begin{teo}[ver \cite{zhdogl96}]{\ \\}
+Considere una planta estable $G$, donde sus entradas y salidas se relacionan por
+\begin{equation}
+\left[\begin{array}{cc}Y(q)\\E(q)\end{array}\right]=G(q)\left[\begin{array}{cc}D(q)\\U(q)\end{array}\right]
+\end{equation}
+Con G(q) dada por
+\begin{equation}\label{eq:Gq-youla}
+G(q)=\left[\begin{array}{c|cc}A&B_1&B_2\\ \hline C_1&D_{11}&D_{12}\\ C_2 & D_{21} & D_{22}\end{array}\right]=\left[\begin{array}{cc}G_{11}(q)&G_{12}(q)\\G_{21}(q)&G_{22}(q)\end{array}\right]
+\end{equation}
+
+\begin{figure}[htbp]
+\centering
+\scalebox{0.65}{\input{./figuras/fb_youla.pstex_t}}
+\caption{Sistema realimentado para planta $G(q)$ con controlador $K(q)$.}
+\label{fig:fb-youla}
+\end{figure}
+Entonces, todos los controladores $K$ que estabilizan internamente a $G$, bajo un esquema de control realimentado (ver Figura \ref{fig:fb-youla}) pueden escribirse como
+\begin{equation}
+K(q)=\left( I+Q(q)G_{22}(q)\right)^{-1}Q(q)
+\end{equation}
+para alg\'un par\'ametro $Q \in \cal{RH}_{\infty}$ tal que $\left(I+Q(\infty)D_{22}\right)$ sea no singular. ($Q$ corresponde al par\'ametro de Youla asociado al controlador $K$).
+\QED
+\end{teo}
+La importancia de este teorema radica en que permite escribir todas las funciones de transferencia de lazo cerrado en un lazo, como funciones afines del par\'ametro $Q$. En efecto,
+\begin{coro}
+Sea la planta $G(q)$ descrita por \eqref{eq:Gq-youla} y $Q$ el par\'ametro de Youla asociado al controlador $K(q)$ de la Figura \ref{fig:fb-youla}, entonces la funci\'on de transferencia de lazo cerrado entre $d$ e $y$ viene dada por
+\begin{equation}
+T_{dy}(q)=G_{11}(q)-G_{12}(q)Q(q)G_{21}(q)
+\end{equation}\QED
+\end{coro}
+
+\section{Sistemas lineales excitados por procesos aleatorios}\label{sec:aleatorios}
+En esta tesis entenderemos un proceso aleatorio como una secuencia de variables aleatorias indexadas por un \'indice $k \in \mathbb{N}_0$. Dado un proceso definimos las siguientes nociones:
+
+\begin{lema}[Primeros y Segundos Momentos, ver \cite{soders02}]\label{lema:momentos}{\ \\}
+Considere dos procesos aleatorios, $x$ e $y$.
+\begin{itemize}
+\item La media de $x$ en el instante $k$, denotada por $\mu_x(k)$, se define como $\mu_x(k) \treq \xi\{x(k)\}$, donde $\xi\{\cdot\}$ representa al operador esperanza.
+\item La matriz de covarianza cruzada entre $x$ e $y$, denotada por $R_{xy}(k+\tau,k)$, se define como $R_{xy}(k+\tau,k)\treq \xi\{ (x(k+\tau)-\mu_x(k+\tau))(y(k)-\mu_y(k))^{\intercal}\}.$
+\item La matriz de varianza de $x$ en el instante $k$, denotada por $P_x(k)$, se define como $P_x(k)\treq R_{xx}(k,k).$
+\end{itemize}\QED
+\end{lema}
+
+\begin{defin}[Proceso segundo orden]{\ \\}
+Un proceso aleatorio $x$ es de segundo orden si y s\'olo si su media y matriz de varianza existen y son finitas para todo $k \in \mathbb{N}_0$, y adem\'as permanecen finitas cuando $k\rightarrow \infty$
+\end{defin}
+
+\begin{defin}[Procesos no correlacionados]{\ \\}
+Se dice que dos procesos no est\'an correlacionados entre s\'i si y s\'olo si $R_{xy}(k+\tau,k)=0 \quad \forall k,\tau.$
+\end{defin}
+
+\begin{defin}[Proceso i.i.d.]{\ \\}
+Un proceso aleatorio $x$ corresponde a una secuencia i.i.d. si y s\'olo si $x$ corresponde a una secuencia de variables aleatorias independientes entre s\'i e id\'enticamente distribuidas.
+\end{defin}
+
+\begin{defin}[Proceso blanco]{\ \\}
+Se dice que el proceso aleatorio $x$ es blanco si y s\'olo si corresponde a una secuencia de variables aleatorias no correlacionadas entre s\'i, con la misma media y matriz de varianza.
+\end{defin}
+
+Con estas definiciones, podemos introducir un concepto que ser\'a usado reiteradamente a lo largo de este documento. \'Este se refiere a la estacionaridad de un proceso. La noci\'on de estacionaridad juega un papel fundamental en este trabajo de tesis dado que el cap\'itulo que contiene los resultados principales aborda el problema de estimaci\'on estacionaria de estado.
+
+\begin{lema}[Proceso WSS, ver Secci\'on 2.8.3 en \cite{hyvarinen2001independent}]\label{lema:wss}{\ \\}
+Un proceso $x$ se dice estacionario en sentido amplio, o WSS (Wide-Sense Stationary), si es de segundo orden y cumple las siguientes condiciones:
+\begin{itemize}
+\item La media del proceso $\mu_x(k)=\xi\{ x(k)\}$ es invariante en el tiempo, es decir, $\mu_x(k)=\mu_x,\quad \forall k,$
+\item La autocovarianza de $x$ depende s\'olo del desplazamiento en el tiempo, es decir, $R_x(k+\tau,k)=R_x(\tau)$. (Esto implica que $P_x(k)$ es constante $\forall k$).
+\end{itemize}\QED
+\end{lema}
+
+\begin{defin}{\ \\}
+Se dice que un proceso $x$ es asint\'oticamente estacionario en sentido amplio si y s\'olo si se cumplen las condiciones del Lema \ref{lema:wss} cuando $k\rightarrow \infty$, es decir, si existen $\mu_x$,$ \hspace{1mm} R_x(\tau)$ y $P_x$ finitos, tales que:
+\begin{align*}
+\mu_x &=\lim_{k\rightarrow \infty}{\mu_x(k)},\\
+R_{x}(\tau)&=\lim_{k\rightarrow \infty}{R_x(k+\tau,k)},\\
+P_x&=\lim_{k\rightarrow \infty}{P_x(k)}.
+\end{align*}
+\end{defin}
+
+En este trabajo modelaremos se\~nales como la salida de Sistemas LTI excitados por ruido blanco. Recuerde la descripci\'on en variables de estado en \eqref{eq:GzVE}, reproducida aqu\'i por conveniencia:
+\begin{subequations}\label{eq:GzVEal}
+\begin{align}
+x(k+1)&=Ax(k)+Bu(k),\\
+y(k)&=Cx(k)+Du(k).
+\end{align}
+\end{subequations}
+Esta vez, la entrada $u \in \mathbb{R}^m$ corresponder\'a a una se\~nal de ruido blanco
+
+En primer lugar, extendemos la noci\'on de estabilidad interna a este tipo de sistemas:
+
+\begin{defin}\label{lema:mss}{\ \\}
+El sistema \eqref{eq:GzVEal} es estable en sentido cuadr\'atico medio (MSS - Mean Square Stable) si y s\'olo si para cada $x_0$ de segundo orden y entrada $u$ blanco no correlacionado con $x_0$, existe $\mu_x \in \mathbb{R}^{n_x}$ y $M_x \in \mathbb{R}^{n_x \times n_x}$ independientes de $x_0$ tal que:
+\begin{align*}
+\mu_x &= \lim_{k\rightarrow \infty}{\xi\{ x(k)\}},\\
+M_x &= \lim_{k\rightarrow \infty}{\xi \{ x(k)x(k)^{\intercal}\}}.
+\end{align*}\QED
+\end{defin}
+Es f\'acil probar que un sistema LTI ser\'a MSS si y s\'olo si su estado es un proceso WSS asintótico (A-WSS) \cite{astrom70}. Asimismo, se puede probar, en dicho caso, que un sistema LTI es MSS si y s\'olo si los autovalores de su matriz $A$ son menor a $1$, i.e., MSS es equivalente a estabilidad interna.
+
+\begin{obs}
+El concepto de MSS para procesos aleatorios puede ser f\'acilmente extendido en forma natural al caso de sistemas MJLS, por lo que posteriormente tambi\'en se ocupar\'a este concepto para este tipo de sistemas (vea \cite{cofrma05}).
+\end{obs}
+
+\section{Estimaci\'on \'Optima de Estado}\label{sec:KF}
+En esta secci\'on se presenta el Filtro de Kalman estacionario, herramienta b\'asica para la soluci\'on de problemas de estimaci\'on que involucran sistemas lineales con entradas estoc\'asticas. El Filtro de Kalman fue propuesto por primera vez en \cite{kalman1960new}, y actualmente es presentado en la mayor\'ia de textos de estimaci\'on en sistemas lineales (vea \cite{andmoo79,kwasiv72,soders02}).
+
+Considere el siguiente sistema:
+\begin{subequations}\label{eq:GzKF}
+\begin{align}
+x(k+1)&=A(k)x(k)+B(k)\omega(k),\qquad x(0)=x_0\\
+z(k)&=C_z(k)x(k)+D_z(k)\omega(k)\\
+y(k)&=C_y(k)x(k)+D_y(k)\omega(k)
+\end{align}
+\end{subequations}
+donde $x_0$ es el estado inicial del sistema, $\omega(k)$ corresponde a una secuencia de ruido blanco de segundo orden, con media cero y varianza unitaria. Como se puede apreciar, a diferencia de la estructura definida en las secciones anteriores, en \eqref{eq:GzKF} se tienen dos salidas: $z(k)$ e $y(k)$. Lo que realiza el Filtro de Kalman es estimar la se\~nal de salida $z(k)$, a la cual suponemos no se tiene acceso, a partir de las mediciones de $y(k)$.
+
+El Filtro de Kalman es un algoritmo recursivo que entrega estimaciones de $z$ que minimizan la varianza del error de estimaci\'on sobre la clase de todos los estimadores lineales. Este filtro se mostrar\'a para el caso en que interesa estimar $z(k)$ en el instante $k$ usando todas las mediciones de $y$ disponibles hasta el instante $k-1$ y, posteriormente, consideraremos el caso en que se usan las mediciones hasta el instante $k$.
+
+\begin{lema}[Filtro estrictamente propio, \cite{andmoo79}]\label{lema:kfsp}{\ \\}
+Considere el sistema descrito por \eqref{eq:GzKF}. El conjunto de ecuaciones recursivas que permiten hallar el mejor estimador en sentido cuadr\'atico medio de $z(k)$ usando $y(0),...,y(k-1)$ est\'an dadas por:
+\begin{subequations}\label{eq:kfsp}
+\begin{align}
+\hat{x}(k+1|k) &= A\hat{x}(k|k-1)+K_{sp}(k)\left(y(k)-C_y\hat{x}(k|k-1)\right)\\
+\hat{z}(k|k-1)&=C_z\hat{x}(k|k-1)\\
+P(k+1|k)&=AP(k|k-1)A^{\intercal}-K_{sp}(k)\left( AP(k|k-1)C_y^{\intercal}+BD_y^{\intercal}\right)^{\intercal}+BB^{\intercal}\\ \label{eq:Ksp}
+K_{sp}(k)&=\left( AP(k|k-1)C_y^{\intercal}+BD_y^{\intercal}\right) \left( C_yP(k|k-1)C_y^{\intercal}+D_yD_y^{\intercal}\right)^{-1}
+\end{align}
+\end{subequations}
+En \eqref{eq:kfsp}, $K_{sp}(k)$ denota la ganancia del filtro en el instante $k$, $\hat{x}(k|j)$ y $P(k|j)$ corresponden a la estimaci\'on del estado $x$ en el instante $k$ dadas las mediciones hasta el instante $j$ y a la varianza del error de estimaci\'on de estado en el instante $k$ dadas las mediciones de $y$ hasta el instante $j$, respectivamente.
+
+La varianza del error de estimaci\'on $\tilde{z}(k)\treq z(k)-\hat{z}(k)$, digamos $P_{\tilde{z}}$, viene dada por:
+\begin{equation}\label{eq:Pzsp}
+P_{\tilde{z}}(k|k-1)=C_zP(k|k-1)C_z^{\intercal}+D_zD_z^{\intercal}.
+\end{equation}
+Adem\'as, si $A$ es estable, entonces existe $P\geq 0$ y $K_{sp}$ tales que
+\begin{align}
+K_{sp}&=\lim_{k\rightarrow \infty}{K_{sp}(k)},\\
+P&=\lim_{k\rightarrow \infty}{P(k|k-1)}.
+\end{align}
+En estos casos, el filtro se reduce a un filtro estacionario. La funci\'on de transferencia desde $y$ a $\hat{z}$ que describe al estimador \'optimo en este caso es:
+\begin{equation}
+H(q)=C_z\left( qI-A+K_{sp}C_y\right)^{-1}K_{sp},
+\end{equation}
+donde $\left( A-K_{sp}C_y\right)$ es estable.
+\QED
+\end{lema}
+
+\begin{obs}
+Existen versiones del Filtro de Kalman estacionario que no requieren que $A$ sea estable, sino que imponen condiciones sobre el par $(A,C)$ \cite{kwasiv72}.
+\end{obs}
+
+De las expresiones en el Lema \ref{lema:kfsp}, se puede ver inmediatamente que la estimaci\'on $\hat{x}(k+1|k)$ viene dada por una copia del modelo del sistema (vea \eqref{eq:GzKF}), m\'as un t\'ermino de correcci\'on asociado al error de predecir $y(k)$ usando $y(0),...,y(k-1)$.
+
+El Lema \ref{lema:kfsp} permite hallar el filtro estrictamente propio que, alimentado por $y$, entrega estimaciones \'optimas de $z$. El Filtro de Kalman puede modificarse para hallar el filtro propio que entrega estimaciones estacionarias \'optimas de $z(k)$:
+
+\begin{lema}[Filtro bipropio \cite{gustafsson2000adaptive}]\label{lema:kfbp}{\ \\}
+Sea el sistema descrito por \eqref{eq:GzKF}. El conjunto de ecuaciones recursivas que permiten hallar el estimador que minimiza el error cuadr\'atico medio de $z(k)$ cuando se usan las mediciones $y(0),...,y(k)$ est\'an dadas por:
+\begin{subequations}\label{eq:KFBP}
+\begin{align}
+&\hat{x}(k|k-1)=A\hat{x}(k-1|k-1)\\
+&P(k|k-1)=AP(k-1|k-1)A^{\intercal}+BB^{\intercal}\\
+&K_{bp}(k)=\left( C_zP(k|k-1)C_y^{\intercal}+D_zD_y^{\intercal}\right) \left(C_yP(k|k-1)C_y^{\intercal}+D_yD_y^{\intercal}\right)^{-1}\\ \nonumber
+&\hat{x}(k|k)=\hat{x}(k|k-1)+\\ &\qquad \qquad \quad P(k|k-1)C_y^{\intercal}\left( C_yP(k|k-1)C_y^{\intercal}+D_yD_y^{\intercal}\right)^{-1}\left( y(k)-C_y\hat{x}(k|k-1)\right)\\
+&\hat{z}(k|k)=C_z\hat{x}(k|k-1)+K_{bp}(k)\left(y(k)-C_y\hat{x}(k|k-1)\right)
+\end{align}
+\end{subequations}
+En \eqref{eq:KFBP}, $K_{bp}(k)$ denota la ganancia del filtro en el instante $k$. Luego, el costo, o la varianza del error de estimaci\'on de la salida desconocida, $P_{\tilde{z}}$, viene dada por:
+\begin{equation}\label{eq:Pzbp}
+P_{\tilde{z}}(k|k)=C_zP(k|k-1)C_z^{\intercal}+D_zD_z^{\intercal}-K_{bp}(k)\left(C_zP(k|k-1)C_y^{\intercal}+D_zD_y^{\intercal}\right)^{\intercal}.
+\end{equation}
+Adem\'as, si $A$ es estable, entonces existe $P \geq 0$ y $K_{bp}$ tales que
+\begin{align}
+K_{bp}&=\lim_{k\rightarrow \infty}{K_{bp}(k)},\\
+P&=\lim_{k\rightarrow \infty}{P(k|k-1)}.
+\end{align}
+En estos casos, el filtro se reduce a un filtro estacionario. La funci\'on de transferencia desde $y$ a $\hat{z}$ que describe al estimador \'optimo en este caso es:
+\begin{equation}
+H(q)=\left(C_z-K_{bp}C_y\right)\left( qI-A+K_{sp}C_y\right)^{-1}K_{sp}+K_{bp}
+\end{equation}
+donde $\left(A-K_{bp}C_y\right)$ es estable, y $K_{sp}$ est\'a dado en \eqref{eq:Ksp}.\QED
+\end{lema}
+\begin{obs}
+Note que siempre se puede computar primero la matriz de varianza del error de estimaci\'on para el filtro de Kalman estrictamente propio, y luego actualizarla tomando en cuenta la medici\'on adicional $y(k)$. En particular, se puede probar que (vea \eqref{eq:Pzsp} y \eqref{eq:Pzbp}):
+\begin{equation}
+P_{\tilde{z}}(k|k)=P_{\tilde{z}}(k|k-1)-K_{bp}(k)\left( C_zP(k|k-1)C_y^{\intercal}+D_zD_y^{\intercal}\right)^{\intercal}
+\end{equation}
+Esto indica que, como era de esperarse, el conocimiento de $y(k)$ disminuye la incertidumbre acerca de $\tilde{z}(k)$.
+\end{obs}
+
+\section{Conclusiones}
+En este cap\'itulo se ha hecho una revisi\'on de ciertos resultados que son la base para el desarrollo que presentaremos en los cap\'itulos posteriores. Los conceptos aqu\'i expuestos ser\'an utilizados constantemente a medida que se avance en la presentaci\'on de los resultados de las siguientes secciones.

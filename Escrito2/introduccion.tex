@@ -1,0 +1,74 @@
+\section{Motivaci\'on y Definici\'on del problema} 
+El problema de dise\~no y an\'alisis de sistemas de control y estimaci\'on sobre redes de comunicaci\'on ha recibido mucha atenci\'on en la literatura reciente \cite{antbai07}. En tales situaciones, uno se encuentra con problemas de dise\~no en que los objetivos de control y de estimaci\'on deben balancearse con restricciones impuestas por el canal de comunicaci\'on que se est\'e utilizando. En  general, el canal de comunicaci\'on entre la planta y el estimador, o el controlador seg\'un sea el problema en cuesti\'on, presenta imperfecciones. Por ejemplo, puede existir un retardo en el env\'io de la se\~nal enviada, puede haber p\'erdida de datos, puede existir limitaciones en la tasa de trasferencia de datos, o etc \cite{wong1997systems,li1996state,malyavej2005problem}. En muchos casos, no se pueden obviar estas restricciones, pues el comportamiento del sistema resultante depende cr\'iticamente de \'estas \cite{tatikonda2004control}.
+
+Este trabajo se encuentra motivado por el reciente inter\'es en redes de sensores inal\'ambricos (ver \cite{ghakum03} y \cite{ilmake04}). En tales arquitecturas, los sensores miden variables locales y dichas mediciones son enviadas a nodos centrales para su posterior procesamiento (ver \cite{chokum03}). Esta forma de procesar las variables medidas es atractivo debido a que la carga de procesamiento cae sobre un nodo central, y la comunicaci\'on se puede realizar de forma inal\'ambrica. Esto permite, por ejemplo, utilizar sensores econ\'omicos que no incorporan unidades sofisticadas de procesamiento, permitiendo reducir el costo que implica realizar un alambrado para transmitir las mediciones, haciendo as\'i viables aplicaciones en donde el alambrado es, no s\'olo caro, sino que imposible de realizar (como se ha estudiado en \cite{wacosi07}). Adem\'as, dado que los sensores involucrados usualmente tienen energ\'ia disponible limitada, transmitir con alta potencia no es una opci\'on viable. Por lo tanto, las restricciones relativas al canal de comunicaci\'on juegan un papel importante en este tipo de sistemas.
+
+En este trabajo de tesis se realizar\'a el an\'alisis y dise\~no de estimadores estacionarios en que las se\~nales a estimar se modelan a trav\'es de plantas  de m\'ultiples entradas y salidas estables, lineales e invariantes en el tiempo, y las mediciones se realizan a trav\'es de un canal que eventualmente pierde estos datos. Los estimadores propuestos construyen una estimaci\'on de la se\~nal de inter\'es, y de los datos perdidos a trav\'es del canal, suponiendo que se tiene acceso al estado de \'este. Esta suposici\'on no se encuentra alejada de la realidad, dado que los protocolos de comunicaci\'on actuales (como TCP) permiten discriminar datos v\'alidos de los corruptos \cite{scsifr07,garone2007lqg}.
+
+En este trabajo se realiza una compensaci\'on \'optima de los datos perdidos. Existen estrategias sub\'optimas de compensaci\'on, dentro de las cuales se estudiar\'an las dos estrategias usadas con mayor frecuencia en la literatura, proveyendo as\'i expresiones que permiten comparar anal\'iticamente estos esquemas de compensaci\'on.
+
+Es necesario destacar que el problema de estimaci\'on a partir de mediciones enviadas a trav\'es de un canal de borrado, puede ser tratado como un problema particular de estimaci\'on en plantas variantes en el tiempo, espec\'ificamente plantas cuyos par\'ametros cambian abruptamente y donde los cambios obedecen a una cadena de Markov.Dichos sistemas se conocen como Sistemas Lineales con Saltos Markovianos (MJLS, \cite{cofrma05}). Como se podr\'a comprobar en las secciones posteriores, el problema de estimaci\'on sujeto a p\'erdida de datos corresponde a un caso particular de estimaci\'on de estado para un MJLS, en el que la variable aleatoria que gobierna la cadena de Markov es la que determina si se pierde o no el dato a trav\'es del canal (ver Figura \ref{fig:mjls}).
+
+\begin{figure}[htbp]
+\centering
+\scalebox{0.8}{\input{./figuras/mjls.pstex_t}}
+\caption{Equivalencia entre sistema con p\'erdida de datos y un MJLS.}
+\label{fig:mjls}
+\end{figure}
+
+\subsection{Identificacion de Problemas}
+El estudio del problema de estimaci\'on sujeto a la p\'erdida de datos motiva las siguientes preguntas:
+\begin{enumerate}
+\item El desempe\~no de un filtro convencional (e.g., un filtro de Kalman que se dise\~na sin considerar p\'erdidas), ¿ser\'a considerablemente peor que el de un filtro dise\~nado tomando en cuenta las p\'erdidas de datos?
+\item Al incluir un compensador de los datos perdidos, ¿cu\'anto mejora el desempe\~no del filtro convencional?
+\item ¿Es posible dise\~nar, simult\'anea y \'optimamente, un filtro y un compensador de p\'erdida de datos?
+\item ¿Es posible dar condiciones que garanticen que un compensador de p\'erdida de datos sea mejor que otro?
+\end{enumerate}
+
+\newpage 
+\section{Trabajo previo}
+
+El estudio de problemas de estimaci\'on con observaciones intermitentes comienza a fines de los a\~nos 60. En la literatura se pueden encontrar filtros que usan mediciones intermitentes de la salida, suponiendo conocidas s\'olo las propiedades estad\'isticas del proceso de p\'erdida de datos, o suponiendo que se cuenta con una medici\'on directa de dicho proceso. Lo anterior permite distinguir varios tipos de filtros, dependiendo de si se tiene acceso o no al estado del canal. Otra diferencia importante al momento de distinguir los distintos tipos de filtros, se refiere a si el filtro pertenece a la clase MJLS o no. Luego de hechas estas diferencias, cabe notar si el filtro es \'optimo o sub\'optimo dependiendo de si la varianza del error de estimaci\'on que se obtiene, es la m\'inima posible dentro de una clase de filtros determinada. Ya realizadas estas distinciones, otro aspecto relevante se refiere a si el filtro converge a uno estacionario o no.
+
+En la bibliograf\'ia hay distintos enfoques para lograr filtros \'optimos y sub\'optimos bajo distintas suposiciones y, adem\'as, utilizando distintas herramientas. Por ejemplo, se puede nombrar a \cite{nahi69} que presenta filtros \'optimos utilizando las mediciones intermitentes que se transmiten por un canal, suponiendo conocidas s\'olo las propiedades estad\'isticas del proceso de p\'erdida de datos, y suponiendo que el proceso se distribuye de forma id\'entica e independiente. La convergencia de los filtros propuestos en \cite{nahi69} se estudia en \cite{tugnai81}, definiendo para ello un sistema lineal apropiado, sin p\'erdida de datos, cuyos segundos momentos coinciden con los del sistema original (en que s\'i se consideran las p\'erdidas).
+
+En \cite{hadsch79}, se considera el tipo de sistemas y la clase de filtros propuestos en \cite{nahi69}, pero sin considerar la misma distribuci\'on para el proceso de p\'erdidas, considerando as\'i modelos m\'as realistas. El trabajo \cite{hadsch79} entrega, adem\'as, condiciones para la existencia de filtros lineales \'optimos recursivos del mismo orden que el sistema original.
+
+Los trabajos mencionados anteriormente se centran en filtros \'optimos lineales. Esto est\'a motivado por el hecho de que, cuando no se explotan las mediciones del proceso
+de p\'erdidas, los filtros \'optimos son de dimensi\'on infinita (\cite{ackfu70} y \cite{baliki01}). Asimismo, los filtros propuestos en los trabajos anteriores no usan mediciones del estado de la cadena de Markov que rige las p\'erdidas, a pesar de que es com\'un en la pr\'actica contar con mediciones instant\'aneas del proceso de p\'erdidas. La ventaja de aprovechar este conocimiento radica en que permite utilizar esquemas de compensaci\'on de las p\'erdidas. Un esquema com\'un de compensaci\'on consiste en reemplazar el dato perdido, por la \'ultima muestra recibida exitosamente (\cite{schena09}). Usando este esquema de compensaci\'on, \cite{sachsh07} dise\~na un filtro \'optimo lineal e invariante en el tiempo, utilizando un marco de trabajo basado en una norma-2 estoc\'astica. Trabajo relacionado se puede encontrar en  \cite{suxixi08}
+y \cite{lichpa10}, donde los resultados est\'an generalizados a plantas en que m\'ultiples salidas se transmiten por un mismo canal multivariable.
+
+En \cite{scsifr07} y en \cite{siscfr04} se han estudiado problemas de estimaci\'on \'optima sobre canales que pierden datos, suponiendo que las p\'erdidas se distribuyen
+de forma id\'entica e independiente. En dichos trabajos, el filtro de Kalman \cite{andmoo79} se ha extendido para considerar la p\'erdida de las mediciones, aprovechando el conocimiento instant\'aneo de las p\'erdidas del canal. Como consecuencia, el filtro resultante depende explicitamente del proceso de p\'erdidas, y no converge a un filtro estacionario. En particular, en este caso, la varianza del error de estimaci\'on se convierte en una variable aleatoria y no hay una caracterizaci\'on simple para su comportamiento estacionario (en \cite{siscfr04} se dan cotas superiores e inferiores para la varianza del error de estimaci\'on). Extensiones del trabajo realizado en \cite{siscfr04} se pueden encontrar en \cite{liugol04} y \cite{huadey07}.
+
+Cuando se utiliza un filtro de Kalman variante en el tiempo, en que sus par\'ametros var\'ian dependiendo del estado de la cadena de Markov asociada al proceso de p\'erdidas, se obtiene un filtro \'optimo (ver Secci\'on 5.2 de \cite{cofrma05}) en donde todos los estados pasados de la cadena de Markov participan en la estimaci\'on (como en \cite{scsifr07} y \cite{siscfr04}). Este filtro no pertenece, por lo tanto, a la clase de MJLS. El trabajo \cite{cofrma05} presenta un filtro \'optimo en la clase de MJLS que puede ser usado como una alternativa al filtro de Kalman variante en el tiempo.
+
+El trabajo no tratado en las referencias anteriores incluye el dise\~no, simult\'aneo, de un estimador y un compensador \'optimo de p\'erdida de datos. Asimismo, se echa de menos la propuesta de algoritmos estacionarios.
+
+\section{Contribuciones del trabajo}
+Las principales contribuciones de este trabajo de tesis son:
+\begin{itemize}
+\item Se propone una clase de estimadores que incorporan un compensador de p\'erdidas.
+
+\item Se caracterizan los estimadores \'optimos dentro de la clase de filtros propuestos, haciendo \'enfasis en el hecho de que el dise\~no de dichos estimadores se puede lograr secuencialmente en dos pasos. En el primer paso, se dise\~na el compensador de datos perdidos a trav\'es de la soluci\'on de un problema de estimaci\'on auxiliar est\'andar, sujeto a una restricci\'on se\~nal a ruido. En la segunda etapa, se dise\~na un estimador \'optimo para el sistema original (sin p\'erdidas), al cual se le ha agregado un ruido de medici\'on auxiliar cuyos segundos momentos dependen del compensador previamente dise\~nado.
+
+\item Para el caso en que las mediciones enviadas a trav\'es del canal de borrado sean escalares, se proveen expresiones cerradas que permiten entender f\'acilmente los compromisos involucrados en problemas de estimaci\'on sujetos a p\'erdida de datos.
+
+\item Se exploran condiciones bajo las cuales se puede garantizar cuando un esquema sub-\'optimo de compensaci\'on de p\'erdida de datos es mejor que otro. En particular, se proveen expresiones que permiten comparar anal\'iticamente dos estrategias de compensaci\'on: la primera en que se reemplazan muestras perdidas por ceros, y la segunda en que se reemplazan las muestras perdidas por la \'ultima muestra recibida exitosamente.
+\end{itemize}
+
+\newpage
+\section{Estructura de la Tesis}
+Esta tesis se organiza como sigue:
+\begin{itemize}
+\item{\bf Cap\'itulo \ref{cap:marco}: Resultados Preliminares.} Este cap\'itulo revisa algunas ideas b\'asicas sobre sistemas lineales, estabilidad de sistemas y dise\~no de filtros estacionarios. El objetivo de este cap\'itulo es establecer las bases de los temas que se presentan posteriormente.
+
+\item{\bf Cap\'itulo \ref{cap:estimacion_mimo}: Estimaci\'on estacionaria sujeta a la p\'erdida de datos.} Este cap\'itulo estudia problemas de an\'alisis y dise\~no de filtros estacionarios para plantas que env\'ian mediciones a trav\'es de un canal de borrado. La clase de estimadores propuesta incorpora, en forma natural, un compensador \'optimo de los datos perdidos. Adem\'as, para el caso en que las mediciones enviadas sean escalares, se proveen expresiones cerradas que permiten obtener una mayor comprensi\'on de los resultados expuestos. Asimismo, se compara el desempe\~no del estimador propuesto frente a estimadores que utilizan otras formas de compensaci\'on para la p\'erdida de datos. Se obtienen expresiones que permiten comparar diferentes m\'etodos en forma anal\'itica y, finalmente se muestran ejemplos que ilustran los resultados obtenidos.
+
+%\item{\bf Cap\'itulo \ref{cap:filtros_mjls}: Dos m\'etodos de estimaci\'on alternativos.} Este cap\'itulo presenta dos filtros alternativos para la estimaci\'on de estado de sistemas dentro de la clase de Sistemas Lineales con Saltos Markovianos, tanto para el caso en que se tiene acceso al estado del canal como tambi\'en para el caso en que no se cuenta con dicha informaci\'on. El objetivo de este cap\'itulo es mostrar diferentes enfoques existentes que permitan lograr la estimaci\'on de estado en esta clase de sistemas.
+
+\item{\bf Cap\'itulo \ref{cap:conclusiones}: Conclusiones.} Este cap\'itulo relaciona los resultados obtenidos en los diferentes cap\'itulos del documento, presenta un resumen del trabajo realizado, y revisa temas pendientes que quedan como trabajo futuro.
+
+\item {\bf Ap\'endices:} Este cap\'itulo contiene una serie de resultados matem\'aticos utilizados en este documento.
+\end{itemize}
+

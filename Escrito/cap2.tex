@@ -1,0 +1,225 @@
+\chapter{ALTERNATIVAS DE SOLUCIÓN PARA EL DESARROLLO DEL PROYECTO}
+
+En este capítulo se darán a conocer las alternativas de solución consideradas para llevar a cabo el Proyecto ``\(\tau\)-HyperNEAT: Retardos de Tiempo en una Red HyperNEAT para Aprendizaje de Caminatas en Robots con Extremidades Móviles'', concentrándose en cómo se logrará la generación de algoritmos de caminata usando herramientas de Inteligencia Artificial (IA) en un entorno de simulación virtual. El programa encargado de la generación de caminatas deberá hacer uso de una herramienta externa para la comunicación con los robots a manipular tanto en el entorno virtual como en el real, tal como se muestra en la Figura \ref{dflujo}
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Diagrama de Flujo del Sistema Completo para la Generación de Caminatas.}
+\label{dflujo}
+\end{figure}
+
+Si bien el desarrollo de este proyecto de memoria es bastante acotado debido a lo específico que es el tema, se presentarán otras opciones con las cuales es posible la generación de caminatas en robots con extremidades móviles: Deep Learning en redes neuronales, Reinforcement learning, además del método que usa HyperNEAT para la implementación de \(\tau\)-HyperNEAT, propuesto para este proyecto. Con respecto al entorno virtual de simulación a usar, se optará por el software V-REP, y no se indagará en otras alternativas ya que se posee un gran manejo y experiencia en el uso de este software. Para la librería encargada de manejar los robots tanto en el entorno virtual como en el real se optará por una implementación en lenguaje C++ al igual que para la implementación de la herramienta de IA.
+
+\section{ALTERNATIVAS DE SOLUCIÓN}
+
+\subsection{ALTERNATIVA N°1: RETARDOS DE TIEMPO EN UNA RED HYPERNEAT}
+
+HyperNEAT, Hipercubo basado en el Aumento de Topologías, es un generador de codificación que evoluciona redes neuronales artificiales haciendo uso de los principios del algoritmo de Neuroevolución basado en el Aumento de Topologías (NEAT). Es una novedosa técnica para la evolución de redes neuronales de gran escala usando las regularidades geométricas del problema descritas por la red. Esta herramienta actualmente ha sido implementada para trabajo multiplataforma en lenguaje C++. 
+
+HyperNEAT básicamente es formado por dos redes neuronales: la red principal llamada substrato, y una segunda red neuronal NEAT usada para generar los pesos de las conexiones en el substrato. La topología del substrato es fija (no evoluciona), y está relacionada con la existencia de restricciones espaciales. El substrato está conformado por un número fijo de neuronas y capas: una capa de entrada, una capa de salida y capas intermedias; donde cada neurona de la red tiene una posición espacial asignada. 
+
+Dado un cierto conexionado realizado por la red NEAT en el substrato, se verifica el desempeño de la red HyperNEAT en una tarea dada y se le asigna a dicha red NEAT una calificación en relación directa con la efectividad de la red HyperNEAT  en dicha tarea. Luego de calificar a un número determinado de redes NEAT, el algoritmo de NEAT hace evolucionar dichas redes generando otras nuevas, con el objetivo de alcanzar mejores desempeños al utilizarlas para generar el conexionado del substrato de HyperNEAT. Esto se realiza ciclicamente hasta alcanzar el desempeño deseado de la red HyperNEAT.
+
+A partir de la implementación de HyperNEAT es posible implementar el algoritmo propuesto llamado \(\tau\)-HyperNEAT, el cual usa una red secundaria NEAT que no solo proporciona el peso de la conexión entre dos nodos, sino que además entrega el tiempo de retardo entre la conexión. %El retardo en la conexión es implementado a través de un buffer con un largo proporcional al retardo.
+
+%La Figura \ref{tauhyperneat} muestra un esquema del \(\tau\)-HyperNEAT propuesto en este artículo. Las neuronas en el substrato ahora están conectadas a través de un peso de conexión y un retardo de conexión obtenidos a través de la red NEAT secundaria, añadiendo así inercia al sistema.
+%
+%\begin{figure}[H]
+%\centering
+%\includegraphics[scale=1]{fig/usmLogo.png}
+%\caption{Algoritmo \(\tau\)-HyperNEAT formado por redes neuronales diferentes. La red principal `Substrato' conforma la red con información estructural y puede ser formada por muchas capas. Los pesos de conexiones y retardos de tiempo entre la neuronas en el Substrato son obtenidos usando la red neuronal secundaria NEAT. Esta red secundaria recibe como entrada las coordenadas de las neuronas a conectar, y opcionalmente, información adicional acerca de las distancia entre ellas. Como salida, la red neuronal secundaria genera el peso de la conexión y el tiempo de retardo entre dichas neuronas.}
+%\label{tauhyperneat}
+%\end{figure}
+
+\subsubsection*{VENTAJAS Y DESVENTAJAS DE LA ALTERNATIVA}
+
+De acuerdo a lo antes expuesto, la alternativa de diseñar \(\tau\)-HyperNEAT mediante la implementación anterior de HyperNEAT presenta las siguientes características:
+
+\begin{itemize}
+\item Al tener la implementación de HyperNEAT y por ende NEAT en C++, es posible realizar la implementación de \(\tau\)-HyperNEAT sin mayor complicación.
+\item Al no usar ninguna librería externa para la implementación de las herramientas antes descritas permite la incorporación de \(\tau\)-HyperNEAT en cualquier proyecto sobre sistemas operativos Windows, Linux o Mac OS.
+\item No existe implementación conocida de \(\tau\)-HyperNEAT en particular, por lo que implementarla sería entrar en áreas inexploradas de la investigación.
+\end{itemize}
+
+Las siguientes alternativas expuestas no son factibles en base a la idea principal de este proyecto, que es precisamente incorporar retardos de tiempo en las conexiones de una red HyperNEAT para la generación de caminatas en robots con extremidades móviles, pero que si cumplirían con el objetivo de la generación de caminatas propiamente tal.
+
+\subsection{ALTERNATIVA N°2: DEEP LEARNING EN REDES NEURONALES}
+
+Deep Learning \cite{deep} es una rama de Machine Learning basado en un conjunto de algoritmos que intentan modelar abstracciones de alto nivel de datos mediante el uso de varias capas de procesamiento con estructuras complejas, o de otra manera compuestas de múltiples trasformaciones no lineales. Deep Learning es parte de una familia más amplia de métodos de Machine Learning basado en la representación de los datos de aprendizaje. Una observación se puede representar de muchas maneras. Una de las promesas de Deep Learning está en remplazar funciones realizadas manualmente con eficientes algoritmos para aprendizaje de características y extracción de características jerárquica de manera no-supervisada o semi-supervisada.
+
+La investigación en esta área intenta tomar mejores representaciones y crear modelos para aprender estas representaciones a partir de datos no etiquetados a gran escala. Algunas de las representaciones están inspiradas por los avances en neurociencia y se basan libremente en la interpretación de los patrones de procesamiento y comunicación de información en un sistema nervioso, tales como la codificación neuronal que intenta definir una relación entre varios estímulos y las respuestas neuronales asociados en el cerebro.
+
+El aprendizaje profundo es una clase de algoritmos de aprendizaje automático que:
+
+\begin{itemize}
+\item Utiliza una cascada de muchas capas de unidades de procesamiento no lineal para la extracción de características y transformación. Cada capa sucesiva utiliza la salida de la capa anterior como entrada. Los algoritmos pueden ser supervisados o sin supervisión y las aplicaciones incluyen análisis de patrones (sin supervisión) y clasificación (supervisado).
+\item Se basa en el aprendizaje de múltiples niveles de características o de las representaciones de los datos (no supervisado). Características de nivel superior se derivan de características de nivel inferior para formar una representación jerárquica.
+\item Son parte del campo de aprendizaje automático más amplio de representaciones de aprendizaje de datos.
+\item Aprende múltiples niveles de representaciones que corresponden a diferentes niveles de abstracción; los niveles forman una jerarquía de conceptos.
+\end{itemize}
+
+Los algoritmos de aprendizaje profundo contrastan con los algoritmos de aprendizaje poco profundo por el número de transformaciones aplicadas a la señal mientras se propaga desde la capa de entrada a la capa de salida. Cada una de estas transformaciones incluye parámetros que se pueden entrenar como pesos y umbrales. No existe un estándar de facto para el número de transformaciones (o capas) que convierte a un algoritmo en profundo, pero la mayoría de investigadores en el campo considera que aprendizaje profundo implica más de dos transformaciones intermedias.
+
+\subsubsection*{VENTAJAS Y DESVENTAJAS DE LA ALTERNATIVA}
+
+De acuerdo a lo antes expuesto, la alternativa de realizar la generación de caminatas mediante la implementación de Deep Learning presenta las siguientes características:
+
+\begin{itemize}
+\item Permite varios niveles de abstracción que ayudarían a los robots utilizados para generar algoritmos de caminata.
+\item Generalmente es usado para trabajar con elementos visuales para la extracción de características y no para la generación de caminatas, por lo que su uso en dicha área no ha sido muy explorado.
+\item Se cree que el aumento de las capas en una red neuronal usando Deep Learning aumente el grado de complejidad de la red volviendo el problema de generación de caminatas aún más complejo.
+\end{itemize}
+
+\subsection{ALTERNATIVA N°3: APRENDIZAJE REFORZADO}
+
+Cuando hablamos de Aprendizaje Reforzado (RL por su nombre en inglés, Reinforcement Learning) \cite{rl}, nos referimos a un área de estudio dentro del Aprendizaje de Máquinas, donde el objetivo principal es resolver problemas de decisiones secuenciales modelados como Procesos de Decisión Markovianos (MDP). Sin embargo, por mucho tiempo se ha ampliado el espectro de aplicaciones a áreas como por ejemplo Robótica o Teoría de Control Automático.
+
+En términos simples, el objetivo del aprendizaje por refuerzos es maximizar la recompensa esperada a largo plazo, en un entorno (inicialmente) desconocido mediante la búsqueda de una secuencia óptima de acciones a tomar para cierto problema. Mientras el agente (quien aprende) decide qué acciones tomar, debe hacer un balance de dos objetivos: explotar lo que ya se ha aprendido para evitar caer en soluciones que reporten una menor utilidad, o explorar nuevas soluciones que eventualmente permitan obtener una mayor utilidad a futuro. Este compromiso usualmente se conoce como el dilema de exploración-explotación, el que ha sido extensamente tratado en la literatura, teniendo métodos de exploración indirecta (como exploración de Boltzmann) que explora todo el espacio de estado-acciones al hacer una asignación del tipo probabilista a las diferentes acciones posibles, y métodos de exploración directa que usan información estadística obtenida en experiencias pasadas. Un problema de aprendizaje reforzado, formulado como un MDP está compuesto por (S, A, T, R) donde:
+
+\begin{itemize}
+\item S: corresponde al conjunto de todos los estados posibles.
+\item A: denota el conjunto de todas las acciones que el agente puede ejecutar.
+\item T: $S \times A \times S \rightarrow [0, 1]$ es una función de transición de estado, la que asigna una probabilidad de que el agente en el estado s ejecutando a sea trasladado al estado s'.
+\item R: $S \times A \rightarrow \Re$ corresponde a una función escalar (real) de recompensas.
+\item $\pi$: $S \rightarrow A$ es un mapeo de estados a acciones, describe la política (secuencia de acciones) que el agente tomará en cierto estado.
+\end{itemize}
+
+La Figura \ref{rl} muestra un esquema de la estructura que tiene un problema de aprendizaje reforzado.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Esquema utilizado en el contexto de aprendizaje reforzado.}
+\label{rl}
+\end{figure}
+
+\subsubsection*{VENTAJAS Y DESVENTAJAS DE LA ALTERNATIVA}
+
+De acuerdo a lo antes expuesto, la alternativa de realizar la generación de caminatas mediante la implementación de Aprendizaje Reforzado presenta las siguientes características:
+
+\begin{itemize}
+\item Al tener un aprendizaje constante, la caminata se adapta de forma automática en caso de que la estructura del robot cambie o el tipo de terreno varíe.
+\item Los métodos tabulares (basados en tablas) son imprácticos en caso de que el espacio de estados discreto sea muy grande (imposible de utilizar en el caso continuo, necesitando aproximador de funciones como redes neuronales).
+\item El espacio de estados discreto aumenta de forma considerable conforme el número de extremidades o el número de grados de libertad por cada extremidad aumenta.
+\end{itemize}
+
+\subsection{ENTORNO VIRTUAL DE SIMULACIÓN: VIRTUAL ROBOT EXPERIMENTATION PLATAFORM (V-REP)}
+
+V-REP (véase la Figura \ref{vrep}) es un simulador compatible con Windows, Mac y Linux, el cual permite el modelado de un sistema completo o de solo ciertas componentes, como sensores, mecanismos, engranajes u otros en poco tiempo. El programa de control de un componente puede estar unido a un objeto ligado o a una escena para modelarlo de manera similar a la realidad. Esta plataforma puede ser usada para controlar partes de hardware, desarrollar algoritmos, crear simulaciones de automatizaciones de fábricas o para demostraciones educativas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Imagen publicitaria del software de simulación V-REP.}
+\label{vrep}
+\end{figure}
+
+V-REP puede ser usado de dos formas, vía script interno programado en Lua, o vía script externo con la ayuda de la API entregada por el programa, la cual se encuentra en C/C++, Python, Java, Urbi, Lua, Matlab y Octave. Su última versión data del 17 de mayo del 2016.
+
+\section{ALTERNATIVA SELECCIONADA}
+
+En esta sección se seleccionará una de las tres alternativas de solución que se han expuesto para el Proyecto de Titulación en sección anterior, utilizando para ello diversos criterios que permitirán determinar la conveniencia de una u otra alternativa.
+
+\subsection{CRITERIOS DE SELECCIÓN}
+
+De acuerdo a lo expuesto anteriormente, se encontraron tres opciones que permiten generar caminatas en robots con extremidades móviles. Sin embargo lo acotado del problema a solucionar hará que los criterios presentados a continuación estén bastante sesgados para favorecer a la solución principal propuesta con anterioridad. Los criterios a considerar son los siguientes:
+
+\begin{itemize}
+\item \textbf{Cantidad de publicaciones en donde se use la alternativa para la generación de caminatas:} Mientras más publicaciones, información y referencias se tenga del trabajo realizado con la alternativa a elegir será más fácil obtener los conocimientos necesarios para implementar la solución.
+\item \textbf{Simplicidad en la programación:} Puesto que el tiempo para realizar el proyecto es limitado, una programación fácil ayuda a ocupar este recurso en forma óptima. Esto también puede verse afectado por el conocimiento previo que se tenga de la alternativa a elegir.
+\item \textbf{Conocimientos previos de la alternativa a elegir:} Conocimientos previos del tema a trabajar facilitaran en gran medida la implementación de la solución a efectuar.
+\item \textbf{Complejidad computacional de la alternativa a elegir:} Una variable importante a considerar es la complejidad computacional que puede tener la alternativa a elegir, lo cual puede limitar en gran medida a la generación de las caminatas debido a los retardos de procesamiento que se puedan generar.
+\end{itemize}
+
+La ponderación relativa que tienen cada uno de los criterios en la decisión final de la alternativa escogida, de acuerdo a las condiciones, recursos y tiempo del que se dispone son las siguientes:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | c |}
+	\hline
+	Criterio de Selección & Porcentaje de Relevancia \\ \hline
+	Cantidad de bibliografía & 30\% \\
+	Simplicidad en la programación & 15\% \\
+	Conocimientos previos & 35\% \\
+	Complejidad computacional & 20\% \\ \hline
+	Porcentaje Total & 100\% \\
+	\hline
+\end{tabular}
+\end{center}
+\caption{Ponderación de cada uno de los criterios de evaluación}
+\label{tab:criterios}
+\end{table}
+
+Se ha dado un mayor porcentaje de relevancia a los conocimientos previos que se puedan tener de la alternativa a elegir debido a que daría más facilidad para comprender y solucionar el problema por su mejor manejo. Luego sigue la cantidad de bibliografía disponible, debido a que es fundamental poder informarse de los desarrollos realizados por otros investigadores con el fin de nutrir el trabajo a realizar y para efectuar comparaciones de desempeño. Posteriormente le sigue la complejidad computacional, punto realmente crítico si es que se desea obtener buenos resultados de las simulaciones. Finalmente, la simplicidad en la programación tiene cierta relevancia y se debe tomar en consideración, sin embargo no es un criterio demasiado crítico, ya que se dispone de basto conocimiento de ello.
+
+\subsection{EVALUACIÓN DE LAS ALTERNATIVAS}
+
+Para evaluar cada una de las alternativas se utilizará el siguiente sistema de puntuación:
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| c | c | c | c | c |}
+	\hline
+	\multicolumn{5}{| c |}{Sistema de Puntuación} \\
+	\hline
+	Muy Deficiente & Deficiente & Aceptable & Bueno & Óptimo \\ \hline
+	0.1 - 0.2 & 0.3 - 0.4 & 0.5 - 0.6 & 0.7 - 0.8 & 0.9 - 1 \\
+	\hline
+\end{tabular}
+\end{center}
+\caption{Sistema de puntuación utilizado para evaluar las alternativas}
+\label{tab:puntuacion}
+\end{table}
+
+La puntuación de cada alternativa se detalla a continuación.
+
+\subsubsection{Retardos de tiempo en una red HyperNEAT (\(\tau\)-HyperNEAT)}
+
+\begin{itemize}
+\item \textbf{Cantidad de publicaciones en donde se use la alternativa para la generación de caminatas: Puntuación = 0.9} (Se pueden encontrar un gran número de publicaciones del tema).
+\item \textbf{Simplicidad en la Programación: Puntuación = 0.8} (Se posee un buen manejo de programación en C++ para cualquiera de las alternativas, pero al tener mayor manejo del tema se facilita aún más la programación).
+\item \textbf{Conocimientos previos de la alternativa a elegir: Puntuación = 0.9} (Se posee conocimientos bastos en el tema debido a trabajos realizados previamente).
+\item \textbf{Complejidad computacional de la alternativa a elegir: Puntuación = 0.7} (La complejidad computacional se ve perjudicada por tratarse de dos redes involucradas en el cálculo de la alternativa, sin embargo no perjudica mayormente al problema en sí).
+\end{itemize}
+
+\subsubsection{Deep learning en redes neuronales}
+
+\begin{itemize}
+\item \textbf{Cantidad de publicaciones en donde se use la alternativa para la generación de caminatas: Puntuación = 0.5} (Cantidad de bibliografía promedio).
+\item \textbf{Simplicidad en la Programación: Puntuación = 0.7} (Se posee un buen manejo de programación en C++ para cualquiera de las alternativas, pero no se posee gran manejo del tema).
+\item \textbf{Conocimientos previos de la alternativa a elegir: Puntuación = 0.4} (Se poseen conocimientos regulares del tema).
+\item \textbf{Complejidad computacional de la alternativa a elegir: Puntuación = 0.8} (No posee gran complejidad computacional manteniendo baja la cantidad de capas de la red).
+\end{itemize}
+
+\subsubsection{Aprendizaje reforzado}
+
+\begin{itemize}
+\item \textbf{Cantidad de publicaciones en donde se use la alternativa para la generación de caminatas: Puntuación = 0.4} (Se encuentran un numero de publicaciones bajo el promedio).
+\item \textbf{Simplicidad en la Programación: Puntuación = 0.5} (Se posee un buen manejo de programación en C++ para cualquiera de las alternativas, pero no se posee ningún manejo del tema, complicando la tarea de programar los algoritmos).
+\item \textbf{Conocimientos previos de la alternativa a elegir: Puntuación = 0.6} (Se posee muy poco conocimiento del tema).
+\item \textbf{Complejidad computacional de la alternativa a elegir: Puntuación = 0.4} (Debido a la gran complejidad de los robots por su cantidad de grados de libertad implica que exista un espacio de estados discretos muy grande volviendo la solución impráctica).
+\end{itemize}
+
+En la Tabla \ref{tab:eval} se evalúa cada una de las alternativas, de acuerdo a la ponderación que tiene cada criterio. Ella muestra, que con una puntuación total del 84.5\%, la opción más conveniente es la de Retardos de tiempo en una red HyperNEAT (\(\tau\)-HyperNEAT), luego con un 55.5\% la de Deep learning en redes neuronales y finalmente con un 48.5\% la de Aprendizaje reforzado. \textbf{Con todo, la alternativa seleccionada para la generación de caminatas en robots con extremidades móviles es Retardos de tiempo en una red HyperNEAT (\(\tau\)-HyperNEAT)}.
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{| l | c | c | c |}
+	\hline
+	\multirow{2}{*}{Criterio de Selección} & \multicolumn{3}{ c |}{Puntuación} \\
+	\cline{2-4}
+	& \(\tau\)-HyperNEAT & Deep L. & Reinforcement L. \\
+	\hline
+	Cantidad de bibliografía & 0.9 & 0.5 & 0.4 \\
+	Simplicidad en la programación & 0.8 & 0.7 & 0.5 \\
+	Conocimientos previos & 0.9 & 0.4 & 0.6 \\
+	Complejidad computacional & 0.7 & 0.8 & 0.4 \\
+	\hline
+	Puntuación Total & 84.50\% & 55.50\% & 48.50\% \\
+	\hline
+\end{tabular}
+\end{center}
+\caption{Tabla de Evaluación de cada alternativa}
+\label{tab:eval}
+\end{table}

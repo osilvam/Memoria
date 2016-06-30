@@ -1,0 +1,121 @@
+\documentclass[10pt,letterpaper]{phstylee} %,twoside]{phstylee}
+
+\input{packages.tex}
+
+% Pre\'ambulo
+\input{pream_profe.tex}
+\input{prePato.tex}
+
+\addtolength{\topmargin}{-30pt}
+\linespread{1.1} %tama\~no de la l\'inea
+\makeindex
+\spanishdecimal{.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%\layout
+%--------------------PORTADA--------------------------------
+%
+\setcounter{tocdepth}{2}
+\input portada.tex
+\cleardoublepage
+
+%--------------------RESUMEN--------------------------------
+
+\pagestyle{fancyplain}
+
+%\cleardoublepage
+%\newpage
+%\thispagestyle{empty}
+%\mbox{}
+%\cleardoublepage
+
+\pagenumbering{roman}
+
+\chapter*{Agradecimientos}
+Gracias a todos los involucrados en este trabajo, ya sea de forma directa o indirecta. \newline 
+
+Gracias a Francisca, familia y amigos.
+
+%\input agradecimientos.tex
+
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\cleardoublepage
+
+\chapter*{Resumen}
+\input resumen.tex
+
+%\cleardoublepage
+\newpage
+%\thispagestyle{empty}
+%\mbox{}
+%\cleardoublepage
+
+\chapter*{Abstract}
+\input abstract.tex
+
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\cleardoublepage
+ 
+%--------------------\'iNDICE---------------------------------
+
+\tableofcontents
+%-------------------CAP\'iTULOS-------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\cleardoublepage
+\pagenumbering{arabic}
+\chapter{Introducci\'on}
+\label{cap:introduccion}
+\input introduccion.tex
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\cleardoublepage
+\chapter{Resultados Preliminares}
+\label{cap:marco}
+\input{preliminares.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\cleardoublepage
+\chapter{Estimaci\'on estacionaria sujeta a la p\'erdida de datos}
+\label{cap:estimacion_mimo}
+\input{estimacion.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\cleardoublepage
+\chapter{Conclusiones}
+\label{cap:conclusiones}
+\input{conclusiones.tex}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%------------------AP\'eNDICES--------------------------------
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cleardoublepage
+\appendix
+\chapter{Ap\'endice}
+\label{cap:apendice}
+\input apendice1.tex
+\chapter{Notaci\'on}
+\label{cap:notacion}
+\input apendice2.tex
+
+
+%------------------BIBLIOGRAF\'iA-----------------------------
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+\end{document}

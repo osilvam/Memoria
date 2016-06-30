@@ -1,0 +1,40 @@
+\chapter{BASE TEÓRICA}
+
+En este capítulo se presentará una introducción teórica de la herramienta de neuroevolución HyperNEAT y sus componentes, necesaria para la implementación de ?-HyperNEAT.
+
+\section{NEAT}
+
+Neuroevolución a través del Aumento de Topologías (NEAT) \cite{neat} usa algoritmos genéticos para hacer evolucionar la topología y los pesos entre conexiones de una red neuronal de acuerdo a una función de desempeño. Debido al fundamento que tienen los algoritmos genéticos, NEAT hace evolucionar la red neuronal en base al individuo más fuerte (de mejor desempeño), teniendo una gran probabilidad de crear una nueva generación de individuos o redes neuronales, y así preservar la especie.
+
+Una de las principales ventajas de NEAT, comparada con otros tipos de redes neuronales, es que la estructura inicial de la red (topología) no es necesaria, pero es encontrada a través del proceso de neuroevolución del algoritmo mismo. Cada red NEAT es codificada por un genoma, como se muestra en la Figura \ref{genoma}, en donde la red es representada por Genes de Nodo y Genes de Conexión, representando a neuronas y conexiones respectivamente. Cada Nodo o Conexión tiene un único numero Id de innovación, el cual se preserva si el Nodo o Conexión es removido (como resultado de la evolución) o creado nuevamente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Ejemplo de Genoma usado en NEAT para codificar la red neuronal mostrada a su derecha.}
+\label{genoma}
+\end{figure}
+
+La evolución del genoma que forma la red NEAT es impulsado por su desempeño dada una función de desempeño determinada. La función de desempeño determina la probabilidad de reproducción de un genoma en específico. Los hijos generados por el mecanismo de reproducción conservará los nodos y conexiones del padre y aleatoriamente cambiará los pesos de sus conexiones. Si una conexión solo proviene de uno de los padres, esta es heredada instantáneamente. Una especie es obtenida cuando un grupo de redes neuronales comparten similitudes entre ellas, esto es cuando, la distancia entre ellos está bajo un umbral (el cual depende de la topología de la red y los pesos de las conexiones). Redes neuronales pertenecientes a una misma especie tienen una alta probabilidad de convertirse en padres de una nueva población de redes neuronales. Similarmente a los algoritmos genéticos, la variabilidad en el proceso de reproducción en redes NEAT es dado por mutaciones. Aquí las mutaciones permiten la creación de nuevos nodos y la modificación de conexiones entre nodos (crear, eliminar o modular los pesos entre conexiones).
+
+\section{CPPN}
+
+falta aca
+
+\section{HYPERNEAT}
+
+Una extensión de NEAT, es el algoritmo de codificación generativa Hypercubo basado en Neuroevolución a través del Aumento de Topologías (HyperNEAT) \cite{hyperneat}. HyperNEAT es formado por dos redes neuronales: la red principal llamada substrato, y una segunda red neuronal NEAT usada para generar los pesos de las conexiones en el substrato. La topología del substrato es fija (no evoluciona), y está relacionada con la existencia de restricciones espaciales. El substrato está conformado por un número fijo de neuronas y capas: una capa de entrada, una capa de salida y capas intermedias; donde cada neurona de la red tiene una posición espacial asignada.
+
+Las conexiones entre neuronas del substrato son obtenidas a través de la segunda red neuronal implementada por NEAT. La red NEAT recibe como entrada la posición espacial de los nodos que van a ser conectados, representadas como coordenadas de una matriz abstracta (véase la Figura \ref{hyperneat}). La salida de la red NEAT corresponde al peso entre la conexión entre esas dos neuronas. Siguiendo esta implementación, HyperNEAT toma ventaja de las simetrías y regularidades en la geometría del substrato para resolver el problema planteado con sus restricciones espaciales.
+
+Información adicional puede ser usada como entrada de la red para realzar las características geométricas de la red implementada, como por ejemplo la distancia euclidiana entre neuronas.
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=1]{fig/usmLogo.png}
+\caption{Algoritmo HyperNEAT formado por dos redes neuronales distintas. La red principal `Substrato' conforma la red con información estructural y puede ser formada por muchas capas. Las conexiones de pesos entre neuronas en el Substrato son obtenidas usando la red neuronal secundaria implementada por NEAT.}
+\label{hyperneat}
+\end{figure}
+
+El beneficio de un cierto set de conexiones en la implementación de HyperNEAT es evaluada por una función de desempeño. El resultado del desempeño es posteriormente pasado a la red secundaria NEAT con el fin de evolucionar los pesos de las conexiones entre nodos. Se elige entonces el conjunto de pesos de conexiones dado el mejor valor de desempeño obtenido como una solución del problema de optimización.
+
