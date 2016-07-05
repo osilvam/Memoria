@@ -1,10 +1,48 @@
-CPPNs es un método de codificación que permite describir directamente relaciones estructurales de una topología a través de la composición de funciones.
+Un concepto base en la codificación en la naturaleza es que un pequeño número de genes pueden codificar un gran numero de subestructuras dentro de un fenotipo a través de la reutilización de genes. En biología, los genes en el AND representan estructuras extremadamente complejas con miles de millones de partes interconectadas. Sin embargo el ADN no posee miles de millones de genes, sino que de algún modo solo 30 mil genes codifican todo el cuerpo humano.
+
+La reutilización de genes se hace posible debido a que una estructura o fenotipo puede poseer un gran número de patrones, y estos patrones un sin número de regularidades, tal como ocurre en la naturaleza. De no existir regularidades no se hace posible reproducir distintas partes de una estructura a partir de la misma información, perdiendo gran ventaja en la codificación. 
+
+En el siguiente sección se introducirán importantes características del desarrollo de patrones.
+
+\subsection{DESARROLLO DE PATRONES}
+
+Identificar las características generales de los patrones presentes en la naturaleza es un pre-requisito importante para describir como esos patrones pueden ser generados algorítmicamente. A continuación se mencionaran características generales de patrones observados en organismos de la naturaleza que también puede buscarse en fenotipos evolucionado artificialmente.
+
+\begin{itemize}
+\item[\textbf{Repetición }] Múltiples instancias de la misma subestructura es un sello distintivo de los organismos biológicos. Desde las células de todo el cuerpo hasta las neuronas del cerebro, las mismas estructuras se repiten una y otra vez en un único organismo. La repetición en el fenotipo también se llama auto similitud.
+\item[\textbf{Repetición con variaciones }] Frecuentemente estructuras se encuentran repetidas pero no de forma completamente idénticas. Esto se ve de forma frecuente en toda la naturaleza, como por ejemplo en las vertebras de una columna o en los mismos dedos de una mano, cada una de sus componentes posee la misma estructura pero con distintas variaciones.
+\item[\textbf{Simetría }] A menudo las repeticiones ocurren a través de las simetrías, como cuando los lados derecho e izquierdo del cuerpo son idénticas, produciéndose una simetría bilateral.
+\item[\textbf{Simetría imperfecta }] Mientras que un tema simétrico general es observable en muchas estructuras biológicas, muchas veces no son perfectamente simétricas. Tal simetría imperfecta es una característica común de repetición con variaciones. El cuerpo humano es simétrico en general, pero no es equitativo en ambos lados; algunos órganos solo aparecen en uno de los lados, y un lado es generalmente dominante sobre el otro.
+\item[\textbf{Regularidades elaboradas }] Durante muchas generaciones, regularidades son a menudo elaboradas y mucho mas explotadas, como por ejemplo las aletas de los peces con simetría bilateral temprana que con el tiempo se convirtieron en los brazos y manos de mamíferos.
+\item[\textbf{Preservación de regularidades }] Durante generaciones, determinadas regularidades son estrictamente preservadas. Simetrías bilaterales no producen fácilmente simetrías de tres vías, y animales cuadrúpedos raramente producen crías con distinto numero de extremidades.
+\end{itemize}
+
+Usando esta lista, fenotipos y linajes producidos por codificaciones artificiales pueden ser analizados en base a características presentes naturalmente, dando una indicación de si una codificación particular esta capturando propiedades y capacidades esenciales de un desarrollo natural.
+
+La siguiente sección describe un proceso mediante el cual los patrones representados por un conjunto de genes pueden llegar a ser cada vez más complejos.
+
+\subsection{COMPLEJIFICACIÓN}
+
+EL proceso de complejificación permite a la evolución descubrir fenotipos más complejos de los que sería posible descubrir a través de la optimización de un conjunto fijo de genes. 
+
+En la búsqueda de la solución a un problema particular, cuya dimensión es desconocido a priori, mientras más dimensiones tenga el espacio de solución seleccionado, más difícil se hace descubrir esta solución. En otras palabras, soluciones mas complejas son mas difíciles de evolucionar que otras mas simples. Es por esto que se busca reducir la complejidad del espacio de búsqueda mediante la codificación de un fenotipo complejo en un genotipo de dimensiones significativamente menores.
+
+La razón de por qué la evolución puede superar el problema de la complejidad es que no se inicia la búsqueda en un espacio de la misma complejidad que la solución final. Nuevos genes son ocasionalmente añadidos al genoma, permitiendo a la evolución complejizar funciones por sobre el proceso de optimización. La complejificación permite a la evolución comenzar con fenotipos simples partiendo por un espacio de búsqueda dimensionalmente más pequeño para trabajar sobre este de manera incremental, opuesto a la idea de trabajar directamente a partir de sistemas más elaborados desde el comienzo.
+
+Nuevos genes comúnmente aparecen a través de duplicación de otros genes, que es un tipo espacial de mutación en donde uno o más genes de los padres son copiados en un genoma hijo más de una vez. El principal efecto de la duplicación de genes es el incremento de la dimensionalidad del genotipo, con lo que se podrán representar patrones fenotípicos cada vez más complejos. Por lo tanto, complejización y la codificación con reutilización de genes trabajan conjuntos para producir fenotipos complejos.
+
+\subsection{MÉTODO DE CODIFICACIÓN}
+
+``Compositional Pattern Producing Networks'' (CPPNs) es un método de codificación que permite describir directamente relaciones estructurales de una topología a través de una composición de funciones. Para esto es necesario poder describir dichas estructuras dentro de un sistema de coordenadas, y así usar dichas coordenadas para la codificación.
+
+Una manera natural de representar una composición de funciones es a través de un grafo de funciones interconectadas, como se muestra en la figura \ref{grafo}. Es así como un sistema de coordenadas inicial de una estructura puede ser provisto como entrada del grafo. El siguiente nivel de nodos puede ser visto como una descripción inicial del primer sistema de coordenadas de dicha estructura. Niveles mas elevados de nodos establecerán sistemas de coordenadas cada vez más refinados. Finalmente las salidas finales corresponden a las transformaciones de todas las capas anteriores, entregando una codificación del sistema de coordenadas provisto.
+
+Es interesante observar que un grafo de dicha composición es muy similar a una ANN con topología arbitraria. La única diferencia entre ambas es que las ANNs generalmente usan funciones sigmoides (y a veces funciones Gaussianas) como función de activación de cada nodo, mientras que un grafo puede usar cualquier variedad de funciones canónicas en cada nodo.
+
+Finalmente podemos referirnos a ``Compositional Pattern Producing Networks'' (CPPNs) para describir a una composición de funciones en forma de grafo que busca reproducir patrones regulares.
+
+\subsection{EVOLUCIONANDO CPPNs}
+
+
 
 Desde una perspectiva estructura CPPNs y ANNs son muy similares debido a que métodos designados para evolucionar ANNs también pueden evolucionar CPPNs. En particular, el método de ``NeuroEvolution of Augmenting Topologies'' (NEAT) es una buena opción para evolucionar CPPNs porque NEAT incrementa la complejidad de las redes a medida que evolucionan generación tras generación, permitiendo que se generen cada vez regularidades mas elaboradas.
-
-Un concepto base en la codificación en la naturaleza es que un pequeño numero de genes pueden codificar un gran numero de estructuras a través de la reutilización de genes.
-
-La reutilización de genes se hace posible debido a que una estructura puede poseer un gran número de regularidades, tal como ocurre en la naturaleza. De no existir regularidades no se hace posible reproducir distintas partes de una estructura a partir de la misma información, perdiendo gran ventaja en la codificación. 
-
-Identificar las caracteristicas generales de los patrones presentes en la naturaleza 
-
