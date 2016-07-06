@@ -2,31 +2,25 @@
 
 En este capítulo se presentará una introducción teórica de la herramienta de neuroevolución HyperNEAT y sus componentes, necesaria para la implementación de \(\tau\)-HyperNEAT.
 
-\section{COMPOSITIONAL PATTERN PRODUCING NETWORKS}
+\section{COMPOSITIONAL PATTERN PRODUCING NETWORKS (CPPNs)}
 
-La representación es uno de los elementos principales en la IA. Particularmente cuando un problema involucra búsquedas, una buena representación del espacio de solución puede hacer la diferencia entre éxito y fracaso. En computación evolutiva, como los genomas tradicionales de tamaño fijo y codificaciones directas alcanzan sus límites, la importancia de la representación se ha movido al frente de la investigación. %Mientras tanto, la biología sigue siendo una constante motivación que nos recuerda que tan lejos es posible llegar. 
+Un concepto base en la codificación en la naturaleza es que un pequeño número de genes pueden codificar un gran número de subestructuras dentro de un fenotipo a través de la reutilización de genes. En biología, los genes en el AND representan estructuras extremadamente complejas con miles de millones de partes interconectadas. Sin embargo el ADN no posee miles de millones de genes, sino que de algún modo solo 30 mil genes codifican todo el cuerpo humano.
 
-En biología, los genes en el ADN representan estructuras tremendamente complejas con miles de millones de partes interconectadas, tal como lo es el cerebro humano. Sin embargo el ADN no contiene miles de millones de genes, de echo, solo treinta mil genes codifican todo el cuerpo. Esta es la razón para creer que el descubrimiento de sistemas tan complejos como el de los seres humanos es solo posible a través de una extraordinariamente eficiente codificación, como se ve en la naturaleza. Un proceso clave en la codificación en la naturaleza es la reutilización de genes ya que el mismo gen puede ser activado en cualquier lugar y en cualquier momento en el proceso de desarrollo. Así un pequeño conjunto de genes puede codificar un conjunto mucho mas grande de componentes estructurales.
+La reutilización de genes se hace posible debido a que una estructura o fenotipo puede poseer un gran número de patrones, y estos patrones un sin número de regularidades, tal como ocurre en la naturaleza. De no existir regularidades no se hace posible reproducir distintas partes de una estructura a partir de la misma información, perdiendo gran ventaja en la codificación. 
 
-Esta observación ha inspirado un campo activo de investigación en la \textsl{codificacion de desarrollo} artificial. El objetivo es encontrar la correcta abstracción del desarrollo natural, por un computador corriendo un algoritmo evolutivo, de modo que pueda comenzar a descubrir la complejidad en una escala natural. Una faceta común de algunas abstracciones es que un estado de un componente individual del fenotipo en un momento del desarrollo afecta los estados de los componentes de la misma vecindad en el futuro, es decir, el desarrollo se despliega a través de interacciones locales. Debido a que ninguna abstracción se ha acercado hasta ahora a descubrir el nivel de complejidad visto en la naturaleza, sigue siendo de gran interés identificar las propiedades de abstracción que dan lugar a una codificación eficiente.
+En el siguiente sección se introducirán importantes características del desarrollo de patrones.
 
-El principal aporte detrás de ``Compositional Pattern Producing Networks'' (CPPNs), es que es posible describir directamente las relaciones estructurales que resultan de un proceso de desarrollo sin simular el proceso mismo. En su lugar, la descripción es codificada a través de una composición de funciones, cada una de estas basadas en el patrón de gradientes observado en embriones en la naturaleza.
+\subsection{DESARROLLO DE PATRONES}
 
-Desde una perspectiva estructura CPPNs y ANNs son muy similares debido a que métodos designados para evolucionar ANNs también pueden evolucionar CPPNs. En particular, el método de ``NeuroEvolution of Augmenting Topologies'' (NEAT) es una buena opción para evolucionar CPPNs porque NEAT incrementa la complejidad de las redes a medida que evolucionan generación tras generación, permitiendo que se generen cada vez regularidades mas elaboradas.
-
-En el siguiente sección se introducirán importantes características de patrones de desarrollo.
-
-\subsection{PATRONES DE DESARROLLO}
-
-El desarrollo produce patrones y la evolución produce secuencias de patrones generación tras generación. Los patrones incluyen regularidades y las regularidades son las que hacen posible una reutilización en la codificación. Sin regularidad, la misma información no puede producir distintas partes de un mismo fenotipo, reduciendo mucho las ventajas del desarrollo. A continuación se mencionaran características generales de patrones observados en organismos de la naturaleza que también puede buscarse en fenotipos evolucionado artificialmente.
+Identificar las características generales de los patrones presentes en la naturaleza es un prerrequisito importante para describir como esos patrones pueden ser generados algorítmicamente. A continuación se mencionarán características generales de patrones observados en organismos de la naturaleza que también puede buscarse en fenotipos evolucionado artificialmente.
 
 \begin{itemize}
-\item[\textbf{Repetición }] Múltiples instancias de la misma subestructura es un sello distintivo de los organismos biológicos. Desde las células de todo el cuerpo hasta las neuronas del cerebro, las mismas estructuras se repiten una y otra vez en un único organismo. La repetición en el fenotipo también se llama auto similitud.
-\item[\textbf{Repetición con variaciones }] Frecuentemente estructuras se encuentran repetidas pero no de forma completamente idénticas. Esto se ve de forma frecuente en toda la naturaleza, como por ejemplo en las vertebras de una columna o en los mismos dedos de una mano, cada una de sus componentes posee la misma estructura pero con distintas variaciones.
-\item[\textbf{Simetría }] A menudo las repeticiones ocurren a través de las simetrías, como cuando los lados derecho e izquierdo del cuerpo son idénticas, produciéndose una simetría bilateral.
-\item[\textbf{Simetría imperfecta }] Mientras que un tema simétrico general es observable en muchas estructuras biológicas, muchas veces no son perfectamente simétricas. Tal simetría imperfecta es una característica común de repetición con variaciones. El cuerpo humano es simétrico en general, pero no es equitativo en ambos lados; algunos órganos solo aparecen en uno de los lados, y un lado es generalmente dominante sobre el otro.
-\item[\textbf{Regularidades elaboradas }] Durante muchas generaciones, regularidades son a menudo elaboradas y mucho mas explotadas, como por ejemplo las aletas de los peces con simetría bilateral temprana que con el tiempo se convirtieron en los brazos y manos de mamíferos.
-\item[\textbf{Preservación de regularidades }] Durante generaciones, determinadas regularidades son estrictamente preservadas. Simetrías bilaterales no producen fácilmente simetrías de tres vías, y animales cuadrúpedos raramente producen crías con distinto numero de extremidades.
+\item \textbf{Repetición } Múltiples instancias de la misma subestructura es un sello distintivo de los organismos biológicos. Desde las células de todo el cuerpo hasta las neuronas del cerebro, las mismas estructuras se repiten una y otra vez en un único organismo. La repetición en el fenotipo también se llama auto similitud.
+\item \textbf{Repetición con variaciones } Frecuentemente estructuras se encuentran repetidas pero no de forma completamente idénticas. Esto se ve de forma frecuente en toda la naturaleza, como por ejemplo en las vertebras de una columna o en los mismos dedos de una mano, cada una de sus componentes posee la misma estructura pero con distintas variaciones.
+\item \textbf{Simetría } A menudo las repeticiones ocurren a través de las simetrías, como cuando los lados derecho e izquierdo del cuerpo son idénticas, produciéndose una simetría bilateral.
+\item \textbf{Simetría imperfecta } Mientras que un tema simétrico general es observable en muchas estructuras biológicas, muchas veces no son perfectamente simétricas. Tal simetría imperfecta es una característica común de repetición con variaciones. El cuerpo humano es simétrico en general, pero no es equitativo en ambos lados; algunos órganos solo aparecen en uno de los lados, y un lado es generalmente dominante sobre el otro.
+\item \textbf{Regularidades elaboradas } Durante muchas generaciones, regularidades son a menudo elaboradas y mucho mas explotadas, como por ejemplo las aletas de los peces con simetría bilateral temprana que con el tiempo se convirtieron en los brazos y manos de mamíferos.
+\item \textbf{Preservación de regularidades } Durante generaciones, determinadas regularidades son estrictamente preservadas. Simetrías bilaterales no producen fácilmente simetrías de tres vías, y animales cuadrúpedos raramente producen crías con distinto numero de extremidades.
 \end{itemize}
 
 Usando esta lista, fenotipos y linajes producidos por codificaciones artificiales pueden ser analizados en base a características presentes naturalmente, dando una indicación de si una codificación particular esta capturando propiedades y capacidades esenciales de un desarrollo natural.
@@ -37,65 +31,60 @@ La siguiente sección describe un proceso mediante el cual los patrones represent
 
 EL proceso de complejificación permite a la evolución descubrir fenotipos más complejos de los que sería posible descubrir a través de la optimización de un conjunto fijo de genes. 
 
-En la búsqueda de la solución a un problema particular, cuya dimensión es desconocido a priori, mientras más dimensiones tenga el espacio de solución seleccionado, más difícil se hace descubrir esta solución. En otras palabras, soluciones mas complejas son mas difíciles de evolucionar que otras mas simples. Codificaciones de desarrollo intentan reducir la complejidad del espacio de búsqueda mediante la codificación de un fenotipo complejo en un genotipo de dimensiones significativamente menores.
+En la búsqueda de la solución a un problema particular, cuya dimensión es desconocida a priori, mientras más dimensiones tenga el espacio de solución seleccionado, más difícil se hace descubrir esta solución. En otras palabras, soluciones más complejas son más difíciles de evolucionar que otras mas simples. Es por esto que se busca reducir la complejidad del espacio de búsqueda mediante la codificación de un fenotipo complejo en un genotipo de dimensiones significativamente menores.
 
-Sin embargo esta reducción no elimina el problema de dimensionalidad, ya que aun se necesitan de miles de genes para representar fenotipos con altos grados de complejidad, y a pesar de que la compresión entre el genotipo y el fenotipo es realmente substancial, el espacio de búsqueda del genotipo aun sigue siendo prohibitivamente complejo para su búsqueda directa.
+La razón de por qué la evolución puede superar el problema de la complejidad es que no se inicia la búsqueda en un espacio de la misma complejidad que la solución final. Nuevos genes son ocasionalmente añadidos al genoma, permitiendo a la evolución complejizar funciones por sobre el proceso de optimización. La complejificación permite a la evolución comenzar con fenotipos simples partiendo por un espacio de búsqueda dimensionalmente más pequeño para trabajar sobre este de manera incremental, opuesto a la idea de trabajar directamente a partir de sistemas más elaborados desde el comienzo.
 
-La razón de por qué la evolución puede superar el problema de la complejidad es que no se inicia la búsqueda en un espacio de la misma complejidad que la solución final. Nuevos genes son ocasionalmente añadidos al genoma, permitiendo a la evolución complejizar funciones por sobre el proceso de optimización. La complejificación permite a la evolución comenzar con fenotipos simples partiendo por un espacio de busqueda dimensionalmente más pequeño para trabajar sobre este de manera incremental, opuesto a la idea de trabajar directamente a partir de sistemas más elaborados desde el comienzo.
+Nuevos genes comúnmente aparecen a través de duplicación de otros genes, que es un tipo especial de mutación en donde uno o más genes de los padres son copiados en un genoma hijo más de una vez. El principal efecto de la duplicación de genes es el incremento de la dimensionalidad del genotipo, con lo que se podrán representar patrones fenotípicos cada vez más complejos. Por lo tanto, complejización y la codificación con reutilización de genes trabajan conjuntos para producir fenotipos complejos.
 
-Este proceso de añadir nuevos genes de manera gradual es confirmado por la evolución en la naturaleza y ha demostrado una mejora en la adaptación. Nuevos genes comúnmente aparecen a través de duplicación de otros genes, que es un tipo espacial de mutación en donde uno o más genes de los padres son copiados en un genoma hijo más de una vez. La duplicación de genes ha sido responsable de las innovaciones clave en la morfología general del cuerpo a lo largo de la evolución natural. El principal efecto de la duplicación de genes es el incremento de la dimensionalidad del genotipo, con lo que se podrán representar patrones fenotípicos cada vez más complejos. Por lo tanto, complejización y la codificación de desarrollo trabajan conjuntos para producir fenotipos complejos.
+\subsection{MÉTODO DE CODIFICACIÓN}
 
+``Compositional Pattern Producing Networks'' (CPPNs) es un método de codificación que permite describir directamente relaciones estructurales de una topología a través de una composición de 		funciones. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- La siguiente sección describe el método  NEAT.
-
-%HyperNEAT utiliza una codificación llamada ``Compositional Pattern Producing Networks'' (connective CPPNs), el cual puede representar patrones de conectividad como función del espacio cartesiano. Específicamente, connective CPPNs representa patrones dentro de un hiperespacio que es mapeado a un patron de conectividad dimensionalmente mas pequeño. De esta manera connective CPPNs evolucionado con HyperNEAT puede codificar redes neuronales artificiales de gran escala para descubrir regularidades a lo largo sus dimensiones geométricas motivado por la evolución de cerebros biológicos en la naturaleza.
-%
-
-
-\section{NEUROEVOLUTION OF AUGMENTING TOPOLOGIES}
-
-``NeuroEvolution of Augmenting Topologies'' (NEAT) \cite{neat} usa algoritmos genéticos para hacer evolucionar la topología y los pesos entre conexiones de una red neuronal de acuerdo a una función de desempeño. Debido al fundamento que tienen los algoritmos genéticos, NEAT hace evolucionar la red neuronal en base al individuo más fuerte (de mejor desempeño), teniendo una gran probabilidad de crear una nueva generación de individuos o redes neuronales, y así preservar la especie.
-
-Una de las principales ventajas de NEAT, comparada con otros tipos de redes neuronales, es que la estructura inicial de la red (topología) no es necesaria, pero es encontrada a través del proceso de neuroevolución del algoritmo mismo. Cada red NEAT es codificada por un genoma, como se muestra en la Figura \ref{genoma}, en donde la red es representada por Genes de Nodo y Genes de Conexión, representando a neuronas y conexiones respectivamente. Cada Nodo o Conexión tiene un único numero Id de innovación, el cual se preserva si el Nodo o Conexión es removido (como resultado de la evolución) o creado nuevamente.
+Con el fin de poder codificar un fenotipo determinado es que ayuda concebirlo como una distribución de puntos en un espacio cartesiano multidimensional. Visto de esta manera, un fenotipo puede ser descrito como una función de dimension \textit{n}, donde \textit{n} es el número de dimensiones en el mundo físico. Para cada coordenada, la presencia o ausencia de un punto es una salida de la función que define el fenotipo. La figura \ref{mapfenotipo} muestra como un fenotipo bidimensional puede ser generado a través de una función de dos parámetros
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{fig/usmLogo.png}
-\caption{Ejemplo de Genoma usado en NEAT para codificar la red neuronal mostrada a su derecha.}
-\label{genoma}
+\includegraphics[width=0.8\textwidth]{fig/mapfenotipo.png}
+\caption{\textbf{Una función produce un fenotipo. } La funcion \textit{f} toma los argumentos \textit{x} e \textit{y}, las cuales son coordenadas en un espacio bidimensional. Cuando todas las coordenadas son dibujadas con una intensidad correspondiente a la salida de la función \textit{f}, el resultado es un patrón, el cual puede ser visto como un fenotipo cuyo genotipo es \textit{f}. En este ejemplo, \textit{f} produce un fenotipo triangular.}
+\label{mapfenotipo}
 \end{figure}
 
-La evolución del genoma que forma la red NEAT es impulsado por su desempeño dada una función de desempeño determinada. La función de desempeño determina la probabilidad de reproducción de un genoma en específico. Los hijos generados por el mecanismo de reproducción conservará los nodos y conexiones del padre y aleatoriamente cambiará los pesos de sus conexiones. Si una conexión solo proviene de uno de los padres, esta es heredada instantáneamente. Una especie es obtenida cuando un grupo de redes neuronales comparten similitudes entre ellas, esto es cuando, la distancia entre ellos está bajo un umbral (el cual depende de la topología de la red y los pesos de las conexiones). Redes neuronales pertenecientes a una misma especie tienen una alta probabilidad de convertirse en padres de una nueva población de redes neuronales. Similarmente a los algoritmos genéticos, la variabilidad en el proceso de reproducción en redes NEAT es dado por mutaciones. Aquí las mutaciones permiten la creación de nuevos nodos y la modificación de conexiones entre nodos (crear, eliminar o modular los pesos entre conexiones).
-
-\section{HYPERNEAT}
-
-Una extensión de NEAT, es el algoritmo de codificación generativa Hypercubo basado en Neuroevolución a través del Aumento de Topologías (HyperNEAT) \cite{hyperneat}. HyperNEAT es formado por dos redes neuronales: la red principal llamada substrato, y una segunda red neuronal NEAT usada para generar los pesos de las conexiones en el substrato. La topología del substrato es fija (no evoluciona), y está relacionada con la existencia de restricciones espaciales. El substrato está conformado por un número fijo de neuronas y capas: una capa de entrada, una capa de salida y capas intermedias; donde cada neurona de la red tiene una posición espacial asignada.
-
-Las conexiones entre neuronas del substrato son obtenidas a través de la segunda red neuronal implementada por NEAT. La red NEAT recibe como entrada la posición espacial de los nodos que van a ser conectados, representadas como coordenadas de una matriz abstracta (véase la Figura \ref{hyperneat}). La salida de la red NEAT corresponde al peso entre la conexión entre esas dos neuronas. Siguiendo esta implementación, HyperNEAT toma ventaja de las simetrías y regularidades en la geometría del substrato para resolver el problema planteado con sus restricciones espaciales.
-
-Información adicional puede ser usada como entrada de la red para realzar las características geométricas de la red implementada, como por ejemplo la distancia euclidiana entre neuronas.
+Una manera natural de representar una composición de funciones es a través de un grafo de funciones interconectadas, como se muestra en la figura \ref{grafo}. Es así como el sistema de coordenadas inicial de una estructura puede ser provisto como entrada del grafo. El siguiente nivel de nodos puede ser visto como una descripción inicial del primer sistema de coordenadas de dicha estructura. Niveles mas elevados de nodos establecerán sistemas de coordenadas cada vez más refinados. Finalmente las salidas finales corresponden a las transformaciones de todas las capas anteriores, entregando una codificación del sistema de coordenadas provisto.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=1]{fig/usmLogo.png}
-\caption{Algoritmo HyperNEAT formado por dos redes neuronales distintas. La red principal `Substrato' conforma la red con información estructural y puede ser formada por muchas capas. Las conexiones de pesos entre neuronas en el Substrato son obtenidas usando la red neuronal secundaria implementada por NEAT.}
-\label{hyperneat}
+\includegraphics[width=0.5\textwidth]{fig/grafo.png}
+\caption{\textbf{Composición de funciones en forma de grafo. } El grafo determina cual función esta conectada con cual. A cada conexión se le asigna un peso, el cual multiplica a la salida de la función del nodo entrante. Si múltiples conexiones entran a una misma función, esta recibe como entrada la suma de las salidas de cada una de las funciones entrantes multiplicadas por sus respectivos pesos de conexión. Se debe tener en cuenta que la topología no tiene restricciones y puede representar cualquier relación posible. Esta representación es similar al formalismo de las ANNs tradicionales con funciones de activación y topologías arbitrarias.}
+\label{grafo}
 \end{figure}
 
-El beneficio de un cierto set de conexiones en la implementación de HyperNEAT es evaluada por una función de desempeño. El resultado del desempeño es posteriormente pasado a la red secundaria NEAT con el fin de evolucionar los pesos de las conexiones entre nodos. Se elige entonces el conjunto de pesos de conexiones dado el mejor valor de desempeño obtenido como una solución del problema de optimización.
+Es interesante observar que un grafo de dicha composición es muy similar a una ANN con topología arbitraria. La única diferencia entre ambas es que las ANNs generalmente usan funciones sigmoides (y a veces funciones Gaussianas) como función de activación de cada nodo, mientras que un grafo puede usar cualquier variedad de funciones canónicas en cada nodo.
 
+Finalmente podemos referirnos a ``Compositional Pattern Producing Networks'' (CPPNs) para describir a una composición de funciones en forma de grafo que busca reproducir patrones regulares.
+
+\subsection{EVOLUCIONANDO CPPNs}
+
+Casualmente CPPNs y ANNs son prácticamente lo mismo desde una perspectiva estructural. Muchos métodos para evolucionar topologías y pesos de conexión en ANNs ya existen, por lo que es posible extender de manera fácil estos métodos para evolucionar CPPNs añadiendo pequeños cambios. También hay métodos para evolucionar programas genéticos, los cuales pueden ser muy similares a CPPNs.
+
+Anteriormente se describió una propiedad esencial de la evolución en la naturaleza que describe la gradual complejificación del genoma. La idea principal es iniciar con un pequeño genoma al cual se le añaden nuevos genes en el trascurso de la evolución. En CPPNs esto significa que se añadirán nuevas conexiones o nodos de funciones a la red, permitiendo así complejificar la red para poder establecer regularidades fundamentales en los principios de su desarrollo para luego hacerlas más elaboradas a lo largo de la evolución.
+
+El método a usar para evolucionar las CPPNs será ``NeuroEvolution of Augmenting Topologies'' (NEAT). NEAT es capaz de evolucionar ANNs increíblemente complejas a lo largo de generaciones, y sobrellevar los desafíos que conlleva evolucionar una gran población de redes de diversas topologías mediante el uso de marcas históricas. Ya que NEAT comienza trabajando sobre redes pequeñas y solo expande su espacio de solución cuando logra un beneficio de esta expansión, se vuelve capaz de encontrar ANNs significativamente mas complejas, de forma contraria a métodos que evolucionan topologías fijas.
+
+A pesar de que NEAT originalmente fue diseñado para evolucionar ANNs, solo se requiere de pequeñas modificaciones para evolucionar CPPNs, ya que como se mencionó, estas son muy similares.
+
+\section{CPPN-NEAT}
+
+Esta sección explica cómo NEAT puede evolucionar CPPNs.
+
+Mientras que anteriores métodos propuestos para evolucionar ANNs (métodos de neuroevolución) con topologías fijas o generadas arbitrariamente de forma aleatoria; NEAT es la primera que inicia la evolución a partir de una población de pequeñas y simples redes neuronales, aumentando su complejidad a lo largo de las generaciones, destacando un comportamiento cada vez más sofisticado.
+
+Antes de describir como extender el algoritmo NEAT para evolucionar CPPNs es necesario describir las tres ideas principales de las cuales NEAT se basa. Primero, con el fin de permitir que las estructuras de las redes se complejifiquen a través de las generaciones se hace necesario un método para realizar un seguimiento de qué gen es cuál. De otra forma no es claro en posteriores generaciones cual individuo es compatible con cual, o como estos genes pueden ser combinados para producir genes hijos. NEAT soluciona este problema asignando una marca histórica única a cada nueva pieza de la estructura de la red que aparezca a través de mutaciones estructurales. La marca histórica es un número asignado a cada gen correspondiente a su orden de aparición durante el curso de la evolución. Estos números son heredados durante el entrecruzamiento sin cambios, y permitiendo a NEAT realizar entrecruzamientos de genes sin la necesidad de un costoso análisis topológico. De esta forma, genomas con diferentes estructuras o tamaños mantienen la compatibilidad a lo largo de la evolución, solucionando el problema planteado anteriormente de comparación de diferentes topologías en una población en evolución.
+
+Segundo, NEAT separa en especies a los individuos de una población, por lo que los organismos compiten principalmente dentro de sus propios nichos en lugar de con toda la población. De esta manera las innovaciones topológicas en los genes son protegidas y se les da tiempo para que optimicen sus estructuras antes de competir con otros nichos dentro de la población. NEAT utiliza las marcas históricas en genes para determinar a qué especies pertenecen diferentes individuos.
+
+Tercero, otros sistemas que evolucionan redes con topologías con nodos interconectados con pesos o costos en sus conexiones comienzan una evolución con una población con topologías aleatorias.  NEAT al contrario, comienza con una población uniforme de redes simples sin capas intermedias, difiriendo solo en los pesos de sus conexiones inicializados aleatoriamente. Diversas topologías se acumulan gradualmente durante la evolución, lo que permite diversos y complejos patrones fenotípicos para ser representados. No esta indicado un límite del tamaño que puede llegar a alcanzar una topología. Así, NEAT puede iniciar la evolución desde una estructura mínima, y aumentar el tamaño de la estructura sobre un número determinado de generaciones.
+
+Nuevas estructuras son introducidas como ocurrencias de mutaciones estructurales, y solo sobrevivirán si es que resultan ser beneficiosas a través del cálculo de su desempeño. De este modo, otra ventaja de la complejificación es que NEAT busca a través de las soluciones dimensionalmente mas pequeñas, reduciendo significativamente el número de generaciones necesarias para encontrar la solución, y asegurando que la red no se volverá mas compleja de lo necesario. En efecto, entonces, NEAT realiza una búsqueda de una solución compacta y apropiada a través del incremento de la complejidad de estructuras ya existentes.
+
+CPPN-NEAT es una extensión de NEAT que permite evolucionar CPPNs. Mientras que redes en el método NEAT original solo incluían nodos intermedios con funciones de activación sigmoides, los nodos en CPPN-NEAT son creados asignándoles aleatoriamente una función de activación proveniente de un grupo canónico determinado de funciones (por ejemplo incluyendo la función Gausiana, Sigmoide, y funciones periódicas). Además se define la función de distancia de compatibilidad para determinar si dos redes pertenecen a la misma especie, la cual incluye la información de por cuantas funciones de activación difieren dos individuos distintos. Esta característica permite que la separación de los individuos en especies tome en cuenta el número de funciones de activación que difieren entre individuos. Ya que CPPN-NEAT es una mejora de un preexistente efectivo método de neuroevolución, proporciona una base fiable para el estudio de la evolución de formas cada vez mas complejas. 
