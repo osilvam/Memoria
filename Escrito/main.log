@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  5 JUL 2016 20:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  8 JUL 2016 20:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -330,6 +330,28 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen138
+\captionmargin@=\dimen139
+\captionwidth=\dimen140
+\caption@tempdima=\dimen141
+\caption@indent=\dimen142
+\caption@parindent=\dimen143
+\caption@hangindent=\dimen144
+)
+\c@ContinuedFloat=\count121
+Package caption Info: float package is loaded.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count122
+\c@subtable=\count123
 ) (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
@@ -337,38 +359,38 @@ LaTeX Info: Redefining \% on input line 6.
 (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux) (./referencias.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
-LaTeX Font Info:    ... okay on input line 44.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 44.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 45.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Info: Redefining \. on input line 44.
-LaTeX Info: Redefining \% on input line 44.
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
-\scratchdimen=\dimen138
+\scratchcounter=\count124
+\scratchdimen=\dimen145
 \scratchbox=\box57
-\nofMPsegments=\count122
-\nofMParguments=\count123
+\nofMPsegments=\count125
+\nofMParguments=\count126
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count124
-\MPscratchDim=\dimen139
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
+\MPscratchCnt=\count127
+\MPscratchDim=\dimen146
+\MPnumerator=\count128
+\makeMPintoPDFobject=\count129
 \everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -450,23 +472,25 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
 <fig/usmLogo.png, id=1, 201.75375pt x 163.3603pt>
 File: fig/usmLogo.png Graphic file (type png)
  <use fig/usmLogo.png>
-Package pdftex.def Info: fig/usmLogo.png used on input line 55.
+Package pdftex.def Info: fig/usmLogo.png used on input line 56.
 (pdftex.def)             Requested size: 166.44879pt x 134.7739pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
-LaTeX Font Info:    Try loading font information for U+msa on input line 60.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
+LaTeX Font Info:    Try loading font information for U+msa on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 60.
+LaTeX Font Info:    Try loading font information for U+msb on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -515,12 +539,12 @@ Package pdftex.def Info: fig/usmLogo.png used on input line 7.
 
 
 
-] [11] [12] [13] [14] [15]
+] [11] [12] [13] [14]
 File: fig/usmLogo.png Graphic file (type png)
  <use fig/usmLogo.png>
 Package pdftex.def Info: fig/usmLogo.png used on input line 92.
 (pdftex.def)             Requested size: 201.75325pt x 163.3599pt.
-
+ [15]
 Overfull \hbox (2.91568pt too wide) in paragraph at lines 104--105
 []\OT1/ptm/m/n/12 El es-pa-cio de es-ta-dos dis-cre-to au-men-ta de for-ma con-
 si-de-ra-ble con-for-me el n[]ume-
@@ -544,17 +568,158 @@ Cap\'{\i }tulo 3.
 File: fig/mapfenotipo.png Graphic file (type png)
 
 <use fig/mapfenotipo.png>
-Package pdftex.def Info: fig/mapfenotipo.png used on input line 48.
+Package pdftex.def Info: fig/mapfenotipo.png used on input line 46.
 (pdftex.def)             Requested size: 327.54945pt x 146.93333pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 49.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
  [26]
-<fig/grafo.png, id=112, 387.4475pt x 398.48875pt>
+<fig/compfunciones.png, id=115, 793.96625pt x 645.41125pt>
+File: fig/compfunciones.png Graphic file (type png)
+
+<use fig/compfunciones.png>
+Package pdftex.def Info: fig/compfunciones.png used on input line 57.
+(pdftex.def)             Requested size: 327.54945pt x 266.26497pt.
+ [27 <./fig/mapfenotipo.png>]
+<fig/grafo.png, id=119, 387.4475pt x 398.48875pt>
 File: fig/grafo.png Graphic file (type png)
  <use fig/grafo.png>
-Package pdftex.def Info: fig/grafo.png used on input line 57.
+Package pdftex.def Info: fig/grafo.png used on input line 68.
 (pdftex.def)             Requested size: 204.71762pt x 210.5535pt.
- [27 <./fig/mapfenotipo.png>] [28 <./fig/grafo.png>] [29] [30]) [31]
+ [28 <./fig/compfunciones.png>] [29 <./fig/grafo.png>] [30] [31] [32] [33]
+<fig/hyperneat.png, id=140, 496.85625pt x 264.99pt>
+File: fig/hyperneat.png Graphic file (type png)
+ <use fig/hyperneat.png>
+Package pdftex.def Info: fig/hyperneat.png used on input line 121.
+(pdftex.def)             Requested size: 327.54945pt x 174.6958pt.
+
+[34 <./fig/hyperneat.png>]
+<fig/patronescppn1.png, id=144, 140.525pt x 140.525pt>
+File: fig/patronescppn1.png Graphic file (type png)
+
+<use fig/patronescppn1.png>
+Package pdftex.def Info: fig/patronescppn1.png used on input line 136.
+(pdftex.def)             Requested size: 100.31293pt x 100.31378pt.
+
+<fig/patronescppn2.png, id=145, 140.525pt x 140.525pt>
+File: fig/patronescppn2.png Graphic file (type png)
+
+<use fig/patronescppn2.png>
+Package pdftex.def Info: fig/patronescppn2.png used on input line 143.
+(pdftex.def)             Requested size: 100.31293pt x 100.31378pt.
+
+<fig/patronescppn3.png, id=146, 140.525pt x 140.525pt>
+File: fig/patronescppn3.png Graphic file (type png)
+
+<use fig/patronescppn3.png>
+Package pdftex.def Info: fig/patronescppn3.png used on input line 150.
+(pdftex.def)             Requested size: 100.31293pt x 100.31378pt.
+
+<fig/patronescppn4.png, id=147, 140.525pt x 140.525pt>
+File: fig/patronescppn4.png Graphic file (type png)
+
+<use fig/patronescppn4.png>
+Package pdftex.def Info: fig/patronescppn4.png used on input line 157.
+(pdftex.def)             Requested size: 100.31293pt x 100.31378pt.
+ [35 <./fig/patronescppn1.png> <./fig/patronescppn2.png> <./fig/patronescppn3.p
+ng> <./fig/patronescppn4.png>]
+<fig/substrateconf1.png, id=151, 180.675pt x 200.75pt>
+File: fig/substrateconf1.png Graphic file (type png)
+
+<use fig/substrateconf1.png>
+Package pdftex.def Info: fig/substrateconf1.png used on input line 179.
+(pdftex.def)             Requested size: 100.31293pt x 111.46043pt.
+
+<fig/substrateconf2.png, id=152, 180.675pt x 200.75pt>
+File: fig/substrateconf2.png Graphic file (type png)
+
+<use fig/substrateconf2.png>
+Package pdftex.def Info: fig/substrateconf2.png used on input line 186.
+(pdftex.def)             Requested size: 100.31293pt x 111.46043pt.
+
+<fig/substrateconf3.png, id=153, 180.675pt x 200.75pt>
+File: fig/substrateconf3.png Graphic file (type png)
+
+<use fig/substrateconf3.png>
+Package pdftex.def Info: fig/substrateconf3.png used on input line 193.
+(pdftex.def)             Requested size: 100.31293pt x 111.46043pt.
+
+<fig/substrateconf4.png, id=154, 180.675pt x 200.75pt>
+File: fig/substrateconf4.png Graphic file (type png)
+
+<use fig/substrateconf4.png>
+Package pdftex.def Info: fig/substrateconf4.png used on input line 200.
+(pdftex.def)             Requested size: 100.31293pt x 111.46043pt.
+
+Overfull \hbox (23.64445pt too wide) in paragraph at lines 208--209
+\OT1/ptm/m/n/12 sio-na-les por la re-pre-sen-ta-ci[]on es-pa-cial de pa-tro-nes
+ de la fun-ci[]on $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x[]; y[]; z[]; x[]; y[];
+ z[]\OT1/cmr/m/n/12 )$
+ []
+
+[36] [37 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrate
+conf3.png> <./fig/substrateconf4.png>]
+<fig/posio1.png, id=161, 181.67876pt x 161.60374pt>
+File: fig/posio1.png Graphic file (type png)
+ <use fig/posio1.png>
+Package pdftex.def Info: fig/posio1.png used on input line 226.
+(pdftex.def)             Requested size: 122.83182pt x 109.26276pt.
+
+<fig/posio2.png, id=162, 183.68625pt x 170.6375pt>
+File: fig/posio2.png Graphic file (type png)
+ <use fig/posio2.png>
+Package pdftex.def Info: fig/posio2.png used on input line 233.
+(pdftex.def)             Requested size: 122.83182pt x 114.1078pt.
+
+<fig/posio3.png, id=163, 180.675pt x 166.6225pt>
+File: fig/posio3.png Graphic file (type png)
+ <use fig/posio3.png>
+Package pdftex.def Info: fig/posio3.png used on input line 240.
+(pdftex.def)             Requested size: 122.83182pt x 113.27892pt.
+ [38 <./fig/posio1.png> <./fig/posio2.png> <./fig/posio3.png>]
+<fig/substrateres1.png, id=168, 200.75pt x 200.75pt>
+File: fig/substrateres1.png Graphic file (type png)
+
+<use fig/substrateres1.png>
+Package pdftex.def Info: fig/substrateres1.png used on input line 260.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+
+<fig/substrateres2.png, id=169, 200.75pt x 200.75pt>
+File: fig/substrateres2.png Graphic file (type png)
+
+<use fig/substrateres2.png>
+Package pdftex.def Info: fig/substrateres2.png used on input line 267.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+
+<fig/substrateres3.png, id=170, 200.75pt x 200.75pt>
+File: fig/substrateres3.png Graphic file (type png)
+
+<use fig/substrateres3.png>
+Package pdftex.def Info: fig/substrateres3.png used on input line 274.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+
+<fig/substrateres4.png, id=171, 200.75pt x 200.75pt>
+File: fig/substrateres4.png Graphic file (type png)
+
+<use fig/substrateres4.png>
+Package pdftex.def Info: fig/substrateres4.png used on input line 282.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+
+<fig/substrateres5.png, id=172, 200.75pt x 200.75pt>
+File: fig/substrateres5.png Graphic file (type png)
+
+<use fig/substrateres5.png>
+Package pdftex.def Info: fig/substrateres5.png used on input line 289.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+
+<fig/substrateres6.png, id=173, 200.75pt x 200.75pt>
+File: fig/substrateres6.png Graphic file (type png)
+
+<use fig/substrateres6.png>
+Package pdftex.def Info: fig/substrateres6.png used on input line 296.
+(pdftex.def)             Requested size: 122.83182pt x 122.83408pt.
+ [39] [40 <./fig/substrateres1.png> <./fig/substrateres2.png> <./fig/substrater
+es3.png> <./fig/substrateres4.png> <./fig/substrateres5.png> <./fig/substratere
+s6.png>]) [41]
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -563,36 +728,41 @@ Underfull \hbox (badness 1152) in paragraph at lines 4--5
  Ar-ti-fi-cial Li-fe,
  []
 
-[32
+[42
 
 
 
-]) [33] (./main.aux
+]) [43] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
 (./referencias.aux)) ) 
 Here is how much of TeX's memory you used:
- 5556 strings out of 493304
- 73159 string characters out of 6139871
- 164922 words of memory out of 5000000
- 8841 multiletter control sequences out of 15000+600000
- 33514 words of font info for 69 fonts, out of 8000000 for 9000
+ 6785 strings out of 493304
+ 95978 string characters out of 6139871
+ 186972 words of memory out of 5000000
+ 10043 multiletter control sequences out of 15000+600000
+ 36076 words of font info for 77 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,1483b,372s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,43p,1483b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (38 pages, 257481 bytes).
+c}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmri8a.pfb>
+Output written on main.pdf (48 pages, 469146 bytes).
 PDF statistics:
- 169 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 239 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

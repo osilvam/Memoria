@@ -39,20 +39,31 @@ Nuevos genes comúnmente aparecen a través de duplicación de otros genes, que es 
 
 \subsection{MÉTODO DE CODIFICACIÓN}
 
-``Compositional Pattern Producing Networks'' (CPPNs) es un método de codificación que permite describir directamente relaciones estructurales de una topología a través de una composición de 		funciones. 
-
 Con el fin de poder codificar un fenotipo determinado es que ayuda concebirlo como una distribución de puntos en un espacio cartesiano multidimensional. Visto de esta manera, un fenotipo puede ser descrito como una función de dimension \textit{n}, donde \textit{n} es el número de dimensiones en el mundo físico. Para cada coordenada, la presencia o ausencia de un punto es una salida de la función que define el fenotipo. La figura \ref{mapfenotipo} muestra como un fenotipo bidimensional puede ser generado a través de una función de dos parámetros
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.8\textwidth]{fig/mapfenotipo.png}
 \caption{\textbf{Una función produce un fenotipo. } La funcion \textit{f} toma los argumentos \textit{x} e \textit{y}, las cuales son coordenadas en un espacio bidimensional. Cuando todas las coordenadas son dibujadas con una intensidad correspondiente a la salida de la función \textit{f}, el resultado es un patrón, el cual puede ser visto como un fenotipo cuyo genotipo es \textit{f}. En este ejemplo, \textit{f} produce un fenotipo triangular.}
 \label{mapfenotipo}
 \end{figure}
 
+Considere una distribución de puntos o marco de coordenadas en un eje cartesiano de izquierda a derecha, donde la concentración de puntos aumenta hacia la derecha. Las coordenadas de estos puntos a lo largo del eje podrían estar definidas simplemente por una función $f(x)=x$. Si consideramos una distribución de puntos en donde estos estuvieran concentrados hacia el punto medio de ambos extremos y que disminuyen su concentración a medida que se acercan a los extremos, tal como se presentaría una simetría bilateral, esta podría ser descrita simplemente como una función Gaussiana $g(x) = \dfrac{1}{\sigma \sqrt{2\pi}}e^{-(x-\mu)^{2}/2 \sigma^{2}}$. Si se quisiera representar segmentación, podría hacerse a través de funciones periódicas. La función $h(x) = sin(x)$ podría representar puntos repetidos equidistantemente a lo largo de un eje de coordenadas.
+
+Diferentes marcos de coordenadas podrían interactuar en el proceso de desarrollo para producir patrones con regularidades mas complejos. Del mismo modo, marcos representados por funciones pueden interactuar y componer regularidades complejas. Por ejemplo, una simetría bilateral con segmentación a lo largo de un eje de coordenadas de izquierda a derecha puede producir dos grupos de segmentos con polaridades opuestas. Esta distribución podría ser representada fácilmente poniendo como entrada de una función periódica la salida de una función simétrica, realizando una composición de funciones, como se muestra en la figura \ref{compfunciones}. Así también, una serie de composiciones de funciones pueden unirse para formar una nueva composición de manera de producir marcos de coordenadas mas elaborados.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/compfunciones.png}
+\caption{\textbf{Composición de funciones. } Este ejemplo ilustra como una simple composición de funciones en una dimensión puede producir patrones con múltiples regularidades. Una representación en forma de red de cada composición es mostrada a la derecha de los gráficos de cada función. La entrada asimétrica inicial $x$ a la entrada de una composición de una función simétrica ($F_{1}$) y una función periódica ($F_{2}$) produce dos grupos de segmentos con polaridades opuestas.}
+\label{compfunciones}
+\end{figure}
+
+``Compositional Pattern Producing Networks'' (CPPNs) es un método de codificación que permite describir directamente relaciones estructurales de una topología a través de una composición de 		funciones. 
+
 Una manera natural de representar una composición de funciones es a través de un grafo de funciones interconectadas, como se muestra en la figura \ref{grafo}. Es así como el sistema de coordenadas inicial de una estructura puede ser provisto como entrada del grafo. El siguiente nivel de nodos puede ser visto como una descripción inicial del primer sistema de coordenadas de dicha estructura. Niveles mas elevados de nodos establecerán sistemas de coordenadas cada vez más refinados. Finalmente las salidas finales corresponden a las transformaciones de todas las capas anteriores, entregando una codificación del sistema de coordenadas provisto.
 
-\begin{figure}[H]
+\begin{figure}[t]
 \centering
 \includegraphics[width=0.5\textwidth]{fig/grafo.png}
 \caption{\textbf{Composición de funciones en forma de grafo. } El grafo determina cual función esta conectada con cual. A cada conexión se le asigna un peso, el cual multiplica a la salida de la función del nodo entrante. Si múltiples conexiones entran a una misma función, esta recibe como entrada la suma de las salidas de cada una de las funciones entrantes multiplicadas por sus respectivos pesos de conexión. Se debe tener en cuenta que la topología no tiene restricciones y puede representar cualquier relación posible. Esta representación es similar al formalismo de las ANNs tradicionales con funciones de activación y topologías arbitrarias.}
@@ -73,7 +84,7 @@ El método a usar para evolucionar las CPPNs será ``NeuroEvolution of Augmenting 
 
 A pesar de que NEAT originalmente fue diseñado para evolucionar ANNs, solo se requiere de pequeñas modificaciones para evolucionar CPPNs, ya que como se mencionó, estas son muy similares.
 
-\section{CPPN-NEAT}
+\section{NEAT}
 
 Esta sección explica cómo NEAT puede evolucionar CPPNs.
 
@@ -87,4 +98,229 @@ Tercero, otros sistemas que evolucionan redes con topologías con nodos intercone
 
 Nuevas estructuras son introducidas como ocurrencias de mutaciones estructurales, y solo sobrevivirán si es que resultan ser beneficiosas a través del cálculo de su desempeño. De este modo, otra ventaja de la complejificación es que NEAT busca a través de las soluciones dimensionalmente mas pequeñas, reduciendo significativamente el número de generaciones necesarias para encontrar la solución, y asegurando que la red no se volverá mas compleja de lo necesario. En efecto, entonces, NEAT realiza una búsqueda de una solución compacta y apropiada a través del incremento de la complejidad de estructuras ya existentes.
 
-CPPN-NEAT es una extensión de NEAT que permite evolucionar CPPNs. Mientras que redes en el método NEAT original solo incluían nodos intermedios con funciones de activación sigmoides, los nodos en CPPN-NEAT son creados asignándoles aleatoriamente una función de activación proveniente de un grupo canónico determinado de funciones (por ejemplo incluyendo la función Gausiana, Sigmoide, y funciones periódicas). Además se define la función de distancia de compatibilidad para determinar si dos redes pertenecen a la misma especie, la cual incluye la información de por cuantas funciones de activación difieren dos individuos distintos. Esta característica permite que la separación de los individuos en especies tome en cuenta el número de funciones de activación que difieren entre individuos. Ya que CPPN-NEAT es una mejora de un preexistente efectivo método de neuroevolución, proporciona una base fiable para el estudio de la evolución de formas cada vez mas complejas. 
+\section{CPPN-NEAT}
+
+CPPN-NEAT es una extensión de NEAT que permite evolucionar CPPNs. Mientras que redes en el método NEAT original solo incluían nodos intermedios con funciones de activación sigmoides, los nodos en CPPN-NEAT son creados asignándoles aleatoriamente una función de activación proveniente de un grupo canónico determinado de funciones (por ejemplo incluyendo la función Gausiana, Sigmoide, y funciones periódicas). Además se define la función de distancia de compatibilidad para determinar si dos redes pertenecen a la misma especie, la cual incluye la información de por cuantas funciones de activación difieren dos individuos distintos. Esta característica permite que la separación de los individuos en especies tome en cuenta el número de funciones de activación que difieren entre individuos. Ya que CPPN-NEAT es una mejora de un preexistente efectivo método de neuroevolución, proporciona una base fiable para el estudio de la evolución de formas cada vez mas complejas, como ANNs de gran escala o otras estructuras tipo grafo con simetrías y patrones complejos de repetición. La siguiente sección presenta un enfoque que permite a CPPN representar y evolucionar simplemente este tipo de redes.
+
+\section{HYPERNEAT}
+
+Si CPPNs son evolucionadas para representar patrones de conectividad, el problema se dirige en encontrar la mejor interpretación de sus salidas para describir efectivamente la estructura que se intenta representar. EL patrón de dos dimensiones mostrado en la figura \ref{mapfenotipo} presenta un desafío: ¿Cómo pueden patrones especiales describir la conectividad de una red? Esta sección como patrones espaciales generados por CPPNs pueden mapear de manera natural patrones de conectividad de la red mientras que al mismo tiempo dan solución a problemas asignados a la red desde su propia dimensionalidad.
+
+\subsection{MAPEANDO PATRONES ESPACIALES A PATRONES DE CONECTIVIDAD}
+
+Existe un mapeao eficaz entre los patrones espaciales y de conectividad que pueden elegantemente explotar las geometrías de las estructuras. La idea principal es entregar a la entrada de CPPN las coordenadas de dos puntos que definan una conexión en lugar de entregar solo la posición de un único punto como se mostró en la figura \ref{mapfenotipo}. La salida de CPPN es interpretado como el \textsl{peso} de la conexión en lugar de la intensidad de un punto. De esta formas las conexiones pueden ser definidas en términos de la ubicación de las mismas, teniendo así en cuenta la geometría de la red.
+
+CPPN en efecto calcula una función $\text{CPPN}(x_{1}, y_{1}, x_{2}, y_{2})=\omega$ de cuatro dimensiones, en donde el primer nodo se encuentra en la coordenada $(x_{1}, y_{1})$ y el segundo en $(x_{2}, y_{2})$. A partir de esta función se retorna el peso de cada una de las conexiones entre cada nodo en la red. Por convención, una conexión no se realiza si la magnitud del peso resultante de la función $\text{CPPN}$, que puede ser positiva o negativa, se encuentra por debajo de un umbral mínimo $\omega_{min}$. Las magnitudes de los pesos por sobre este umbral son escalados entre cero y una magnitud máxima definida para la red. De esta forma, los patrones producidos por la red CPPN pueden representar cualquier topología de red.
+
+Por ejemplo, considere una malla de $5 \times 5$ nodos. A cada nodo se le asigna una coordenada correspondiente a la posición de este dentro de la malla (nombrada como \textsl{substrato} en la figura \ref{hyperneat}), donde la cordenada $(0,0)$ es el centro de la malla. Asumiendo que estos nodos y sus posiciones son dadas \textsl{a priori}, un patron de conectividad entre nodos en un espacio bidimensional es producido por una red CPPN que toma dos coordenadas (fuente y destino) como entrada, y que retorna como salida el peso de la conexión entre estos nodos. La red CPPN calcula de esta manera entonces cada conexión potencial en la malla. Ya que los pesos de las conexiones son de un modo una función de las posiciones de los nodos de fuente y destino, la distribución de pesos en las conexiones a lo largo de la malla exhibirá un patrón que esta en función de la geometría del sistema de coordenadas de la malla.
+
+El patrón de coordenadas producido por una red CPPN será llamado \textsl{substrato} de forma de distinguirla verbalmente de la red CPPN misma, el cual tendrá su propia topología interna.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/hyperneat.png}
+\caption{\textbf{Interpretación del patrón geométrico de conectividad de un hipercubo. } En una malla de nodos, llamada \textsl{substrato}, a cada uno de los nodos se le es asignada una coordenada tal que el nodo central se encuentra en el origen. (1) Cada conexión potencial es consultada para determinar si esta existe, y de existir, cual sería su peso; la linea negra en la parte inferior derecha del substrato indica una posible conexión a ser consultada. (2) Por cada consulta, la red CPPN toma como entrada las coordenadas de los dos puntos terminales y (3) entrega como salida el peso de la conexión entre ellos. Luego de que todas las conexiones han sido determinadas, un patrón de conexiones y pesos de conexión resultan en función de la geometría del substrato. De esta forma, la red CPPN produce patrones de regularidad de conexiones en el espacio.}
+\label{hyperneat}
+\end{figure}
+
+Ya que la red CPPN en este caso representa una función de cuatro dimensiones, el patrón de conectividad bidimensional expresado por la red CPPN es isomorfo al patrón espacial presente en un hipercubo de cuatro dimensiones. Esta observación es importante ya que esto significa que patrones espaciales con simetrías y regularidades corresponden a patrones de conectividad también con dichas regularidades. Así, tal como CPPNs generan patrones espaciales regulares, por extensión se puede esperar que puedan producir patrones de conectividad con las correspondientes regularidades. La siguiente sección muestra dichas capacidades.
+
+\subsection{GENERACIÓN DE PATRONES DE CONECTIVIDAD REGULARES}
+
+Subestructuras descubiertas en la red CPPN producen importantes regularidades en las conexiones del substrato utilizando como entradas los valores de las coordenadas de los puntos en el eje $x$ y en el eje $y$. Así por ejemplo, una simetría a lo largo del eje $x$ puede ser simplemente descubierta mediante la aplicación de una función simétrica (por ejemplo Gaussiana) a las coordenadas $x_{1}$ y $x_{2}$ (figura \ref{fig:patronsim}).
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.35\textwidth}
+		\centering
+        \includegraphics[width=0.7\textwidth]{fig/patronescppn1.png}
+        \caption{Simetría}
+        \label{fig:patronsim}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/patronescppn2.png}
+        \caption{Simetría Imperfecta}
+        \label{fig:patronsimimp}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/patronescppn3.png}
+        \caption{Repetición}
+        \label{fig:patronrep}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/patronescppn4.png}
+        \caption{Repetición con Variaciones}
+        \label{fig:patronrepvar}
+    \end{subfigure}
+    \caption{\textbf{Patrones de conectividad producidos por CPPNs. } Estos patrones, producidos a través de la evolución, exhiben importantes eventualidades de patrones de conectividad: (a) simetría bilateral, (b) simetría imperfecta, (c) repetición, y (d) repetición con variaciones. Que estos patrones sean generados fácilmente y representados de forma compacta sugiere el poder de esta codificación.}
+    \label{fig:patronescppn}
+\end{figure}
+
+Una simetría imperfecta es otro importante patrón observado. Una red CPPN puede producir simetrías imperfectas por la composición de dos funciones simétricas, en donde el marco de coordenadas de una de las funciones esta dado por la salida de la otra. De esta manera, la red CPPN puede producir diferentes grados de simetrías imperfectas como el ejemplo de la figura \ref{fig:patronsimimp}.
+
+Otro patrón importante es el de repetición, particularmente el de repetición con variaciones. Tal como funciones simétricas producen simetrías, funciones periodicas tal como la función seno produce repeticiones (figura \ref{fig:patronrep}). Patrones con variaciones son producidos por una composición de una función periódica con un marco de coordenadas que no se repite, tal como su propio eje (figura \ref{fig:patronrepvar}).
+
+La siguiente sección ahondará en las configuraciones que puede adoptar el substrato.
+
+\subsection{CONFIGURACIONES DEL SUBSTRATO}
+
+La disposición de los nodos que CPPN conecta en el substrato puede tomar otras formas distintas a la malla plana mostrada en el ejemplo demostrativo de la figura \ref{hyperneat} y en la figura \ref{fig:substrateconf1}. Configuraciones de substratos diferentes son probablemente más adecuadas para distintos tipos de problemas.% raro
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.35\textwidth}
+		\centering
+        \includegraphics[width=0.7\textwidth]{fig/substrateconf1.png}
+        \caption{Maya}
+        \label{fig:substrateconf1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/substrateconf2.png}
+        \caption{Tridimensional}
+        \label{fig:substrateconf2}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/substrateconf3.png}
+        \caption{Sándwich}
+        \label{fig:substrateconf3}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.35\textwidth}
+    	\centering
+        \includegraphics[width=0.7\textwidth]{fig/substrateconf4.png}
+        \caption{Circular}
+        \label{fig:substrateconf4}
+    \end{subfigure}
+    \caption{\textbf{Alternativas de configuración del Substrato. } Estas figuras muestran (b) una configuración tridimensional de nodos centrados en (0,0,0), (c) una configuración sándwich de dos capas en la cual una capa fuente de neuronas se conecta directamente a una capa destino, y (d) una configuración circular. Diferentes configuraciones son probablemente mas adecuadas para problemas con diferentes propiedades geométricas.}
+    \label{fig:substrateconf}
+\end{figure}
+
+Por ejemplo, CPPNs también pueden producir patrones de conectividad tridimensionales por la representación espacial de patrones de la función $\text{CPPN}(x_{1},y_{1},z_{1},x_{2},y_{2},z_{2})$ en un hipercubo de seis dimensiones (figura \ref{fig:substrateconf2}), tal como es teóricamente la topología de los cerebros biológicos.
+
+También es posible restringir configuraciones de substrato a determinadas topologías con el fin de aprender acerca de su viabilidad de forma aislada. Por ejemplo, Churchland \cite{churchuland} llama a una simple capa bidimensional de neuronas conectada a otra capa bidimensional un \textit{``state-space sandwich''}. El sándwich es una estructura tridimensional restringida en la cual una capa solo puede entablar conexiones en una sola dirección hacia otra capa. Por lo tanto, debido a esta restricción, se puede expresar por una única función $\text{CPPN}(x_{1},y_{1},x_{2},y_{2})$ de dimensión cuatro, donde $(x_{2},y_{2})$ se interpreta como una locación en la capa de destino en lugar de estar en el mismo plano de cordenadas de $(x_{1},y_{1})$. De esta manera, CPPNs pueden hacer busqueda de patrones útiles dentro de un substrato con configuración state-space sandwich (figura \ref{fig:substrateconf3}).
+
+Finalmente, los nodos en una capa no tienen que estar necesariamente distribuidos en forma de malla. Por ejemplo, nodos dentro de un substrato que controla entradas radiales, como por ejemplo un robot con sensores de distancia situados a su alrededor, podrían estar previstos mejor de una simetría radial, como se muestra en la figura \ref{fig:substrateconf4}, de modo que el patrón de conectividad se puede establecer con un sistema de coordenadas polares perfecto.
+
+\subsection{POSICIONAMIENTO DE ENTRADAS Y SALIDAS}
+
+Parte de la configuración del substrato es la determinación de cuales nodos son entradas y cuales salidas. La flexibilidad de asignar entradas y salidas a coordenadas especificas en el substrato crea una oportunidad de explorar relaciones geométricas ventajosamente.
+
+En muchas aplicaciones de ANNs, las entradas son dibujadas por un grupo de sensores en un arreglo geométrico en el espacio. A diferencia de los algoritmos tradicionales de aprendizaje de ANNs que no son conscientes de tal geometría, una red CPPN si sera consciente de ello y puede usar esa información a su favor.
+
+Mediante la disposición de las entradas y las salidas en una configuración especifica en el substrato, regularidades en la geometría pueden ser explotadas por la codificación. Esto permite ser creativos para probar diferentes configuraciones geométricas que aporten distintas ventajas. Por ejemplo, la figura \ref{fig:posio} describe dos métodos en los cuales las entradas y las salidas de un robot circular pueden ser configuradas, en donde ambas crean una oportunidad de explotar diferentes formas de relaciones geométricas. 
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/posio1.png}
+        \caption{Maya}
+        \label{fig:posio1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/posio2.png}
+        \caption{Tridimensional}
+        \label{fig:posio2}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/posio3.png}
+        \caption{Circular}
+        \label{fig:posio3}
+    \end{subfigure}
+    \caption{\textbf{Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar y ocho actuadores situados en los mismos ángulos. En (b), las entradas (de etiqueta \textit{I}) y salidas (de etiqueta \textit{O}) estan situadas en la misma diagonal en ocho direcciones distintas en el espacio. En (c), entradas y salidas son situadas horizontales y paralelamente una de la otra en dos filas. Ambos arreglos crean una relación geométrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evolución desde el principio.}
+    \label{fig:posio}
+\end{figure}
+
+En un arreglo, los sensores de la periferia del robot son situados en un circulo centrado en el origen del substrato, y las salidas forman una circunferencia concéntrica alrededor de este (figura \ref{fig:posio2}). De esta forma, si la red CPPN descubre simetrías radiales o bilaterales, esta puede usar este sistema de coordenadas para crear un patrón repetitivo que capture regularidades en las conexiones entre las entradas y las salidas. Un arreglo alternativo es situar las entradas y las salidas en dos lineas paralelas en donde la posición de cada entrada y salida esta correlacionada con el ángulo de ubicación en el robot en cada una de sus filas respectivamente (figura \ref{fig:posio3}). De esa forma, la evolución puede explotar las similitudes de las posiciones horizontales de las entradas y salidas. Ambos métodos representan correspondencia a través de una regularidad geométrica diferente.
+
+A través del arreglo de las neuronas en una configuración especifica en el substrato, regularidades en la geometría pueden ser explotadas por la codificación. 
+
+\subsection{RESOLUCIÓN DEL SUBSTRATO}
+
+En contraposición con la codificación de un patrón específico de conexiones entre un conjunto específico de nodos, una red CPPN en efecto codifica un concepto de conectividad general, es decir, los fundamentos de las relaciones matemáticas producen un patrón particular. La consecuencia es que la misma red CPPN puede representar un concepto equivalente en diferentes resoluciones o densidades de nodos. La figura \ref{fig:substrateres} muestra dos conceptos de conectividad en diferentes resoluciones.
+
+\begin{figure}[t]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/substrateres1.png}
+        \caption{Concepto 1 de $5 \times 5$}
+        \label{fig:substrateres1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/substrateres2.png}
+        \caption{Concepto 1 de $7 \times 7$}
+        \label{fig:substrateres2}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/substrateres3.png}
+        \caption{Concepto 1 de CPPN}
+        \label{fig:substrateres3}
+    \end{subfigure}
+    
+    \centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/substrateres4.png}
+        \caption{Concepto 2 de $5 \times 5$}
+        \label{fig:substrateres4}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/substrateres5.png}
+        \caption{Concepto 2 de $7 \times 7$}
+        \label{fig:substrateres5}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/substrateres6.png}
+        \caption{Concepto 2 de CPPN}
+        \label{fig:substrateres6}
+    \end{subfigure}
+    \caption{\textbf{Conceptos de conectividad equivalentes en diferentes resoluciones del substrato. } Se describen dos conceptos de conectividad generados en el proceso de evolución. La red CPPN que genera el primer concepto a resoluciones de $5 \times 5$ (a) y $7 \times 7$ (b) es mostrado en (c). La red CPPN en (f) genera de forma similar el segundo concepto en ambas resoluciones (d) y (e). Esta ilustración demuestra que CPPNs representan un concepto matemático en lugar de una sola estructura. Así, la misma red CPPN puede producir patrones con el mismo fundamento conceptual en diferentes resoluciones del substratoo en diferente densidad de nodos. Las funciones de activación de las redes CPPN mostradas estan denotadas por \textit{G} para funciones \textit{Gaussianas}, \textit{S} para \textit{Sigmoides}, \textit{Si} para \textit{Senos}, y \textit{L} para \textit{Lineales}.}
+    \label{fig:substrateres}
+\end{figure}
+
+Para substratos con neuronas, la importante implicancia de esto es que la misma funcionalidad de la ANN puede ser generada en distintas resoluciones. Sin más evolución, una red CPPN previamente evolucionada puede ser usada para especificar el patrón de conectividad de un mismo tipo de substrato con una resolución mayor, generando de este modo una solución para un mismo problema con una resolución mas alta.  
+
+\subsection{EVOLUCIÓN DE LA RED CPPN}
+
+La propuesta de este método base para la implementación de \(\tau\)-HyperNEAT es evolucionar una red CPPN usando NEAT. Este método base es llamado HyperNEAT ya que se usa a NEAT para evolucionar una red CPPN que busca representar patrones espaciales en un hiperespacio. Cada punto en el patrón, delimitado por un hipercubo, es interpretado como una conexión en un grafo dimensionalmente mas pequeño.
+
+El esquema básico del algoritmo del método HyperNEAT se muestra a continuación:
+
+\begin{enumerate}
+\item Elegir una configuración de substrato, es decir, el posicionamiento de cada nodo y la asignación de nodos de entrada y salida.
+\item Inicializar una población de redes CPPN con pesos asignados de forma aleatoria.
+\item Repetir hasta encontrar una solución:
+	\begin{enumerate}
+	\item Por cada miembro de la población de redes CPPN:
+		\begin{enumerate}[label=(\roman*)]
+		\item Usar la red CPPN para determinar el peso de cada posible conexión en el substrato. Si el valor absoluto de la salida de la red CPPN sobrepasa la magnitud de un umbral, se crea la conexión con el peso dado por la salida de la red CPPN escalada apropiadamente.
+		\item Se usa el substrato como una ANN en la tarea a resolver para determinar su desempeño y asignar el resultado a la red CPPN.
+		\end{enumerate}
+	\item Reproducir las redes CPPN acorde al método NEAT para producir una nueva población de CPPNs correspondientes a una nueva generación.
+	\end{enumerate}
+\end{enumerate}
+
+En efecto, como HyperNEAT incorpora nuevas conexiones y nodos a la estructura de la red CPPN, esta esta descubriendo nuevas dimensiones globales de variaciones en los patrones de conectividad a través del substrato. Al principio es posible descubrir una simetría global, para luego descubrir un concepto mas elaborado de las regularidades del sistema. Cada nuevo nodo y conexión en el substrato representan una nueva manera en que un patrón a generar pueda variar dándose nuevas regularidades. Así, HyperNEAT es una propuesta para evolucionar patrones de conectividad a gran escala en ANNs.
