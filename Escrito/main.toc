@@ -21,7 +21,7 @@
 \contentsline {chapter}{\numberline {3.}BASE TE\'ORICA}{23}
 \contentsline {section}{\numberline {3.1}COMPOSITIONAL PATTERN PRODUCING NETWORKS (CPPNs)}{23}
 \contentsline {subsection}{\numberline {3.1.1}DESARROLLO DE PATRONES}{24}
-\contentsline {subsection}{\numberline {3.1.2}COMPLEJIFICACI\'ON}{25}
+\contentsline {subsection}{\numberline {3.1.2}COMPLEJIZACI\'ON}{25}
 \contentsline {subsection}{\numberline {3.1.3}M\'ETODO DE CODIFICACI\'ON}{26}
 \contentsline {subsection}{\numberline {3.1.4}EVOLUCIONANDO CPPNs}{29}
 \contentsline {section}{\numberline {3.2}NEAT}{30}
@@ -30,6 +30,8 @@
 \contentsline {subsection}{\numberline {3.4.1}MAPEANDO PATRONES ESPACIALES A PATRONES DE CONECTIVIDAD}{33}
 \contentsline {subsection}{\numberline {3.4.2}GENERACI\'ON DE PATRONES DE CONECTIVIDAD REGULARES}{35}
 \contentsline {subsection}{\numberline {3.4.3}CONFIGURACIONES DEL SUBSTRATO}{36}
-\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{37}
+\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{38}
 \contentsline {subsection}{\numberline {3.4.5}RESOLUCI\'ON DEL SUBSTRATO}{39}
-\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{39}
+\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{40}
+\contentsline {chapter}{\numberline {4.}$\tau $-HYPERNEAT}{42}
+\contentsline {chapter}{\numberline {5.}ROBOTLIB: LIBRER\'IA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}{45}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  8 JUL 2016 20:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  14 JUL 2016 17:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -356,7 +356,8 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 
-(./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux) (./referencias.aux))
+(./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux) (./cap4.aux) (./cap5.aux)
+(./referencias.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
@@ -372,13 +373,11 @@ LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
 LaTeX Font Info:    ... okay on input line 45.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 45.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
-
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count124
@@ -720,6 +719,33 @@ Package pdftex.def Info: fig/substrateres6.png used on input line 296.
  [39] [40 <./fig/substrateres1.png> <./fig/substrateres2.png> <./fig/substrater
 es3.png> <./fig/substrateres4.png> <./fig/substrateres5.png> <./fig/substratere
 s6.png>]) [41]
+\openout2 = `cap4.aux'.
+
+ (./cap4.tex
+Cap\'{\i }tulo 4.
+File: fig/usmLogo.png Graphic file (type png)
+<use fig/usmLogo.png>
+Package pdftex.def Info: fig/usmLogo.png used on input line 9.
+(pdftex.def)             Requested size: 327.54945pt x 265.22052pt.
+ [42
+
+
+
+] [43]
+File: fig/usmLogo.png Graphic file (type png)
+ <use fig/usmLogo.png>
+Package pdftex.def Info: fig/usmLogo.png used on input line 18.
+(pdftex.def)             Requested size: 327.54945pt x 265.22052pt.
+) [44]
+\openout2 = `cap5.aux'.
+
+ (./cap5.tex
+Cap\'{\i }tulo 5.
+) [45
+
+
+
+]
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -728,41 +754,41 @@ Underfull \hbox (badness 1152) in paragraph at lines 4--5
  Ar-ti-fi-cial Li-fe,
  []
 
-[42
+[46
 
 
 
-]) [43] (./main.aux
+]) [47] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
-(./referencias.aux)) ) 
+(./cap4.aux) (./cap5.aux) (./referencias.aux)) ) 
 Here is how much of TeX's memory you used:
- 6785 strings out of 493304
- 95978 string characters out of 6139871
- 186972 words of memory out of 5000000
- 10043 multiletter control sequences out of 15000+600000
- 36076 words of font info for 77 fonts, out of 8000000 for 9000
+ 6812 strings out of 493304
+ 96261 string characters out of 6139871
+ 189674 words of memory out of 5000000
+ 10056 multiletter control sequences out of 15000+600000
+ 38267 words of font info for 86 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 41i,12n,43p,1483b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.en
-c}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on main.pdf (48 pages, 469146 bytes).
+ 41i,12n,43p,1483b,496s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (52 pages, 475932 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
+ 252 PDF objects out of 1000 (max. 8388607)
+ 160 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
