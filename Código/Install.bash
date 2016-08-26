@@ -5,6 +5,7 @@ if ! [[ -d RobotLib ]]
 	cd RobotLib; make; sudo make install; cd ..;
 else
 	cd RobotLib
+	git remote update
 	LOCAL=$(git rev-parse @)
 	REMOTE=$(git rev-parse @{u})
 	if [ $LOCAL = $REMOTE ]
@@ -13,7 +14,7 @@ else
 		cd ..
 	else
 		cd ..
-		rm -f -R /RobotLib
+		rm -f -R RobotLib
 		echo "Downloading RobotLib library from git repository"
 		git clone https://github.com/osilvam/RobotLib.git
 		cd RobotLib; make; sudo make install; cd ..;
@@ -35,6 +36,7 @@ if ! [[ -d NEAT ]]
 	cd NEAT; make; sudo make install; cd ..;
 else
 	cd NEAT
+	git remote update
 	LOCAL=$(git rev-parse @)
 	REMOTE=$(git rev-parse @{u})
 	if [ $LOCAL = $REMOTE ]
@@ -43,7 +45,7 @@ else
 		cd ..
 	else
 		cd ..
-		rm -f -R /NEAT
+		rm -f -R NEAT
 		echo "Downloading NEAT library from git repository"
 		git clone https://github.com/osilvam/NEAT.git
 		cd NEAT; make; sudo make install; cd ..;
@@ -57,6 +59,7 @@ if ! [[ -d HyperNeat ]]
 	cd HyperNeat; make; sudo make install; cd ..;
 else
 	cd HyperNeat
+	git remote update
 	LOCAL=$(git rev-parse @)
 	REMOTE=$(git rev-parse @{u})
 	if [ $LOCAL = $REMOTE ]
@@ -65,10 +68,33 @@ else
 		cd ..
 	else
 		cd ..
-		rm -f -R /HyperNeat
+		rm -f -R HyperNeat
 		echo "Downloading HyperNeat library from git repository"
 		git clone https://github.com/osilvam/HyperNeat.git
 		cd HyperNeat; make; sudo make install; cd ..;
+	fi
+fi
+
+if ! [[ -d TauHyperNeat ]]
+	then
+	echo "Downloading TauHyperNeat library from git repository"
+	git clone https://github.com/osilvam/TauHyperNeat.git
+	cd TauHyperNeat; make; sudo make install; cd ..;
+else
+	cd TauHyperNeat
+	git remote update
+	LOCAL=$(git rev-parse @)
+	REMOTE=$(git rev-parse @{u})
+	if [ $LOCAL = $REMOTE ]
+		then
+		echo "TauHyperNeat is already downloaded and Up-to-date"		
+		cd ..
+	else
+		cd ..
+		rm -f -R TauHyperNeat
+		echo "Downloading TauHyperNeat library from git repository"
+		git clone https://github.com/osilvam/TauHyperNeat.git
+		cd TauHyperNeat; make; sudo make install; cd ..;
 	fi
 fi
 

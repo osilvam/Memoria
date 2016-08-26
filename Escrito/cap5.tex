@@ -1,3 +1,58 @@
 \chapter{ROBOTLIB: LIBRERÍA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}
 
-wea de robotlib
+RobotLib es una herramienta diseñada para la comunicación e interacción con entornos de simulación y entornos reales de manera transparente y sencilla. RobotLib esta implementada en lenguaje C/C++ y funciona a modo de librería externa, entregando a disposición del usuario los recursos necesarios para poder obtener y entregar información a todos los entornos de trabajo (simulados o reales), inclusive de manera simultanea, de una forma simple y segura.
+
+RobotLib esta compuesta por un conjunto de clases que se dividen en dos grupos, \textit{componentes} del entorno y \textit{controladores}. Los componentes del entorno son los objetos a manipular, como piezas, motores o sensores. Los controladores son objetos que permiten al usuario ejecutar acciones con los componentes del entorno, como por ejemplo posicionar piezas dentro de un entorno virtual, asignar posiciones a motores, o obtener lectura de sensores. Así, para que un usuario pueda manipular un componente de algún entorno de trabajo debe crear un objeto controlador para dicho entorno y un objeto correspondiente al tipo de componente, y además, indicarle al objeto controlador el objeto componente que se desea manipular a través de él. También es posible que un mismo componente sea controlado en distintos entornos de forma simultanea, creando tantos objetos controladores como sean necesarios para cada entorno, creando el objeto componente que se desea manipular, e indicarle a cada objeto controlador el componente a manipular. Esta última estrategia es muy útil cuando se desea, por ejemplo, manipular un robot en un entorno virtual y en el entorno físico real de forma simultanea. A continuación se explicará de forma breve cada una de las clases fundamentales que componen RobotLib. Para obtener información más completa de esta librería debe revisarse el apéndice \textit{Implementación de RobotLib}.
+
+Los objetos controladores implementados son dos: el objeto \textit{RobotVREP} y \textit{USB2Dynamixel}. RobotVREP es el controlador implementado para manipular objetos dentro de software de simulación VREP \cite{vrep}, el cual fue el software elegido para realizar los entrenamientos de generación de caminatas en los robots con extremidades móviles. USB2Dynamixel es el controlador implementado para controlar los motores de los robots a utilizar, los cuales son de la marca Dynamixel \cite{dyn}, a través del dispositivo de comunicación serial USB2Dynamixel diseñado exclusivamente para dichos motores. 
+
+Los objetos componentes implementados son tres: el objeto \textit{Object}, \textit{Joint} y \textit{CollisionObject}, en donde los últimos dos objetos heredan del primero. El objeto Object es la base de cualquier objeto existente en un experimento, y almacena un \textit{UniqueObjectId} asignado al objeto. El \textit{UniqueObjectId} es un número único asignado a cada objeto al momento de ser creado, y permite que cada controlador pueda asociar dicho número con el número identificador interno respectivo de cada objeto, sin la necesidad de que un objeto deba almacenar tantos números identificadores como controladores lo estén controlando. En un programa de simulación un Object puede representar, por ejemplo, un obstáculo dentro del escenario de simulación, y usando las funciones disponibles en RobotVREP es posible obtener su posición, orientación y velocidad, y asignarle una nueva posición y orientación. En un entorno real un Object puede representar, por ejemplo, una IMU (del inglés \textit{Inertial Measurement Unit}), que con el procesamiento adecuado puede entregar, a través del controlador respectivo, su posición, orientación, velocidad y aceleración. Para hacer uso de cualquier Object en algún entorno (simulado o real) solo debe indicarse al controlador respectivo que dicho Object estará bajo su control, haciendo uso de la función \textit{Controlador.addObject(Object *)} implementada en cada controlador \footnote{No esta implementado en el controlador USB2Dynamixel debido al no uso de sensores físicos.}, en donde el argumento entre paréntesis corresponde al puntero del objeto a controlar. Funciones similares como \textit{addJoint(Joint *)} y \textit{addCollisionObject(CollisionObject *)} son usadas para trabajar con objetos Joint y CollisionObject respectivamente con el controlador RobotVREP; y addMotor(Joint *, int) con el controlador USB2Dynamixel, en donde el segundo argumento corresponde al ID del motor dynamixel físico. Una vez asignado el Object al controlador es posible, por ejemplo, obtener la posición de dicho objeto en coordenadas cartesianas dentro del entorno de simulación (V-REP) usando la función \textit{Controlador.getObjectPosition(Object *)}.
+
+El objeto Joint es usado para representar cualquier tipo de motor que se desee utilizar, como un servomotor, un motor paso a paso, o uno de giro continuo. Si un Joint representa, por ejemplo, un servomotor de un brazo robótico, es posible asignarle una posición angular, o consultar cual es su posición actual para lograr mover el brazo. Si un Joint representa un motor de giro continuo, es posible variar su velocidad angular de giro, para por ejemplo, controlar un carro motorizado con ese tipo de motores. Cualquiera de dichas acciones debe realizarse usando las funciones disponibles en el controlador correspondiente, al cual previamente le fue asignado el control de dicho Joint con la función \textit{addJoint(Joint *)}. De esta forma, a modo de ejemplo, si se desea asignar a un servomotor real una posición angular de $\pi$ radianes \footnote{por defecto el objeto Joint recibe y entrega valores en radianes, pero es posible elegir otro tipo de unidad disponible para evitar que el usuario deba realizar conversiones adicionales.}, se deben seguir los siguientes pasos:
+
+\begin{itemize}
+\item Informar al Joint la posición que necesita alcanzar, usando la función \textit{setJointNextPosition((double)3.1415)}, en donde el argumento entre paréntesis corresponde a la posición angular a adoptar de tipo doble flotante. Si se desea asignar una posición angular a más de un Joint se debe realizar esta misma operación con cada uno de ellos.
+\item Solicitar al controlador, que en este caso corresponde a un controlador USB2Dynamixel, que actualice la posición de cada uno de los motores usando la función \textit{Controlador.move()}.
+\end{itemize}
+
+De esta forma, es posible mover todos los motores que se deseen de forma simultanea, como lo es en el caso de la generación de caminatas en donde todas las extremidades de un robot deben moverse al mismo tiempo.
+
+El objeto CollisionObject es usado para representar objetos que eventualmente puedan colisionar durante un experimento. En un entorno real un CollisionObject puede representar, por ejemplo, un sensor de tacto que al hacer contacto con otros objetos pueda indicar una posible colisión. En el software V-REP, un CollisionObject corresponde a una interacción entre dos entidades dentro del escenario que posean propiedades de colisión activas, pudiendo detectar si existe colisión entre estas. De esta forma, si por ejemplo se quisiera detectar una colisión entre el piso del escenario de simulación y el torso de un robot, se deben seguir los siguientes pasos:
+
+\begin{itemize}
+\item Crear un objeto dentro del software de simulación que relacione el par de entidades de posible colisión.
+\item Crear un objeto CollisionObject correspondiente al objeto del punto anterior en el programa de entrenamiento.
+\item Solicitar al controlador, que en este caso corresponde al controlador RobotVREP, que verifique si existe una colisión relacionada con el objeto del punto anterior usando la función \textit{Controlador.readCollision(CollisionObject *)}, en donde el argumento entre paréntesis corresponde al puntero del objeto que relaciona el par de entidades a colisionar. Esta función retornará un valor booleano verdadero si existe una colisión entre el par de entidades, o falso si no existe colisión.
+\end{itemize}
+
+Con el uso de los objetos mencionados anteriormente es posible efectuar cualquier tipo de experimento relacionado con robótica móvil, por lo que RobotLib es una herramienta indispensable para el estudio de la robótica para cualquier rama de investigación. A continuación se muestra un programa de prueba, escrito en C/C++, en donde se acelera un motor de giro continuo unido a una hélice sobre la cual hay un cilindro (figura \ref{prueba}) que es expulsado por efecto de la aceleración centrífuga.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\textwidth]{fig/prueba.png}
+\caption{\textbf{Escenario de prueba de la librería RobotLib. }El escenario de simulación de la figura muestra una hélice azul montada en una base que gira con el uso de un motor o \textit{Joint}, y un cilindro verde sobre un extremo de la hélice. El experimento, realizado como ejemplo de uso de la librería RobotLib, tiene como objetivo hacer girar la hélice y acelerarla hasta expulsar el cilindro de sobre ella producto de la fuerza centrifuga generada sobre el cilindro producto del giro.}
+\label{prueba_robotlib}
+\end{figure}
+
+\lstset{language=C++,
+		frame=L,
+		basicstyle=\footnotesize, 
+		identifierstyle=\color{black},
+		keywordstyle=\bfseries\color{green!40!black},
+		stringstyle=\color{red!85!white},
+		commentstyle=\color{cyan!70!black},
+		morecomment=[l][\color{blue!70!white}]{\#},		
+		showstringspaces=false,
+		tabsize=2,
+		numbers=left,
+		lineskip={-1.5pt},
+		breaklines=true
+}
+
+\newpage
+
+\lstinputlisting{code/example_vrep.cpp}
+
+Como se aprecia en la linea 4 del código anterior, una vez instalada la librería RobotLib, es posible utilizarla solo incluyéndola como allí se muestra. El programa crea un objeto RobotVREP para controlar los objetos dentro del software V-REP, un objeto Joint para el motor que hace girar la hélice, y un objeto CollisionObject que relaciona el contacto entre la hélice y el cilindro, y añade estos dos últimos al controlador. Luego, se inicia una simulación, y se aumenta la velocidad de giro del Joint hasta que se detectan dos ``no colisiones''\footnote{Por posibles inexactitudes de la escena y los objetos dentro de ella se producen breves detecciones de no colisión entre objetos que si están colisionando, por lo que se verifican dos no colisiones consecutivas para asegurar que los objetos no estén colisionando realmente.} consecutivas relacionadas con el CollisionObject, producto de la caída del cilindro desde la superficie de la hélice. Una vez confirmada la caída del cilindro de la superficie de la hélice se reduce la velocidad del Joint hasta detenerlo para finalmente detener la simulación. En el capitulo siguiente se mostrará como realizar el diseño de las plataformas robóticas a usar para la generación de caminatas dentro del software de simulación V-REP.
+
+

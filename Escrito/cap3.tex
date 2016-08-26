@@ -241,7 +241,7 @@ Mediante la disposición de las entradas y las salidas en una configuración espec
         \caption{Paralela}
         \label{fig:posio3}
     \end{subfigure}
-    \caption{\textbf{Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar y ocho actuadores situados de forma radial en los mismos ángulos. En (b), las entradas (de etiqueta \textit{I}) y salidas (de etiqueta \textit{O}) están situadas en la misma diagonal en ocho direcciones distintas en el espacio. En (c), entradas y salidas son situadas horizontales y paralelamente una de la otra en dos filas. Ambos arreglos crean una relación geométrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evolución desde el principio.}
+    \caption{\textbf{Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar como entradas de estímulos, y ocho actuadores para respuestas motoras situados de forma radial equiangularmente distanciados. En (b), las entradas (de etiqueta \textit{I}, correspondientes a sensores lidar) y salidas (de etiqueta \textit{O}, correspondientes a actuadores) están situadas en la misma diagonal en los ocho sectores indicados en (a). En (c), entradas y salidas son situadas horizontales y paralelamente unas de la otras en dos filas. Ambos arreglos crean una relación geométrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evolución desde el comienzo.}
     \label{fig:posio}
 \end{figure}
 
@@ -253,7 +253,7 @@ A través del arreglo de las neuronas en una configuración especifica en el subst
 
 En contraposición con la codificación de un patrón específico de conexiones entre un conjunto específico de nodos, una red CPPN en efecto codifica un concepto de conectividad general, es decir, los fundamentos de las relaciones matemáticas producen un patrón particular. La consecuencia es que la misma red CPPN puede representar un concepto equivalente en diferentes resoluciones o densidades de nodos. La figura \ref{fig:substrateres} muestra dos conceptos de conectividad en diferentes resoluciones.
 
-\begin{figure}[t]
+\begin{figure}[ht!]
 	\centering
 	\begin{subfigure}[b]{0.3\textwidth}
 		\centering
@@ -306,6 +306,8 @@ Para substratos con neuronas, la importante implicancia de esto es que la misma 
 \subsection{EVOLUCIÓN DE LA RED CPPN}
 
 La propuesta de este método base para la implementación de \(\tau\)-HyperNEAT es evolucionar una red CPPN usando NEAT para generar un patrón de conectividad en otra red principal que posee características geométricas propias del problema a solucionar. Este método base es llamado HyperNEAT ya que se usa a NEAT para evolucionar una red CPPN que busca representar patrones espaciales en un hiperespacio. Cada punto en el patrón, delimitado por un hipercubo, es interpretado como una conexión en un grafo dimensionalmente más pequeño.
+
+\clearpage
 
 El esquema básico del algoritmo del método HyperNEAT se muestra a continuación:
 

@@ -6,18 +6,55 @@ La figura \ref{tauhyperneat} muestra un esquema del método \(\tau\)-HyperNEAT pr
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/usmLogo.png}
+\includegraphics[width=0.8\textwidth]{fig/tauhyperneat.png}
 \caption{\textbf{Interpretación del patrón geométrico de conectividad de un hipercubo usando \(\tau\)-HyperNEAT. } Al igual que como funciona el método HyperNEAT (1) cada conexión potencial es consultada para determinar si esta existe, y de existir, cual sería su peso y su retardo asociado. (2) Por cada consulta, la red CPPN toma como entrada las coordenadas de los dos puntos terminales y (3) entrega como salida el peso y el retardo de la conexión entre ellos. Luego de que todas las conexiones han sido determinadas, un patrón de conexiones, pesos y retardos de conexión resultan en función de la geometría del substrato.}
 \label{tauhyperneat}
 \end{figure}
 
-En este caso, la red CPPN calcula una función $\text{CPPN}(x_{1}, y_{1}, x_{2}, y_{2})= [ \omega,\tau ]$ de cuatro dimensiones, al igual que en el caso de HyperNEAT, en donde el primer nodo se encuentra en la coordenada $(x_{1}, y_{1})$ y el segundo en $(x_{2}, y_{2})$. Sin embargo, a diferencia de su predecesor, a partir de esta función se retorna un vector de largo dos, compuesto por el peso y el retardo de cada una de las conexiones entre cada nodo en la red. Tal como funciona en HyperNEAT, una conexión no se realiza si la magnitud del peso resultante de la función $\text{CPPN}$, que puede ser positiva o negativa, se encuentra por debajo de un umbral mínimo $\omega_{min}$. Las magnitudes de los pesos por sobre este umbral son escalados entre cero y una magnitud máxima definida para la red. El resultado correspondiente al retardo no tiene ninguna implicancia al momento de decidir si una conexión es o no factible, y solo entrega información adicional del comportamiento de cada conexión. El porcentaje de retardo obtenido es multiplicado por el retardo máximo $\tau_{max}$ (número entero positivo correspondiente al tamaño máximo asignable al buffer de retardo) dado para la red, y  es aproximado al número entero más próximo, obteniendo como resultado el tamaño del buffer de retardo. La figura \ref{buffer} muestra como es el comportamiento del buffer a cada iteración de la red.
+En este caso, la red CPPN calcula una función $\text{CPPN}(x_{1}, y_{1}, x_{2}, y_{2})= [ \omega,\tau ]$ de cuatro dimensiones, al igual que en el caso de HyperNEAT, en donde el primer nodo se encuentra en la coordenada $(x_{1}, y_{1})$ y el segundo en $(x_{2}, y_{2})$. Sin embargo, a diferencia de su predecesor, a partir de esta función se retorna un vector de largo dos, compuesto por el peso y el retardo de cada una de las conexiones entre cada nodo en la red. Al igual que en HyperNEAT, una conexión no se realiza si la magnitud del peso resultante de la función $\text{CPPN}$, que puede ser positiva o negativa, se encuentra por debajo de un umbral mínimo $\omega_{min}$. Las magnitudes de los pesos por sobre este umbral son escalados entre cero y una magnitud máxima definida para la red. El resultado correspondiente al retardo no tiene ninguna implicancia al momento de decidir si una conexión es o no factible, y solo entrega información adicional del comportamiento de cada conexión. El porcentaje de retardo obtenido es multiplicado por el retardo máximo $\tau_{max}$ (número entero positivo correspondiente al tamaño máximo asignable al buffer de retardo) dado para la red, y  es aproximado al número entero más próximo, obteniendo como resultado el tamaño del buffer de retardo. La figura \ref{fig:buffer} muestra como es el comportamiento del buffer a cada iteración de la red.
 
-\begin{figure}[t]%hacer esto
-\centering
-\includegraphics[width=0.8\textwidth]{fig/usmLogo.png}
-\caption{\textbf{Funcionamiento del buffer de retardo. } lalallaa}
-\label{buffer}
+\begin{figure}[t]
+	%\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+        \includegraphics[width=1.1\textwidth]{fig/buffer1.png}
+        \caption{Primera Iteración}
+        \label{fig:buffer1}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=1.1\textwidth]{fig/buffer2.png}
+        \caption{Segunda Iteración}
+        \label{fig:buffer2}
+    \end{subfigure}
+    ~ 
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=1.1\textwidth]{fig/buffer3.png}
+        \caption{Quinta Iteración}
+        \label{fig:buffer3}
+    \end{subfigure}
+    \caption{\textbf{Funcionamiento del buffer de retardo. } Cada nodo dentro del substrato posee un buffer, con un largo dado por una red CPPN, que retardará el flujo de información a través de la red. En las imágenes se muestra un ejemplo de un nodo asignado con un buffer de tamaño 4, al que se le asignan por defecto todas sus casillas con valor cero. En la primera iteración (a), la suma de todas las entradas al nodo es pasada por una función de activación previamente asignada dando como resultado el primer valor de entrada $\textit{I}_{0}$ al buffer, colocándose al inicio de este y desplazando todos los demás valores contenidos en el buffer hacia la derecha. Luego el resultado de salida del nodo para la primera iteración es el valor de la última casilla del buffer antes del desplazamiento (cero). En la segunda iteración (b), se entrega una nueva entrada $\textit{I}_{1}$ al buffer volviendo a desplazar cada valor contenido en el buffer hacia la derecha, obteniéndose como salida el valor de la última casilla del buffer antes del desplazamiento (cero aun). Al llegar a la quinta iteración (c), se ingresa un nuevo valor a la entrada del buffer y se obtiene a la salida el valor $\textit{I}_{0}$ ingresado en la primera iteración. }
+    \label{fig:buffer}
 \end{figure}
 
-Cada nodo del substrato, en primera instancia, recibirá como entrada los valores de salida de cada uno de los demás nodos conectados a él multiplicados por sus respectivos pesos. Estos valores
+Cada nodo del substrato recibirá como entrada los valores de salida de cada uno de los demás nodos conectados a él, multiplicados por sus respectivos pesos. Estos valores son sumados para posteriormente pasar el resultado por la función de activación del nodo e ingresar al inicio del buffer, desplazando los demás valores contenidos en él hacia la derecha. El valor que queda fuera del buffer producto del desplazamiento se convierte en la salida final del nodo.
+
+Todos estos retardos a lo largo de la red permitirán incorporar variables temporales en la solución del problema a solucionar, incorporando dinámica al sistema. Finalmente, el esquema básico del algoritmo del método \(\tau\)-HyperNEAT se muestra a continuación:
+
+\begin{enumerate}
+\item Elegir una configuración de substrato, es decir, el posicionamiento de cada nodo, la asignación de nodos de entrada y salida, y establecer un retardo máximo.
+\item Inicializar una población de redes CPPN con pesos asignados de forma aleatoria.
+\item Repetir hasta encontrar una solución:
+	\begin{enumerate}
+	\item Por cada miembro de la población de redes CPPN:
+		\begin{enumerate}[label=(\roman*)]
+		\item Usar la red CPPN para determinar el peso y el retardo de cada posible conexión en el substrato. Si el valor absoluto de la salida correspondiente al peso de la red CPPN sobrepasa la magnitud de un umbral, se crea la conexión con el peso y el porcentaje de retardo dado por la salida de la red CPPN.
+		\item Se usa el substrato como una ANN en la tarea a resolver para determinar su desempeño y asignar el resultado a la red CPPN.
+		\end{enumerate}
+	\item Reproducir las redes CPPN acorde al método NEAT para producir una nueva población de CPPNs correspondientes a una nueva generación.
+	\end{enumerate}
+\end{enumerate}
+
+Ya definidos el método HyperNEAT y el método propuesto \(\tau\)-HyperNEAT es posible realizar pruebas de desempeño en la tarea de generación de caminatas en robots con extremidades móviles, pero para esto es necesario diseñar una herramienta de comunicación que permita al programa que usa alguno de estos métodos de neuroevolución comunicarse con el programa de simulación en donde se ejecutarán los entrenamientos de los robots en la generación de caminatas. Además esta herramienta debe permitir una comunicación con los robots reales para posterior al entrenamiento poder recrear las caminatas efectuadas en el entorno virtual del programa de simulación. En el capítulo siguiente se explicará el diseño e implementación de esta herramienta.

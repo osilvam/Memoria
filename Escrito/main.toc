@@ -9,11 +9,11 @@
 \contentsline {chapter}{\numberline {2.}ALTERNATIVAS DE SOLUCI\'ON PARA EL DESARROLLO DEL PROYECTO}{10}
 \contentsline {section}{\numberline {2.1}ALTERNATIVAS DE SOLUCI\'ON}{11}
 \contentsline {subsection}{\numberline {2.1.1}ALTERNATIVA N\IeC {\textdegree }1: RETARDOS DE TIEMPO EN UNA RED HYPERNEAT}{11}
-\contentsline {subsection}{\numberline {2.1.2}ALTERNATIVA N\IeC {\textdegree }2: DEEP LEARNING EN REDES NEURONALES}{12}
-\contentsline {subsection}{\numberline {2.1.3}ALTERNATIVA N\IeC {\textdegree }3: APRENDIZAJE REFORZADO}{14}
-\contentsline {subsection}{\numberline {2.1.4}ENTORNO VIRTUAL DE SIMULACI\'ON: VIRTUAL ROBOT EXPERIMENTATION PLATAFORM (V-REP)}{16}
-\contentsline {section}{\numberline {2.2}ALTERNATIVA SELECCIONADA}{17}
-\contentsline {subsection}{\numberline {2.2.1}CRITERIOS DE SELECCI\'ON}{17}
+\contentsline {subsection}{\numberline {2.1.2}ALTERNATIVA N\IeC {\textdegree }2: DEEP LEARNING EN REDES NEURONALES}{13}
+\contentsline {subsection}{\numberline {2.1.3}ALTERNATIVA N\IeC {\textdegree }3: APRENDIZAJE REFORZADO}{15}
+\contentsline {subsection}{\numberline {2.1.4}ENTORNO VIRTUAL DE SIMULACI\'ON: VIRTUAL ROBOT EXPERIMENTATION PLATAFORM (V-REP)}{17}
+\contentsline {section}{\numberline {2.2}ALTERNATIVA SELECCIONADA}{18}
+\contentsline {subsection}{\numberline {2.2.1}CRITERIOS DE SELECCI\'ON}{18}
 \contentsline {subsection}{\numberline {2.2.2}EVALUACI\'ON DE LAS ALTERNATIVAS}{19}
 \contentsline {subsubsection}{Retardos de tiempo en una red HyperNEAT (\relax $\tau \relax \GenericError { }{LaTeX Error: Bad math environment delimiter}{See the LaTeX manual or LaTeX Companion for explanation.}{Your command was ignored.\MessageBreak Type I <command> <return> to replace it with another command,\MessageBreak or <return> to continue without it.}-HyperNEAT)}{20}
 \contentsline {subsubsection}{Deep learning en redes neuronales}{20}
@@ -30,8 +30,9 @@
 \contentsline {subsection}{\numberline {3.4.1}MAPEANDO PATRONES ESPACIALES A PATRONES DE CONECTIVIDAD}{33}
 \contentsline {subsection}{\numberline {3.4.2}GENERACI\'ON DE PATRONES DE CONECTIVIDAD REGULARES}{35}
 \contentsline {subsection}{\numberline {3.4.3}CONFIGURACIONES DEL SUBSTRATO}{36}
-\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{38}
+\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{37}
 \contentsline {subsection}{\numberline {3.4.5}RESOLUCI\'ON DEL SUBSTRATO}{39}
-\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{40}
+\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{39}
 \contentsline {chapter}{\numberline {4.}$\tau $-HYPERNEAT}{42}
-\contentsline {chapter}{\numberline {5.}ROBOTLIB: LIBRER\'IA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}{45}
+\contentsline {chapter}{\numberline {5.}ROBOTLIB: LIBRER\'IA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}{46}
+\contentsline {chapter}{\numberline {6.}DISE\~NO DE PLATAFORMAS ROB\'OTICAS EN EL ENTORNO VIRTUAL}{52}
