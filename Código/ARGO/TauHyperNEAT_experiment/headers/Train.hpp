@@ -11,7 +11,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <fstream>
-#include <HYPERNEAT>
+#include <TAUHYPERNEAT>
 #include <ROBOTLIB>
 #include <NEAT>
 #include "CalcFunctions.hpp"

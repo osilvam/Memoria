@@ -124,6 +124,11 @@ void * calcOrganismFitness(void * arg)
 				generationBestFitness.at(segmento) = fitnesss.at(segmento)->getFitness();
 				populationOfGenerationBestFitness.at(segmento) = p;
 			}
+
+			stringstream hcf_filename;
+			hcf_filename << "HyperNeat_conf_files/HCF_G" << g << "_P" << p << ".txt";
+
+			hyperneats.at(segmento)->printConnectionFile(&cppn_neat->organisms.at( p ), (char*)hcf_filename.str().c_str());
 		}
 		else
 		{	
@@ -337,6 +342,8 @@ int main(int argc, char * argv[])
         cerr << "TRAIN ERROR:\tFailed to copy the Champion Organism File" << endl;
     }
 	
+	hyperneats.at(0)->printConnectionFile((char*)"NEAT_organisms/Champion.txt",(char*)"HyperNeat_conf_files/HCF_Champion.txt");
+
 	sleep(1);
 
 	for (int i = 0; i < (int)vreps.size(); i++)

@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 		pass.push_back(aux_pass);
 	}
 
-	HyperNeat * hyperneat = new HyperNeat(pass, next, argv[1]);
+	TauHyperNeat * tauhyperneat = new TauHyperNeat(pass, next, argv[1]);
 
 	// ================================================ //	
 				
@@ -65,7 +65,7 @@ int main(int argc, char* argv[])
 	Genetic_Encoding * organism = new Genetic_Encoding;
 	organism->load(argv[2]);
 
-	if(!hyperneat->createSubstrateConnections(organism))
+	if(!tauhyperneat->createSubstrateConnections(organism))
 	{
 		clog << "ERROR: Neat organism has not created substrate connections successfully" << endl;
 		return(0);
@@ -87,7 +87,7 @@ int main(int argc, char* argv[])
 			*pass.at((int)joints.size()+i) = SIN(sim_time,i);
 		}
 
-		hyperneat->evaluateSubstrateConnections();
+		tauhyperneat->evaluateSubstrateConnections();
 
 		for(int i = 0; i < (int)joints.size(); i++)
 		{
@@ -116,7 +116,7 @@ int main(int argc, char* argv[])
 	vrep->stopSimulation(simx_opmode_oneshot_wait);
 
 	delete(vrep);
-	delete(hyperneat);
+	delete(tauhyperneat);
 	
 	return(0);
 

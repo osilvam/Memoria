@@ -37,6 +37,12 @@
 # NEAT
 **/NEAT/
 
+# HyperNeat
+**/HyperNeat/
+
+# TauHyperNeat
+**/TauHyperNeat/
+
 # C/C++ Objects
 *.o
 

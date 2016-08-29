@@ -10,7 +10,7 @@ vector < SimFiles2 * > simfiles2s;
 
 int g;
 
-vector <HyperNeat *> hyperneats;
+vector <TauHyperNeat *> tauhyperneats;
 vector < vector < double * > > nexts;
 vector < vector < double * > > passs;
 Population * cppn_neat;
@@ -41,7 +41,7 @@ void * calcOrganismFitness(void * arg)
 		simfiles2s.at(segmento)->openNewJointsPositionFile(g, p);
 		simfiles2s.at(segmento)->openNewRobotPositionFile(g, p);
 
-		if(!hyperneats.at(segmento)->createSubstrateConnections( &cppn_neat->organisms.at( p ) )   ) continue;
+		if(!tauhyperneats.at(segmento)->createSubstrateConnections( &cppn_neat->organisms.at( p ) )   ) continue;
 
 		for(int i = 0; i < (int)jointss.at(segmento).size(); i++)
 		{						
@@ -66,7 +66,7 @@ void * calcOrganismFitness(void * arg)
 				*passs.at(segmento).at((int)jointss.at(segmento).size()+i) = SIN(sim_time,i);
 			}
 
-			hyperneats.at(segmento)->evaluateSubstrateConnections();
+			tauhyperneats.at(segmento)->evaluateSubstrateConnections();
 
 			for(int i = 0; i < (int)jointss.at(segmento).size(); i++)
 			{
@@ -124,6 +124,11 @@ void * calcOrganismFitness(void * arg)
 				generationBestFitness.at(segmento) = fitnesss.at(segmento)->getFitness();
 				populationOfGenerationBestFitness.at(segmento) = p;
 			}
+
+			stringstream thcf_filename;
+			thcf_filename << "TauHyperNeat_conf_files/THCF_G" << g << "_P" << p << ".txt";
+
+			tauhyperneats.at(segmento)->printConnectionFile(&cppn_neat->organisms.at( p ), (char*)thcf_filename.str().c_str());
 		}
 		else
 		{	
@@ -272,11 +277,11 @@ int main(int argc, char * argv[])
 			pass.push_back(aux_pass);
 		}
 
-		HyperNeat * hyperneat = new HyperNeat(pass, next, argv[1]);
+		TauHyperNeat * tauhyperneat = new TauHyperNeat(pass, next, argv[1]);
 
 		nexts.push_back(next);
 		passs.push_back(pass);
-		hyperneats.push_back(hyperneat);
+		tauhyperneats.push_back(tauhyperneat);
 
 		// ================================================ //		
 	}	
@@ -336,7 +341,9 @@ int main(int argc, char * argv[])
     {
         cerr << "TRAIN ERROR:\tFailed to copy the Champion Organism File" << endl;
     }
-	
+
+    tauhyperneats.at(0)->printConnectionFile((char*)"NEAT_organisms/Champion.txt",(char*)"TauHyperNeat_conf_files/THCF_Champion.txt");
+
 	sleep(1);
 
 	for (int i = 0; i < (int)vreps.size(); i++)

@@ -12,6 +12,8 @@ CNAME = ../saveTrains.zip
 all: CalcFunctions.o Fitness.o SimFiles.o SimFiles2.o
 	@mkdir -p bin/NEAT_organisms
 	@rm -f ./bin/NEAT_organisms/*
+	@mkdir -p bin/HyperNeat_conf_files
+	@rm -f ./bin/HyperNeat_conf_files/*
 	@echo "Linking all objects to ./bin/$(EXECUTABLE1)"
 	@$(CC) $(CFLAGS) ./src/Train.cpp ./objects/Fitness.o ./objects/SimFiles.o ./objects/SimFiles2.o ./objects/CalcFunctions.o -o ./bin/$(EXECUTABLE1) $(LDFLAGS)
 	@echo "Linking all objects to ./bin/$(EXECUTABLE2)"
@@ -43,6 +45,7 @@ clean:
 	@rm -f ./bin/$(EXECUTABLE1)	
 	@rm -f ./bin/$(EXECUTABLE2)
 	@rm -f -R ./bin/NEAT_organisms
+	@rm -f -R ./bin/HyperNeat_conf_files
 	@rm -f -R ./bin/simulation_files*
 	@rm -f -R ./bin/videoRecorder*
 	@rm -f ./bin/*.txt

@@ -99,3 +99,4 @@ else
 fi
 
 cd ARGO/HyperNEAT_experiment; make; cd ../..;
+cd ARGO/TauHyperNEAT_experiment; make; cd ../..;

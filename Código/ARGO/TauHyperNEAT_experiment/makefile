@@ -3,7 +3,7 @@ EXECUTABLE2 = Champion
 VPATH = ./src ./headers 
 CC = g++ -O3 -std=c++11
 CFLAGS = -g -Wall -I./src -I./headers -DNON_MATLAB_PARSING -DMAX_EXT_API_CONNECTIONS=255
-LDFLAGS = -lpthread -L. -lhyperneat -lrobotlib -lneat
+LDFLAGS = -lpthread -L. -ltauhyperneat -lrobotlib -lneat
 DATE = `date +'%F--%T'`
 CURRENFOLDER = $(notdir $(shell pwd))
 SPATH = ./saveTrains_$(CURRENFOLDER)/$(DATE)
@@ -12,6 +12,8 @@ CNAME = ../saveTrains.zip
 all: CalcFunctions.o Fitness.o SimFiles.o SimFiles2.o
 	@mkdir -p bin/NEAT_organisms
 	@rm -f ./bin/NEAT_organisms/*
+	@mkdir -p bin/TauHyperNeat_conf_files
+	@rm -f ./bin/TauHyperNeat_conf_files/*
 	@echo "Linking all objects to ./bin/$(EXECUTABLE1)"
 	@$(CC) $(CFLAGS) ./src/Train.cpp ./objects/Fitness.o ./objects/SimFiles.o ./objects/SimFiles2.o ./objects/CalcFunctions.o -o ./bin/$(EXECUTABLE1) $(LDFLAGS)
 	@echo "Linking all objects to ./bin/$(EXECUTABLE2)"
@@ -43,6 +45,7 @@ clean:
 	@rm -f ./bin/$(EXECUTABLE1)	
 	@rm -f ./bin/$(EXECUTABLE2)
 	@rm -f -R ./bin/NEAT_organisms
+	@rm -f -R ./bin/TauHyperNeat_conf_files
 	@rm -f -R ./bin/simulation_files*
 	@rm -f -R ./bin/videoRecorder*
 	@rm -f ./bin/*.txt
@@ -60,7 +63,7 @@ save:
 
 runTrain:
 	make cleanTrain; 
-	cd bin; ./$(EXECUTABLE1) hyperneat_config.json user_def genetic_encoding VrepsList
+	cd bin; ./$(EXECUTABLE1) tauhyperneat_config.json user_def genetic_encoding VrepsList
 
 runChampion: 
-	cd bin; ./$(EXECUTABLE2) hyperneat_config.json ./NEAT_organisms/Champion.txt
+	cd bin; ./$(EXECUTABLE2) tauhyperneat_config.json ./NEAT_organisms/Champion.txt
