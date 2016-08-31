@@ -3,8 +3,8 @@ function [y] = JOINT_QUADRANT_PLOT_REAL(g,p)
 Color = [[0,0,0];[0,0,1];[0,1,0];[0,1,1];[1,0,0];[1,0,1];[1,1,0];[0.5,0.5,0.5];[1,0.27,0]];
 plot_order = [1 4 7 10 2 5 8 11 3];
 
-S0 = '../bin/simulation_files/joints_position_real/jointsPosition_G';
-S1 = '_P';
+S0 = '../bin/simulation_files/joints_real_position/jointsPosition_G';
+S1 = 'P';
 S2 = '.txt';
 x = [S0 num2str(g) S1 num2str(p) S2];
 Title = 'Position of Joint ';

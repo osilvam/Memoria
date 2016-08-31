@@ -32,7 +32,8 @@ fi
 if [ -d V-REP* ]
 	then
 	cd V-REP*
-	chmod 755 MultiVrep.sh; bash ./MultiVrep.sh $puerto $numero "../$robot.ttt" &>/dev/null &
+	chmod 755 MultiVrep.sh; 
+	PIDS=$(bash ./MultiVrep.sh $puerto $numero "../$robot.ttt" &)
 	cd ..
 else
 	echo ERROR: No existe la carpeta que contiene al simulador V-REP
@@ -44,6 +45,8 @@ sleep 5
 
 ruta="./$robot/${experiment#*_}"
 cd $ruta
+
+exit
 
 echo Presione la tecla Enter para comenzar el experimento
 read ok
@@ -76,5 +79,4 @@ else
 	echo ERROR: La instrucción no es correcta.
 fi
 
-vrep=$(pgrep vrep)
-kill -9 $vrep
+kill -9 $PIDS

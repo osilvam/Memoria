@@ -3,7 +3,7 @@ function [y] = JOINT_PLOT(g,p)
 Color = [[0,0,0];[0,0,1];[0,1,0];[0,1,1];[1,0,0];[1,0,1];[1,1,0];[0.5,0.5,0.5];[1,0.27,0]];
 
 S0 = '../bin/simulation_files/joints_position/jointsPosition_G';
-S1 = '_P';
+S1 = 'P';
 S2 = '.txt';
 x = [S0 num2str(g) S1 num2str(p) S2];
 
