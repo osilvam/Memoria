@@ -31,7 +31,7 @@ void Fitness::measuringValues(vector < Joint * > joints, vector < double > posit
 	for(int i = 0; i < (int)joints.size(); i++)
 		if(joints.at(i)->getJointChangeDirection())
 		{
-			jdcns.at((unsigned int)i/4)++;
+			jdcns.at((unsigned int)i/3)++;
 			jdcn++;
 		}
 }
@@ -45,12 +45,12 @@ double Fitness::calcFitness()
 				
 		vector < double > freq_fitness ((int)(N_LEGS + GRA_LIB_EXT),0.0);
 		vector < double > freq ((int)(N_LEGS + GRA_LIB_EXT),0.0);
-
+		
 		for(int i = 0; i < N_LEGS; i++)
-		{
+		{			
 			freq.at(i) = (double)(jdcns.at(i)/GRA_LIB);
 			freq_fitness.at(i) = FREQUENCY_FITNESS(freq.at(i)/(TIME_SIMULATION - TIME_INIT_MEASURING));
-		}
+		}		
 
 		if(GRA_LIB_EXT == 1)
 		{

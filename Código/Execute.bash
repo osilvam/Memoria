@@ -46,8 +46,6 @@ sleep 5
 ruta="./$robot/${experiment#*_}"
 cd $ruta
 
-exit
-
 echo Presione la tecla Enter para comenzar el experimento
 read ok
 

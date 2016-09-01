@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	for(int k = 0; k < N_LEGS*GRA_LIB + GRA_LIB_EXT; k++)
 	{
 		stringstream joint_name;
-		joint_name << "joint" << k+1 << "#";
+		joint_name << "joint" << k << "#";
 		Joint * joint = new Joint((char*)"SCALE", (char*)joint_name.str().c_str(), max_angle_limit[k], min_angle_limit[k], initial_angles[k]);
 		joints.push_back(joint);
 		vrep->addJoint(joint);

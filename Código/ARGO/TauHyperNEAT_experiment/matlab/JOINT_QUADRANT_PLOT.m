@@ -1,8 +1,5 @@
 function [y] = JOINT_QUADRANT_PLOT(g,p)
 
-Color = [[0,0,0];[0,0,1];[0,1,0];[0,1,1];[1,0,0];[1,0,1];[1,1,0];[0.5,0.5,0.5];[1,0.27,0]];
-plot_order = [1 4 7 10 2 5 8 11 3];
-
 S0 = '../bin/simulation_files/joints_position/jointsPosition_G';
 S1 = 'P';
 S2 = '.txt';
@@ -15,10 +12,10 @@ t = A(:,1);
 
 figure
 
-for i = 2 : 10,
-	y = [Title num2str(i-2)];
-	subplot(4,3,plot_order(i-1));
-	plot(t, A(:,i), 'Color', Color(i-1,:));
+for i = 2 : 13,
+	y = [Title num2str(i-1)];
+	subplot(4,3,i-1);
+	plot(t, A(:,i), 'Color', 'b', 'LineWidth',2);
 	title(y)
 	xlabel('Time [s]')
 	ylabel('Joint Position [rad]')
