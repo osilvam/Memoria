@@ -73,10 +73,13 @@ int main(int argc, char* argv[])
 
 	for(int i = 0; i < (int)joints.size(); i++)
 	{
+		joints.at(i)->setInitialValues();
 		double joint_pos = joints.at(i)->getJointInitialPosition();
 		*next.at(i) = joint_pos;
 		*pass.at(i) = joint_pos;
 	}
+
+	vrep->moveJointsToInitialPosition();
 
 	vrep->startSimulation(simx_opmode_oneshot_wait);
 
