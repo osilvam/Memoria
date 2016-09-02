@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  19 JUL 2016 17:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  2 SEP 2016 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -15535,7 +15535,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no p in font nullfont!
-Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
 Missing character: There is no c in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -16011,6 +16011,12 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no P in font nullfont!
@@ -16132,7 +16138,7 @@ Missing character: There is no a in font nullfont!
 <write> ...ference `mapfenotipo' on page \thepage 
                                                   \space undefined\on@line .
 l.111 ... se mostró en la figura \ref{mapfenotipo}
-                                                  . La salida de CPPN es int...
+                                                  . La salida de la red CPPN...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -16153,6 +16159,11 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
 Missing character: There is no C in font nullfont!
 Missing character: There is no P in font nullfont!
 Missing character: There is no P in font nullfont!
@@ -16927,6 +16938,11 @@ Overfull \hbox (32.60553pt too wide) in paragraph at lines 113--114
 
 
 Overfull \hbox (21.59326pt too wide) in paragraph at lines 113--114
+\OML/cmm/m/it/10 ![]$
+ []
+
+
+Overfull \hbox (22.69302pt too wide) in paragraph at lines 113--114
 \OML/cmm/m/it/10 ![]$
  []
 
@@ -27839,16 +27855,15 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.256 \begin{figure}
-                    [t][H]
+                    [ht!]
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 Missing character: There is no [ in font nullfont!
+Missing character: There is no h in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no H in font nullfont!
+Missing character: There is no ! in font nullfont!
 Missing character: There is no ] in font nullfont!
 
 ! LaTeX Error: Environment subfigure undefined.
@@ -30281,6 +30296,154 @@ Overfull \hbox (5.50348pt too wide) in paragraph at lines 308--309
 \OML/cmm/m/it/10 ^^\$
  []
 
+
+! LaTeX Error: The font size command \normalsize is not defined:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.310 \clearpage
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+[2
+! Undefined control sequence.
+<write> \newlabel{fig:posio1}{{}{\thepage 
+                                          }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:posio1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:posio2}{{}{\thepage 
+                                          }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:posio2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:posio3}{{}{\thepage 
+                                          }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:posio3}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:posio}{{}{\thepage 
+                                         }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:posio}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres1}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres1}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres2}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres2}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres3}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres3}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres4}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres4}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres5}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres5}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres6}{{}{\thepage 
+                                                 }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres6}{{}{}}
+! Undefined control sequence.
+<write> \newlabel{fig:substrateres}{{}{\thepage 
+                                                }}
+l.310 \clearpage
+                
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{fig:substrateres}{{}{}}
+]
 Missing character: There is no E in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -30350,12 +30513,12 @@ Missing character: There is no ó in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 310--311
+Overfull \hbox (20.0pt too wide) in paragraph at lines 312--313
 []
  []
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 312--312
+Overfull \hbox (20.0pt too wide) in paragraph at lines 314--314
 [] 
  []
 
@@ -30616,7 +30779,7 @@ Missing character: There is no ( in font nullfont!
 ! Missing number, treated as zero.
 <to be read again> 
                    \c@* 
-l.318 		\begin{enumerate}[label=(\roman*
+l.320 		\begin{enumerate}[label=(\roman*
                                         )]
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -30631,7 +30794,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.319 		\item U
+l.321 		\item U
                sar la red CPPN para determinar el peso de cada posible conex...
 
 Try typing  <return>  to proceed.
@@ -30644,7 +30807,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.319 		\item U
+l.321 		\item U
                sar la red CPPN para determinar el peso de cada posible conex...
 
 Try typing  <return>  to proceed.
@@ -30657,7 +30820,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.319 		\item U
+l.321 		\item U
                sar la red CPPN para determinar el peso de cada posible conex...
 
 Try typing  <return>  to proceed.
@@ -30880,7 +31043,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 		\item S
+l.322 		\item S
                e usa el substrato como una ANN en la tarea a resolver para d...
 
 Try typing  <return>  to proceed.
@@ -30893,7 +31056,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 		\item S
+l.322 		\item S
                e usa el substrato como una ANN en la tarea a resolver para d...
 
 Try typing  <return>  to proceed.
@@ -30906,7 +31069,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.320 		\item S
+l.322 		\item S
                e usa el substrato como una ANN en la tarea a resolver para d...
 
 Try typing  <return>  to proceed.
@@ -31018,7 +31181,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.321 		\end{enumerate}
+l.323 		\end{enumerate}
                        
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.

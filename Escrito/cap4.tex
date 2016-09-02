@@ -50,7 +50,7 @@ Todos estos retardos a lo largo de la red permitirán incorporar variables tempor
 	\begin{enumerate}
 	\item Por cada miembro de la población de redes CPPN:
 		\begin{enumerate}[label=(\roman*)]
-		\item Usar la red CPPN para determinar el peso y el retardo de cada posible conexión en el substrato. Si el valor absoluto de la salida correspondiente al peso de la red CPPN sobrepasa la magnitud de un umbral, se crea la conexión con el peso y el porcentaje de retardo dado por la salida de la red CPPN.
+		\item Usar la red CPPN para determinar el peso y el retardo de cada posible conexión en el substrato. Si el valor absoluto de la salida correspondiente al peso de la red CPPN sobrepasa la magnitud de un umbral, se crea la conexión con el peso escalado apropiadamente y el porcentaje de retardo dado por la salida de la red CPPN.
 		\item Se usa el substrato como una ANN en la tarea a resolver para determinar su desempeño y asignar el resultado a la red CPPN.
 		\end{enumerate}
 	\item Reproducir las redes CPPN acorde al método NEAT para producir una nueva población de CPPNs correspondientes a una nueva generación.

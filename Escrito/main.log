@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  23 AUG 2016 19:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  2 SEP 2016 17:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -701,8 +701,8 @@ Overfull \hbox (23.64445pt too wide) in paragraph at lines 208--209
  z[]\OT1/cmr/m/n/12 )$
  []
 
-[36 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrateconf3
-.png> <./fig/substrateconf4.png>] [37]
+[36] [37 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrate
+conf3.png> <./fig/substrateconf4.png>]
 <fig/posio1.png, id=180, 144.54pt x 144.54pt>
 File: fig/posio1.png Graphic file (type png)
  <use fig/posio1.png>
@@ -818,7 +818,10 @@ g/buffer3.png>]) [45]
 
  (./cap5.tex
 Cap\'{\i }tulo 5.
-[46
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 5.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [46
 
 
 
@@ -839,7 +842,7 @@ e a un con-tro-la-dor USB2Dynamixel,
 
 LaTeX Warning: Reference `prueba' on page 49 undefined on input line 28.
 
-<fig/prueba.png, id=243, 982.67125pt x 664.4825pt>
+<fig/prueba.png, id=244, 982.67125pt x 664.4825pt>
 File: fig/prueba.png Graphic file (type png)
  <use fig/prueba.png>
 Package pdftex.def Info: fig/prueba.png used on input line 32.
@@ -876,19 +879,19 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
  (./cap6.tex
 Cap\'{\i }tulo 6.
-<fig/import1.png, id=254, 451.6875pt x 451.6875pt>
+<fig/import1.png, id=255, 451.6875pt x 451.6875pt>
 File: fig/import1.png Graphic file (type png)
  <use fig/import1.png>
 Package pdftex.def Info: fig/import1.png used on input line 12.
 (pdftex.def)             Requested size: 163.77159pt x 163.77214pt.
 
-<fig/import2.png, id=255, 631.35875pt x 485.815pt>
+<fig/import2.png, id=256, 631.35875pt x 485.815pt>
 File: fig/import2.png Graphic file (type png)
  <use fig/import2.png>
 Package pdftex.def Info: fig/import2.png used on input line 19.
 (pdftex.def)             Requested size: 212.90808pt x 163.82576pt.
 
-<fig/import3.png, id=256, 1927.2pt x 1058.95625pt>
+<fig/import3.png, id=257, 1927.2pt x 1058.95625pt>
 File: fig/import3.png Graphic file (type png)
  <use fig/import3.png>
 Package pdftex.def Info: fig/import3.png used on input line 27.
@@ -898,34 +901,34 @@ Package pdftex.def Info: fig/import3.png used on input line 27.
 
 
 
-] <fig/divide1.png, id=260, 843.15pt x 519.44063pt>
+] <fig/divide1.png, id=261, 843.15pt x 519.44063pt>
 File: fig/divide1.png Graphic file (type png)
  <use fig/divide1.png>
 Package pdftex.def Info: fig/divide1.png used on input line 41.
 (pdftex.def)             Requested size: 184.24461pt x 113.50847pt.
 
-<fig/divide2.png, id=261, 843.15pt x 519.44063pt>
+<fig/divide2.png, id=262, 843.15pt x 519.44063pt>
 File: fig/divide2.png Graphic file (type png)
  <use fig/divide2.png>
 Package pdftex.def Info: fig/divide2.png used on input line 48.
 (pdftex.def)             Requested size: 184.24461pt x 113.50847pt.
 
 [53 <./fig/import1.png> <./fig/import2.png> <./fig/import3.png>]
-<fig/selectutil1.png, id=265, 632.3625pt x 451.6875pt>
+<fig/selectutil1.png, id=266, 632.3625pt x 451.6875pt>
 File: fig/selectutil1.png Graphic file (type png)
 
 <use fig/selectutil1.png>
 Package pdftex.def Info: fig/selectutil1.png used on input line 62.
 (pdftex.def)             Requested size: 184.24461pt x 131.59941pt.
 
-<fig/selectutil2.png, id=266, 632.3625pt x 451.6875pt>
+<fig/selectutil2.png, id=267, 632.3625pt x 451.6875pt>
 File: fig/selectutil2.png Graphic file (type png)
 
 <use fig/selectutil2.png>
 Package pdftex.def Info: fig/selectutil2.png used on input line 69.
 (pdftex.def)             Requested size: 184.24461pt x 131.59941pt.
 
-<fig/selectutil3.png, id=267, 969.6225pt x 692.5875pt>
+<fig/selectutil3.png, id=268, 969.6225pt x 692.5875pt>
 File: fig/selectutil3.png Graphic file (type png)
 
 <use fig/selectutil3.png>
@@ -933,42 +936,42 @@ Package pdftex.def Info: fig/selectutil3.png used on input line 77.
 (pdftex.def)             Requested size: 368.48923pt x 263.2071pt.
  [54 <./fig/divide1.png> <./fig/divide2.png>] [55 <./fig/selectutil1.png> <./fi
 g/selectutil2.png> <./fig/selectutil3.png>]
-<fig/convexshape1.png, id=279, 767.86874pt x 557.08125pt>
+<fig/convexshape1.png, id=280, 767.86874pt x 557.08125pt>
 File: fig/convexshape1.png Graphic file (type png)
 
 <use fig/convexshape1.png>
 Package pdftex.def Info: fig/convexshape1.png used on input line 91.
 (pdftex.def)             Requested size: 184.24461pt x 133.66823pt.
 
-<fig/convexshape2.png, id=280, 767.86874pt x 557.08125pt>
+<fig/convexshape2.png, id=281, 767.86874pt x 557.08125pt>
 File: fig/convexshape2.png Graphic file (type png)
 
 <use fig/convexshape2.png>
 Package pdftex.def Info: fig/convexshape2.png used on input line 98.
 (pdftex.def)             Requested size: 184.24461pt x 133.66823pt.
 
-<fig/simpleshape1.png, id=281, 730.22812pt x 542.025pt>
+<fig/simpleshape1.png, id=282, 730.22812pt x 542.025pt>
 File: fig/simpleshape1.png Graphic file (type png)
 
 <use fig/simpleshape1.png>
 Package pdftex.def Info: fig/simpleshape1.png used on input line 112.
 (pdftex.def)             Requested size: 184.24461pt x 136.75478pt.
 
-<fig/simpleshape2.png, id=282, 730.22812pt x 542.025pt>
+<fig/simpleshape2.png, id=283, 730.22812pt x 542.025pt>
 File: fig/simpleshape2.png Graphic file (type png)
 
 <use fig/simpleshape2.png>
 Package pdftex.def Info: fig/simpleshape2.png used on input line 119.
 (pdftex.def)             Requested size: 184.24461pt x 136.75478pt.
 
-<fig/simpleshape3.png, id=283, 608.2725pt x 451.6875pt>
+<fig/simpleshape3.png, id=284, 608.2725pt x 451.6875pt>
 File: fig/simpleshape3.png Graphic file (type png)
 
 <use fig/simpleshape3.png>
 Package pdftex.def Info: fig/simpleshape3.png used on input line 127.
 (pdftex.def)             Requested size: 184.24461pt x 136.8099pt.
 
-<fig/simpleshape4.png, id=284, 608.2725pt x 451.6875pt>
+<fig/simpleshape4.png, id=285, 608.2725pt x 451.6875pt>
 File: fig/simpleshape4.png Graphic file (type png)
 
 <use fig/simpleshape4.png>
@@ -983,66 +986,66 @@ cmsy/m/n/12 !$\OT1/ptm/m/it/12 Revolute\OT1/ptm/m/n/12 )
 
 [56 <./fig/convexshape1.png> <./fig/convexshape2.png>] [57 <./fig/simpleshape1.
 png> <./fig/simpleshape2.png> <./fig/simpleshape3.png> <./fig/simpleshape4.png>
-] <fig/addjoint1.png, id=298, 888.31876pt x 421.575pt>
+] <fig/addjoint1.png, id=299, 888.31876pt x 421.575pt>
 File: fig/addjoint1.png Graphic file (type png)
  <use fig/addjoint1.png>
 Package pdftex.def Info: fig/addjoint1.png used on input line 148.
 (pdftex.def)             Requested size: 184.24461pt x 87.43336pt.
 
-<fig/addjoint2.png, id=299, 888.31876pt x 421.575pt>
+<fig/addjoint2.png, id=300, 888.31876pt x 421.575pt>
 File: fig/addjoint2.png Graphic file (type png)
  <use fig/addjoint2.png>
 Package pdftex.def Info: fig/addjoint2.png used on input line 155.
 (pdftex.def)             Requested size: 184.24461pt x 87.43336pt.
 
-<fig/addjoint3.png, id=300, 828.09375pt x 376.40625pt>
+<fig/addjoint3.png, id=301, 828.09375pt x 376.40625pt>
 File: fig/addjoint3.png Graphic file (type png)
  <use fig/addjoint3.png>
 Package pdftex.def Info: fig/addjoint3.png used on input line 163.
 (pdftex.def)             Requested size: 368.48923pt x 167.49738pt.
 
 [58 <./fig/addjoint1.png> <./fig/addjoint2.png> <./fig/addjoint3.png>]
-<fig/jointg1.png, id=307, 685.05937pt x 504.38437pt>
+<fig/jointg1.png, id=308, 685.05937pt x 504.38437pt>
 File: fig/jointg1.png Graphic file (type png)
  <use fig/jointg1.png>
 Package pdftex.def Info: fig/jointg1.png used on input line 179.
 (pdftex.def)             Requested size: 184.24461pt x 135.65456pt.
 
-<fig/jointg2.png, id=308, 685.05937pt x 504.38437pt>
+<fig/jointg2.png, id=309, 685.05937pt x 504.38437pt>
 File: fig/jointg2.png Graphic file (type png)
  <use fig/jointg2.png>
 Package pdftex.def Info: fig/jointg2.png used on input line 186.
 (pdftex.def)             Requested size: 184.24461pt x 135.65456pt.
 
-[59] <fig/copy_rot1.png, id=312, 1097.60063pt x 504.38437pt>
+[59] <fig/copy_rot1.png, id=313, 1097.60063pt x 504.38437pt>
 File: fig/copy_rot1.png Graphic file (type png)
 
 <use fig/copy_rot1.png>
 Package pdftex.def Info: fig/copy_rot1.png used on input line 200.
 (pdftex.def)             Requested size: 184.24461pt x 84.66672pt.
 
-<fig/copy_rot2.png, id=313, 1099.10625pt x 504.38437pt>
+<fig/copy_rot2.png, id=314, 1099.10625pt x 504.38437pt>
 File: fig/copy_rot2.png Graphic file (type png)
 
 <use fig/copy_rot2.png>
 Package pdftex.def Info: fig/copy_rot2.png used on input line 207.
 (pdftex.def)             Requested size: 184.24461pt x 84.55128pt.
 
-<fig/copy_rot3.png, id=314, 1099.10625pt x 502.87875pt>
+<fig/copy_rot3.png, id=315, 1099.10625pt x 502.87875pt>
 File: fig/copy_rot3.png Graphic file (type png)
 
 <use fig/copy_rot3.png>
 Package pdftex.def Info: fig/copy_rot3.png used on input line 215.
 (pdftex.def)             Requested size: 368.48923pt x 168.59778pt.
  [60 <./fig/jointg1.png> <./fig/jointg2.png>]
-<fig/enablejoint1.png, id=320, 383.4325pt x 519.9425pt>
+<fig/enablejoint1.png, id=321, 383.4325pt x 519.9425pt>
 File: fig/enablejoint1.png Graphic file (type png)
 
 <use fig/enablejoint1.png>
 Package pdftex.def Info: fig/enablejoint1.png used on input line 229.
 (pdftex.def)             Requested size: 171.96205pt x 233.18652pt.
 
-<fig/enablejoint2.png, id=321, 383.4325pt x 484.81125pt>
+<fig/enablejoint2.png, id=322, 383.4325pt x 484.81125pt>
 File: fig/enablejoint2.png Graphic file (type png)
 
 <use fig/enablejoint2.png>
@@ -1050,28 +1053,28 @@ Package pdftex.def Info: fig/enablejoint2.png used on input line 236.
 (pdftex.def)             Requested size: 184.24461pt x 232.95827pt.
  [61 <./fig/copy_rot1.png> <./fig/copy_rot2.png> <./fig/copy_rot3.png>] [62 <./
 fig/enablejoint1.png> <./fig/enablejoint2.png>]
-<fig/changevis1.png, id=332, 1099.10625pt x 496.85625pt>
+<fig/changevis1.png, id=333, 1099.10625pt x 496.85625pt>
 File: fig/changevis1.png Graphic file (type png)
 
 <use fig/changevis1.png>
 Package pdftex.def Info: fig/changevis1.png used on input line 252.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/changevis2.png, id=333, 287.57437pt x 166.37157pt>
+<fig/changevis2.png, id=334, 287.57437pt x 166.37157pt>
 File: fig/changevis2.png Graphic file (type png)
 
 <use fig/changevis2.png>
 Package pdftex.def Info: fig/changevis2.png used on input line 260.
 (pdftex.def)             Requested size: 184.24461pt x 106.5942pt.
 
-<fig/changevis3.png, id=334, 287.57437pt x 166.37157pt>
+<fig/changevis3.png, id=335, 287.57437pt x 166.37157pt>
 File: fig/changevis3.png Graphic file (type png)
 
 <use fig/changevis3.png>
 Package pdftex.def Info: fig/changevis3.png used on input line 267.
 (pdftex.def)             Requested size: 184.24461pt x 106.5942pt.
 
-<fig/changevis4.png, id=335, 1099.10625pt x 496.85625pt>
+<fig/changevis4.png, id=336, 1099.10625pt x 496.85625pt>
 File: fig/changevis4.png Graphic file (type png)
 
 <use fig/changevis4.png>
@@ -1082,58 +1085,58 @@ Package pdftex.def Info: fig/changevis4.png used on input line 275.
 LaTeX Warning: Text page 64 contains only floats.
 
 [64 <./fig/changevis1.png> <./fig/changevis2.png> <./fig/changevis3.png> <./fig
-/changevis4.png>] <fig/accesschancol1.png, id=346, 1099.10625pt x 496.85625pt>
+/changevis4.png>] <fig/accesschancol1.png, id=347, 1099.10625pt x 496.85625pt>
 File: fig/accesschancol1.png Graphic file (type png)
 
 <use fig/accesschancol1.png>
 Package pdftex.def Info: fig/accesschancol1.png used on input line 289.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/accesschancol2.png, id=347, 1099.10625pt x 496.85625pt>
+<fig/accesschancol2.png, id=348, 1099.10625pt x 496.85625pt>
 File: fig/accesschancol2.png Graphic file (type png)
 
 <use fig/accesschancol2.png>
 Package pdftex.def Info: fig/accesschancol2.png used on input line 297.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/chancol1.png, id=348, 1099.10625pt x 496.85625pt>
+<fig/chancol1.png, id=349, 1099.10625pt x 496.85625pt>
 File: fig/chancol1.png Graphic file (type png)
  <use fig/chancol1.png>
 Package pdftex.def Info: fig/chancol1.png used on input line 311.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol2.png, id=349, 1099.10625pt x 496.85625pt>
+<fig/chancol2.png, id=350, 1099.10625pt x 496.85625pt>
 File: fig/chancol2.png Graphic file (type png)
  <use fig/chancol2.png>
 Package pdftex.def Info: fig/chancol2.png used on input line 318.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol3.png, id=350, 1099.10625pt x 496.85625pt>
+<fig/chancol3.png, id=351, 1099.10625pt x 496.85625pt>
 File: fig/chancol3.png Graphic file (type png)
  <use fig/chancol3.png>
 Package pdftex.def Info: fig/chancol3.png used on input line 326.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol4.png, id=351, 1099.10625pt x 496.85625pt>
+<fig/chancol4.png, id=352, 1099.10625pt x 496.85625pt>
 File: fig/chancol4.png Graphic file (type png)
  <use fig/chancol4.png>
 Package pdftex.def Info: fig/chancol4.png used on input line 333.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-[65] <fig/chanjpos1.png, id=355, 903.375pt x 412.54124pt>
+[65] <fig/chanjpos1.png, id=356, 903.375pt x 412.54124pt>
 File: fig/chanjpos1.png Graphic file (type png)
 
 <use fig/chanjpos1.png>
 Package pdftex.def Info: fig/chanjpos1.png used on input line 347.
 (pdftex.def)             Requested size: 368.48923pt x 168.28061pt.
- <fig/chanjpos2.png, id=356, 903.375pt x 414.04688pt>
+ <fig/chanjpos2.png, id=357, 903.375pt x 414.04688pt>
 File: fig/chanjpos2.png Graphic file (type png)
 
 <use fig/chanjpos2.png>
 Package pdftex.def Info: fig/chanjpos2.png used on input line 355.
 (pdftex.def)             Requested size: 368.48923pt x 168.89476pt.
 
-<fig/robotlisto.png, id=357, 978.65625pt x 557.08125pt>
+<fig/robotlisto.png, id=358, 978.65625pt x 557.08125pt>
 File: fig/robotlisto.png Graphic file (type png)
 
 <use fig/robotlisto.png>
@@ -1162,16 +1165,13 @@ LaTeX Info: Redefining \% on input line 6.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 9052 strings out of 493304
- 127855 string characters out of 6139871
- 298965 words of memory out of 5000000
- 12203 multiletter control sequences out of 15000+600000
- 45882 words of font info for 98 fonts, out of 8000000 for 9000
+ 9087 strings out of 493304
+ 128354 string characters out of 6139871
+ 299053 words of memory out of 5000000
+ 12233 multiletter control sequences out of 15000+600000
+ 46397 words of font info for 100 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,60p,2241b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -1183,15 +1183,15 @@ ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
-pfb>
-Output written on main.pdf (76 pages, 22128354 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (76 pages, 21821812 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
+ 440 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  336 words of extra memory for PDF output out of 10000 (max. 10000000)
 
