@@ -36,3 +36,8 @@
 \contentsline {chapter}{\numberline {4.}$\tau $-HYPERNEAT}{42}
 \contentsline {chapter}{\numberline {5.}ROBOTLIB: LIBRER\'IA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}{46}
 \contentsline {chapter}{\numberline {6.}DISE\~NO DE PLATAFORMAS ROB\'OTICAS EN EL ENTORNO VIRTUAL}{52}
+\contentsline {chapter}{\numberline {7.}SIMULACI\'ON DE CAMINATAS}{70}
+\contentsline {section}{\numberline {7.1}FUNCIONES DE DESEMPE\~NO}{72}
+\contentsline {section}{\numberline {7.2}ESTRUCTURA B\'ASICA DE UN ENTRENAMIENTO}{73}
+\contentsline {section}{\numberline {7.3}PROGRAMA DE ENTRENAMIENTO}{74}
+\contentsline {section}{\numberline {7.4}RESULTADOS DE LOS ENTRENAMIENTOS}{75}

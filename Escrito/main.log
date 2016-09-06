@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  2 SEP 2016 17:27
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  5 SEP 2016 22:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -385,7 +385,7 @@ LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 
 (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux) (./cap4.aux) (./cap5.aux)
-(./cap6.aux) (./referencias.aux))
+(./cap6.aux) (./cap7.aux) (./referencias.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
@@ -1145,6 +1145,29 @@ Package pdftex.def Info: fig/robotlisto.png used on input line 367.
 ) [66 <./fig/accesschancol1.png> <./fig/accesschancol2.png>] [67 <./fig/chancol
 1.png> <./fig/chancol2.png> <./fig/chancol3.png> <./fig/chancol4.png>] [68 <./f
 ig/chanjpos1.png> <./fig/chanjpos2.png>] [69 <./fig/robotlisto.png>]
+\openout2 = `cap7.aux'.
+
+ (./cap7.tex
+Cap\'{\i }tulo 7.
+[70
+
+
+
+]
+
+LaTeX Warning: Reference `h_tauh_structure' on page 71 undefined on input line 
+7.
+
+[71]
+
+LaTeX Warning: Reference `fig:fitnessfrec' on page 72 undefined on input line 1
+5.
+
+
+LaTeX Warning: Reference `fig:fitnessdist' on page 72 undefined on input line 1
+7.
+
+[72] [73] [74]) [75]
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -1153,24 +1176,24 @@ Underfull \hbox (badness 1152) in paragraph at lines 4--5
  Ar-ti-fi-cial Li-fe,
  []
 
-[70
+[76
 
 
 
-]) [71] (./main.aux
+]) [77] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
-(./cap4.aux) (./cap5.aux) (./cap6.aux) (./referencias.aux))
+(./cap4.aux) (./cap5.aux) (./cap6.aux) (./cap7.aux) (./referencias.aux))
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9087 strings out of 493304
- 128354 string characters out of 6139871
- 299053 words of memory out of 5000000
- 12233 multiletter control sequences out of 15000+600000
+ 9099 strings out of 493304
+ 128479 string characters out of 6139871
+ 299427 words of memory out of 5000000
+ 12238 multiletter control sequences out of 15000+600000
  46397 words of font info for 100 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,60p,2241b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1188,10 +1211,10 @@ xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (76 pages, 21821812 bytes).
+Output written on main.pdf (82 pages, 21836015 bytes).
 PDF statistics:
- 440 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
+ 459 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  336 words of extra memory for PDF output out of 10000 (max. 10000000)
 
