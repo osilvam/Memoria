@@ -4,7 +4,37 @@ Con el fin de lograr que las plataformas robóticas aprendan a mover sus extremid
 
 Para el caso de HyperNEAT y \(\tau\)-HyperNEAT cada simulación de 6 segundo busca verificar el desempeño en la generación de caminatas de ambos métodos. Para ambos casos se ha establecido una configuración de substrato del tipo state-space sandwich, con una capa de entrada, una capa de salida y solo una capa oculta o intermedia. A la capa de entrada del substrato ingresarán los valores de las últimas posiciones de los motores de cada robot, junto a dos señales senoidales desfasadas en 90 grados; así si el robot posee 12 motores para mover sus extremidades, la capa de entrada poseerá 14 nodos. A la capa intermedia, conformada por $n^{2}$ nodos con $n$ como el número de patas del robot, ingresarán las señales provenientes de la capa de entrada. Finalmente la capa de salida, conformada por tantos nodos como motores tenga el robot a utilizar, recibirá las señales provenientes de los nodos de la capa intermedia, y sus salidas corresponderán a las nuevas posiciones que deben adoptar los motores del robot. Para el cálculo de una nueva iteración (nuevas posiciones para los motores), las posiciones de los motores obtenidas anteriormente a la salida del substrato serán las nuevas entradas de este. De esta forma el substrato en ambos métodos tendrá la labor de generar las señales de accionamiento de cada motor para lograr el desplazamiento del robot, a partir de las dos señales senoidales adicionales de entrada.
 
-Para el caso de HyperNEAT, la red CPPN que establece las conexiones en el substrato posee sus cuatro entradas básicas de coordenadas $x$ e $y$ de los nodos de origen y destino, además de dos entradas adicionales de información referente al espaciamiento entre ellos a lo largo de los ejes cartesianos, y como salida los pesos de las conexiones entre nodos de la capa de entrada e intermedia y entre la capa intermedia y de salida. Para el caso de \(\tau\)-HyperNEAT, la red CPPN que establece las conexiones en el substrato posee las mismas entradas que para el caso de HyperNEAT, pero como salida, además de entregar los pesos de las conexiones entre nodos de la capa de entrada e intermedia y entre la capa intermedia y de salida entrega los retardos correspondientes a dichas conexiones. En la figura \ref{h_tauh_structure} se puede apreciar un ejemplo de configuración de ambos métodos para el caso de un robot cuadrúpedo de tres grados de libertad por extremidad.
+Para el caso de HyperNEAT, la red CPPN que establece las conexiones en el substrato posee sus cuatro entradas básicas de coordenadas $x$ e $y$ de los nodos de origen y destino, además de dos entradas adicionales de información referente al espaciamiento entre ellos a lo largo de los ejes cartesianos, y como salida los pesos de las conexiones entre nodos de la capa de entrada e intermedia y entre la capa intermedia y de salida. Para el caso de \(\tau\)-HyperNEAT, la red CPPN que establece las conexiones en el substrato posee las mismas entradas que para el caso de HyperNEAT, pero como salida, además de entregar los pesos de las conexiones entre nodos de la capa de entrada e intermedia y entre la capa intermedia y de salida entrega los retardos correspondientes a dichas conexiones. En la figura \ref{fig:h_tauh_structure} se puede apreciar un ejemplo de configuración de ambos métodos para el caso de un robot cuadrúpedo de tres grados de libertad por extremidad.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.71\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/hsubstrate.JPG}
+        \label{fig:hsubstrate}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.255\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/hcppn.JPG}
+        \label{fig:hcppn}
+    \end{subfigure}
+    
+    \centering
+	\begin{subfigure}[b]{0.71\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/tauhsubstrate.JPG}
+        \label{fig:tauhsubstrate}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.255\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/tauhcppn.JPG}
+        \label{fig:tauhcppn}
+    \end{subfigure}
+    \caption{\textbf{Esquema estructural de HyperNEAT y \(\tau\)-HyperNEAT.} En la figura, los recuadros superiores e inferiores muestran el esquema estructural del método HyperNEAT y \(\tau\)-HyperNEAT respectivamente, usado en los experimentos con un robot cuadrúpedo de 3 grados de libertad por extremidad. Ambos recuadros derechos corresponden a la estructura del substrato del método respectivo, mientras que los recuadros izquierdos corresponden a la estructura básica de la red CPPN, en las que es posible apreciar la diferencia en la cantidad de salidas entre ambas debido a que en \(\tau\)-HyperNEAT la red CPPN debe calcular los retardos de las conexiones en el substrato, además de los pesos correspondientes a ellas.}
+    \label{fig:h_tauh_structure}
+\end{figure}
 
 Una vez finalizada una simulación exitosa (no se detectaron colisiones), es necesario medir y evaluar el desempeño de la caminata generada por e robot. La determinación de que tan bueno o que tan malo fue el desempeño del robot durante una simulación es un aspecto crítico del entrenamiento, ya que esto determinará de que manera evolucionarán las CPPNs encargadas de generar las conexiones en el substrato de HyperNEAT y \(\tau\)-HyperNEAT. En la siguiente sección se ahondará respecto a la medición y evaluación del desempeño de las caminatas generadas por ambos métodos.
 
@@ -13,6 +43,25 @@ Una vez finalizada una simulación exitosa (no se detectaron colisiones), es nece
 Con el objetivo de lograr medir correctamente el desempeño de las caminatas de cada robot es que se observarán dos variables importantes en cada simulación, la frecuencia de oscilación de cada uno de los motores y la máxima distancia alcanzada por el robot. Ambas variables son medidas los últimos cinco segundos de simulación, debido a que es posible que ocurran acciones no deseadas del robot inmediatamente al inicio de cada simulación, evitándose así lecturas erróneas de dichas variables. 
 
 La frecuencia de cada motor es calculada observando los cambios en el signo de la pendiente en el movimiento de este entre una iteración y otra, siendo un cambio de signo entre iteraciones consecutivas un cambio en la dirección en que se mueve el motor. Así dos cambios de dirección en el movimiento de un motor indicarán el suceso de un periodo completo de señal de dicho motor. Una vez obtenida la frecuencia de cada uno de los motores se promedian las frecuencias correspondientes a motores de la misma extremidad y dicho promedio es ingresado a la función del cálculo del desempeño de la caminata según la frecuencia, mostrada en la figura \ref{fig:fitnessfrec}. Por último el desempeño final correspondiente a la frecuencia estará dado por el promedio de las salidas de la función de desempeño de frecuencias de cada extremidad.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.48\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/usmLogo.png}
+        \caption{Función de desempeño de la frecuencia.}
+        \label{fig:fitnessfrec}
+    \end{subfigure}
+    ~
+    \begin{subfigure}[b]{0.48\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/usmLogo.png}
+        \caption{Función de desempeño de la distancia.}
+        \label{fig:fitnessdist}
+    \end{subfigure}
+    \caption{\textbf{Funciones de desempeño del entrenamiento.} En esta figura se muestran las funciones de desempeño usadas para calificar que tan exitosa fue una caminata en el entrenamiento.}
+    \label{fig:fitness}
+\end{figure}
 
 La distancia final alcanzada por el robot durante la simulación es calculada por la diferencia de distancia entre el punto donde se posiciona el robot en el segundo uno de simulación y el punto final que alcanza. Luego dicha distancia es ingresada a la función del cálculo del desempeño de la caminata según la distancia alcanzada, mostrada en la figura \ref{fig:fitnessdist}.
 
@@ -32,9 +81,16 @@ Una vez iniciado el programa de entrenamiento, este creará todos los objetos nec
 
 Ya creadas todas las entidades necesarias para el funcionamiento de los métodos de neuroevolución y de los simuladores el programa continuará con un bucle for que iterará tantas veces como generaciones se hayan estipulado para el entrenamiento, y en cada ciclo de este se iniciarán las hebras que se dividirán la población de CPPNs para ejecutar las simulaciones correspondientes a cada una de ellas. Luego que cada una de las hebras termine de probar y evaluar cada unas de las CPPNs asignadas, estas terminarán su ejecución volviendo el programa al bucle for para posteriormente evolucionar la población de CPPNs en una nueva generación y completar nuevamente un nuevo ciclo del bucle. Una vez realizados todos los ciclos del bucle for se obtendrá la red CPPN capaz de crear el patrón de conectividad más adecuado sobre el substrato del método usado, logrando la caminata con el mejor desempeño del entrenamiento.
 
-Para comprobar el funcionamiento de HyperNEAT y \(\tau\)-HyperNEAT en la generación de caminatas en robots con extremidades móviles se entrenarán a 3 robots distintos: Quadratot, ArgoV2 y Rosita, siendo el primero un robot diseñado por el Investigador de la Universidad de Chile Juan Cristóbal Zagal, con el objeto de ser usado para comprobar el funcionamiento de distintos métodos para la generación de caminatas; y los últimos dos, robots diseñados Por el estudiante de Ingeniería en Diseño de Productos Cristian Osorio Méndez para el Departamento de Electrónica de La Universidad Técnica Federico Santa María. En la sección siguiente se mostrarán los resultados de los entrenamientos realizados sobre cada uno de estos robots usando ambos métodos de neuroevolución. Todos los códigos utilizados en la siguiente sección pueden ser descargados desde el repositorio Github \url{https://github.com/osilvam/Memoria} y probados de manera fácil y sencilla.
+Para comprobar el funcionamiento de HyperNEAT y \(\tau\)-HyperNEAT en la generación de caminatas en robots con extremidades móviles se entrenarán a 3 robots distintos: Quadratot, ArgoV2 y Rosita (ver Figura \ref{robots}), siendo el primero un robot diseñado por el Investigador de la Universidad de Chile Juan Cristóbal Zagal, con el objeto de ser usado para comprobar el funcionamiento de distintos métodos para la generación de caminatas; y los últimos dos, robots diseñados por el estudiante de Ingeniería en Diseño de Productos Cristian Osorio Méndez para el Departamento de Electrónica de La Universidad Técnica Federico Santa María. En la sección siguiente se mostrarán los resultados de los entrenamientos realizados sobre cada uno de estos robots usando ambos métodos de neuroevolución. Todos los códigos utilizados en la siguiente sección pueden ser descargados desde el repositorio Github \url{https://github.com/osilvam/Memoria} y probados de manera fácil y sencilla.
 
 \section{RESULTADOS DE LOS ENTRENAMIENTOS}
 
-Tal como se mencionó anteriormente, los entrenamientos para la generación de caminatas usando los métodos de neuroevolución HyperNEAT y \(\tau\)-HyperNEAT se aplicar´an
+Tal como se mencionó anteriormente, los entrenamientos para la generación de caminatas usando los métodos de neuroevolución HyperNEAT y \(\tau\)-HyperNEAT se aplicarán en 3 plataformas robóticas, Quadratot, ArgoV2 y Rosita. A continuación se mostrarán los resultados obtenidos para cada una de ellas.
+
+\subsection{QUADRATOT}
+
+\begin{itemize}
+\item[\textbf{HyperNEAT}] jkwnajkw
+\item[\textbf{\(\tau\)-HyperNEAT}] jkwnajkw
+\end{itemize}
 

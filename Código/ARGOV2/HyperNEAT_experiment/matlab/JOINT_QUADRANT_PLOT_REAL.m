@@ -1,6 +1,6 @@
 function [y] = JOINT_QUADRANT_PLOT_REAL(g,p)
 
-S0 = '../bin/simulation_files/joints_real_position/jointsPosition_G';
+S0 = '../bin/simulation_files/joints_real_position/Champion_G';
 S1 = 'P';
 S2 = '.txt';
 x = [S0 num2str(g) S1 num2str(p) S2];

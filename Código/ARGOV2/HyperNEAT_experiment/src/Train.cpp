@@ -60,7 +60,6 @@ void * calcOrganismFitness(void * arg)
 
 		while(sim_time < TIME_SIMULATION && flag)
 		{				
-			simfiles2s.at(segmento)->addFileJointsPosition(vreps.at(segmento), jointss.at(segmento), sim_time);		
 			for(int i = 0; i < ADITIONAL_HYPERNEAT_INPUTS; i++)
 			{
 				*passs.at(segmento).at((int)jointss.at(segmento).size()+i) = SIN(sim_time,i);
@@ -124,11 +123,6 @@ void * calcOrganismFitness(void * arg)
 				generationBestFitness.at(segmento) = fitnesss.at(segmento)->getFitness();
 				populationOfGenerationBestFitness.at(segmento) = p;
 			}
-
-			stringstream hcf_filename;
-			hcf_filename << "HyperNeat_conf_files/HCF_G" << g << "_P" << p << ".txt";
-
-			hyperneats.at(segmento)->printConnectionFile(&cppn_neat->organisms.at( p ), (char*)hcf_filename.str().c_str());
 		}
 		else
 		{	
@@ -318,31 +312,104 @@ int main(int argc, char * argv[])
 		int generationBestFitnessIndex;
 		double generationBestFitness_value = max(generationBestFitness,&generationBestFitnessIndex);
 
-		stringstream generation_champion_filename;
-        generation_champion_filename << "NEAT_organisms/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+		//////////////////////////// SAVE CHAMPION FILES /////////////////////////////////
 
+		stringstream generation_champion_filename, hcf_filename;
+        generation_champion_filename << "NEAT_organisms/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+        hcf_filename << "HyperNeat_conf_files/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+
+        
         cppn_neat->organisms.at(populationOfGenerationBestFitness.at(generationBestFitnessIndex)).save((char*)generation_champion_filename.str().c_str());
+        hyperneats.at(0)->printConnectionFile((char*)generation_champion_filename.str().c_str(), (char*)hcf_filename.str().c_str());
+
+        stringstream cp_champion_jointPosition, cp_champion_jointRealPosition, cp_champion_robotPosition;
+
+	    cp_champion_jointPosition << "cp simulation_files/joints_position/jointsPosition_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt ./simulation_files/joints_position/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+	    cp_champion_jointRealPosition << "cp simulation_files/joints_real_position/jointsPosition_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt ./simulation_files/joints_real_position/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+	    cp_champion_robotPosition << "cp simulation_files/robot_position/robotPosition_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt ./simulation_files/robot_position/Champion_G" << g << "P" << populationOfGenerationBestFitness.at(generationBestFitnessIndex) << ".txt";
+
+	    if(system((char*)cp_champion_jointPosition.str().c_str()) == -1)
+	    {
+	        cerr << "TRAIN ERROR:\tFailed to copy the Champion joint position File" << endl;
+	    }
+	    else
+	    {
+	    	if(system("rm -f ./simulation_files/joints_position/jointsPosition_G*.txt") == -1)
+		    {
+		        cerr << "TRAIN ERROR:\tFailed to remove useless files" << endl;
+		    }
+	    }
+
+	    if(system((char*)cp_champion_jointRealPosition.str().c_str()) == -1)
+	    {
+	        cerr << "TRAIN ERROR:\tFailed to copy the Champion joint real position File" << endl;
+	    }
+	    else
+	    {
+	    	if(system("rm -f ./simulation_files/joints_real_position/jointsPosition_G*.txt") == -1)
+		    {
+		        cerr << "TRAIN ERROR:\tFailed to remove useless files" << endl;
+		    }
+	    }
+
+	    if(system((char*)cp_champion_robotPosition.str().c_str()) == -1)
+	    {
+	        cerr << "TRAIN ERROR:\tFailed to copy the Champion robot position File" << endl;
+	    }
+	    else
+	    {
+	    	if(system("rm -f ./simulation_files/robot_position/robotPosition_G*.txt") == -1)
+		    {
+		        cerr << "TRAIN ERROR:\tFailed to remove useless files" << endl;
+		    }
+	    }
+
+        ///////////////////////////////////////////////////////////////////////////////////
 
         if(bestFitness < generationBestFitness_value)
         {
         	bestFitness = generationBestFitness_value;
-        	bestGeneration = g;
+        	bestGeneration = g; 
         	bestPopulation = populationOfGenerationBestFitness.at(generationBestFitnessIndex);
         }
 
         simfile->addFileChampions(generationBestFitness_value, g, populationOfGenerationBestFitness.at(generationBestFitnessIndex));
+
+
 	}
 
-	stringstream cp_champion_filename;
+	//////////////////////////// SAVE CHAMPION FILES /////////////////////////////////
+
+	stringstream cp_champion_organism, cp_champion_jointPos, cp_champion_jointRPos, cp_champion_robotPos;
     
-    cp_champion_filename << "cp NEAT_organisms/Champion_G" << bestGeneration << "P" << bestPopulation << ".txt ./NEAT_organisms/Champion.txt";
+    cp_champion_organism << "cp NEAT_organisms/Champion_G" << bestGeneration << "P" << bestPopulation << ".txt ./NEAT_organisms/Champion.txt";
+    cp_champion_jointPos << "cp simulation_files/joints_position/Champion_G" << bestGeneration << "P" << bestPopulation << ".txt ./simulation_files/joints_position/Champion.txt";
+    cp_champion_jointRPos << "cp simulation_files/joints_real_position/Champion_G" << bestGeneration << "P" << bestPopulation << ".txt ./simulation_files/joints_real_position/Champion.txt";
+    cp_champion_robotPos << "cp simulation_files/robot_position/Champion_G" << bestGeneration << "P" << bestPopulation << ".txt ./simulation_files/robot_position/Champion.txt";
     
-    if(system((char*)cp_champion_filename.str().c_str()) == -1)
+    if(system((char*)cp_champion_organism.str().c_str()) == -1)
     {
         cerr << "TRAIN ERROR:\tFailed to copy the Champion Organism File" << endl;
     }
+
+    if(system((char*)cp_champion_jointPos.str().c_str()) == -1)
+    {
+        cerr << "TRAIN ERROR:\tFailed to copy the Champion Joint Position File" << endl;
+    }
+
+    if(system((char*)cp_champion_jointRPos.str().c_str()) == -1)
+    {
+        cerr << "TRAIN ERROR:\tFailed to copy the Champion Joint Real Position File" << endl;
+    }
+
+    if(system((char*)cp_champion_robotPos.str().c_str()) == -1)
+    {
+        cerr << "TRAIN ERROR:\tFailed to copy the Champion Robot Position File" << endl;
+    }
 	
-	hyperneats.at(0)->printConnectionFile((char*)"NEAT_organisms/Champion.txt",(char*)"HyperNeat_conf_files/HCF_Champion.txt");
+	hyperneats.at(0)->printConnectionFile((char*)"NEAT_organisms/Champion.txt",(char*)"HyperNeat_conf_files/Champion.txt");
+
+	///////////////////////////////////////////////////////////////////////////////////
 
 	sleep(1);
 
@@ -353,3 +420,4 @@ int main(int argc, char * argv[])
 	
 	return(0);
 }
+

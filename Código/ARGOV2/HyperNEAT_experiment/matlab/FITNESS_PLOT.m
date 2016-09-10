@@ -18,15 +18,15 @@ dst_fre = frecuency(:,3);
 figure
 hold on
 
-plot(g, m_fit, 'Color', 'blue', 'DisplayName', 'Average fitness')
+plot(g, m_fit, 'Color', 'blue', 'LineWidth',2, 'DisplayName', 'Average fitness')
 %plot(g, m_fit+dst_fit, 'LineStyle', '--', 'DisplayName', 'Standard desviation')
 %plot(g, m_fit-dst_fit, 'LineStyle', '--')
 
-plot(g, m_dis, 'Color', 'red', 'DisplayName', 'Average distance')
+plot(g, m_dis, 'Color', 'red', 'LineWidth',2, 'DisplayName', 'Average distance')
 %plot(g, m_dis+dst_dis, 'LineStyle', '--', 'DisplayName', 'Standard desviation')
 %plot(g, m_dis-dst_dis, 'LineStyle', '--')
 
-plot(g, m_fre, 'Color', 'green', 'DisplayName', 'Average frecuency')
+plot(g, m_fre, 'Color', 'green', 'LineWidth',2, 'DisplayName', 'Average frecuency')
 %plot(g, m_fre+dst_fre, 'LineStyle', '--', 'DisplayName', 'Standard desviation')
 %plot(g, m_fre-dst_fre, 'LineStyle', '--')
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  5 SEP 2016 22:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  9 SEP 2016 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1153,21 +1153,43 @@ Cap\'{\i }tulo 7.
 
 
 
-]
+] <fig/hsubstrate.JPG, id=384, 754.31813pt x 233.37187pt>
+File: fig/hsubstrate.JPG Graphic file (type jpg)
 
-LaTeX Warning: Reference `h_tauh_structure' on page 71 undefined on input line 
-7.
+<use fig/hsubstrate.JPG>
+Package pdftex.def Info: fig/hsubstrate.JPG used on input line 13.
+(pdftex.def)             Requested size: 290.70177pt x 89.93568pt.
+ <fig/hcppn.JPG, id=385, 270.25969pt x 232.61906pt>
+File: fig/hcppn.JPG Graphic file (type jpg)
 
-[71]
+<use fig/hcppn.JPG>
+Package pdftex.def Info: fig/hcppn.JPG used on input line 19.
+(pdftex.def)             Requested size: 104.40799pt x 89.86563pt.
+ <fig/tauhsubstrate.JPG, id=386, 754.31813pt x 233.37187pt>
+File: fig/tauhsubstrate.JPG Graphic file (type jpg)
 
-LaTeX Warning: Reference `fig:fitnessfrec' on page 72 undefined on input line 1
-5.
+<use fig/tauhsubstrate.JPG>
+Package pdftex.def Info: fig/tauhsubstrate.JPG used on input line 26.
+(pdftex.def)             Requested size: 290.70177pt x 89.93568pt.
 
+<fig/tauhcppn.JPG, id=387, 270.25969pt x 232.61906pt>
+File: fig/tauhcppn.JPG Graphic file (type jpg)
+ <use fig/tauhcppn.JPG>
+Package pdftex.def Info: fig/tauhcppn.JPG used on input line 32.
+(pdftex.def)             Requested size: 104.40799pt x 89.86563pt.
 
-LaTeX Warning: Reference `fig:fitnessdist' on page 72 undefined on input line 1
-7.
-
-[72] [73] [74]) [75]
+[71] [72 <./fig/hsubstrate.JPG> <./fig/hcppn.JPG> <./fig/tauhsubstrate.JPG> <./
+fig/tauhcppn.JPG>]
+File: fig/usmLogo.png Graphic file (type png)
+ <use fig/usmLogo.png>
+Package pdftex.def Info: fig/usmLogo.png used on input line 51.
+(pdftex.def)             Requested size: 196.52716pt x 159.12982pt.
+File: fig/usmLogo.png Graphic file (type png)
+ <use fig/usmLogo.png>
+Package pdftex.def Info: fig/usmLogo.png used on input line 58.
+(pdftex.def)             Requested size: 196.52716pt x 159.12982pt.
+ [73] [74]
+[75] [76]) [77]
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -1176,11 +1198,11 @@ Underfull \hbox (badness 1152) in paragraph at lines 4--5
  Ar-ti-fi-cial Li-fe,
  []
 
-[76
+[78
 
 
 
-]) [77] (./main.aux
+]) [79] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
@@ -1190,10 +1212,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 9099 strings out of 493304
- 128479 string characters out of 6139871
- 299427 words of memory out of 5000000
- 12238 multiletter control sequences out of 15000+600000
+ 9131 strings out of 493304
+ 129078 string characters out of 6139871
+ 299695 words of memory out of 5000000
+ 12265 multiletter control sequences out of 15000+600000
  46397 words of font info for 100 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,60p,2241b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1211,10 +1233,10 @@ xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (82 pages, 21836015 bytes).
+Output written on main.pdf (84 pages, 22011973 bytes).
 PDF statistics:
- 459 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
+ 469 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 336 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 356 words of extra memory for PDF output out of 10000 (max. 10000000)
 

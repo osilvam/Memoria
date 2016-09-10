@@ -98,14 +98,14 @@ else
 	fi
 fi
 
-cd ARGO/HyperNEAT_experiment; make; cd ../..;
-cd ARGO/TauHyperNEAT_experiment; make; cd ../..;
+#cd ARGO/HyperNEAT_experiment; make; cd ../..;
+#cd ARGO/TauHyperNEAT_experiment; make; cd ../..;
 
 cd ARGOV2/HyperNEAT_experiment; make; cd ../..;
 cd ARGOV2/TauHyperNEAT_experiment; make; cd ../..;
 
-cd PB2/HyperNEAT_experiment; make; cd ../..;
-cd PB2/TauHyperNEAT_experiment; make; cd ../..;
+#cd PB2/HyperNEAT_experiment; make; cd ../..;
+#cd PB2/TauHyperNEAT_experiment; make; cd ../..;
 
 cd QUADRATOT/HyperNEAT_experiment; make; cd ../..;
 cd QUADRATOT/TauHyperNEAT_experiment; make; cd ../..;

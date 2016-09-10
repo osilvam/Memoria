@@ -94,7 +94,7 @@ void SimFiles2::addFileJointsPosition(RobotVREP * vrep, vector < Joint * > joint
 void SimFiles2::openNewRobotPositionFile(int generation, int population)
 {
 	stringstream file_name;
-	file_name << "simulation_files/robot_position/robotPosition_G" << generation << "_P" << population << ".txt";
+	file_name << "simulation_files/robot_position/robotPosition_G" << generation << "P" << population << ".txt";
 	file_robot_position.open((char*)file_name.str().c_str());
 }
 

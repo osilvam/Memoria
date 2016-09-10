@@ -7,7 +7,7 @@ f = A(:,3);
 figure
 hold on
 
-plot(g, f, 'DisplayName', 'Average frecuency');
+plot(g, f, 'LineWidth',2, 'DisplayName', 'Average frecuency');
 xlabel('Generation');
 ylabel('Fitness');
 legend('show');

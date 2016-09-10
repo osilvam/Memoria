@@ -1,12 +1,10 @@
-ROBOTOPC=(ARGO ARGOV2 PB2 QUADRATOT)
+ROBOTOPC=(ARGOV2 QUADRATOT)
 ANNOPC=(run_HyperNEAT_experiment run_TauHyperNEAT_experiment)
 
 echo Escriba el numero de la opcion de robot que desea utilizar
 echo Opciones:
-echo -e ' \t ' 1.- ARGO
-echo -e ' \t ' 2.- ARGOV2
-echo -e ' \t ' 3.- PB2
-echo -e ' \t ' 4.- QUADRATOT
+echo -e ' \t ' 1.- ARGOV2
+echo -e ' \t ' 2.- QUADRATOT
 read robot
 robot=${ROBOTOPC[$((robot - 1))]}
 
