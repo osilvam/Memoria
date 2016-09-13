@@ -10,26 +10,26 @@ Para el caso de HyperNEAT, la red CPPN que establece las conexiones en el substr
 	\centering
 	\begin{subfigure}[b]{0.71\textwidth}
 		\centering
-        \includegraphics[width=\textwidth]{fig/hsubstrate.JPG}
+        \includegraphics[width=\textwidth]{fig/hsubstrate.png}
         \label{fig:hsubstrate}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.255\textwidth}
     	\centering
-        \includegraphics[width=\textwidth]{fig/hcppn.JPG}
+        \includegraphics[width=\textwidth]{fig/hcppn.png}
         \label{fig:hcppn}
     \end{subfigure}
     
     \centering
 	\begin{subfigure}[b]{0.71\textwidth}
 		\centering
-        \includegraphics[width=\textwidth]{fig/tauhsubstrate.JPG}
+        \includegraphics[width=\textwidth]{fig/tauhsubstrate.png}
         \label{fig:tauhsubstrate}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.255\textwidth}
     	\centering
-        \includegraphics[width=\textwidth]{fig/tauhcppn.JPG}
+        \includegraphics[width=\textwidth]{fig/tauhcppn.png}
         \label{fig:tauhcppn}
     \end{subfigure}
     \caption{\textbf{Esquema estructural de HyperNEAT y \(\tau\)-HyperNEAT.} En la figura, los recuadros superiores e inferiores muestran el esquema estructural del método HyperNEAT y \(\tau\)-HyperNEAT respectivamente, usado en los experimentos con un robot cuadrúpedo de 3 grados de libertad por extremidad. Ambos recuadros derechos corresponden a la estructura del substrato del método respectivo, mientras que los recuadros izquierdos corresponden a la estructura básica de la red CPPN, en las que es posible apreciar la diferencia en la cantidad de salidas entre ambas debido a que en \(\tau\)-HyperNEAT la red CPPN debe calcular los retardos de las conexiones en el substrato, además de los pesos correspondientes a ellas.}
@@ -48,14 +48,14 @@ La frecuencia de cada motor es calculada observando los cambios en el signo de l
 	\centering
 	\begin{subfigure}[b]{0.48\textwidth}
 		\centering
-        \includegraphics[width=\textwidth]{fig/usmLogo.png}
+        \includegraphics[width=\textwidth]{fig/FITNESS_FREC.eps}
         \caption{Función de desempeño de la frecuencia.}
         \label{fig:fitnessfrec}
     \end{subfigure}
     ~
     \begin{subfigure}[b]{0.48\textwidth}
     	\centering
-        \includegraphics[width=\textwidth]{fig/usmLogo.png}
+        \includegraphics[width=\textwidth]{fig/FITNESS_DIST.eps}
         \caption{Función de desempeño de la distancia.}
         \label{fig:fitnessdist}
     \end{subfigure}
@@ -81,7 +81,7 @@ Una vez iniciado el programa de entrenamiento, este creará todos los objetos nec
 
 Ya creadas todas las entidades necesarias para el funcionamiento de los métodos de neuroevolución y de los simuladores el programa continuará con un bucle for que iterará tantas veces como generaciones se hayan estipulado para el entrenamiento, y en cada ciclo de este se iniciarán las hebras que se dividirán la población de CPPNs para ejecutar las simulaciones correspondientes a cada una de ellas. Luego que cada una de las hebras termine de probar y evaluar cada unas de las CPPNs asignadas, estas terminarán su ejecución volviendo el programa al bucle for para posteriormente evolucionar la población de CPPNs en una nueva generación y completar nuevamente un nuevo ciclo del bucle. Una vez realizados todos los ciclos del bucle for se obtendrá la red CPPN capaz de crear el patrón de conectividad más adecuado sobre el substrato del método usado, logrando la caminata con el mejor desempeño del entrenamiento.
 
-Para comprobar el funcionamiento de HyperNEAT y \(\tau\)-HyperNEAT en la generación de caminatas en robots con extremidades móviles se entrenarán a 3 robots distintos: Quadratot, ArgoV2 y Rosita (ver Figura \ref{robots}), siendo el primero un robot diseñado por el Investigador de la Universidad de Chile Juan Cristóbal Zagal, con el objeto de ser usado para comprobar el funcionamiento de distintos métodos para la generación de caminatas; y los últimos dos, robots diseñados por el estudiante de Ingeniería en Diseño de Productos Cristian Osorio Méndez para el Departamento de Electrónica de La Universidad Técnica Federico Santa María. En la sección siguiente se mostrarán los resultados de los entrenamientos realizados sobre cada uno de estos robots usando ambos métodos de neuroevolución. Todos los códigos utilizados en la siguiente sección pueden ser descargados desde el repositorio Github \url{https://github.com/osilvam/Memoria} y probados de manera fácil y sencilla.
+Para comprobar el funcionamiento de HyperNEAT y \(\tau\)-HyperNEAT en la generación de caminatas en robots con extremidades móviles se entrenarán a 3 robots distintos: Quadratot, ArgoV2 y Rosita (ver Figura \ref{fig:robots}), siendo el primero un robot diseñado por el Investigador de la Universidad de Chile Juan Cristóbal Zagal, con el objeto de ser usado para comprobar el funcionamiento de distintos métodos para la generación de caminatas; y los últimos dos, robots diseñados por el estudiante de Ingeniería en Diseño de Productos Cristian Osorio Méndez para el Departamento de Electrónica de La Universidad Técnica Federico Santa María. En la sección siguiente se mostrarán los resultados de los entrenamientos realizados sobre cada uno de estos robots usando ambos métodos de neuroevolución. Todos los códigos utilizados en la siguiente sección pueden ser descargados desde el repositorio Github \url{https://github.com/osilvam/Memoria} y probados de manera fácil y sencilla.
 
 \section{RESULTADOS DE LOS ENTRENAMIENTOS}
 
@@ -89,8 +89,99 @@ Tal como se mencionó anteriormente, los entrenamientos para la generación de cam
 
 \subsection{QUADRATOT}
 
-\begin{itemize}
-\item[\textbf{HyperNEAT}] jkwnajkw
-\item[\textbf{\(\tau\)-HyperNEAT}] jkwnajkw
-\end{itemize}
+A continuación se presentaran los resultados de los entrenamientos para la generación de caminatas realizados sobre la plataforma robótica Quadratot con el fin de identificar avances entre el desempeño de la tarea al usar el método HyperNEAT y el nuevo método \(\tau\)-HyperNEAT. 
 
+Gráfico Fitness 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/QUADRATOT_FITNESS.eps}
+    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:quadratot_fitness}	
+\end{figure}
+
+Gráfico Joint Positions HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/QUADRATOT_JP_HYPERNEAT.eps}
+    \caption{\textbf{Posición de los motores de Quadratot dada por HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:quadratot_jp_hyperneat}	
+\end{figure}
+
+Gráfico Joint Positions \(\tau\)-HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/QUADRATOT_JP_TAUHYPERNEAT.eps}
+    \caption{\textbf{Posición de los motores de Quadratot dada por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:quadratot_jp_tauhyperneat}	
+\end{figure}
+
+Gráfico Robot Position HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_HYPERNEAT.eps}
+    \caption{\textbf{Desplazamiento de Quadratot en el escenario dado por HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:quadratot_p_hyperneat}	
+\end{figure}
+
+Gráfico Robot Position \(\tau\)-HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps}
+    \caption{\textbf{Desplazamiento de Quadratot en el escenario dado por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:quadratot_p_tauhyperneat}	
+\end{figure}
+
+
+\subsection{ARGOV2}
+
+A continuación se presentaran los resultados de los entrenamientos para la generación de caminatas realizados sobre la plataforma robótica ArgoV2 con el fin de identificar avances entre el desempeño de la tarea al usar el método HyperNEAT y el nuevo método \(\tau\)-HyperNEAT. 
+
+Gráfico Fitness 
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/ARGOV2_FITNESS.eps}
+    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:argov2_fitness}	
+\end{figure}
+
+Gráfico Joint Positions HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/ARGOV2_JP_HYPERNEAT.eps}
+    \caption{\textbf{Posición de los motores de ArgoV2 dada por HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:argov2_jp_hyperneat}	
+\end{figure}
+
+Gráfico Joint Positions \(\tau\)-HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/ARGOV2_JP_TAUHYPERNEAT.eps}
+    \caption{\textbf{Posición de los motores de ArgoV2 dada por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:argov2_jp_tauhyperneat}	
+\end{figure}
+
+Gráfico Robot Position HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_HYPERNEAT.eps}
+    \caption{\textbf{Desplazamiento de ArgoV2 en el escenario dado por HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:argov2_p_hyperneat}	
+\end{figure}
+
+Gráfico Robot Position \(\tau\)-HyperNEAT
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_TAUHYPERNEAT.eps}
+    \caption{\textbf{Desplazamiento de ArgoV2 en el escenario dado por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+    \label{fig:argov2_p_tauhyperneat}	
+\end{figure}
