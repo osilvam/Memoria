@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  12 SEP 2016 23:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  13 SEP 2016 12:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -559,9 +559,6 @@ LaTeX Info: Redefining \% on input line 1.
 
  (./cap1.tex
 Cap\'{\i }tulo 1.
-
-LaTeX Warning: Reference `robots' on page 4 undefined on input line 3.
-
 <fig/QUADRATOT.png, id=34, 529.98pt x 454.69875pt>
 File: fig/QUADRATOT.png Graphic file (type png)
  <use fig/QUADRATOT.png>
@@ -1242,13 +1239,7 @@ File: fig/QUADRATOT_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
 <use fig/QUADRATOT_FITNESS-eps-converted-to.pdf>
 Package pdftex.def Info: fig/QUADRATOT_FITNESS-eps-converted-to.pdf used on inp
 ut line 98.
-(pdftex.def)             Requested size: 409.43526pt x 359.10405pt.
-
-Underfull \hbox (badness 2065) in paragraph at lines 99--99
-[][]|\OT1/ptm/b/n/10.95 Gr[]afi-co com-pa-ra-ti-vo del desem-pe[]no en-tre Hy-p
-er-NEAT y $\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
- []
-
+(pdftex.def)             Requested size: 307.07643pt x 269.3262pt.
 Package epstopdf Info: Source file: <fig/QUADRATOT_JP_HYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:10:02
 (epstopdf)                    size: 29731 bytes
@@ -1268,12 +1259,6 @@ File: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf used o
 n input line 107.
 (pdftex.def)             Requested size: 409.43526pt x 198.34871pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
-[][]|\OT1/ptm/b/n/10.95 Po-si-ci[]on de los mo-to-res de Qua-dra-tot da-da por 
-Hy-per-NEAT.
- []
-
 Package epstopdf Info: Source file: <fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:13:55
 (epstopdf)                    size: 29708 bytes
@@ -1283,7 +1268,7 @@ d-to.pdf>
 (epstopdf)                    size: 18374 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_JP_TAUHYPERN
 EAT-eps-converted-to.pdf fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 116.
+(epstopdf)             \includegraphics on input line 114.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=434, 1096.095pt x 530.9
@@ -1292,14 +1277,11 @@ File: fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
 )
  <use fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf use
-d on input line 116.
+d on input line 114.
 (pdftex.def)             Requested size: 409.43526pt x 198.34871pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--117
-[][]|\OT1/ptm/b/n/10.95 Po-si-ci[]on de los mo-to-res de Qua-dra-tot da-da por 
-$\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
- []
-
+ [78 <./fig/QUADRATOT_FITNESS-eps-converted-to.pdf>] [79 <./fig/QUADRATOT_JP_HY
+PERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to
+.pdf>]
 Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_HYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:17:42
 (epstopdf)                    size: 18628 bytes
@@ -1309,23 +1291,17 @@ rted-to.pdf>
 (epstopdf)                    size: 12328 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_HYP
 ERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_HYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 125.
+(epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf, id=435, 1095.09125pt x 
+<fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf, id=459, 1095.09125pt x 
 530.98375pt>
 File: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf 
-used on input line 125.
+used on input line 132.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
-
-Underfull \hbox (badness 5637) in paragraph at lines 126--126
-[][]|\OT1/ptm/b/n/10.95 Des-pla-za-mien-to de Qua-dra-tot en el es-ce-na-rio da
--do por Hy-per-NEAT.
- []
-
 Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:18:25
 (epstopdf)                    size: 18850 bytes
@@ -1335,26 +1311,22 @@ nverted-to.pdf>
 (epstopdf)                    size: 12530 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_TAU
 HYPERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 134.
+(epstopdf)             \includegraphics on input line 139.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=436, 1095.09125pt
+<fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=460, 1095.09125pt
  x 530.98375pt>
 File: fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.p
-df used on input line 134.
+df used on input line 139.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 
-Underfull \hbox (badness 2980) in paragraph at lines 135--135
-[][]|\OT1/ptm/b/n/10.95 Des-pla-za-mien-to de Qua-dra-tot en el es-ce-na-rio da
--do por $\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
- []
+[80
 
-[78 <./fig/QUADRATOT_FITNESS-eps-converted-to.pdf>] [79 <./fig/QUADRATOT_JP_HYP
-ERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.
-pdf>]
+] [81 <./fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/QUADRATO
+T_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/ARGOV2_FITNESS.eps>
 (epstopdf)                    date: 2016-09-12 18:24:38
 (epstopdf)                    size: 13014 bytes
@@ -1363,140 +1335,108 @@ Package epstopdf Info: Source file: <fig/ARGOV2_FITNESS.eps>
 (epstopdf)                    size: 10509 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_FITNESS-eps-con
 verted-to.pdf fig/ARGOV2_FITNESS.eps>
-(epstopdf)             \includegraphics on input line 148.
+(epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_FITNESS-eps-converted-to.pdf, id=461, 547.04375pt x 479.7925pt>
+<fig/ARGOV2_FITNESS-eps-converted-to.pdf, id=480, 547.04375pt x 479.7925pt>
 File: fig/ARGOV2_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/ARGOV2_FITNESS-eps-converted-to.pdf>
 Package pdftex.def Info: fig/ARGOV2_FITNESS-eps-converted-to.pdf used on input 
-line 148.
-(pdftex.def)             Requested size: 409.43526pt x 359.10405pt.
-
-Underfull \hbox (badness 2065) in paragraph at lines 149--149
-[][]|\OT1/ptm/b/n/10.95 Gr[]afi-co com-pa-ra-ti-vo del desem-pe[]no en-tre Hy-p
-er-NEAT y $\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
- []
-
+line 157.
+(pdftex.def)             Requested size: 307.07643pt x 269.3262pt.
 Package epstopdf Info: Source file: <fig/ARGOV2_JP_HYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:26:46
 (epstopdf)                    size: 37061 bytes
 (epstopdf)             Output file: <fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.p
 df>
+(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    size: 21983 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_HYPERNEAT-ep
 s-converted-to.pdf fig/ARGOV2_JP_HYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 157.
-runsystem(repstopdf --outfile=fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf fig/
-ARGOV2_JP_HYPERNEAT.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 166.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.p
-df>
-(epstopdf)                    date: 2016-09-12 23:08:46
-(epstopdf)                    size: 21983 bytes.
-
-<fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf, id=462, 1095.09125pt x 530.98375
+<fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf, id=481, 1095.09125pt x 530.98375
 pt>
 File: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf used on i
-nput line 157.
+nput line 166.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 Package epstopdf Info: Source file: <fig/ARGOV2_JP_TAUHYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:28:58
 (epstopdf)                    size: 37529 bytes
 (epstopdf)             Output file: <fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-t
 o.pdf>
+(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    size: 22492 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_TAUHYPERNEAT
 -eps-converted-to.pdf fig/ARGOV2_JP_TAUHYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 166.
-runsystem(repstopdf --outfile=fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf f
-ig/ARGOV2_JP_TAUHYPERNEAT.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 173.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-t
-o.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
-(epstopdf)                    size: 22492 bytes.
-
-<fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=463, 1095.09125pt x 530.98
+<fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=482, 1095.09125pt x 530.98
 375pt>
 File: fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf used o
-n input line 166.
+n input line 173.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
+ [82
 
-Underfull \hbox (badness 10000) in paragraph at lines 167--167
-[][]|\OT1/ptm/b/n/10.95 Po-si-ci[]on de los mo-to-res de Ar-goV2 da-da por $\OM
-L/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
- []
-
+ <./fig/ARGOV2_FITNESS-eps-converted-to.pdf>] [83 <./fig/ARGOV2_JP_HYPERNEAT-ep
+s-converted-to.pdf> <./fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_HYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:31:15
 (epstopdf)                    size: 18233 bytes
 (epstopdf)             Output file: <fig/ARGOV2_POSITION_HYPERNEAT-eps-converte
 d-to.pdf>
+(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    size: 12209 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_HYPERN
 EAT-eps-converted-to.pdf fig/ARGOV2_POSITION_HYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 175.
-runsystem(repstopdf --outfile=fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pd
-f fig/ARGOV2_POSITION_HYPERNEAT.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 191.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <fig/ARGOV2_POSITION_HYPERNEAT-eps-converte
-d-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
-(epstopdf)                    size: 12209 bytes.
-
-<fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf, id=464, 1095.09125pt x 530
+<fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf, id=507, 1095.09125pt x 530
 .98375pt>
 File: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
 )
  <use fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf use
-d on input line 175.
+d on input line 191.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--176
-[][]|\OT1/ptm/b/n/10.95 Des-pla-za-mien-to de Ar-goV2 en el es-ce-na-rio da-do 
-por Hy-per-NEAT.
- []
-
 Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
 (epstopdf)                    date: 2016-09-12 18:41:42
 (epstopdf)                    size: 18669 bytes
 (epstopdf)             Output file: <fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-conve
 rted-to.pdf>
+(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    size: 12254 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_TAUHYP
 ERNEAT-eps-converted-to.pdf fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
-(epstopdf)             \includegraphics on input line 184.
-runsystem(repstopdf --outfile=fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to
-.pdf fig/ARGOV2_POSITION_TAUHYPERNEAT.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 198.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-conve
-rted-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
-(epstopdf)                    size: 12254 bytes.
-
-<fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=465, 1095.09125pt x 
+<fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=508, 1095.09125pt x 
 530.98375pt>
 File: fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type 
 pdf)
  <use fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>
 Package pdftex.def Info: fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf 
-used on input line 184.
+used on input line 198.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 
-Underfull \hbox (badness 4726) in paragraph at lines 185--185
+Underfull \hbox (badness 1895) in paragraph at lines 202--202
 [][]|\OT1/ptm/b/n/10.95 Des-pla-za-mien-to de Ar-goV2 en el es-ce-na-rio da-do 
-por $\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -HyperNEAT.
+por Hy-per-NEAT y $\OML/cmm/m/it/10.95 ^^\$\OT1/ptm/b/n/10.95 -
  []
 
-[80 <./fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT_
-POSITION_TAUHYPERNEAT-eps-converted-to.pdf>]) [81 <./fig/ARGOV2_FITNESS-eps-con
-verted-to.pdf>] [82 <./fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf> <./fig/ARG
-OV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>] [83 <./fig/ARGOV2_POSITION_HYPERNEAT
--eps-converted-to.pdf> <./fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf
->]
+[84
+
+] [85 <./fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/ARGOV2_POSI
+TION_TAUHYPERNEAT-eps-converted-to.pdf>])
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -1505,48 +1445,43 @@ Underfull \hbox (badness 1152) in paragraph at lines 4--5
  Ar-ti-fi-cial Li-fe,
  []
 
-[84
+[86
 
 
 
-]) [85] (./main.aux
+
+]) [87] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
-(./cap4.aux) (./cap5.aux) (./cap6.aux) (./cap7.aux) (./referencias.aux))
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+(./cap4.aux) (./cap5.aux) (./cap6.aux) (./cap7.aux) (./referencias.aux)) ) 
 Here is how much of TeX's memory you used:
- 9215 strings out of 493304
- 132343 string characters out of 6139871
- 299906 words of memory out of 5000000
- 12335 multiletter control sequences out of 15000+600000
+ 9226 strings out of 493304
+ 132651 string characters out of 6139871
+ 300038 words of memory out of 5000000
+ 12346 multiletter control sequences out of 15000+600000
  46397 words of font info for 100 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,12n,60p,2241b,1798s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (90 pages, 23061457 bytes).
+{/usr
+/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (92 pages, 23068721 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 305 compressed objects within 4 object streams
+ 586 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  426 words of extra memory for PDF output out of 10000 (max. 10000000)
 

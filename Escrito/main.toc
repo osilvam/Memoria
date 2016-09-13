@@ -42,4 +42,4 @@
 \contentsline {section}{\numberline {7.3}PROGRAMA DE ENTRENAMIENTO}{76}
 \contentsline {section}{\numberline {7.4}RESULTADOS DE LOS ENTRENAMIENTOS}{77}
 \contentsline {subsection}{\numberline {7.4.1}QUADRATOT}{78}
-\contentsline {subsection}{\numberline {7.4.2}ARGOV2}{79}
+\contentsline {subsection}{\numberline {7.4.2}ARGOV2}{82}

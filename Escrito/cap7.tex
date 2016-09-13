@@ -91,97 +91,116 @@ Tal como se mencionó anteriormente, los entrenamientos para la generación de cam
 
 A continuación se presentaran los resultados de los entrenamientos para la generación de caminatas realizados sobre la plataforma robótica Quadratot con el fin de identificar avances entre el desempeño de la tarea al usar el método HyperNEAT y el nuevo método \(\tau\)-HyperNEAT. 
 
-Gráfico Fitness 
+En la figura \ref{fig:quadratot_fitness} se muestra un gráfico comparativo entre el desempeño del método HyperNEAT y \(\tau\)-HyperNEAT, siendo cada una de las curvas el promedio de un gran número de entrenamientos. Como se puede apreciar, en términos de resultados numéricos, no existe mayor diferencia entre los métodos, alcanzando ambos un promedio de desempeño generacional cercano a 5 de 10, con una pequeña diferencia en la rapidez en el progreso al inicio de los entrenamientos. Además, la magnitud de la dispersión del desempeño obtenido para ambos métodos se mantiene.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/QUADRATOT_FITNESS.eps}
-    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+	\includegraphics[width=0.75\textwidth]{fig/QUADRATOT_FITNESS.eps}
+    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} En esta figura puede observarse la gran similitud en el desempeño promedio obtenido de entrenamientos de generación de caminatas sobre el robot Quadratot usando ambos métodos.}
     \label{fig:quadratot_fitness}	
 \end{figure}
 
-Gráfico Joint Positions HyperNEAT
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/QUADRATOT_JP_HYPERNEAT.eps}
+        \caption{HyperNEAT.}
+        \label{fig:quadratot_jp_hyperneat}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/QUADRATOT_JP_TAUHYPERNEAT.eps}
+        \caption{\(\tau\)-HyperNEAT.}
+        \label{fig:quadratot_jp_tauhyperneat}
+    \end{subfigure}
+    \caption{\textbf{Posición de los motores de Quadratot dada por HyperNEAT y \(\tau\)-HyperNEAT.} En la figura se muestran los gráficos de las señales entregadas a los motores del robot Quadratot en caminatas representativas realizadas usando el método HyperNEAT (a) y el nuevo método \(\tau\)-HyperNEAT (b). En ambos esquemas de gráficos, cada fila corresponde a una de las extremidades del robot, siendo la primera columna el motor más cercano al torso central, y la segunda columna el motor más alejado. El gráfico solitario de la columna 3 corresponde al motor ubicado entre los torsos centrales del robot.}
+    \label{fig:quadratot_jp}
+\end{figure}
+
+\clearpage
+
+Sin embargo, a pesar de que numéricamente no exista gran mejora entre el método propuesto y su predecesor, si la hay en términos de la ejecución misma de las caminatas logradas por estos. En la figura \ref{fig:quadratot_jp} se pueden observar gráficos de las señales entregadas a los motores por ambos métodos, siendo los dos set de gráficos mostrados, resultados representativos para cada método. En el esquema de gráficos, las dos primeras columnas de cada fila corresponden a las señales dadas a los motores de una extremidad de Quadratot. El gráfico restante de la tercera columna corresponde al grado de libertad que une las dos piezas que componen el torso central de Quadratot. Se puede apreciar en la figura \ref{fig:quadratot_jp_hyperneat} que todas las señales dadas a los motores de Quadratot poseen la misma fase, a diferencia de la figura \ref{fig:quadratot_jp_tauhyperneat}, en la que se ven claramente diferencias de fases en las señales de los motores por cada par de extremidades, implicando que el movimiento de estas para el caso de HyperNEAT fuera el mismo a cada momento y que para el caso de \(\tau\)-HyperNEAT fuera alternado, estirando y contrayendo sus pares de extremidades a distintos tiempos.
+
+Además de la diferencia en la fase de las señales de los motores en sus extremidades, Quadratot presenta un desplazamiento más fluido y direccionado al momento de usar \(\tau\)-HyperNEAT para la generación de las caminatas, como se ve en la figura \ref{fig:quadratot_p}, de la que se infiere que al usar \(\tau\)-HyperNEAT el robot avanzó con una trayectoria totalmente recta y fluida (figura \ref{fig:quadratot_p_tauhyperneat}), a diferencia del caso usar HyperNEAT, en donde su trayectoria fue turbulenta y poco lineal (figura \ref{fig:quadratot_p_hyperneat}). Más aun, las características estrictamente lineales en el desplazamiento de Quadratot al usar \(\tau\)-HyperNEAT, en conjunto con la información entregada por el cuarto gráfico del set indican que el desplazamiento del robot, además de poseer una trayectoria lineal se realiza a una velocidad constante en el tiempo.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/QUADRATOT_JP_HYPERNEAT.eps}
-    \caption{\textbf{Posición de los motores de Quadratot dada por HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:quadratot_jp_hyperneat}	
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_HYPERNEAT.eps}
+        \caption{HyperNEAT.}
+        \label{fig:quadratot_p_hyperneat}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps}
+        \caption{\(\tau\)-HyperNEAT.}
+        \label{fig:quadratot_p_tauhyperneat}
+    \end{subfigure}
+    \caption{\textbf{Desplazamiento de Quadratot en el escenario dado por HyperNEAT y \(\tau\)-HyperNEAT.} Los sets de gráficos presentes en esta figura muestran el desplazamiento de Quadratot a lo largo del escenario de simulación en distintas medidas. Los gráficos superiores izquierdo y derecho muestra el desplazamiento en el tiempo del robot a lo largo del los ejes $x$ e $y$ respectivamente. EL gráfico inferior izquierdo corresponde al desplazamiento del robot a lo largo del plano $xy$ del escenario. Finalmente el gráfico inferior derecho corresponde a la distancia recta medida del robot hacia el punto de partida del escenario en el tiempo.}
+    \label{fig:quadratot_p}
 \end{figure}
 
-Gráfico Joint Positions \(\tau\)-HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/QUADRATOT_JP_TAUHYPERNEAT.eps}
-    \caption{\textbf{Posición de los motores de Quadratot dada por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:quadratot_jp_tauhyperneat}	
-\end{figure}
-
-Gráfico Robot Position HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_HYPERNEAT.eps}
-    \caption{\textbf{Desplazamiento de Quadratot en el escenario dado por HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:quadratot_p_hyperneat}	
-\end{figure}
-
-Gráfico Robot Position \(\tau\)-HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps}
-    \caption{\textbf{Desplazamiento de Quadratot en el escenario dado por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:quadratot_p_tauhyperneat}	
-\end{figure}
-
+\clearpage
 
 \subsection{ARGOV2}
 
 A continuación se presentaran los resultados de los entrenamientos para la generación de caminatas realizados sobre la plataforma robótica ArgoV2 con el fin de identificar avances entre el desempeño de la tarea al usar el método HyperNEAT y el nuevo método \(\tau\)-HyperNEAT. 
 
-Gráfico Fitness 
+En la figura \ref{fig:argov2_fitness} se muestra un gráfico comparativo entre el desempeño del método HyperNEAT y \(\tau\)-HyperNEAT, siendo cada una de las curvas el promedio de un gran número de entrenamientos. Como se puede apreciar al igual que en el caso de Quadratot, en términos de resultados numéricos, no existe mayor diferencia entre los métodos (\(\tau\)-HyperNEAT solo supera apenas en 0.5 puntos de 10 a su predecesor), alcanzando ambos un promedio de desempeño generacional también cercano al 5. Además, la magnitud de la dispersión del desempeño obtenido para ambos métodos se mantiene.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/ARGOV2_FITNESS.eps}
-    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
+	\includegraphics[width=0.75\textwidth]{fig/ARGOV2_FITNESS.eps}
+    \caption{\textbf{Gráfico comparativo del desempeño entre HyperNEAT y \(\tau\)-HyperNEAT.} En esta figura puede observarse la poca diferencia en el desempeño promedio obtenido de entrenamientos de generación de caminatas sobre el robot ArgoV2 usando ambos métodos.}
     \label{fig:argov2_fitness}	
 \end{figure}
 
-Gráfico Joint Positions HyperNEAT
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/ARGOV2_JP_HYPERNEAT.eps}
+        \caption{HyperNEAT.}
+        \label{fig:argov2_jp_hyperneat}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/ARGOV2_JP_TAUHYPERNEAT.eps}
+        \caption{\(\tau\)-HyperNEAT.}
+        \label{fig:argov2_jp_tauhyperneat}
+    \end{subfigure}
+     \caption{\textbf{Posición de los motores de ArgoV2 dada por HyperNEAT y \(\tau\)-HyperNEAT.} En la figura se muestran los gráficos de las señales entregadas a los motores del robot ArgoV2 en caminatas representativas realizadas usando el método HyperNEAT (a) y el nuevo método \(\tau\)-HyperNEAT (b). En ambos esquemas de gráficos, cada fila corresponde a una de las extremidades del robot, siendo la primera columna el motor más cercano al torso central, la segunda columna el motor intermedio de cada extremidad, y la tercera columna el motor mas alejado del torso.}
+    \label{fig:argov2_jp}
+\end{figure}
+
+\clearpage
+
+Tal como se dió en el caso de Quadratot, a pesar de que numéricamente no exista una mejora substancial entre el método propuesto y HyperNEAT, la hay en términos de la ejecución de las caminatas logradas. En la figura \ref{fig:argov2_jp} se pueden observar gráficos de las señales entregadas a los motores por ambos métodos, siendo los dos set de gráficos mostrados, resultados representativos para cada método. Se puede apreciar en la figura \ref{fig:argov2_jp_tauhyperneat}, al igual que en la figura \ref{fig:argov2_jp_tauhyperneat}, que existe una diferencia clara de fase, de aproximadamente $\pi$ radianes entre pares de extremidades. Si bien las señales del set de gráficos correspondiente al método HyperNEAT también presentan desfases entre las distintas extremidades del robot, estos desfases no se manifiestan iguales a lo largo de ellas, existiendo distintas fases en las señales de los motores dados para una extremidad. Esto se observa en las extremidades 1 y 4 vistas de la figura \ref{fig:argov2_jp_hyperneat}, en donde el primer motor posee una fase retrasada en $\pi$ radianes en comparación con los otros dos.
+
+Además de la diferencia en la fase de las señales de los motores en sus extremidades, ArgoV2 presenta un desplazamiento más fluido y con menos oscilaciones al momento de usar \(\tau\)-HyperNEAT para la generación de las caminatas, como se ve en la figura \ref{fig:argov2_p}, de la que se infiere que al usar \(\tau\)-HyperNEAT el robot avanzó con una trayectoria lineal (figura \ref{fig:argov2_p_tauhyperneat}) con menos oscilaciones que al usar HyperNEAT, en donde su trayectoria fue más oscilante, pero aun así recta (figura \ref{fig:quadratot_p_hyperneat}). Para el caso de esta plataforma robótica, ambos métodos lograron realizar una trayectoria en promedio recta, y en conjunto con la información entregada por el cuarto gráfico de cada set, se infiere que además de haberse realizado trayectorias rectas, estas fueron realizadas a una velocidad constante en el tiempo.
 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics[width=\textwidth]{fig/ARGOV2_JP_HYPERNEAT.eps}
-    \caption{\textbf{Posición de los motores de ArgoV2 dada por HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:argov2_jp_hyperneat}	
+	\begin{subfigure}[b]{\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_HYPERNEAT.eps}
+        \caption{HyperNEAT.}
+        \label{fig:argov2_p_hyperneat}
+    \end{subfigure}
+    
+    \begin{subfigure}[b]{\textwidth}
+    	\centering
+        \includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_TAUHYPERNEAT.eps}
+        \caption{\(\tau\)-HyperNEAT.}
+        \label{fig:argov2_p_tauhyperneat}
+    \end{subfigure}
+    \caption{\textbf{Desplazamiento de ArgoV2 en el escenario dado por HyperNEAT y \(\tau\)-HyperNEAT.} Los sets de gráficos presentes en esta figura muestran el desplazamiento de ArgoV2 a lo largo del escenario de simulación en distintas medidas. Los gráficos superiores izquierdo y derecho muestra el desplazamiento en el tiempo del robot a lo largo del los ejes $x$ e $y$ respectivamente. EL gráfico inferior izquierdo corresponde al desplazamiento del robot a lo largo del plano $xy$ del escenario. Finalmente el gráfico inferior derecho corresponde a la distancia recta medida del robot hacia el punto de partida del escenario en el tiempo.}
+    \label{fig:argov2_p}
 \end{figure}
 
-Gráfico Joint Positions \(\tau\)-HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/ARGOV2_JP_TAUHYPERNEAT.eps}
-    \caption{\textbf{Posición de los motores de ArgoV2 dada por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:argov2_jp_tauhyperneat}	
-\end{figure}
-
-Gráfico Robot Position HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_HYPERNEAT.eps}
-    \caption{\textbf{Desplazamiento de ArgoV2 en el escenario dado por HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:argov2_p_hyperneat}	
-\end{figure}
-
-Gráfico Robot Position \(\tau\)-HyperNEAT
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth]{fig/ARGOV2_POSITION_TAUHYPERNEAT.eps}
-    \caption{\textbf{Desplazamiento de ArgoV2 en el escenario dado por \(\tau\)-HyperNEAT.} HOAOAOAOAOAOA.}
-    \label{fig:argov2_p_tauhyperneat}	
-\end{figure}
+\clearpage
