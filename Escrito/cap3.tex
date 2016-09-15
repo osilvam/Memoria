@@ -4,15 +4,15 @@ En este capítulo se presentará una introducción teórica de la herramienta de neu
 
 \section{COMPOSITIONAL PATTERN PRODUCING NETWORKS (CPPNs)}
 
-Un concepto base en la codificación en la naturaleza es que un pequeño número de genes pueden codificar un gran número de subestructuras dentro de un fenotipo a través de la reutilización de genes. En biología, los genes en el ADN representan estructuras extremadamente complejas con miles de millones de partes interconectadas. Sin embargo el ADN no posee miles de millones de genes, sino que de algún modo solo 30 mil genes codifican todo el cuerpo humano.
+La representación forma parte fundamental del campo de la inteligencia artificial. En biología, los genes en el ADN representan estructuras extremadamente complejas con miles de millones de partes interconectadas. Sin embargo el ADN no posee miles de millones de genes, sino que de algún modo solo 30 mil genes representan o codifican todo el cuerpo humano.
 
 La reutilización de genes se hace posible debido a que una estructura o fenotipo puede poseer un gran número de patrones, y estos patrones un sin número de regularidades, tal como ocurre en la naturaleza. De no existir regularidades no se hace posible reproducir distintas partes de una estructura a partir de la misma información, perdiendo gran ventaja en la codificación. 
 
-En el siguiente sección se introducirán importantes características del desarrollo de patrones.
+En el siguiente sección se introducirán importantes características del desarrollo de patrones estructurales.
 
 \subsection{DESARROLLO DE PATRONES}
 
-Identificar las características generales de los patrones presentes en la naturaleza es un prerrequisito importante para describir como esos patrones pueden ser generados algorítmicamente. A continuación se mencionarán características generales de patrones observados en organismos de la naturaleza que también pueden ser observados en fenotipos evolucionado artificialmente.
+Identificar las características generales de los patrones presentes en la naturaleza es un prerrequisito importante para describir como esos patrones pueden ser generados algorítmicamente. A continuación se mencionarán características generales de patrones observados en organismos de la naturaleza que también pueden ser observados en fenotipos evolucionados artificialmente.
 
 \begin{itemize}
 \item \textbf{Repetición } Múltiples instancias de la misma subestructura es un sello distintivo de los organismos biológicos. Desde las células de todo el cuerpo hasta las neuronas del cerebro, las mismas estructuras se repiten una y otra vez en un único organismo. 
@@ -29,17 +29,17 @@ La siguiente sección describe un proceso mediante el cual los patrones represent
 
 \subsection{COMPLEJIZACIÓN}
 
-EL proceso de complejización permite a la evolución descubrir fenotipos más complejos de los que sería posible descubrir a través de la optimización de un conjunto fijo de genes. 
+El proceso de complejización permite a la evolución descubrir fenotipos más complejos de los que sería posible descubrir a través de la optimización de un conjunto fijo de genes. 
 
-En la búsqueda de la solución a un problema particular, cuya dimensión es desconocida a priori, mientras más dimensiones tenga el espacio de solución seleccionado, más difícil se hace descubrir esta solución. En otras palabras, soluciones más complejas son más difíciles de evolucionar que otras mas simples. Es por esto que se busca reducir la complejidad del espacio de búsqueda mediante la codificación de un fenotipo complejo en un genotipo de dimensiones significativamente menores.
+En la búsqueda de la solución a un problema particular, cuya dimensión es desconocida a priori, mientras más dimensiones tenga el espacio de solución seleccionado, más difícil se hace descubrir esta solución. En otras palabras, soluciones más complejas son más difíciles de evolucionar que otras más simples. Es por esto que se busca reducir la complejidad del espacio de búsqueda mediante la codificación de un fenotipo complejo en un genotipo de dimensiones significativamente menores.
 
-La clave para que la evolución pueda superar el problema de la complejidad es que no se inicia la búsqueda en un espacio de la misma complejidad que la solución final. Nuevos genes son ocasionalmente añadidos al genoma, permitiendo a la evolución complejizar funciones por sobre el proceso de optimización. La complejización permite a la evolución comenzar con fenotipos simples partiendo por un espacio de búsqueda dimensionalmente más pequeño para trabajar sobre este de manera incremental, opuesto a la idea de trabajar directamente a partir de sistemas más elaborados desde el comienzo.
+La clave para que la evolución pueda superar el problema de la complejidad es que no se inicia la búsqueda en un espacio de la misma complejidad que la solución final. Nuevos genes son ocasionalmente añadidos al genoma, permitiendo a la evolución complejizar funciones por sobre el proceso de optimización. La complejización permite a la evolución comenzar con fenotipos simples partiendo por un espacio de búsqueda dimensionalmente más pequeño para trabajar sobre éste de manera incremental, opuesto a la idea de trabajar directamente a partir de sistemas más elaborados desde el comienzo.
 
 Nuevos genes comúnmente aparecen a través de duplicación de otros genes, que es un tipo especial de mutación en donde uno o más genes de los padres son copiados en un genoma hijo más de una vez. El principal efecto de la duplicación de genes es el incremento de la dimensionalidad del genotipo, con lo que se podrán representar patrones fenotípicos cada vez más complejos. Por lo tanto, complejización y la codificación con reutilización de genes trabajan conjuntos para producir fenotipos complejos.
 
 \subsection{MÉTODO DE CODIFICACIÓN}
 
-Con el fin de poder codificar un fenotipo determinado es que ayuda concebirlo como una distribución de puntos en un espacio cartesiano multidimensional. Visto de esta manera, un fenotipo puede ser descrito como una función de dimension \textit{n}, donde \textit{n} es el número de dimensiones en el mundo físico. Para cada coordenada, la presencia o ausencia de un punto es una salida de la función que define el fenotipo. La figura \ref{mapfenotipo} muestra como un fenotipo bidimensional puede ser generado a través de una función de dos parámetros
+Con el fin de poder codificar un fenotipo determinado, es de ayuda concebirlo como una distribución de puntos a lo largo de un espacio cartesiano multidimensional. Visto de esta manera, un fenotipo puede ser descrito como una función $f: \mathbb{R}^{n}\longrightarrow\mathbb{R}$, donde $n$ es el número de dimensiones en el mundo físico. Para cada coordenada, la presencia o ausencia de un punto es una salida de la función que define el fenotipo. La figura \ref{mapfenotipo} muestra como un fenotipo bidimensional puede ser generado a través de una función de dos parámetros
 
 \begin{figure}[t]
 \centering

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.6.28)  14 SEP 2016 22:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.4)  15 SEP 2016 01:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,49 +601,49 @@ File: fig/mapfenotipo.png Graphic file (type png)
 <use fig/mapfenotipo.png>
 Package pdftex.def Info: fig/mapfenotipo.png used on input line 46.
 (pdftex.def)             Requested size: 327.54945pt x 139.25003pt.
- [13]
-<fig/compfunciones.png, id=78, 744.8628pt x 591.6504pt>
+ [13 <./fig/mapfenotipo.png>]
+<fig/compfunciones.png, id=77, 744.8628pt x 591.6504pt>
 File: fig/compfunciones.png Graphic file (type png)
 
 <use fig/compfunciones.png>
 Package pdftex.def Info: fig/compfunciones.png used on input line 57.
 (pdftex.def)             Requested size: 327.54945pt x 260.17351pt.
- [14 <./fig/mapfenotipo.png>]
-<fig/grafo.png, id=84, 516.9714pt x 515.0442pt>
+ <fig/grafo.png, id=78, 516.9714pt x 515.0442pt>
 File: fig/grafo.png Graphic file (type png)
- <use fig/grafo.png>
+
+<use fig/grafo.png>
 Package pdftex.def Info: fig/grafo.png used on input line 68.
 (pdftex.def)             Requested size: 204.71762pt x 203.95499pt.
- [15 <./fig/compfunciones.png>] [16 <./fig/grafo.png>] [17] [18] [19] [20]
-<fig/hyperneat.png, id=107, 864.831pt x 395.5578pt>
+ [14] [15 <./fig/compfunciones.png>] [16 <./fig/grafo.png>]
+[17] [18] [19] [20] <fig/hyperneat.png, id=108, 864.831pt x 395.5578pt>
 File: fig/hyperneat.png Graphic file (type png)
- <use fig/hyperneat.png>
+
+<use fig/hyperneat.png>
 Package pdftex.def Info: fig/hyperneat.png used on input line 121.
 (pdftex.def)             Requested size: 327.54945pt x 149.81255pt.
-
-[21 <./fig/hyperneat.png>]
-<fig/patronescppn1.png, id=112, 347.8596pt x 345.9324pt>
+ [21 <./fig/hyperneat.png>]
+<fig/patronescppn1.png, id=113, 347.8596pt x 345.9324pt>
 File: fig/patronescppn1.png Graphic file (type png)
 
 <use fig/patronescppn1.png>
 Package pdftex.def Info: fig/patronescppn1.png used on input line 136.
 (pdftex.def)             Requested size: 100.31293pt x 99.7583pt.
 
-<fig/patronescppn2.png, id=113, 345.4506pt x 343.5234pt>
+<fig/patronescppn2.png, id=114, 345.4506pt x 343.5234pt>
 File: fig/patronescppn2.png Graphic file (type png)
 
 <use fig/patronescppn2.png>
 Package pdftex.def Info: fig/patronescppn2.png used on input line 143.
 (pdftex.def)             Requested size: 100.31293pt x 99.75027pt.
 
-<fig/patronescppn3.png, id=114, 395.5578pt x 315.0972pt>
+<fig/patronescppn3.png, id=115, 395.5578pt x 315.0972pt>
 File: fig/patronescppn3.png Graphic file (type png)
 
 <use fig/patronescppn3.png>
 Package pdftex.def Info: fig/patronescppn3.png used on input line 150.
 (pdftex.def)             Requested size: 100.31293pt x 79.90398pt.
 
-<fig/patronescppn4.png, id=115, 343.0416pt x 345.9324pt>
+<fig/patronescppn4.png, id=116, 343.0416pt x 345.9324pt>
 File: fig/patronescppn4.png Graphic file (type png)
 
 <use fig/patronescppn4.png>
@@ -651,28 +651,28 @@ Package pdftex.def Info: fig/patronescppn4.png used on input line 157.
 (pdftex.def)             Requested size: 100.31293pt x 101.1571pt.
  [22 <./fig/patronescppn1.png> <./fig/patronescppn2.png> <./fig/patronescppn3.p
 ng> <./fig/patronescppn4.png>]
-<fig/substrateconf1.png, id=123, 310.761pt x 321.3606pt>
+<fig/substrateconf1.png, id=124, 310.761pt x 321.3606pt>
 File: fig/substrateconf1.png Graphic file (type png)
 
 <use fig/substrateconf1.png>
 Package pdftex.def Info: fig/substrateconf1.png used on input line 179.
 (pdftex.def)             Requested size: 100.31293pt x 103.73483pt.
 
-<fig/substrateconf2.png, id=124, 386.8854pt x 388.8126pt>
+<fig/substrateconf2.png, id=125, 386.8854pt x 388.8126pt>
 File: fig/substrateconf2.png Graphic file (type png)
 
 <use fig/substrateconf2.png>
 Package pdftex.def Info: fig/substrateconf2.png used on input line 186.
 (pdftex.def)             Requested size: 100.31293pt x 100.81004pt.
 
-<fig/substrateconf3.png, id=125, 471.2004pt x 516.4896pt>
+<fig/substrateconf3.png, id=126, 471.2004pt x 516.4896pt>
 File: fig/substrateconf3.png Graphic file (type png)
 
 <use fig/substrateconf3.png>
 Package pdftex.def Info: fig/substrateconf3.png used on input line 193.
 (pdftex.def)             Requested size: 100.31293pt x 109.94763pt.
 
-<fig/substrateconf4.png, id=126, 307.3884pt x 309.3156pt>
+<fig/substrateconf4.png, id=127, 307.3884pt x 309.3156pt>
 File: fig/substrateconf4.png Graphic file (type png)
 
 <use fig/substrateconf4.png>
@@ -685,62 +685,62 @@ Overfull \hbox (23.64445pt too wide) in paragraph at lines 208--209
  z[]\OT1/cmr/m/n/12 )$
  []
 
-[23] [24 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrate
-conf3.png> <./fig/substrateconf4.png>]
-<fig/posio1.png, id=137, 144.54pt x 144.54pt>
+[23 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrateconf3
+.png> <./fig/substrateconf4.png>] [24]
+<fig/posio1.png, id=138, 144.54pt x 144.54pt>
 File: fig/posio1.png Graphic file (type png)
  <use fig/posio1.png>
 Package pdftex.def Info: fig/posio1.png used on input line 226.
 (pdftex.def)             Requested size: 122.83182pt x 122.83089pt.
 
-<fig/posio2.png, id=138, 255.8358pt x 215.3646pt>
+<fig/posio2.png, id=139, 255.8358pt x 215.3646pt>
 File: fig/posio2.png Graphic file (type png)
  <use fig/posio2.png>
 Package pdftex.def Info: fig/posio2.png used on input line 233.
 (pdftex.def)             Requested size: 122.83182pt x 103.4034pt.
 
-<fig/posio3.png, id=139, 256.3176pt x 186.9384pt>
+<fig/posio3.png, id=140, 256.3176pt x 186.9384pt>
 File: fig/posio3.png Graphic file (type png)
  <use fig/posio3.png>
 Package pdftex.def Info: fig/posio3.png used on input line 240.
 (pdftex.def)             Requested size: 122.83182pt x 89.58394pt.
  [25 <./fig/posio1.png> <./fig/posio2.png> <./fig/posio3.png>]
-<fig/substrateres1.png, id=146, 343.0416pt x 345.9324pt>
+<fig/substrateres1.png, id=147, 343.0416pt x 345.9324pt>
 File: fig/substrateres1.png Graphic file (type png)
 
 <use fig/substrateres1.png>
 Package pdftex.def Info: fig/substrateres1.png used on input line 260.
 (pdftex.def)             Requested size: 122.83182pt x 123.86519pt.
 
-<fig/substrateres2.png, id=147, 342.5598pt x 344.0052pt>
+<fig/substrateres2.png, id=148, 342.5598pt x 344.0052pt>
 File: fig/substrateres2.png Graphic file (type png)
 
 <use fig/substrateres2.png>
 Package pdftex.def Info: fig/substrateres2.png used on input line 267.
 (pdftex.def)             Requested size: 122.83182pt x 123.34836pt.
 
-<fig/substrateres3.png, id=148, 272.6988pt x 328.5876pt>
+<fig/substrateres3.png, id=149, 272.6988pt x 328.5876pt>
 File: fig/substrateres3.png Graphic file (type png)
 
 <use fig/substrateres3.png>
 Package pdftex.def Info: fig/substrateres3.png used on input line 274.
 (pdftex.def)             Requested size: 122.83182pt x 148.00343pt.
 
-<fig/substrateres4.png, id=149, 345.4506pt x 343.0416pt>
+<fig/substrateres4.png, id=150, 345.4506pt x 343.0416pt>
 File: fig/substrateres4.png Graphic file (type png)
 
 <use fig/substrateres4.png>
 Package pdftex.def Info: fig/substrateres4.png used on input line 282.
 (pdftex.def)             Requested size: 122.83182pt x 121.97166pt.
 
-<fig/substrateres5.png, id=150, 343.0416pt x 343.0416pt>
+<fig/substrateres5.png, id=151, 343.0416pt x 343.0416pt>
 File: fig/substrateres5.png Graphic file (type png)
 
 <use fig/substrateres5.png>
 Package pdftex.def Info: fig/substrateres5.png used on input line 289.
 (pdftex.def)             Requested size: 122.83182pt x 122.83011pt.
 
-<fig/substrateres6.png, id=151, 274.626pt x 327.624pt>
+<fig/substrateres6.png, id=152, 274.626pt x 327.624pt>
 File: fig/substrateres6.png Graphic file (type png)
 
 <use fig/substrateres6.png>
@@ -755,7 +755,7 @@ s6.png>]) [28
 
  (./cap4.tex
 Cap\'{\i }tulo 4.
-<fig/tauhyperneat.png, id=169, 864.831pt x 395.5578pt>
+<fig/tauhyperneat.png, id=170, 864.831pt x 395.5578pt>
 File: fig/tauhyperneat.png Graphic file (type png)
 
 <use fig/tauhyperneat.png>
@@ -766,7 +766,7 @@ Package pdftex.def Info: fig/tauhyperneat.png used on input line 9.
 
 
 ]
-<fig/buffer1.png, id=173, 360.3864pt x 93.951pt>
+<fig/buffer1.png, id=174, 360.3864pt x 93.951pt>
 File: fig/buffer1.png Graphic file (type png)
  <use fig/buffer1.png>
 Package pdftex.def Info: fig/buffer1.png used on input line 20.
@@ -776,7 +776,7 @@ Overfull \hbox (12.28392pt too wide) in paragraph at lines 20--21
  [][] 
  []
 
-<fig/buffer2.png, id=174, 360.3864pt x 93.951pt>
+<fig/buffer2.png, id=175, 360.3864pt x 93.951pt>
 File: fig/buffer2.png Graphic file (type png)
  <use fig/buffer2.png>
 Package pdftex.def Info: fig/buffer2.png used on input line 27.
@@ -786,7 +786,7 @@ Overfull \hbox (12.28392pt too wide) in paragraph at lines 27--28
  [][] 
  []
 
-<fig/buffer3.png, id=175, 360.3864pt x 93.951pt>
+<fig/buffer3.png, id=176, 360.3864pt x 93.951pt>
 File: fig/buffer3.png Graphic file (type png)
  <use fig/buffer3.png>
 Package pdftex.def Info: fig/buffer3.png used on input line 34.
@@ -802,19 +802,19 @@ g/buffer3.png>]) [32]
 
  (./cap5.tex
 Cap\'{\i }tulo 5.
-<fig/import1.png, id=190, 451.6875pt x 451.6875pt>
+<fig/import1.png, id=191, 451.6875pt x 451.6875pt>
 File: fig/import1.png Graphic file (type png)
  <use fig/import1.png>
 Package pdftex.def Info: fig/import1.png used on input line 12.
 (pdftex.def)             Requested size: 163.77159pt x 163.77214pt.
 
-<fig/import2.png, id=191, 631.35875pt x 485.815pt>
+<fig/import2.png, id=192, 631.35875pt x 485.815pt>
 File: fig/import2.png Graphic file (type png)
  <use fig/import2.png>
 Package pdftex.def Info: fig/import2.png used on input line 19.
 (pdftex.def)             Requested size: 212.90808pt x 163.82576pt.
 
-<fig/import3.png, id=192, 1927.2pt x 1058.95625pt>
+<fig/import3.png, id=193, 1927.2pt x 1058.95625pt>
 File: fig/import3.png Graphic file (type png)
  <use fig/import3.png>
 Package pdftex.def Info: fig/import3.png used on input line 27.
@@ -824,34 +824,34 @@ Package pdftex.def Info: fig/import3.png used on input line 27.
 
 
 
-] <fig/divide1.png, id=196, 843.15pt x 519.44063pt>
+] <fig/divide1.png, id=197, 843.15pt x 519.44063pt>
 File: fig/divide1.png Graphic file (type png)
  <use fig/divide1.png>
 Package pdftex.def Info: fig/divide1.png used on input line 41.
 (pdftex.def)             Requested size: 184.24461pt x 113.50847pt.
 
-<fig/divide2.png, id=197, 843.15pt x 519.44063pt>
+<fig/divide2.png, id=198, 843.15pt x 519.44063pt>
 File: fig/divide2.png Graphic file (type png)
  <use fig/divide2.png>
 Package pdftex.def Info: fig/divide2.png used on input line 48.
 (pdftex.def)             Requested size: 184.24461pt x 113.50847pt.
 
 [34 <./fig/import1.png> <./fig/import2.png> <./fig/import3.png>]
-<fig/selectutil1.png, id=201, 632.3625pt x 451.6875pt>
+<fig/selectutil1.png, id=202, 632.3625pt x 451.6875pt>
 File: fig/selectutil1.png Graphic file (type png)
 
 <use fig/selectutil1.png>
 Package pdftex.def Info: fig/selectutil1.png used on input line 62.
 (pdftex.def)             Requested size: 184.24461pt x 131.59941pt.
 
-<fig/selectutil2.png, id=202, 632.3625pt x 451.6875pt>
+<fig/selectutil2.png, id=203, 632.3625pt x 451.6875pt>
 File: fig/selectutil2.png Graphic file (type png)
 
 <use fig/selectutil2.png>
 Package pdftex.def Info: fig/selectutil2.png used on input line 69.
 (pdftex.def)             Requested size: 184.24461pt x 131.59941pt.
 
-<fig/selectutil3.png, id=203, 969.6225pt x 692.5875pt>
+<fig/selectutil3.png, id=204, 969.6225pt x 692.5875pt>
 File: fig/selectutil3.png Graphic file (type png)
 
 <use fig/selectutil3.png>
@@ -859,42 +859,42 @@ Package pdftex.def Info: fig/selectutil3.png used on input line 77.
 (pdftex.def)             Requested size: 368.48923pt x 263.2071pt.
  [35 <./fig/divide1.png> <./fig/divide2.png>] [36 <./fig/selectutil1.png> <./fi
 g/selectutil2.png> <./fig/selectutil3.png>]
-<fig/convexshape1.png, id=215, 767.86874pt x 557.08125pt>
+<fig/convexshape1.png, id=216, 767.86874pt x 557.08125pt>
 File: fig/convexshape1.png Graphic file (type png)
 
 <use fig/convexshape1.png>
 Package pdftex.def Info: fig/convexshape1.png used on input line 91.
 (pdftex.def)             Requested size: 184.24461pt x 133.66823pt.
 
-<fig/convexshape2.png, id=216, 767.86874pt x 557.08125pt>
+<fig/convexshape2.png, id=217, 767.86874pt x 557.08125pt>
 File: fig/convexshape2.png Graphic file (type png)
 
 <use fig/convexshape2.png>
 Package pdftex.def Info: fig/convexshape2.png used on input line 98.
 (pdftex.def)             Requested size: 184.24461pt x 133.66823pt.
 
-<fig/simpleshape1.png, id=217, 730.22812pt x 542.025pt>
+<fig/simpleshape1.png, id=218, 730.22812pt x 542.025pt>
 File: fig/simpleshape1.png Graphic file (type png)
 
 <use fig/simpleshape1.png>
 Package pdftex.def Info: fig/simpleshape1.png used on input line 112.
 (pdftex.def)             Requested size: 184.24461pt x 136.75478pt.
 
-<fig/simpleshape2.png, id=218, 730.22812pt x 542.025pt>
+<fig/simpleshape2.png, id=219, 730.22812pt x 542.025pt>
 File: fig/simpleshape2.png Graphic file (type png)
 
 <use fig/simpleshape2.png>
 Package pdftex.def Info: fig/simpleshape2.png used on input line 119.
 (pdftex.def)             Requested size: 184.24461pt x 136.75478pt.
 
-<fig/simpleshape3.png, id=219, 608.2725pt x 451.6875pt>
+<fig/simpleshape3.png, id=220, 608.2725pt x 451.6875pt>
 File: fig/simpleshape3.png Graphic file (type png)
 
 <use fig/simpleshape3.png>
 Package pdftex.def Info: fig/simpleshape3.png used on input line 127.
 (pdftex.def)             Requested size: 184.24461pt x 136.8099pt.
 
-<fig/simpleshape4.png, id=220, 608.2725pt x 451.6875pt>
+<fig/simpleshape4.png, id=221, 608.2725pt x 451.6875pt>
 File: fig/simpleshape4.png Graphic file (type png)
 
 <use fig/simpleshape4.png>
@@ -909,66 +909,66 @@ cmsy/m/n/12 !$\OT1/ptm/m/it/12 Revolute\OT1/ptm/m/n/12 )
 
 [37 <./fig/convexshape1.png> <./fig/convexshape2.png>] [38 <./fig/simpleshape1.
 png> <./fig/simpleshape2.png> <./fig/simpleshape3.png> <./fig/simpleshape4.png>
-] <fig/addjoint1.png, id=234, 888.31876pt x 421.575pt>
+] <fig/addjoint1.png, id=235, 888.31876pt x 421.575pt>
 File: fig/addjoint1.png Graphic file (type png)
  <use fig/addjoint1.png>
 Package pdftex.def Info: fig/addjoint1.png used on input line 148.
 (pdftex.def)             Requested size: 184.24461pt x 87.43336pt.
 
-<fig/addjoint2.png, id=235, 888.31876pt x 421.575pt>
+<fig/addjoint2.png, id=236, 888.31876pt x 421.575pt>
 File: fig/addjoint2.png Graphic file (type png)
  <use fig/addjoint2.png>
 Package pdftex.def Info: fig/addjoint2.png used on input line 155.
 (pdftex.def)             Requested size: 184.24461pt x 87.43336pt.
 
-<fig/addjoint3.png, id=236, 828.09375pt x 376.40625pt>
+<fig/addjoint3.png, id=237, 828.09375pt x 376.40625pt>
 File: fig/addjoint3.png Graphic file (type png)
  <use fig/addjoint3.png>
 Package pdftex.def Info: fig/addjoint3.png used on input line 163.
 (pdftex.def)             Requested size: 368.48923pt x 167.49738pt.
 
 [39 <./fig/addjoint1.png> <./fig/addjoint2.png> <./fig/addjoint3.png>]
-<fig/jointg1.png, id=243, 685.05937pt x 504.38437pt>
+<fig/jointg1.png, id=244, 685.05937pt x 504.38437pt>
 File: fig/jointg1.png Graphic file (type png)
  <use fig/jointg1.png>
 Package pdftex.def Info: fig/jointg1.png used on input line 179.
 (pdftex.def)             Requested size: 184.24461pt x 135.65456pt.
 
-<fig/jointg2.png, id=244, 685.05937pt x 504.38437pt>
+<fig/jointg2.png, id=245, 685.05937pt x 504.38437pt>
 File: fig/jointg2.png Graphic file (type png)
  <use fig/jointg2.png>
 Package pdftex.def Info: fig/jointg2.png used on input line 186.
 (pdftex.def)             Requested size: 184.24461pt x 135.65456pt.
 
-[40] <fig/copy_rot1.png, id=248, 1097.60063pt x 504.38437pt>
+[40] <fig/copy_rot1.png, id=249, 1097.60063pt x 504.38437pt>
 File: fig/copy_rot1.png Graphic file (type png)
 
 <use fig/copy_rot1.png>
 Package pdftex.def Info: fig/copy_rot1.png used on input line 200.
 (pdftex.def)             Requested size: 184.24461pt x 84.66672pt.
 
-<fig/copy_rot2.png, id=249, 1099.10625pt x 504.38437pt>
+<fig/copy_rot2.png, id=250, 1099.10625pt x 504.38437pt>
 File: fig/copy_rot2.png Graphic file (type png)
 
 <use fig/copy_rot2.png>
 Package pdftex.def Info: fig/copy_rot2.png used on input line 207.
 (pdftex.def)             Requested size: 184.24461pt x 84.55128pt.
 
-<fig/copy_rot3.png, id=250, 1099.10625pt x 502.87875pt>
+<fig/copy_rot3.png, id=251, 1099.10625pt x 502.87875pt>
 File: fig/copy_rot3.png Graphic file (type png)
 
 <use fig/copy_rot3.png>
 Package pdftex.def Info: fig/copy_rot3.png used on input line 215.
 (pdftex.def)             Requested size: 368.48923pt x 168.59778pt.
  [41 <./fig/jointg1.png> <./fig/jointg2.png>]
-<fig/enablejoint1.png, id=256, 383.4325pt x 519.9425pt>
+<fig/enablejoint1.png, id=257, 383.4325pt x 519.9425pt>
 File: fig/enablejoint1.png Graphic file (type png)
 
 <use fig/enablejoint1.png>
 Package pdftex.def Info: fig/enablejoint1.png used on input line 229.
 (pdftex.def)             Requested size: 171.96205pt x 233.18652pt.
 
-<fig/enablejoint2.png, id=257, 383.4325pt x 484.81125pt>
+<fig/enablejoint2.png, id=258, 383.4325pt x 484.81125pt>
 File: fig/enablejoint2.png Graphic file (type png)
 
 <use fig/enablejoint2.png>
@@ -976,28 +976,28 @@ Package pdftex.def Info: fig/enablejoint2.png used on input line 236.
 (pdftex.def)             Requested size: 184.24461pt x 232.95827pt.
  [42 <./fig/copy_rot1.png> <./fig/copy_rot2.png> <./fig/copy_rot3.png>] [43 <./
 fig/enablejoint1.png> <./fig/enablejoint2.png>]
-<fig/changevis1.png, id=267, 1099.10625pt x 496.85625pt>
+<fig/changevis1.png, id=268, 1099.10625pt x 496.85625pt>
 File: fig/changevis1.png Graphic file (type png)
 
 <use fig/changevis1.png>
 Package pdftex.def Info: fig/changevis1.png used on input line 252.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/changevis2.png, id=268, 287.57437pt x 166.37157pt>
+<fig/changevis2.png, id=269, 287.57437pt x 166.37157pt>
 File: fig/changevis2.png Graphic file (type png)
 
 <use fig/changevis2.png>
 Package pdftex.def Info: fig/changevis2.png used on input line 260.
 (pdftex.def)             Requested size: 184.24461pt x 106.5942pt.
 
-<fig/changevis3.png, id=269, 287.57437pt x 166.37157pt>
+<fig/changevis3.png, id=270, 287.57437pt x 166.37157pt>
 File: fig/changevis3.png Graphic file (type png)
 
 <use fig/changevis3.png>
 Package pdftex.def Info: fig/changevis3.png used on input line 267.
 (pdftex.def)             Requested size: 184.24461pt x 106.5942pt.
 
-<fig/changevis4.png, id=270, 1099.10625pt x 496.85625pt>
+<fig/changevis4.png, id=271, 1099.10625pt x 496.85625pt>
 File: fig/changevis4.png Graphic file (type png)
 
 <use fig/changevis4.png>
@@ -1008,58 +1008,58 @@ Package pdftex.def Info: fig/changevis4.png used on input line 275.
 LaTeX Warning: Text page 45 contains only floats.
 
 [45 <./fig/changevis1.png> <./fig/changevis2.png> <./fig/changevis3.png> <./fig
-/changevis4.png>] <fig/accesschancol1.png, id=283, 1099.10625pt x 496.85625pt>
+/changevis4.png>] <fig/accesschancol1.png, id=284, 1099.10625pt x 496.85625pt>
 File: fig/accesschancol1.png Graphic file (type png)
 
 <use fig/accesschancol1.png>
 Package pdftex.def Info: fig/accesschancol1.png used on input line 289.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/accesschancol2.png, id=284, 1099.10625pt x 496.85625pt>
+<fig/accesschancol2.png, id=285, 1099.10625pt x 496.85625pt>
 File: fig/accesschancol2.png Graphic file (type png)
 
 <use fig/accesschancol2.png>
 Package pdftex.def Info: fig/accesschancol2.png used on input line 297.
 (pdftex.def)             Requested size: 368.48923pt x 166.57864pt.
 
-<fig/chancol1.png, id=285, 1099.10625pt x 496.85625pt>
+<fig/chancol1.png, id=286, 1099.10625pt x 496.85625pt>
 File: fig/chancol1.png Graphic file (type png)
  <use fig/chancol1.png>
 Package pdftex.def Info: fig/chancol1.png used on input line 311.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol2.png, id=286, 1099.10625pt x 496.85625pt>
+<fig/chancol2.png, id=287, 1099.10625pt x 496.85625pt>
 File: fig/chancol2.png Graphic file (type png)
  <use fig/chancol2.png>
 Package pdftex.def Info: fig/chancol2.png used on input line 318.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol3.png, id=287, 1099.10625pt x 496.85625pt>
+<fig/chancol3.png, id=288, 1099.10625pt x 496.85625pt>
 File: fig/chancol3.png Graphic file (type png)
  <use fig/chancol3.png>
 Package pdftex.def Info: fig/chancol3.png used on input line 326.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-<fig/chancol4.png, id=288, 1099.10625pt x 496.85625pt>
+<fig/chancol4.png, id=289, 1099.10625pt x 496.85625pt>
 File: fig/chancol4.png Graphic file (type png)
  <use fig/chancol4.png>
 Package pdftex.def Info: fig/chancol4.png used on input line 333.
 (pdftex.def)             Requested size: 184.24461pt x 83.28932pt.
 
-[46] <fig/chanjpos1.png, id=292, 903.375pt x 412.54124pt>
+[46] <fig/chanjpos1.png, id=293, 903.375pt x 412.54124pt>
 File: fig/chanjpos1.png Graphic file (type png)
 
 <use fig/chanjpos1.png>
 Package pdftex.def Info: fig/chanjpos1.png used on input line 347.
 (pdftex.def)             Requested size: 368.48923pt x 168.28061pt.
- <fig/chanjpos2.png, id=293, 903.375pt x 414.04688pt>
+ <fig/chanjpos2.png, id=294, 903.375pt x 414.04688pt>
 File: fig/chanjpos2.png Graphic file (type png)
 
 <use fig/chanjpos2.png>
 Package pdftex.def Info: fig/chanjpos2.png used on input line 355.
 (pdftex.def)             Requested size: 368.48923pt x 168.89476pt.
 
-<fig/robotlisto.png, id=294, 978.65625pt x 557.08125pt>
+<fig/robotlisto.png, id=295, 978.65625pt x 557.08125pt>
 File: fig/robotlisto.png Graphic file (type png)
 
 <use fig/robotlisto.png>
@@ -1092,7 +1092,7 @@ Overfull \hbox (37.6087pt too wide) in paragraph at lines 15--16
 e a un con-tro-la-dor USB2Dynamixel,
  []
 
-[53] <fig/prueba.png, id=327, 982.67125pt x 664.4825pt>
+[53] <fig/prueba.png, id=328, 982.67125pt x 664.4825pt>
 File: fig/prueba.png Graphic file (type png)
  <use fig/prueba.png>
 Package pdftex.def Info: fig/prueba.png used on input line 32.
@@ -1133,26 +1133,26 @@ Cap\'{\i }tulo 7.
 
 
 
-] <fig/hsubstrate.png, id=341, 644.62259pt x 203.90465pt>
+] <fig/hsubstrate.png, id=342, 644.62259pt x 203.90465pt>
 File: fig/hsubstrate.png Graphic file (type png)
 
 <use fig/hsubstrate.png>
 Package pdftex.def Info: fig/hsubstrate.png used on input line 13.
 (pdftex.def)             Requested size: 290.70177pt x 91.95535pt.
- <fig/hcppn.png, id=342, 231.65115pt x 203.90465pt>
+ <fig/hcppn.png, id=343, 231.65115pt x 203.90465pt>
 File: fig/hcppn.png Graphic file (type png)
 
 <use fig/hcppn.png>
 Package pdftex.def Info: fig/hcppn.png used on input line 19.
 (pdftex.def)             Requested size: 104.40799pt x 91.90247pt.
- <fig/tauhsubstrate.png, id=343, 644.62259pt x 203.90465pt>
+ <fig/tauhsubstrate.png, id=344, 644.62259pt x 203.90465pt>
 File: fig/tauhsubstrate.png Graphic file (type png)
 
 <use fig/tauhsubstrate.png>
 Package pdftex.def Info: fig/tauhsubstrate.png used on input line 26.
 (pdftex.def)             Requested size: 290.70177pt x 91.95535pt.
 
-<fig/tauhcppn.png, id=344, 231.65115pt x 203.90465pt>
+<fig/tauhcppn.png, id=345, 231.65115pt x 203.90465pt>
 File: fig/tauhcppn.png Graphic file (type png)
  <use fig/tauhcppn.png>
 Package pdftex.def Info: fig/tauhcppn.png used on input line 32.
@@ -1161,17 +1161,17 @@ Package pdftex.def Info: fig/tauhcppn.png used on input line 32.
 [58] [59 <./fig/hsubstrate.png> <./fig/hcppn.png> <./fig/tauhsubstrate.png> <./
 fig/tauhcppn.png>]
 Package epstopdf Info: Source file: <fig/FITNESS_FREC.eps>
-(epstopdf)                    date: 2016-09-12 19:16:45
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 11842 bytes
 (epstopdf)             Output file: <fig/FITNESS_FREC-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-12 22:36:20
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 8288 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/FITNESS_FREC-eps-conve
 rted-to.pdf fig/FITNESS_FREC.eps>
 (epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/FITNESS_FREC-eps-converted-to.pdf, id=355, 547.04375pt x 479.7925pt>
+<fig/FITNESS_FREC-eps-converted-to.pdf, id=356, 547.04375pt x 479.7925pt>
 File: fig/FITNESS_FREC-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/FITNESS_FREC-eps-converted-to.pdf>
@@ -1179,17 +1179,17 @@ Package pdftex.def Info: fig/FITNESS_FREC-eps-converted-to.pdf used on input li
 ne 51.
 (pdftex.def)             Requested size: 196.52716pt x 172.36642pt.
 Package epstopdf Info: Source file: <fig/FITNESS_DIST.eps>
-(epstopdf)                    date: 2016-09-12 19:15:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 9801 bytes
 (epstopdf)             Output file: <fig/FITNESS_DIST-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-12 22:36:20
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 6992 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/FITNESS_DIST-eps-conve
 rted-to.pdf fig/FITNESS_DIST.eps>
 (epstopdf)             \includegraphics on input line 58.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/FITNESS_DIST-eps-converted-to.pdf, id=356, 547.04375pt x 496.85625pt>
+<fig/FITNESS_DIST-eps-converted-to.pdf, id=357, 547.04375pt x 496.85625pt>
 File: fig/FITNESS_DIST-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/FITNESS_DIST-eps-converted-to.pdf>
@@ -1199,18 +1199,18 @@ ne 58.
  [60 <./fig/FITNESS_FREC-eps-converted-to.pdf> <./fig/FITNESS_DIST-eps-converte
 d-to.pdf>] [61] [62] [63]
 Package epstopdf Info: Source file: <fig/QUADRATOT_FITNESS.eps>
-(epstopdf)                    date: 2016-09-12 18:06:29
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 13055 bytes
 (epstopdf)             Output file: <fig/QUADRATOT_FITNESS-eps-converted-to.pdf
 >
-(epstopdf)                    date: 2016-09-12 22:53:32
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 10452 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_FITNESS-eps-
 converted-to.pdf fig/QUADRATOT_FITNESS.eps>
 (epstopdf)             \includegraphics on input line 98.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_FITNESS-eps-converted-to.pdf, id=382, 547.04375pt x 479.7925pt>
+<fig/QUADRATOT_FITNESS-eps-converted-to.pdf, id=383, 547.04375pt x 479.7925pt>
 File: fig/QUADRATOT_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/QUADRATOT_FITNESS-eps-converted-to.pdf>
@@ -1218,18 +1218,18 @@ Package pdftex.def Info: fig/QUADRATOT_FITNESS-eps-converted-to.pdf used on inp
 ut line 98.
 (pdftex.def)             Requested size: 307.07643pt x 269.3262pt.
 Package epstopdf Info: Source file: <fig/QUADRATOT_JP_HYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:10:02
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 29731 bytes
 (epstopdf)             Output file: <fig/QUADRATOT_JP_HYPERNEAT-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-09-12 23:05:48
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18221 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_JP_HYPERNEAT
 -eps-converted-to.pdf fig/QUADRATOT_JP_HYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 107.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf, id=383, 1096.095pt x 530.9837
+<fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf, id=384, 1096.095pt x 530.9837
 5pt>
 File: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf>
@@ -1237,18 +1237,18 @@ Package pdftex.def Info: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf used o
 n input line 107.
 (pdftex.def)             Requested size: 409.43526pt x 198.34871pt.
 Package epstopdf Info: Source file: <fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:13:55
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 29708 bytes
 (epstopdf)             Output file: <fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:05:48
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18374 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_JP_TAUHYPERN
 EAT-eps-converted-to.pdf fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 114.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=384, 1096.095pt x 530.9
+<fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=385, 1096.095pt x 530.9
 8375pt>
 File: fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1260,18 +1260,18 @@ d on input line 114.
 PERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to
 .pdf>]
 Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_HYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:17:42
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18628 bytes
 (epstopdf)             Output file: <fig/QUADRATOT_POSITION_HYPERNEAT-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:05:49
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 12328 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_HYP
 ERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_HYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 132.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf, id=409, 1095.09125pt x 
+<fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf, id=410, 1095.09125pt x 
 530.98375pt>
 File: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1280,18 +1280,18 @@ Package pdftex.def Info: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf
 used on input line 132.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:18:25
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18850 bytes
 (epstopdf)             Output file: <fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:05:49
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 12530 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_TAU
 HYPERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 139.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=410, 1095.09125pt
+<fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=411, 1095.09125pt
  x 530.98375pt>
 File: fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (ty
 pe pdf)
@@ -1305,17 +1305,17 @@ df used on input line 139.
 ] [67 <./fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/QUADRATO
 T_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/ARGOV2_FITNESS.eps>
-(epstopdf)                    date: 2016-09-12 18:24:38
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 13014 bytes
 (epstopdf)             Output file: <fig/ARGOV2_FITNESS-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-12 22:53:32
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 10509 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_FITNESS-eps-con
 verted-to.pdf fig/ARGOV2_FITNESS.eps>
 (epstopdf)             \includegraphics on input line 157.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_FITNESS-eps-converted-to.pdf, id=428, 547.04375pt x 479.7925pt>
+<fig/ARGOV2_FITNESS-eps-converted-to.pdf, id=429, 547.04375pt x 479.7925pt>
 File: fig/ARGOV2_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig/ARGOV2_FITNESS-eps-converted-to.pdf>
@@ -1323,18 +1323,18 @@ Package pdftex.def Info: fig/ARGOV2_FITNESS-eps-converted-to.pdf used on input
 line 157.
 (pdftex.def)             Requested size: 307.07643pt x 269.3262pt.
 Package epstopdf Info: Source file: <fig/ARGOV2_JP_HYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:26:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 37061 bytes
 (epstopdf)             Output file: <fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.p
 df>
-(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 21983 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_HYPERNEAT-ep
 s-converted-to.pdf fig/ARGOV2_JP_HYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 166.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf, id=429, 1095.09125pt x 530.98375
+<fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf, id=430, 1095.09125pt x 530.98375
 pt>
 File: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf>
@@ -1342,18 +1342,18 @@ Package pdftex.def Info: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf used on i
 nput line 166.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 Package epstopdf Info: Source file: <fig/ARGOV2_JP_TAUHYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:28:58
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 37529 bytes
 (epstopdf)             Output file: <fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 22492 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_TAUHYPERNEAT
 -eps-converted-to.pdf fig/ARGOV2_JP_TAUHYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 173.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=430, 1095.09125pt x 530.98
+<fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=431, 1095.09125pt x 530.98
 375pt>
 File: fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
  <use fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>
@@ -1365,18 +1365,18 @@ n input line 173.
  <./fig/ARGOV2_FITNESS-eps-converted-to.pdf>] [69 <./fig/ARGOV2_JP_HYPERNEAT-ep
 s-converted-to.pdf> <./fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_HYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:31:15
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18233 bytes
 (epstopdf)             Output file: <fig/ARGOV2_POSITION_HYPERNEAT-eps-converte
 d-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 12209 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_HYPERN
 EAT-eps-converted-to.pdf fig/ARGOV2_POSITION_HYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf, id=456, 1095.09125pt x 530
+<fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf, id=457, 1095.09125pt x 530
 .98375pt>
 File: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -1385,18 +1385,18 @@ Package pdftex.def Info: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf use
 d on input line 191.
 (pdftex.def)             Requested size: 409.43526pt x 198.52695pt.
 Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
-(epstopdf)                    date: 2016-09-12 18:41:42
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 18669 bytes
 (epstopdf)             Output file: <fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-conve
 rted-to.pdf>
-(epstopdf)                    date: 2016-09-12 23:08:46
+(epstopdf)                    date: 2016-09-15 00:34:57
 (epstopdf)                    size: 12254 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_TAUHYP
 ERNEAT-eps-converted-to.pdf fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
 (epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=457, 1095.09125pt x 
+<fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=458, 1095.09125pt x 
 530.98375pt>
 File: fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type 
 pdf)
@@ -1434,7 +1434,7 @@ LaTeX Info: Redefining \% on input line 6.
 (./cap4.aux) (./cap5.aux) (./cap6.aux) (./cap7.aux) (./referencias.aux)) ) 
 Here is how much of TeX's memory you used:
  9201 strings out of 493304
- 132304 string characters out of 6139871
+ 132304 string characters out of 6139872
  301884 words of memory out of 5000000
  12324 multiletter control sequences out of 15000+600000
  46397 words of font info for 100 fonts, out of 8000000 for 9000
@@ -1450,15 +1450,16 @@ msfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (78 pages, 22659167 bytes).
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times
+/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (78 pages, 22667154 bytes).
 PDF statistics:
- 534 PDF objects out of 1000 (max. 8388607)
- 279 compressed objects within 3 object streams
+ 538 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  411 words of extra memory for PDF output out of 10000 (max. 10000000)
 
