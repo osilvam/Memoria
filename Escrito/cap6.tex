@@ -1,374 +1,58 @@
-\chapter{DISEÑO DE PLATAFORMAS ROBÓTICAS EN EL ENTORNO VIRTUAL}
+\chapter{ROBOTLIB: LIBRERÍA PARA EL MANEJO DE ROBOTS REALES Y SIMULADOS}
 
-Tal como se mostró en el ejemplo de uso de RobotLib, para realizar un experimento en un entorno virtual de simulación es necesario recrear un sistema (en este caso una plataforma robótica) dentro del escenario de simulación. Esto puede realizarse creando piezas simples, como planos, discos, cubos, cilindros o esferas, como se hizo para el sistema usado en el ejemplo de uso de RobotLib; pero cuando se trata de sistemas mas elaborados, como lo son las plataformas robóticas a utilizar en los experimentos de generación de caminatas, se hace necesario realizar procedimientos mas avanzados. El procedimiento necesario para recrear las plataformas robóticas en el escenario de simulación del software V-REP se detalla a continuación.
+RobotLib es una herramienta diseñada para la comunicación e interacción con entornos de simulación y entornos reales de manera transparente y sencilla. RobotLib esta implementada en lenguaje C/C++ y funciona a modo de librería externa, entregando a disposición del usuario los recursos necesarios para poder obtener y entregar información a todos los entornos de trabajo (simulados o reales), inclusive de manera simultanea, de una forma simple y segura.
 
-\begin{enumerate}
-\item \textbf{Importar el diseño 3D de una plataforma robótica: } Con el objetivo de emular de mejor manera las características de cada plataforma robótica es que se debe importar el diseño realizado de ellas (en algún programa de diseño 3D) en el simulador. La importación del diseño debe hacerse a través de la barra de menú superior del simulador (\textit{File}$\rightarrow$\textit{Import}$\rightarrow$\textit{Mesh...}) como se muestra en la figura \ref{fig:import1}, aceptándose formatos con extensión \textit{obj} ,\textit{dxf} o \textit{stl}. Luego debe indicarse el archivo que se desea importar (\ref{fig:import2}), para ser cargado y visualizado por el programa (\ref{fig:import3}).
+RobotLib esta compuesta por un conjunto de clases que se dividen en dos grupos, \textit{componentes} del entorno y \textit{controladores}. Los componentes del entorno son los objetos a manipular, como piezas, motores o sensores. Los controladores son objetos que permiten al usuario ejecutar acciones con los componentes del entorno, como por ejemplo posicionar piezas dentro de un entorno virtual, asignar posiciones a motores, o obtener lectura de sensores. Así, para que un usuario pueda manipular un componente de algún entorno de trabajo debe crear un objeto controlador para dicho entorno y un objeto correspondiente al tipo de componente, y además, indicarle al objeto controlador el objeto componente que se desea manipular a través de él. También es posible que un mismo componente sea controlado en distintos entornos de forma simultanea, creando tantos objetos controladores como sean necesarios para cada entorno, creando el objeto componente que se desea manipular, e indicarle a cada objeto controlador el componente a manipular. Esta última estrategia es muy útil cuando se desea, por ejemplo, manipular un robot en un entorno virtual y en el entorno físico real de forma simultanea. A continuación se explicará de forma breve cada una de las clases fundamentales que componen RobotLib. Para utilizar RobotLib esta debe ser descargada desde el repositorio \url{https://github.com/osilvam/RobotLib.git}.
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.4\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/import1.png}
-        \caption{Paso 1}
-        \label{fig:import1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.52\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/import2.png}
-        \caption{Paso 2}
-        \label{fig:import2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.935\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/import3.png}
-        \caption{Importación finalizada}
-        \label{fig:import3}
-    \end{subfigure}
-    \caption{\textbf{Importación de modelo 3D en V-REP. } La importación de un modelo 3D hacia V-REP  debe realizarse siguiendo dos simples pasos: acceder a la ruta mostrada en (a), seleccionar el modelo 3D a importar (b) en alguno de los formatos permitidos, y abrirlo para luego ser visualizado en el simulador como se muestra en (c).}
-    \label{fig:import}
-\end{figure}
+Los objetos controladores implementados son dos: el objeto \textit{RobotVREP} y \textit{USB2Dynamixel}. RobotVREP es el controlador implementado para manipular objetos dentro de software de simulación VREP \cite{vrep}, el cual fue el software elegido para realizar los entrenamientos de generación de caminatas en los robots con extremidades móviles. USB2Dynamixel es el controlador implementado para controlar los motores de los robots a utilizar, los cuales son de la marca Dynamixel \cite{dyn}, a través del dispositivo de comunicación serial USB2Dynamixel diseñado exclusivamente para dichos motores. 
 
-\item \textbf{Dividir el modelo importado en piezas individuales. } Luego de la importación del modelo es posible observar en el simulador una sola pieza correspondiente a la estructura completa del robot, y para hacerla dinámica es necesario dividir el modelo en piezas individuales. Esto es posible de realizar a través del menú desplegado por medio del click derecho sobre la pieza a dividir (\textit{Edit}$\rightarrow$\textit{Grouping / Merging}$\rightarrow$\textit{Divide selected shape}) como se muestra en la figura \ref{fig:divide}, obteniendo así todas las piezas que componen el modelo original por separado.
+Los objetos componentes implementados son tres: el objeto \textit{Object}, \textit{Joint} y \textit{CollisionObject}, en donde los últimos dos objetos heredan del primero. El objeto Object es la base de cualquier objeto existente en un experimento, y almacena un \textit{UniqueObjectId} asignado al objeto. El \textit{UniqueObjectId} es un número único asignado a cada objeto al momento de ser creado, y permite que cada controlador pueda asociar dicho número con el número identificador interno respectivo de cada objeto, sin la necesidad de que un objeto deba almacenar tantos números identificadores como controladores lo estén controlando. En un programa de simulación un Object puede representar, por ejemplo, un obstáculo dentro del escenario de simulación, y usando las funciones disponibles en RobotVREP es posible obtener su posición, orientación y velocidad, y asignarle una nueva posición y orientación. En un entorno real un Object puede representar, por ejemplo, una IMU (del inglés \textit{Inertial Measurement Unit}), que con el procesamiento adecuado puede entregar, a través del controlador respectivo, su posición, orientación, velocidad y aceleración. Para hacer uso de cualquier Object en algún entorno (simulado o real) solo debe indicarse al controlador respectivo que dicho Object estará bajo su control, haciendo uso de la función \textit{Controlador.addObject(Object *)} implementada en cada controlador \footnote{No esta implementado en el controlador USB2Dynamixel debido al no uso de sensores físicos.}, en donde el argumento entre paréntesis corresponde al puntero del objeto a controlar. Funciones similares como \textit{addJoint(Joint *)} y \textit{addCollisionObject(CollisionObject *)} son usadas para trabajar con objetos Joint y CollisionObject respectivamente con el controlador RobotVREP; y addMotor(Joint *, int) con el controlador USB2Dynamixel, en donde el segundo argumento corresponde al ID del motor dynamixel físico. Una vez asignado el Object al controlador es posible, por ejemplo, obtener la posición de dicho objeto en coordenadas cartesianas dentro del entorno de simulación (V-REP) usando la función \textit{Controlador.getObjectPosition(Object *)}.
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/divide1.png}
-        \caption{Robot en una pieza}
-        \label{fig:divide1}
-    \end{subfigure}
-    ~
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/divide2.png}
-        \caption{Robot dividido en muchas piezas}
-        \label{fig:divide2}
-    \end{subfigure}
-    \caption{\textbf{División del modelo. } Haciendo click derecho sobre una entidad correspondiente a una importación de un modelo tridimensional es posible dividirla en partes individuales, para posteriormente articular dichas partes para generar un modelo dinámico que pueda interactuar con el escenario de simulación.}
-    \label{fig:divide}
-\end{figure}
+El objeto Joint es usado para representar cualquier tipo de motor que se desee utilizar, como un servomotor, un motor paso a paso, o uno de giro continuo. Si un Joint representa, por ejemplo, un servomotor de un brazo robótico, es posible asignarle una posición angular, o consultar cual es su posición actual para lograr mover el brazo. Si un Joint representa un motor de giro continuo, es posible variar su velocidad angular de giro, para por ejemplo, controlar un carro motorizado con ese tipo de motores. Cualquiera de dichas acciones debe realizarse usando las funciones disponibles en el controlador correspondiente, al cual previamente le fue asignado el control de dicho Joint con la función \textit{addJoint(Joint *)}. De esta forma, a modo de ejemplo, si se desea asignar a un servomotor real una posición angular de $\pi$ radianes \footnote{por defecto el objeto Joint recibe y entrega valores en radianes, pero es posible elegir otro tipo de unidad disponible para evitar que el usuario deba realizar conversiones adicionales.}, se deben seguir los siguientes pasos:
 
-\item \textbf{Selección de piezas a utilizar. } Ya que el modelo del robot es simétrico, y todas sus extremidades son iguales y están compuestas de las mismas piezas, basta con trabajar sobre una de las extremidades del robot para generar las restantes. Por esta razón es que solo serán útiles las piezas que componen una de las extremidades y el torso central del robot. Para trabajar únicamente con las piezas útiles deben seleccionarse cada una de estas (figura \ref{fig:selectutil1}) y cortarse (CTRL+X puede utilizarse para esta acción). Luego debe abrirse una nueva escena través de la barra de menú superior del simulador (\textit{File}$\rightarrow$\textit{New escene}) como se muestra en la figura \ref{fig:selectutil2}, y pegar en ella (CTRL+V puede utilizarse para esta acción) las piezas seleccionadas y cortadas anteriormente (figura \ref{fig:selectutil3}). Luego de esto será posible manipular de forma fácil y rápida las piezas de utilidad para armar el modelo dinámico del robot.
+\begin{itemize}
+\item Informar al Joint la posición que necesita alcanzar, usando la función \textit{setJointNextPosition((double)3.1415)}, en donde el argumento entre paréntesis corresponde a la posición angular a adoptar de tipo doble flotante. Si se desea asignar una posición angular a más de un Joint se debe realizar esta misma operación con cada uno de ellos.
+\item Solicitar al controlador, que en este caso corresponde a un controlador USB2Dynamixel, que actualice la posición de cada uno de los motores usando la función \textit{Controlador.move()}.
+\end{itemize}
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/selectutil1.png}
-        \caption{Selección de piezas útiles}
-        \label{fig:selectutil1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/selectutil2.png}
-        \caption{Extracción de piezas útiles}
-        \label{fig:selectutil2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/selectutil3.png}
-        \caption{Inserción de piezas útiles en una nueva escena}
-        \label{fig:selectutil3}
-    \end{subfigure}
-    \caption{\textbf{Extracción de piezas útiles. } Para extraer las piezas útiles pertenecientes a un modelo estas deben (a) seleccionarse, (b) cortarse y finalmente (c) pegarse en una nueva escena para facilitar su manipulación.}
-    \label{fig:selectutil}
-\end{figure}
+De esta forma, es posible mover todos los motores que se deseen de forma simultanea, como lo es en el caso de la generación de caminatas en donde todas las extremidades de un robot deben moverse al mismo tiempo.
 
-\item \label{itm:convexshape} \textbf{Generar piezas convexas a partir de piezas importadas. } Utilizar piezas importadas de manera directa (sin ningún tipo de simplificación) involucra una cantidad extremadamente grande de cómputos para el procesamiento y ejecución de una simulación debido a que están formadas por un gran número de triángulos, siendo necesario transformarlas en estructuras mas simples. Un método que permite realizar una simplificación útil es el que permite genera una pieza convexa y sin agujeros a partir de otra pieza más compleja, ya sea importada o creada dentro del simulador. Estas estructuras convexas estarán conformadas por un número menor de triángulos que la pieza original, facilitando las tareas de computo del procesador. La tarea de generar una pieza convexa a partir de otra pieza es posible de realizar a través del menú desplegado por medio del click derecho sobre la pieza a trabajar (\textit{Edit}$\rightarrow$\textit{Morph selection into convex shapes}) como se muestra en la figura \ref{fig:convexshape1}, resultando en la pieza rosada formada por triángulos mostrada en la figura \ref{fig:convexshape2}. Si una pieza posee demasiadas curvas cóncavas hacia su exterior provocará que al realizar el procedimiento descrito las paredes de la pieza se deformen, ya que el método para la obtención de una estructura convexa a partir de otra busca encontrar el solido de menor volumen y de paredes de trazos rectos que encierre a la pieza en su totalidad. Es por esto que es recomienda realizar este paso cuando la pieza a simplificar no requiere demasiado detalle.
+El objeto CollisionObject es usado para representar objetos que eventualmente puedan colisionar durante un experimento. En un entorno real un CollisionObject puede representar, por ejemplo, un sensor de tacto que al hacer contacto con otros objetos pueda indicar una posible colisión. En el software V-REP, un CollisionObject corresponde a una interacción entre dos entidades dentro del escenario que posean propiedades de colisión activas, pudiendo detectar si existe colisión entre estas. De esta forma, si por ejemplo se quisiera detectar una colisión entre el piso del escenario de simulación y el torso de un robot, se deben seguir los siguientes pasos:
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/convexshape1.png}
-        \caption{Convirtiendo una pieza en convexa}
-        \label{fig:convexshape1}
-    \end{subfigure}
-    ~
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/convexshape2.png}
-        \caption{Pieza convexa obtenida}
-        \label{fig:convexshape2}
-    \end{subfigure}
-    \caption{\textbf{Generación de una pieza en convexa. } A través del procedimiento mostrado en (a) es posible obtener una simplificación de una pieza importada, resultando una figura convexa conformada por una cantidad de triángulos menor a la pieza original (b).}
-    \label{fig:convexshape}
-\end{figure}
+\begin{itemize}
+\item Crear un objeto dentro del software de simulación que relacione el par de entidades de posible colisión.
+\item Crear un objeto CollisionObject correspondiente al objeto del punto anterior en el programa de entrenamiento.
+\item Solicitar al controlador, que en este caso corresponde al controlador RobotVREP, que verifique si existe una colisión relacionada con el objeto del punto anterior usando la función \textit{Controlador.readCollision(CollisionObject *)}, en donde el argumento entre paréntesis corresponde al puntero del objeto que relaciona el par de entidades a colisionar. Esta función retornará un valor booleano verdadero si existe una colisión entre el par de entidades, o falso si no existe colisión.
+\end{itemize}
 
-\item \label{itm:simpleshape} \textbf{Simplificación de una pieza. } Otro método de simplificación, que puede usarse además en conjunto con el paso \ref{itm:convexshape}, es el de reducción del número de triángulos que componen la estructura de una pieza, reduciendo los detalles de esta. Esto puede realizarse a través del menú desplegado por medio del click derecho sobre la pieza a simplificar (\textit{Edit}$\rightarrow$\textit{Decimate selected shape...}) como se muestra en la figura \ref{fig:simpleshape1}, desplegándose una ventana que solicita el porcentaje de reducción de triángulos deseada (20\% por defecto) como se muestra en la figura \ref{fig:simpleshape2}. Luego de confirmado el porcentaje de reducción de triángulos se genera una nueva pieza con una estructura formada por el porcentaje de triángulos especificado (figura \ref{fig:simpleshape3}). Siguiendo los pasos \ref{itm:convexshape} y/o \ref{itm:simpleshape} con todas las piezas se obtiene el resultado mostrado en la figura \ref{fig:simpleshape4}.
+Con el uso de los objetos mencionados anteriormente es posible efectuar cualquier tipo de experimento relacionado con robótica móvil, por lo que RobotLib es una herramienta indispensable para el estudio de la robótica para cualquier rama de investigación. A continuación se muestra un programa de prueba, escrito en C/C++, en donde se acelera un motor de giro continuo unido a una hélice sobre la cual hay un cilindro (figura \ref{prueba_robotlib}) que es expulsado por efecto de la aceleración centrífuga.
 
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/simpleshape1.png}
-        \caption{Minimizando número de triángulos}
-        \label{fig:simpleshape1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/simpleshape2.png}
-        \caption{Porcentaje de triángulos a obtener}
-        \label{fig:simpleshape2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/simpleshape3.png}
-        \caption{Una pieza simplificada}
-        \label{fig:simpleshape3}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/simpleshape4.png}
-        \caption{Todas las piezas simplificadas}
-        \label{fig:simpleshape4}
-    \end{subfigure}
-    \caption{\textbf{Minimización del numero de triángulos de una pieza. } Accediendo al menú mostrado en (a) es posible obtener una simplificación de cada una de las piezas de un modelo, pudiendo indicar el porcentaje de reducción del número de triángulos que componen. Una vez seleccionada la opción de reducción de triángulos, el programa consulta por el porcentaje de simplificación requerido (b) y genera una nueva pieza con un numero menor de triángulos (c). Siguiendo el mismo procedimiento con todas las piezas resulta en la figura mostrada en (d).}
-    \label{fig:simpleshape}
-\end{figure}
-
-\item \textbf{Crear articulaciones. } Una vez que las piezas para una de las extremidades del robot y su tronco están listas es posible crear las articulaciones que permitirán dar movilidad al robot. Para crear una articulación es necesario crear un objeto de tipo \textit{Joint de Revolución} dentro del simulador, a través del menú desplegado por medio del click derecho sobre cualquier parte del escenario (\textit{Add}$\rightarrow$\textit{Joint}$\rightarrow$\textit{Revolute}) como se muestra en la figura \ref{fig:addjoint1}. Una vez realizado este procedimiento aparecerá un objeto Joint con la forma de un bastón azul alargado dentro de otro bastón anaranjado más corto justo en el centro del escenario de simulación (Figura \ref{fig:addjoint2}). Finalmente solo resta posicionar el objeto Joint entre las piezas del robot que se desean articular, haciendo uso del menú de posicionamiento y orientación de objetos ubicado en la barra superior. Así una vez seleccionado un objeto este puede ser posicionado y orientado entre las piezas del robot que se desean articular, como se muestra en la figura \ref{fig:addjoint3}. Es importante que la posición y orientación del Joint en la escena con respecto a las piezas a articular sea correcta, ya que de esto dependerá que el dinamismo presentado en la simulación sea lo más cercano posible al del modelo real.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/addjoint1.png}
-        \caption{Menú para crear un Joint}
-        \label{fig:addjoint1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/addjoint2.png}
-        \caption{Joint creado}
-        \label{fig:addjoint2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/addjoint3.png}
-        \caption{Ubicación de un Joint en el modelo del robot}
-        \label{fig:addjoint3}
-    \end{subfigure}
-    \caption{\textbf{Añadir un Joint para crear una pieza articulada. } A través del menú mostrado en la figura (a) es posible añadir un objeto de tipo Joint a la escena con el fin de articular un par de piezas del modelo a diseñar. Una vez añadido el objeto este aparecerá en el origen del escenario (coordenada cartesiana $(0,0,0)$) como es posible apreciar en (b) y debe ser situada y orientada en el punto adecuado entre la piezas que se desean articular.}
-    \label{fig:addjoint}
-\end{figure}
-
-Luego de crear la primera articulación correspondiente al primer grado de libertad de una de las extremidades del robot es posible seguir el mismo procedimiento anterior para crear las articulaciones restantes. De esta forma se incorporan al modelo las dos articulaciones faltantes como se muestran en la figura \ref{fig:jointg1}, en la cual además puede apreciarse una nueva asignación de nombres. Los Joints fueron nombrados como \textit{joint1}, \textit{joint2} y \textit{joint3}, numerados en orden descendente desde el más cercano al tronco hasta el más lejano. De la misma manera se nombraron las piezas que componen la extremidad, agregándose además el sufijo \textit{\_dyn} a las piezas creadas a partir de las piezas importadas (siguiendo los pasos \ref{itm:convexshape} y/o \ref{itm:simpleshape}). Finalmente se nombra el tronco central del robot y su homologo simplificado como \textit{ArgoV2} y \textit{ArgoV2\_dyn} respectivamente. 
-
-Una vez realizados todos estos pasos es posible crear una estructura jerarquizada de cada una de las piezas del modelo con el fin de indicarle al simulador las piezas que se desean articular, como se muestra en la figura \ref{fig:jointg2}. De esta forma se ubica al tronco central simplificado del robot como la pieza base de la jerarquía del modelo, y a su homologo no simplificado y el \textit{joint1} como hijos de este. Luego como hijo del \textit{joint1} se ubicará el \textit{Link1\_dyn}, correspondiente a la primera pieza articulada de la extremidad, y como hijos de este a su homologo no simplificado y el joint correspondiente a la articulación siguiente. Este procedimiento continua de la misma forma hasta jerarquizar todas las piezas del modelo.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/jointg1.png}
-        \caption{Crear Joints y asignar nombres}
-        \label{fig:jointg1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/jointg2.png}
-        \caption{Jerarquizar los elementos del modelo}
-        \label{fig:jointg2}
-    \end{subfigure}
-    \caption{\textbf{Articulación completa una extremidad del modelo del robot. } La figura muestra como es posible, luego de haber añadido los Joints necesarios y nombrar correctamente a cada una de las partes (a), conformar y articular un modelo de robot con extremidad robótica a través de una estructura jerárquica (b).}
-    \label{fig:jointg}
-\end{figure}
-
-\item \textbf{Replicación de extremidades en el modelo.} Una vez obtenido el diseño del tronco y una de las extremidades del robot ya articulado es posible añadir las demás extremidades a través de un proceso de replicación. Para obtener otra de las extremidad del robot basta con seleccionar todos los componentes de la extremidad existente desde el joint que une el tronco central del robot hacia la punta, copiarlos y luego pegarlos como se muestra en la figura \ref{fig:copy_rot1}. Visualmente no será posible apreciar la existencia de una nueva extremidad en la escena ya que la existente con la nueva que se ha copiado y pegado usarán el mismo espacio físico, pero se podrá observar la existencia del segundo grupo de piezas jerarquizadas que conforman la nueva extremidad en el display a la izquierda de la imagen de la figura \ref{fig:copy_rot1}. Finalmente solo resta posicionar y orientar la nueva extremidad en su ubicación correspondiente, haciendo uso del menú de posicionamiento y orientación de objetos ubicado en la barra superior. Esto debe realizarse seleccionando cada unas de las piezas de la nueva extremidad y rotando en 90 grados las piezas sobre el eje z del escenario al rededor del objeto padre, en este caso, del tronco central del robot, como se muestra en la figura \ref{fig:copy_rot2}. El mismo procedimiento anterior debe ser realizado, rotando las nuevas extremidades copiadas la cantidad necesaria para separar las cuatro extremidades en 90 grados cada una, como se aprecia en la figura \ref{fig:copy_rot3}.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/copy_rot1.png}
-        \caption{Selección de piezas a copiar}
-        \label{fig:copy_rot1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/copy_rot2.png}
-        \caption{Copia y rotación de una extremidad}
-        \label{fig:copy_rot2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/copy_rot3.png}
-        \caption{Todas las extremidades copiadas y rotadas}
-        \label{fig:copy_rot3}
-    \end{subfigure}
-    \caption{\textbf{Modelo armado con sus cuatro extremidades.} Luego de copiar y pegar completamente una extremidad (a) es posible rotarla al rededor del tronco central del robot para situarla en su posición definitiva (b). Siguiendo el mismo procedimiento para las dos extremidades faltantes es posible obtener el modelo completo de un robot con un tronco central y 4 extremidades como el mostrado en (c).}
-    \label{fig:copy_rot}
-\end{figure}
-
-\item \textbf{Habilitar los objetos Joints como motores.} Para que los objetos Joints funcionen como motores y sea posible asignarles posiciones es necesario habilitarlos como tales. Así, una vez seleccionados todos los objetos Joint del modelo es posible acceder al menú de propiedades de objetos ubicado en la barra de tareas a la izquierda del simulador. Una vez desplegado el menú (figura \ref{fig:enablejoint1} es necesario asegurar que los Joints se encuentren en el modo de trabajo \textit{Torque/Force mode} y la casilla \textit{Position is cyclic} se encuentre inactiva. Además es posible acceder al menú de propiedades dinámicas de los objetos Joint por medio del botón \textit{Show dynamic propierties dialog} como se indica en la figura \ref{fig:enablejoint1}. Ya desplegado el menú de propiedades dinámicas se debe asegurar que la casilla \textit{Motor enable} se encuentre activa; asignar el \textit{Maximum torque}, que en este caso es de 2 $[Nm]$; y que la casilla \textit{Control loop enable} se encuentre activa. Para el control de posición del motor puede usarse el controlador deseado por el usuario, que en este caso corresponde a un controlador PID sólo con parámetro proporcional. Para que todas las configuraciones asignadas afecten a cada uno de los objetos Joint seleccionados previamente es necesario activar el botón \textit{Apply to selection} en cada sección de configuración, como se indica en la figura \ref{fig:enablejoint2}.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.42\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/enablejoint1.png}
-        \caption{Menú de propiedades de un Joint}
-        \label{fig:enablejoint1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/enablejoint2.png}
-        \caption{Propiedades dinámicas de un Joint}
-        \label{fig:enablejoint2}
-    \end{subfigure}
-    \caption{\textbf{Habilitando Joints como motores activos. } La figura muestra el procedimiento para habilitar a los objetos Joints para funcionar como motores a través del menú de propiedades de los objetos (a). Además, por medio del menú anterior es posible acceder al menú de propiedades dinámicas de los objetos Joint mostrado en (b), pudiendo allí asignar el torque de los motores y configurar el tipo de control de posición de estos mismos.}
-    \label{fig:enablejoint}
-\end{figure}
-
-\item \textbf{Cambiar la visibilidad de los objetos en el escenario y sus características.} Previamente se indicó como realizar una simplificación de las piezas importadas, debido a que realizar cálculos de las físicas de los objetos que interactúan en el escenario de simulación directamente en las piezas importadas resultaba demasiado costoso. Estas piezas simplificadas son las que interactuarán dentro del escenario para cualquier efecto de cálculo, y las piezas importadas solo serán la parte visible del modelo para el usuario. Es por esto que se deben ocultar las piezas simplificadas y los demás objetos que no se desean observar durante las simulaciones, y se deben hacer visibles los demás objetos ornamentales del modelo que no influyen en los cálculos. Esto es posible de realizar a través del menú de propiedades de los objetos del simulador en la pestaña \textit{Common}. En dicho menú aparecen dos secciones importantes, la de visibilidad (\textit{Visibility}) y la de propiedades especiales (\textit{Object special properties}), como se muestra en las imágenes de la figura \ref{fig:changevis}. En la sección de visibilidad aparecen dos filas de ocho casillas, en donde la primera fila corresponde a capas visibles en el escenario, y la segunda corresponde a capas ocultas. En la sección de propiedades especiales aparecen cinco casillas, la casilla \textit{Collidable} referente a si un objeto esta habilitado para colisionar con otros objetos, la casilla \textit{Mesurable} referente a si un objeto esta habilitado para soportar cálculos de mínimas distancias con otro objetos, la casilla \textit{Detectable} que permite habilitar o deshabilitar la capacidad del objeto de ser detectado por sensores de proximidad, la casilla \textit{Renderable} que permite habilitar al objeto para ser detectado por sensores de visión, y la casilla \textit{Cuttable} que permite a un objeto ser modificado por herramientas de corte dentro del simulador.
-
-Entendido lo anterior se partirá configurando los objetos Joint, los cuales deben ser seleccionados y a través del menú configurados de tal forma que queden ocultos a la vista. Esta configuración implica deshabilitar la casilla activa de la primera fila de visibilidad y habilitar su casilla par ubicada inmediatamente debajo de la anterior, como se aprecia en la figura \ref{fig:changevis1}. Finalmente se debe presionar el botón \textit{Apply to selection} para asignarles a todos los Joints seleccionados la misma configuración. El siguiente paso es configurar las piezas dinámicas y ornamentales del modelo. Las piezas dinámicas serán configuradas con una visibilidad oculta (al igual que los objetos Joint) y propiedades de objeto para detección de colisiones (Figura \ref{fig:changevis2}). Las piezas ornamentales correspondientes a las partes importadas se configuran con una visibilidad activa en la escena y con propiedades de objeto para ser detectados por sensores de proximidad y de visión (Figura \ref{fig:changevis3}). El modelo resultante es mostrado en la figura \ref{fig:changevis4} en el que se pueden observar los objetos Joints ocultos y el diseño importado con todos los acabados y detalles a la vista.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/changevis1.png}
-        \caption{Cambiando todos los objetos Joints a la capa oculta}
-        \label{fig:changevis1}
-    \end{subfigure}
-    
-    \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/changevis2.png}
-        \caption{Configuración de objetos dinámicos}
-        \label{fig:changevis2}
-    \end{subfigure}
-    ~
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/changevis3.png}
-        \caption{Configuración de objetos ornamentales}
-        \label{fig:changevis3}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/changevis4.png}
-        \caption{Resultado visto en el simulador}
-        \label{fig:changevis4}
-    \end{subfigure}
-    \caption{\textbf{Cambiar la visibilidad y otras características de los objetos.} A través del menú de propiedades de objeto es posible configurar que los objetos Joint no sean visibles en la escena (a), y que además, los objetos dinámicos estén ocultos y tengan propiedades de Collidable (b), y los objetos ornamentales sean visibles en la escena y posean propiedades de Detectable y Renderable (c), terminando con el modelo mostrado en (d)}
-    \label{fig:changevis}
-\end{figure}
-
-\item \textbf{Cambiar el color de las piezas visibles.} Una vez obtenido el modelo mostrado en la figura \ref{fig:changevis4} solo con las piezas ornamentales visibles, es posible cambiar el color de las piezas, únicamente con un objetivo estético, para asemejar el modelo virtual del simulador lo más posible al real. Para acceder a cambiar el color de una pieza debe seleccionarse la pieza y abrir el menú de propiedades de objeto. Si la pieza es simple, osea esta compuesta por solo un elemento, el menú de propiedades será como el mostrado en la figura \ref{fig:accesschancol1} y podrá accederse al menú de cambio de color haciendo click en el botón \textit{Adjust color} indicado. Si la pieza es compuesta, ya sea por varias piezas simples o compuestas, el menú de propiedades será como el mostrado en la figura \ref{fig:accesschancol2} y podrá accederse al menú de cambio de color haciendo click en el botón \textit{Edit appearance of compound shape} indicado.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/accesschancol1.png}
-        \caption{Menú de propiedades de una pieza simple}
-        \label{fig:accesschancol1}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/accesschancol2.png}
-        \caption{Menú de propiedades de una pieza compuesta}
-        \label{fig:accesschancol2}
-    \end{subfigure}
-    \caption{\textbf{Acceso al menú de cambio de color de una pieza.} La figura muestra las diferentes formas de acceder al menú de cambio de color de una pieza que puede ser simple (a) o estar compuesta por varias piezas simples y/o otras piezas compuestas (b).}
-    \label{fig:accesschancol}
-\end{figure}
-
-En la figura \ref{fig:chancol} se aprecia el menú desplegado producto del procedimiento anterior sobre una pieza compuesta de 3 componentes simples. Luego de seleccionar alguna de las piezas, haciendo click en el botón \textit{Adjust color} (Figura \ref{fig:chancol1}) se desplegará el menú de cambio de color (en el caso de una pieza simple esta acción no es necesaria y el menú de cambio de color es desplegado inmediatamente) mostrado en la figura \ref{fig:chancol2}. Haciendo click en el botón \textit{Ambient/diffuse component} aparecerá una ventana de ajuste de color (Figura \ref{fig:chancol3}), en donde este puede ser ingresado tanto en formato RGB como HSL. Luego de modificar todas las piezas del conjunto solo basta cerrar el menú de edición de componentes para volver a la ventana principal del simulador para seguir cambiando el color de las demás piezas, para posteriormente obtener el modelo como el que se muestra en la figura \ref{fig:chancol3}.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/chancol1.png}
-        \caption{Menú de edición de componentes}
-        \label{fig:chancol1}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/chancol2.png}
-        \caption{Menú de edición de color}
-        \label{fig:chancol2}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/chancol3.png}
-        \caption{Menú de ajuste de color}
-        \label{fig:chancol3}
-    \end{subfigure}
-    ~
-    \begin{subfigure}[b]{0.45\textwidth}
-    	\centering
-        \includegraphics[width=\textwidth]{fig/chancol4.png}
-        \caption{Coloreado del modelo terminado}
-        \label{fig:chancol4}
-    \end{subfigure}
-    \caption{\textbf{Cambio de color de una pieza compuesta.} La figura muestra el procedimiento efectuado sobre una pieza, compuesta de 3 piezas simples, para cambiar el color de sus componentes. Accediendo de la forma indicada en (a), (b) y (c) es posible cambiar el color de cada uno de los componentes de la pieza mostrada. Completando el procedimiento con las demás piezas del modelo es posible obtener el resultado mostrado en (d).}
-    \label{fig:chancol}
-\end{figure}
-
-\item \textbf{Asignación de posiciones iniciales y rangos de movimiento a los objetos Joint.} El paso final para comenzar a trabajar con el modelo del robot para la generación de caminatas es asignar la posición inicial y el rango de movimiento de cada uno de los objetos Joint, como se muestra en la figura \ref{fig:chanjpos}. Una vez seleccionado un objeto Joint, a través del menú de propiedades de objeto es posible modificar la posición inicial \textit{Position} y los límites de movimiento del Joint \textit{Pos. min.} y \textit{Pos. range}. Observando las figuras \ref{fig:chanjpos1} y \ref{fig:chanjpos2} se puede apreciar el cambio de ángulo inicial del Joint indicado de 0 a 30 grados.
-
-\begin{figure}[ht!]
-	\centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/chanjpos1.png}
-        \caption{Joint con posición inicial 0 grados}
-        \label{fig:chanjpos1}
-    \end{subfigure}
-    
-    \centering
-	\begin{subfigure}[b]{0.9\textwidth}
-		\centering
-        \includegraphics[width=\textwidth]{fig/chanjpos2.png}
-        \caption{Joint con posición inicial 30 grados}
-        \label{fig:chanjpos2}
-    \end{subfigure}
-    \caption{\textbf{Posición inicial y rango de movimiento de un Joint.} La figura describe el procedimiento para ajustar la posición inicial de un Joint y sus límites de movimiento desde una posición mínima hasta una posición dada por el rango asignado. En (a) puede observarse que el Joint tiene asignado un valor de posición inicial por defecto cero, el cual es modificado en (b) para cambiar la pose inicial del robot.}
-    \label{fig:chanjpos}
-\end{figure}
-
-Luego de realizar todos los pasos anteriormente mencionados se obtendrá como resultado un modelo terminado y listo para trabajar, como el mostrado en la figura \ref{fig:robotlisto}. Finalmente, terminado el modelamiento de las plataformas robóticas en el simulador es posible iniciar los entrenamientos para generar las caminatas en los robots, lo cual será relatado en el siguiente capítulo.
-
-\begin{figure}[ht!]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.8\textwidth]{fig/robotlisto.png}
-\caption{\textbf{Modelo del robot ArgoV2 terminado.} En la figura se muestra el resultado final del procedimiento llevado acabo para obtener el sistema robótico a utilizar para la tarea de generación de caminatas en robots con extremidades móviles dentro del software de simulación V-REP.}
-\label{fig:robotlisto}
+\includegraphics[width=0.8\textwidth]{fig/prueba.png}
+\caption{\textbf{Escenario de prueba de la librería RobotLib. }El escenario de simulación de la figura muestra una hélice azul montada en una base que gira con el uso de un motor o \textit{Joint}, y un cilindro verde sobre un extremo de la hélice. El experimento, realizado como ejemplo de uso de la librería RobotLib, tiene como objetivo hacer girar la hélice y acelerarla hasta expulsar el cilindro de sobre ella producto de la fuerza centrifuga generada sobre el cilindro producto del giro.}
+\label{prueba_robotlib}
 \end{figure}
 
-\end{enumerate}
+\lstset{language=C++,
+		frame=L,
+		basicstyle=\footnotesize, 
+		identifierstyle=\color{black},
+		keywordstyle=\bfseries\color{green!40!black},
+		stringstyle=\color{red!85!white},
+		commentstyle=\color{cyan!70!black},
+		morecomment=[l][\color{blue!70!white}]{\#},		
+		showstringspaces=false,
+		tabsize=2,
+		numbers=left,
+		lineskip={-1.5pt},
+		breaklines=true
+}
+
+\newpage
+
+\lstinputlisting{code/example_vrep.cpp}
+
+Como se aprecia en la linea 4 del código anterior, una vez instalada la librería RobotLib, es posible utilizarla solo incluyéndola como allí se muestra. El programa crea un objeto RobotVREP para controlar los objetos dentro del software V-REP, un objeto Joint para el motor que hace girar la hélice, y un objeto CollisionObject que relaciona el contacto entre la hélice y el cilindro, y añade estos dos últimos al controlador. Luego, se inicia una simulación, y se aumenta la velocidad de giro del Joint hasta que se detectan dos ``no colisiones''\footnote{Por posibles inexactitudes de la escena y los objetos dentro de ella se producen breves detecciones de no colisión entre objetos que si están colisionando, por lo que se verifican dos no colisiones consecutivas para asegurar que los objetos no estén colisionando realmente.} consecutivas relacionadas con el CollisionObject, producto de la caída del cilindro desde la superficie de la hélice. Una vez confirmada la caída del cilindro de la superficie de la hélice se reduce la velocidad del Joint hasta detenerlo para finalmente detener la simulación. En el capitulo siguiente se mostrará como realizar el diseño de las plataformas robóticas a usar para la generación de caminatas dentro del software de simulación V-REP.
 
 
