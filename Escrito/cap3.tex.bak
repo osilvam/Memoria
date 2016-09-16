@@ -194,7 +194,7 @@ Subestructuras descubiertas en la red CPPN producen importantes regularidades en
         \caption{Repetición con Variaciones}
         \label{fig:patronrepvar}
     \end{subfigure}
-    \caption{\textbf{Patrones de conectividad producidos por CPPNs. } Estos patrones, producidos a través de la evolución, exhiben importantes casos de patrones de conectividad: (a) simetría bilateral, (b) simetría imperfecta, (c) repetición, y (d) repetición con variaciones. Que estos patrones sean generados fácilmente y representados de forma compacta sugiere el poder de esta codificación.}
+    \caption{\textbf{Patrones de conectividad producidos por CPPNs. } Estos patrones, producidos a través de la evolución, exhiben importantes casos de patrones de conectividad: (a) simetría bilateral, (b) simetría imperfecta, (c) repetición, y (d) repetición con variaciones. Que estos patrones sean generados fácilmente y representados de forma compacta sugiere el poder de esta codificación. Imagen adaptada de \cite{cppn}.}
     \label{fig:patronescppn}
 \end{figure}
 
@@ -237,7 +237,7 @@ La disposición de los nodos que CPPN conecta en el substrato puede tomar otras f
         \caption{Circular}
         \label{fig:substrateconf4}
     \end{subfigure}
-    \caption{\textbf{Alternativas de configuración del Substrato. } Estas figuras muestran (b) una configuración tridimensional de nodos centrados en (0,0,0), (c) una configuración sándwich de dos capas en la cual una capa fuente de neuronas se conecta directamente a una capa destino, y (d) una configuración circular. Diferentes configuraciones son probablemente mas adecuadas para problemas con diferentes propiedades geométricas.}
+    \caption{\textbf{Alternativas de configuración del Substrato. } Estas figuras muestran (b) una configuración tridimensional de nodos centrados en (0,0,0), (c) una configuración sándwich de dos capas en la cual una capa fuente de neuronas se conecta directamente a una capa destino, y (d) una configuración circular. Diferentes configuraciones son probablemente mas adecuadas para problemas con diferentes propiedades geométricas. Imagen adaptada de \cite{cppn}.}
     \label{fig:substrateconf}
 \end{figure}
 
@@ -286,7 +286,7 @@ Mediante la disposición de las entradas y las salidas en una configuración espec
         \caption{Paralela}
         \label{fig:posio3}
     \end{subfigure}
-    \caption{\textbf{Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar como entradas de estímulos, y ocho actuadores para respuestas motoras situados de forma radial equiangularmente distanciados. En (b), las entradas (de etiqueta \textit{I}, correspondientes a sensores lidar) y salidas (de etiqueta \textit{O}, correspondientes a actuadores) están situadas en la misma diagonal en los ocho sectores indicados en (a). En (c), entradas y salidas son situadas horizontales y paralelamente unas de la otras en dos filas. Ambos arreglos crean una relación geométrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evolución desde el comienzo.}
+    \caption{\textbf{Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar como entradas de estímulos, y ocho actuadores para respuestas motoras situados de forma radial equiangularmente distanciados. En (b), las entradas (de etiqueta \textit{I}, correspondientes a sensores lidar) y salidas (de etiqueta \textit{O}, correspondientes a actuadores) están situadas en la misma diagonal en los ocho sectores indicados en (a). En (c), entradas y salidas son situadas horizontales y paralelamente unas de la otras en dos filas. Ambos arreglos crean una relación geométrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evolución desde el comienzo. Imagen adaptada de \cite{cppn}.}
     \label{fig:posio}
 \end{figure}
 
@@ -342,7 +342,7 @@ En contraposición con la codificación de un patrón específico de conexiones entr
         \caption{Concepto 2 de CPPN}
         \label{fig:substrateres6}
     \end{subfigure}
-    \caption{\textbf{Conceptos de conectividad equivalentes en diferentes resoluciones del substrato. } Se describen dos conceptos de conectividad generados en el proceso de evolución. La red CPPN que genera el primer concepto a resoluciones de $5 \times 5$ (a) y $7 \times 7$ (b) es mostrado en (c). La red CPPN en (f) genera de forma similar el segundo concepto en ambas resoluciones (d) y (e). Esta ilustración demuestra que CPPNs representan un concepto matemático en lugar de una sola estructura. Así, la misma red CPPN puede producir patrones con el mismo fundamento conceptual en diferentes resoluciones del substrato en diferente densidad de nodos. Las funciones de activación de las redes CPPN mostradas están denotadas por \textit{G} para funciones \textit{Gaussianas}, \textit{S} para \textit{Sigmoides}, \textit{Si} para \textit{Senos}, y \textit{L} para \textit{Lineales}.}
+    \caption{\textbf{Conceptos de conectividad equivalentes en diferentes resoluciones del substrato. } Se describen dos conceptos de conectividad generados en el proceso de evolución. La red CPPN que genera el primer concepto a resoluciones de $5 \times 5$ (a) y $7 \times 7$ (b) es mostrado en (c). La red CPPN en (f) genera de forma similar el segundo concepto en ambas resoluciones (d) y (e). Esta ilustración demuestra que CPPNs representan un concepto matemático en lugar de una sola estructura. Así, la misma red CPPN puede producir patrones con el mismo fundamento conceptual en diferentes resoluciones del substrato en diferente densidad de nodos. Las funciones de activación de las redes CPPN mostradas están denotadas por \textit{G} para funciones \textit{Gaussianas}, \textit{S} para \textit{Sigmoides}, \textit{Si} para \textit{Senos}, y \textit{L} para \textit{Lineales}. Imagen adaptada de \cite{cppn}.}
     \label{fig:substrateres}
 \end{figure}
 

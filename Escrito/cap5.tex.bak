@@ -360,7 +360,7 @@ En la figura \ref{fig:chancol} se aprecia el menú desplegado producto del proced
     \label{fig:chanjpos}
 \end{figure}
 
-Luego de realizar todos los pasos anteriormente mencionados se obtendrá como resultado un modelo terminado y listo para trabajar, como el mostrado en la figura \ref{fig:robotlisto}. Finalmente, terminado el modelamiento de las plataformas robóticas en el simulador es posible iniciar los entrenamientos para generar las caminatas en los robots, lo cual será relatado en el siguiente capítulo.
+Luego de realizar todos los pasos anteriormente mencionados se obtendrá como resultado un modelo terminado y listo para trabajar, como el mostrado en la figura \ref{fig:robotlisto}. En el capítulo siguiente se explicará el diseño e implementación de la herramienta de comunicación que permitirá al programa de entrenamiento comunicarse con el programa de simulación en donde se ejecutarán los entrenamientos de los robots en la generación de caminatas.
 
 \begin{figure}[ht!]
 \centering
