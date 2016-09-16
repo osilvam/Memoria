@@ -1,58 +1,79 @@
 \relax 
+\citation{cppn}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3.}BASE TE\'ORICA}{10}}
 \@writefile{lof}{\addvspace {10pt}}
 \@writefile{lot}{\addvspace {10pt}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}COMPOSITIONAL PATTERN PRODUCING NETWORKS (CPPNs)}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}DESARROLLO DE PATRONES}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}COMPLEJIZACI\'ON}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf  {Una funci\'on produce un fenotipo. } La funci\'on \textit  {f} toma los argumentos \textit  {x} e \textit  {y}, las cuales son coordenadas en un espacio bidimensional. Cuando todas las coordenadas son dibujadas con una intensidad correspondiente a la salida de la funci\'on \textit  {f}, el resultado es un patr\'on, el cual puede ser visto como un fenotipo cuyo genotipo es \textit  {f}. En este ejemplo, \textit  {f} produce un fenotipo triangular.\relax }}{13}}
+\citation{cppn}
+\citation{cppn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces \textbf  {Una funci\'on produce un fenotipo. } La funci\'on \textit  {f} toma los argumentos \textit  {x} e \textit  {y}, las cuales son coordenadas en un espacio bidimensional. Cuando todas las coordenadas son dibujadas con una intensidad correspondiente a la salida de la funci\'on \textit  {f}, el resultado es un patr\'on, el cual puede ser visto como un fenotipo cuyo genotipo es \textit  {f}. En este ejemplo, \textit  {f} produce un fenotipo triangular. Imagen adaptada de \cite  {cppn}.\relax }}{13}}
 \newlabel{mapfenotipo}{{3.1}{13}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}M\'ETODO DE CODIFICACI\'ON}{13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf  {Composici\'on de funciones. } Este ejemplo ilustra como una simple composici\'on de funciones en una dimensi\'on puede producir patrones con m\'ultiples regularidades. Una representaci\'on en forma de red de cada composici\'on es mostrada a la derecha de los gr\'aficos de cada funci\'on. La entrada asim\'etrica inicial $x$ a la entrada de una composici\'on de una funci\'on sim\'etrica ($F_{1}$) y una funci\'on peri\'odica ($F_{2}$) produce dos grupos de segmentos con polaridades opuestas.\relax }}{15}}
+\citation{cppn}
+\citation{cppn}
+\citation{cppn}
+\citation{cppn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces \textbf  {Composici\'on de funciones. } Este ejemplo ilustra como una simple composici\'on de funciones en una dimensi\'on puede producir patrones con m\'ultiples regularidades. Una representaci\'on en forma de red de cada composici\'on es mostrada a la derecha de los gr\'aficos de cada funci\'on. La entrada asim\'etrica inicial $x$ a la entrada de una composici\'on de una funci\'on sim\'etrica ($F_{1}$) y una funci\'on peri\'odica ($F_{2}$) produce dos grupos de segmentos con polaridades opuestas. Imagen adaptada de \cite  {cppn}.\relax }}{15}}
 \newlabel{compfunciones}{{3.2}{15}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}EVOLUCIONANDO CPPNs}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf  {Composici\'on de funciones en forma de grafo. } El grafo determina cual funci\'on esta conectada con cual. A cada conexi\'on se le asigna un peso, el cual multiplica a la salida de la funci\'on del nodo entrante. Si m\'ultiples conexiones entran a una misma funci\'on, esta recibe como entrada la suma de las salidas de cada una de las funciones entrantes multiplicadas por sus respectivos pesos de conexi\'on. Se debe tener en cuenta que la topolog\IeC {\'\i }a no tiene restricciones y puede representar cualquier relaci\'on posible. Esta representaci\'on es similar al formalismo de las ANNs tradicionales con funciones de activaci\'on y topolog\IeC {\'\i }as arbitrarias.\relax }}{16}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}EVOLUCI\'ON DE UNA RED CPPN}{15}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \textbf  {Composici\'on de funciones en forma de grafo. } GRafo de conexi\'on entre la coordenada $(x,y)$ y la salida $z$. A cada conexi\'on se le asigna un peso, el cual multiplica a la salida de la funci\'on del nodo entrante. Si m\'ultiples conexiones entran a una misma funci\'on, esta recibe como entrada la suma de las salidas de cada una de las funciones entrantes multiplicadas por sus respectivos pesos de conexi\'on. Se debe tener en cuenta que la topolog\IeC {\'\i }a no tiene restricciones y puede representar cualquier relaci\'on posible. Esta representaci\'on es similar al formalismo de las ANNs tradicionales con funciones de activaci\'on y topolog\IeC {\'\i }as arbitrarias. Imagen adaptada de \cite  {cppn}.\relax }}{16}}
 \newlabel{grafo}{{3.3}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}NEAT}{17}}
+\citation{neat}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}EVOLUCIONANDO REDES CPPN UTILIZANDO NEAT}{17}}
+\citation{hyperneat}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}CPPN-NEAT}{19}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}HYPERNEAT}{19}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}MAPEANDO PATRONES ESPACIALES A PATRONES DE CONECTIVIDAD}{20}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf  {Interpretaci\'on del patr\'on geom\'etrico de conectividad de un hipercubo. } En una malla de nodos, llamada \textsl  {substrato}, a cada uno de los nodos se le es asignada una coordenada tal que el nodo central se encuentra en el origen. (1) Cada conexi\'on potencial es consultada para determinar si esta existe, y de existir, cual ser\IeC {\'\i }a su peso; la linea negra en la parte inferior derecha del substrato indica una posible conexi\'on a ser consultada. (2) Por cada consulta, la red CPPN toma como entrada las coordenadas de los dos puntos terminales y (3) entrega como salida el peso de la conexi\'on entre ellos. Luego de que todas las conexiones han sido determinadas, un patr\'on de conexiones y pesos de conexi\'on resultan en funci\'on de la geometr\IeC {\'\i }a del substrato. De esta forma, la red CPPN produce patrones de regularidad de conexiones en el espacio.\relax }}{21}}
-\newlabel{hyperneat}{{3.4}{21}}
-\newlabel{fig:patronsim}{{3.5a}{22}}
-\newlabel{sub@fig:patronsim}{{a}{22}}
-\newlabel{fig:patronsimimp}{{3.5b}{22}}
-\newlabel{sub@fig:patronsimimp}{{b}{22}}
-\newlabel{fig:patronrep}{{3.5c}{22}}
-\newlabel{sub@fig:patronrep}{{c}{22}}
-\newlabel{fig:patronrepvar}{{3.5d}{22}}
-\newlabel{sub@fig:patronrepvar}{{d}{22}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf  {Patrones de conectividad producidos por CPPNs. } Estos patrones, producidos a trav\'es de la evoluci\'on, exhiben importantes casos de patrones de conectividad: (a) simetr\IeC {\'\i }a bilateral, (b) simetr\IeC {\'\i }a imperfecta, (c) repetici\'on, y (d) repetici\'on con variaciones. Que estos patrones sean generados f\'acilmente y representados de forma compacta sugiere el poder de esta codificaci\'on.\relax }}{22}}
-\newlabel{fig:patronescppn}{{3.5}{22}}
+\newlabel{eq:threshold}{{3.1}{20}}
+\citation{cppn}
+\citation{cppn}
+\newlabel{eq:scale}{{3.2}{21}}
+\citation{cppn}
+\citation{cppn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces \textbf  {Interpretaci\'on del patr\'on geom\'etrico de conectividad de un hipercubo. } En una malla de nodos, llamada \textsl  {substrato}, a cada uno de los nodos se le es asignada una coordenada tal que el nodo central se encuentra en el origen. (1) Cada conexi\'on potencial es consultada para determinar si esta existe, y de existir, cual ser\IeC {\'\i }a su peso; la linea negra en la parte inferior derecha del substrato indica una posible conexi\'on a ser consultada. (2) Por cada consulta, la red CPPN toma como entrada las coordenadas de los dos puntos terminales y (3) entrega como salida el peso de la conexi\'on entre ellos. Luego de que todas las conexiones han sido determinadas, un patr\'on de conexiones y pesos de conexi\'on resultan en funci\'on de la geometr\IeC {\'\i }a del substrato. De esta forma, la red CPPN produce patrones de regularidad de conexiones en el espacio. Imagen adaptada de \cite  {cppn}.\relax }}{22}}
+\newlabel{hyperneat}{{3.4}{22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}GENERACI\'ON DE PATRONES DE CONECTIVIDAD REGULARES}{22}}
-\newlabel{fig:substrateconf1}{{3.6a}{23}}
-\newlabel{sub@fig:substrateconf1}{{a}{23}}
-\newlabel{fig:substrateconf2}{{3.6b}{23}}
-\newlabel{sub@fig:substrateconf2}{{b}{23}}
-\newlabel{fig:substrateconf3}{{3.6c}{23}}
-\newlabel{sub@fig:substrateconf3}{{c}{23}}
-\newlabel{fig:substrateconf4}{{3.6d}{23}}
-\newlabel{sub@fig:substrateconf4}{{d}{23}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf  {Alternativas de configuraci\'on del Substrato. } Estas figuras muestran (b) una configuraci\'on tridimensional de nodos centrados en (0,0,0), (c) una configuraci\'on s\'andwich de dos capas en la cual una capa fuente de neuronas se conecta directamente a una capa destino, y (d) una configuraci\'on circular. Diferentes configuraciones son probablemente mas adecuadas para problemas con diferentes propiedades geom\'etricas.\relax }}{23}}
-\newlabel{fig:substrateconf}{{3.6}{23}}
+\citation{cppn}
+\citation{cppn}
+\newlabel{fig:patronsim}{{3.5a}{23}}
+\newlabel{sub@fig:patronsim}{{a}{23}}
+\newlabel{fig:patronsimimp}{{3.5b}{23}}
+\newlabel{sub@fig:patronsimimp}{{b}{23}}
+\newlabel{fig:patronrep}{{3.5c}{23}}
+\newlabel{sub@fig:patronrep}{{c}{23}}
+\newlabel{fig:patronrepvar}{{3.5d}{23}}
+\newlabel{sub@fig:patronrepvar}{{d}{23}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces \textbf  {Patrones de conectividad producidos por CPPNs. } Estos patrones, producidos a trav\'es de la evoluci\'on, exhiben importantes casos de patrones de conectividad: (a) simetr\IeC {\'\i }a bilateral, (b) simetr\IeC {\'\i }a imperfecta, (c) repetici\'on, y (d) repetici\'on con variaciones. Que estos patrones sean generados f\'acilmente y representados de forma compacta sugiere el poder de esta codificaci\'on. Imagen adaptada de \cite  {cppn}.\relax }}{23}}
+\newlabel{fig:patronescppn}{{3.5}{23}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}CONFIGURACIONES DEL SUBSTRATO}{23}}
 \citation{churchuland}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{24}}
-\newlabel{fig:posio1}{{3.7a}{25}}
-\newlabel{sub@fig:posio1}{{a}{25}}
-\newlabel{fig:posio2}{{3.7b}{25}}
-\newlabel{sub@fig:posio2}{{b}{25}}
-\newlabel{fig:posio3}{{3.7c}{25}}
-\newlabel{sub@fig:posio3}{{c}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces \textbf  {Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar como entradas de est\IeC {\'\i }mulos, y ocho actuadores para respuestas motoras situados de forma radial equiangularmente distanciados. En (b), las entradas (de etiqueta \textit  {I}, correspondientes a sensores lidar) y salidas (de etiqueta \textit  {O}, correspondientes a actuadores) est\'an situadas en la misma diagonal en los ocho sectores indicados en (a). En (c), entradas y salidas son situadas horizontales y paralelamente unas de la otras en dos filas. Ambos arreglos crean una relaci\'on geom\'etrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evoluci\'on desde el comienzo.\relax }}{25}}
-\newlabel{fig:posio}{{3.7}{25}}
+\newlabel{fig:substrateconf1}{{3.6a}{24}}
+\newlabel{sub@fig:substrateconf1}{{a}{24}}
+\newlabel{fig:substrateconf2}{{3.6b}{24}}
+\newlabel{sub@fig:substrateconf2}{{b}{24}}
+\newlabel{fig:substrateconf3}{{3.6c}{24}}
+\newlabel{sub@fig:substrateconf3}{{c}{24}}
+\newlabel{fig:substrateconf4}{{3.6d}{24}}
+\newlabel{sub@fig:substrateconf4}{{d}{24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces \textbf  {Alternativas de configuraci\'on del Substrato. } Estas figuras muestran (b) una configuraci\'on tridimensional de nodos centrados en (0,0,0), (c) una configuraci\'on s\'andwich de dos capas en la cual una capa fuente de neuronas se conecta directamente a una capa destino, y (d) una configuraci\'on circular. Diferentes configuraciones son probablemente mas adecuadas para problemas con diferentes propiedades geom\'etricas. Imagen adaptada de \cite  {cppn}.\relax }}{24}}
+\newlabel{fig:substrateconf}{{3.6}{24}}
+\newlabel{eq:hipercubo}{{3.3}{24}}
+\citation{cppn}
+\citation{cppn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{25}}
+\newlabel{fig:posio1}{{3.7a}{26}}
+\newlabel{sub@fig:posio1}{{a}{26}}
+\newlabel{fig:posio2}{{3.7b}{26}}
+\newlabel{sub@fig:posio2}{{b}{26}}
+\newlabel{fig:posio3}{{3.7c}{26}}
+\newlabel{sub@fig:posio3}{{c}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces \textbf  {Posicionando entradas y salidas. } Un robot (a) es descrito con ocho sensores lidar como entradas de est\IeC {\'\i }mulos, y ocho actuadores para respuestas motoras situados de forma radial equiangularmente distanciados. En (b), las entradas (de etiqueta \textit  {I}, correspondientes a sensores lidar) y salidas (de etiqueta \textit  {O}, correspondientes a actuadores) est\'an situadas en la misma diagonal en los ocho sectores indicados en (a). En (c), entradas y salidas son situadas horizontales y paralelamente unas de la otras en dos filas. Ambos arreglos crean una relaci\'on geom\'etrica entre cada entrada y su correspondiente salida. De esta forma es posible dar ventaja a la evoluci\'on desde el comienzo. Imagen adaptada de \cite  {cppn}.\relax }}{26}}
+\newlabel{fig:posio}{{3.7}{26}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}RESOLUCI\'ON DEL SUBSTRATO}{26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{26}}
+\citation{cppn}
+\citation{cppn}
 \newlabel{fig:substrateres1}{{3.8a}{27}}
 \newlabel{sub@fig:substrateres1}{{a}{27}}
 \newlabel{fig:substrateres2}{{3.8b}{27}}
@@ -65,11 +86,12 @@
 \newlabel{sub@fig:substrateres5}{{e}{27}}
 \newlabel{fig:substrateres6}{{3.8f}{27}}
 \newlabel{sub@fig:substrateres6}{{f}{27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces \textbf  {Conceptos de conectividad equivalentes en diferentes resoluciones del substrato. } Se describen dos conceptos de conectividad generados en el proceso de evoluci\'on. La red CPPN que genera el primer concepto a resoluciones de $5 \times 5$ (a) y $7 \times 7$ (b) es mostrado en (c). La red CPPN en (f) genera de forma similar el segundo concepto en ambas resoluciones (d) y (e). Esta ilustraci\'on demuestra que CPPNs representan un concepto matem\'atico en lugar de una sola estructura. As\IeC {\'\i }, la misma red CPPN puede producir patrones con el mismo fundamento conceptual en diferentes resoluciones del substrato en diferente densidad de nodos. Las funciones de activaci\'on de las redes CPPN mostradas est\'an denotadas por \textit  {G} para funciones \textit  {Gaussianas}, \textit  {S} para \textit  {Sigmoides}, \textit  {Si} para \textit  {Senos}, y \textit  {L} para \textit  {Lineales}.\relax }}{27}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces \textbf  {Conceptos de conectividad equivalentes en diferentes resoluciones del substrato. } Se describen dos conceptos de conectividad generados en el proceso de evoluci\'on. La red CPPN que genera el primer concepto a resoluciones de $5 \times 5$ (a) y $7 \times 7$ (b) es mostrado en (c). La red CPPN en (f) genera de forma similar el segundo concepto en ambas resoluciones (d) y (e). Esta ilustraci\'on demuestra que CPPNs representan un concepto matem\'atico en lugar de una sola estructura. As\IeC {\'\i }, la misma red CPPN puede producir patrones con el mismo fundamento conceptual en diferentes resoluciones del substrato en diferente densidad de nodos. Las funciones de activaci\'on de las redes CPPN mostradas est\'an denotadas por \textit  {G} para funciones \textit  {Gaussianas}, \textit  {S} para \textit  {Sigmoides}, \textit  {Si} para \textit  {Senos}, y \textit  {L} para \textit  {Lineales}. Imagen adaptada de \cite  {cppn}.\relax }}{27}}
 \newlabel{fig:substrateres}{{3.8}{27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{28}}
 \@setckpt{cap3}{
-\setcounter{page}{29}
-\setcounter{equation}{0}
+\setcounter{page}{30}
+\setcounter{equation}{3}
 \setcounter{enumi}{3}
 \setcounter{enumii}{2}
 \setcounter{enumiii}{2}

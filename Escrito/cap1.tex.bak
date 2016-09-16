@@ -1,0 +1,46 @@
+\chapter{INTRODUCCIÓN Y OBJETIVOS}
+
+El proyecto``\(\tau\)-HyperNEAT: Retardos de Tiempo en una Red HyperNEAT para Aprendizaje de Caminatas en Robots con Extremidades Móviles'' pretende incorporar conceptos temporales en una red neuronal HyperNEAT incluyendo retardos de tiempo adicionales a los pesos en las conexiones entre neuronas, permitiendo así generar caminatas en robots con distinta cantidad de grados de libertad (ver Figura \ref{fig:robots}), a través de simulaciones en entornos virtuales, de forma más óptima y obteniendo resultados más cercanos a comportamientos encontrados en la naturaleza.
+
+\begin{figure}[ht!]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/QUADRATOT.png}
+        \caption{Quadratot}
+        \label{fig:quadratot}
+    \end{subfigure}
+    ~
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+        \includegraphics[width=\textwidth]{fig/ARGOV2.png}
+        \caption{ArgoV2}
+        \label{fig:argov2}
+    \end{subfigure}
+    \caption{\textbf{Robots con distinto número de grados de libertad y diferentes geometrías. } En la figura se aprecia dos robots, Quadratot y ArgoV2, ambos de 4 extremidades, y de 9 y 12 grados de libertad totales respectivamente.}
+    \label{fig:robots}
+\end{figure}
+
+\section{OBJETIVOS DEL PROYECTO}
+
+\begin{description}
+\item[\textbf{Objetivo 1}] Proponer un red neuronal usando HyperNEAT que incluya retardos de tiempo en sus conexiones.
+
+\item [\textbf{Objetivo 2}] Desarrollar el software necesario para manejar el entorno de simulación a usar en el trascurso del proyecto.
+
+\item [\textbf{Objetivo 4}] Usar la nueva red neuronal en tareas de aprendizaje de caminatas en robots con extremidades móviles.
+\end{description}
+
+\section{TRABAJOS A DESARROLLAR Y RESULTADOS ESPERADOS}
+
+El proyecto se inicia en base a estudios e implementaciones previas de redes NEAT\footnote{\url{https://github.com/osilvam/NEAT}} y HyperNEAT\footnote{\url{https://github.com/osilvam/HyperNeat}} para la generación de caminatas en robots con extremidades móviles en entornos virtuales de simulación\footnote{como parte de un trabajo de investigación realizado por los alumnos de Ingeniería Civil Electrónica Pascal Sigel Olivares y Oscar Silva Muñoz encabezados por la profesora del Departamento de Electrónica de la Universidad Técnica Federico Santa María Dr. María José Escobar Silva.}, con los cuales se obtuvieron resultados exitosos. A partir de esto es que se plantea la incorporación de retardos de tiempo a una red HyperNEAT de forma de implementar computacionalmente la nueva red neuronal propuesta llamada \(\tau\)-HyperNEAT. Luego se debe comparar el desempeño de \(\tau\)-HyperNEAT versus el desempeño de su predecesor entrenando caminatas en los robots, el cual se espera que sea mejor. La correcta generación y evolución de caminatas en un entrenamiento está sujeta a una función de desempeño en base a las variables observadas en el robot, por lo que se debe realizar un estudio exhaustivo de cuál es la función de desempeño que mejor describe a una correcta caminata. Para el desarrollo de los entrenamientos de caminatas en los robots en entornos virtuales es necesario implementar un modelo para cada robot, con el fin de observar las caminatas generadas y emular correctamente las dinámicas que se presentarían en un entorno real \footnote{Como trabajo futuro de esta memoria se propone lograr traspasar de manera posterior los resultados obtenidos a los robots reales.}. Además, se debe desarrollar el software necesario para la comunicación entre el programa de entrenamiento y el programa que provee el entorno virtual de simulación (el cual soporta comunicación por sockets).
+
+La comparación de los resultados de las caminatas obtenidos entre HyperNEAT y \(\tau\)-HyperNEAT debe realizarse observando tanto el aspecto visual final de las caminatas obtenidas, como además la evolución de dichas caminatas a lo largo del proceso de entrenamiento, medida a través de la función de desempeño antes mencionada, la cual evalúa cuantitativamente las caminatas generadas. Luego se debe comparar cuan influyentes fueron los retardos de tiempo incluidos en la red HyperNEAT observando la estructura y conexiones de la red \(\tau\)-HyperNEAT finalmente obtenida para obtener las conclusiones del trabajo propuesto.
+
+Al culminar el Proyecto ``\(\tau\)-HyperNEAT: Retardos de Tiempo en una Red HyperNEAT para Aprendizaje de Caminatas en Robots con Extremidades Móviles'', se espera poder obtener caminatas naturales y armónicas en robots con extremidades móviles de manera más óptima a las obtenidas solo con una red HyperNEAT. De manera más general se pretende obtener una red neuronal más robusta y eficiente que permita resolver problemas reales con dependencias temporales. Además se espera generar un software robusto que permita una correcta comunicación con el entorno de simulación a usar para proveer esta herramienta a proyectos futuros en donde se requiera emular sistemas reales complejos.
+
+Además del problema mismo de la generación de caminatas en robots con extremidades móviles, se encuentra la tarea de simular virtualmente el modelo de cada robot, ya que la mayoría de las veces realizar pruebas en plataformas reales es inalcanzable, por elevados costos de adquisición de los equipos; muy poco práctico ya que requiere de una constante y prolongada intervención de personas; o muy peligroso, ya que cualquier problema o error podría incurrir en el deterioro del equipo o inclusive podría atentar contra la seguridad de las mismas personas que realizan los experimentos. Es por esto que esta memoria contempla la implementación de una herramienta de software que permita al usuario trabajar con modelos virtuales simulados de forma fácil y rápida.
+
+Para el trabajo de simulación en el área de la robótica existen variadas opciones con distintos niveles de dificultad y costo de uso dependiendo del público objetivo para el cual está pensado. Es por esto que para el desarrollo de esta memoria se propone el uso de una herramienta de fácil acceso, tanto por el nivel de conocimiento que requiere su uso como su accesibilidad de descarga y sencillo manejo, con el objetivo de que el software a realizar este al alcance de uso de cualquier persona. Esto busca acercar a las personas a trabajar en el área de la robótica incitándolas con herramientas de fácil acceso y manejo.
+
+
