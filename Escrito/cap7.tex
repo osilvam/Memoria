@@ -343,72 +343,106 @@ Además del análisis de los resultados obtenidos con uso de HyperNEAT y \(\tau\)-
     \label{fig:hist}
 \end{figure}
 
-Finalmente, es posible observar los pesos y retardos en las conexiones de la red \(\tau\)-HyperNEAT para cada Robot, mostrados en las figuras \ref{fig:quadratotthcon} y \ref{fig:argov2thcon}. Si bien no se logra encontrar una tendencia general en la distribución y asignación de los pesos y retardos en las conexiones para cada experimento, pueden observarse asignaciones particulares de estos en cada caso. Para el caso del robot Quadratot ...
+Finalmente, es posible observar los pesos y retardos en las conexiones de la red \(\tau\)-HyperNEAT para cada Robot, mostrados en las figuras \ref{fig:quadratotthcon} y \ref{fig:argov2thcon}. Si bien no se logra encontrar una tendencia general en la distribución y asignación de los pesos y retardos en las conexiones para ambos experimento, pueden observarse asignaciones particulares de estos en cada caso. 
+
+Para el caso del robot Quadratot, los pesos y retardos desde la capa de entrada hacia la capa intermedia (figuras \ref{fig:quadratotthcon2} y \ref{fig:quadratotthcon3}) presentan un claro patrón repetitivo horizontal, junto con un aumento diagonal descendente de los pesos de conexión. Para las conexiones desde la capa intermedia hacia la capa de salida (figuras \ref{fig:quadratotthcon5} y \ref{fig:quadratotthcon6}) se observan también algunos patrones repetitivos en cada diagrama, además de un patrón repetitivo diagonal en el diagrama de retardos.
+
+Para el caso del robot ArgoV2, los pesos desde la capa intermedia hacia la capa de salida (figura \ref{fig:argov2thcon2}) presentan, al igual que Quadratot en la figura \ref{fig:quadratotthcon2}, un aumento diagonal descendente de sus valores; a diferencia de los retardos  que presentan, a simple vista, una distribución uniforme a lo largo del diagrama (figura \ref{fig:argov2thcon3}). Para las conexiones desde la capa intermedia hacia la capa de salida (figuras \ref{fig:argov2thcon5} y \ref{fig:argov2thcon6}) se observan marcados patrones repetitivos verticales a lo largo de ambos diagramas, junto a un patrón repetitivo horizontal en el diagrama de retardos.
+
+En el capítulo siguiente se discutirán las conclusiones obtenidas a partir de los experimentos expuestos anteriormente.
 
 \begin{figure}[ht!]
 	\centering
-    \begin{subfigure}[b]{0.4\textwidth}
+	    \begin{subfigure}[b]{0.3\textwidth}
 		\centering
-        \includegraphics[width=0.8\textwidth]{fig/L1W_ARGOV2.png}
-        \caption{Pesos hacia la capa intermedia}
-        \label{fig:argov2thcon1}
+        \includegraphics[width=\textwidth]{fig/L1_QUADRATOT.png}
+        \caption{Distribución de diagramas (b) y (c)}
+        \label{fig:quadratotthcon1}
     \end{subfigure}
     ~
-	\begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
 		\centering
-    	\includegraphics[width=0.8\textwidth]{fig/L1T_ARGOV2.png}
+        \includegraphics[width=0.88\textwidth]{fig/L1W_QUADRATOT.png}
+        \caption{Pesos hacia la capa intermedia}
+        \label{fig:quadratotthcon2}
+    \end{subfigure}
+    ~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+    	\includegraphics[width=0.88\textwidth]{fig/L1T_QUADRATOT.png}
     	\caption{Retardos hacia la capa intermedia}
-    	\label{fig:argov2thcon2}
+    	\label{fig:quadratotthcon3}
     \end{subfigure}	
 	
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
     	\centering
-        \includegraphics[width=0.8\textwidth]{fig/L2W_ARGOV2.png}
-        \caption{Pesos hacia la capa de salida}
-        \label{fig:argov2thcon3}
+        \includegraphics[width=\textwidth]{fig/L2_QUADRATOT.png}
+        \caption{Distribución de diagramas (e) y (f)}
+        \label{fig:quadratotthcon4}
     \end{subfigure}
     ~
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
     	\centering
-        \includegraphics[width=0.8\textwidth]{fig/L2T_ARGOV2.png}
-        \caption{Retardos hacia la capa de salida}
-        \label{fig:argov2thcon4}
+        \includegraphics[width=0.88\textwidth]{fig/L2W_QUADRATOT.png}
+        \caption{Pesos hacia la capa de salida}
+        \label{fig:quadratotthcon5}
     \end{subfigure}
-    \caption{\textbf{Diagramas de conexión del substrato de \(\tau\)-HyperNEAT para el robot ArgoV2.} La figura muestra cuatro diagramas correspondientes a los pesos y retardos asociados a las conexiones en el substrato entre la capa de entrada e intermedia, y entre la capa intermedia y de salida. En cada diagrama, el pixel ($i,j$) representa el peso, o el retardo según sea el caso, de la conexión desde el nodo $i$-ésimo de la capa origen hacia el nodo $j$-ésimo de la capa destino.}
-    \label{fig:argov2thcon}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=0.88\textwidth]{fig/L2T_QUADRATOT.png}
+        \caption{Retardos hacia la capa de salida}
+        \label{fig:quadratotthcon6}
+    \end{subfigure}
+    \caption{\textbf{Diagramas de conexión del substrato de \(\tau\)-HyperNEAT para el robot Quadratot.} La figura muestra cuatro diagramas (b,c,e,f) correspondientes a los pesos y retardos asociados a las conexiones en el substrato entre la capa de entrada e intermedia, y entre la capa intermedia y de salida. En cada diagrama, el pixel ($i,j$) representa el peso, o el retardo según sea el caso, de la conexión desde el nodo $i$-ésimo de la capa origen hacia el nodo $j$-ésimo de la capa destino, como se indica en (a) y (d).}
+    \label{fig:quadratotthcon}
 \end{figure}
 
 \begin{figure}[ht!]
 	\centering
-    \begin{subfigure}[b]{0.4\textwidth}
+	\begin{subfigure}[b]{0.3\textwidth}
 		\centering
-        \includegraphics[width=0.8\textwidth]{fig/L1W_QUADRATOT.png}
-        \caption{Pesos hacia la capa intermedia}
-        \label{fig:quadratotthcon1}
+        \includegraphics[width=\textwidth]{fig/L1_ARGOV2.png}
+        \caption{Distribución de diagramas (b) y (c)}
+        \label{fig:argov2thcon1}
     \end{subfigure}
     ~
-	\begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
 		\centering
-    	\includegraphics[width=0.8\textwidth]{fig/L1T_QUADRATOT.png}
+        \includegraphics[width=0.88\textwidth]{fig/L1W_ARGOV2.png}
+        \caption{Pesos hacia la capa intermedia}
+        \label{fig:argov2thcon2}
+    \end{subfigure}
+    ~
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+    	\includegraphics[width=0.88\textwidth]{fig/L1T_ARGOV2.png}
     	\caption{Retardos hacia la capa intermedia}
-    	\label{fig:quadratotthcon2}
+    	\label{fig:argov2thcon3}
     \end{subfigure}	
 	
     \centering
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
     	\centering
-        \includegraphics[width=0.8\textwidth]{fig/L2W_QUADRATOT.png}
-        \caption{Pesos hacia la capa de salida}
-        \label{fig:quadratotthcon3}
+        \includegraphics[width=\textwidth]{fig/L2_ARGOV2.png}
+        \caption{Distribución de diagramas (e) y (f)}
+        \label{fig:argov2thcon4}
     \end{subfigure}
     ~
-    \begin{subfigure}[b]{0.4\textwidth}
+    \begin{subfigure}[b]{0.3\textwidth}
     	\centering
-        \includegraphics[width=0.8\textwidth]{fig/L2T_QUADRATOT.png}
-        \caption{Retardos hacia la capa de salida}
-        \label{fig:quadratotthcon4}
+        \includegraphics[width=0.88\textwidth]{fig/L2W_ARGOV2.png}
+        \caption{Pesos hacia la capa de salida}
+        \label{fig:argov2thcon5}
     \end{subfigure}
-    \caption{\textbf{Diagramas de conexión del substrato de \(\tau\)-HyperNEAT para el robot Quadratot.} La figura muestra cuatro diagramas correspondientes a los pesos y retardos asociados a las conexiones en el substrato entre la capa de entrada e intermedia, y entre la capa intermedia y de salida. En cada diagrama, el pixel ($i,j$) representa el peso, o el retardo según sea el caso, de la conexión desde el nodo $i$-ésimo de la capa origen hacia el nodo $j$-ésimo de la capa destino.}
-    \label{fig:quadratotthcon}
+    ~
+    \begin{subfigure}[b]{0.3\textwidth}
+    	\centering
+        \includegraphics[width=0.88\textwidth]{fig/L2T_ARGOV2.png}
+        \caption{Retardos hacia la capa de salida}
+        \label{fig:argov2thcon6}
+    \end{subfigure}
+    \caption{\textbf{Diagramas de conexión del substrato de \(\tau\)-HyperNEAT para el robot ArgoV2.} La figura muestra cuatro diagramas (b,c,e,f) correspondientes a los pesos y retardos asociados a las conexiones en el substrato entre la capa de entrada e intermedia, y entre la capa intermedia y de salida. En cada diagrama, el pixel ($i,j$) representa el peso, o el retardo según sea el caso, de la conexión desde el nodo $i$-ésimo de la capa origen hacia el nodo $j$-ésimo de la capa destino, como se indica en (a) y (d).}
+    \label{fig:argov2thcon}
 \end{figure}

@@ -28,6 +28,6 @@
 \contentsline {section}{\numberline {7.4}RESULTADOS DE LOS ENTRENAMIENTOS}{66}
 \contentsline {subsection}{\numberline {7.4.1}QUADRATOT}{67}
 \contentsline {subsection}{\numberline {7.4.2}ARGOV2}{71}
-\contentsline {chapter}{\numberline {8.}CONCLUSIONES Y TRABAJOS FUTUROS}{79}
-\contentsline {section}{\numberline {8.1}DISCUSION Y COMPARACION DE LOS RESULTADOS OBTENIDOS}{79}
-\contentsline {section}{\numberline {8.2}TRABAJO FUTURO}{80}
+\contentsline {chapter}{\numberline {8.}CONCLUSIONES Y TRABAJOS FUTUROS}{80}
+\contentsline {section}{\numberline {8.1}DISCUSION Y COMPARACION DE LOS RESULTADOS OBTENIDOS}{80}
+\contentsline {section}{\numberline {8.2}TRABAJO FUTURO}{81}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.4)  20 SEP 2016 01:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.4)  20 SEP 2016 11:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1470,72 +1470,98 @@ Package pdftex.def Info: fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted-to.pdf used
  on input line 338.
 (pdftex.def)             Requested size: 184.24461pt x 161.59718pt.
  [76 <./fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf> <./fig/ARGOV2_HIS
-T_TAUHYPERNEAT-eps-converted-to.pdf>] <fig/L1W_ARGOV2.png, id=512, 256.96pt x 2
-24.84pt>
-File: fig/L1W_ARGOV2.png Graphic file (type png)
+T_TAUHYPERNEAT-eps-converted-to.pdf>] <fig/L1_QUADRATOT.png, id=512, 358.33875p
+t x 328.97906pt>
+File: fig/L1_QUADRATOT.png Graphic file (type png)
 
-<use fig/L1W_ARGOV2.png>
-Package pdftex.def Info: fig/L1W_ARGOV2.png used on input line 352.
-(pdftex.def)             Requested size: 131.01776pt x 114.64285pt.
- <fig/L1T_ARGOV2.png, id=513, 256.96pt x 224.84pt>
-File: fig/L1T_ARGOV2.png Graphic file (type png)
+<use fig/L1_QUADRATOT.png>
+Package pdftex.def Info: fig/L1_QUADRATOT.png used on input line 358.
+(pdftex.def)             Requested size: 122.83182pt x 112.765pt.
 
-<use fig/L1T_ARGOV2.png>
-Package pdftex.def Info: fig/L1T_ARGOV2.png used on input line 359.
-(pdftex.def)             Requested size: 131.01776pt x 114.64285pt.
- <fig/L2W_ARGOV2.png, id=514, 218.416pt x 291.489pt>
-File: fig/L2W_ARGOV2.png Graphic file (type png)
-
-<use fig/L2W_ARGOV2.png>
-Package pdftex.def Info: fig/L2W_ARGOV2.png used on input line 367.
-(pdftex.def)             Requested size: 131.01776pt x 174.8547pt.
- <fig/L2T_ARGOV2.png, id=515, 218.416pt x 291.489pt>
-File: fig/L2T_ARGOV2.png Graphic file (type png)
-
-<use fig/L2T_ARGOV2.png>
-Package pdftex.def Info: fig/L2T_ARGOV2.png used on input line 374.
-(pdftex.def)             Requested size: 131.01776pt x 174.8547pt.
-
-<fig/L1W_QUADRATOT.png, id=516, 218.416pt x 199.947pt>
+<fig/L1W_QUADRATOT.png, id=513, 218.416pt x 199.947pt>
 File: fig/L1W_QUADRATOT.png Graphic file (type png)
 
 <use fig/L1W_QUADRATOT.png>
-Package pdftex.def Info: fig/L1W_QUADRATOT.png used on input line 386.
-(pdftex.def)             Requested size: 131.01776pt x 119.94165pt.
+Package pdftex.def Info: fig/L1W_QUADRATOT.png used on input line 365.
+(pdftex.def)             Requested size: 108.09259pt x 98.95117pt.
 
-<fig/L1T_QUADRATOT.png, id=517, 218.416pt x 199.947pt>
+<fig/L1T_QUADRATOT.png, id=514, 218.416pt x 199.947pt>
 File: fig/L1T_QUADRATOT.png Graphic file (type png)
 
 <use fig/L1T_QUADRATOT.png>
-Package pdftex.def Info: fig/L1T_QUADRATOT.png used on input line 393.
-(pdftex.def)             Requested size: 131.01776pt x 119.94165pt.
+Package pdftex.def Info: fig/L1T_QUADRATOT.png used on input line 372.
+(pdftex.def)             Requested size: 108.09259pt x 98.95117pt.
 
-<fig/L2W_QUADRATOT.png, id=518, 183.084pt x 244.112pt>
+<fig/L2_QUADRATOT.png, id=515, 303.38344pt x 386.19281pt>
+File: fig/L2_QUADRATOT.png Graphic file (type png)
+
+<use fig/L2_QUADRATOT.png>
+Package pdftex.def Info: fig/L2_QUADRATOT.png used on input line 380.
+(pdftex.def)             Requested size: 122.83182pt x 156.36008pt.
+
+<fig/L2W_QUADRATOT.png, id=516, 183.084pt x 244.112pt>
 File: fig/L2W_QUADRATOT.png Graphic file (type png)
 
 <use fig/L2W_QUADRATOT.png>
-Package pdftex.def Info: fig/L2W_QUADRATOT.png used on input line 401.
-(pdftex.def)             Requested size: 131.01776pt x 174.69519pt.
+Package pdftex.def Info: fig/L2W_QUADRATOT.png used on input line 387.
+(pdftex.def)             Requested size: 108.09259pt x 144.12538pt.
 
-<fig/L2T_QUADRATOT.png, id=519, 183.084pt x 244.112pt>
+<fig/L2T_QUADRATOT.png, id=517, 183.084pt x 244.112pt>
 File: fig/L2T_QUADRATOT.png Graphic file (type png)
 
 <use fig/L2T_QUADRATOT.png>
-Package pdftex.def Info: fig/L2T_QUADRATOT.png used on input line 408.
-(pdftex.def)             Requested size: 131.01776pt x 174.69519pt.
-) [77 <./fig/L1W_ARGOV2.png> <./fig/L1T_ARGOV2.png> <./fig/L2W_ARGOV2.png> <./f
-ig/L2T_ARGOV2.png>] [78 <./fig/L1W_QUADRATOT.png> <./fig/L1T_QUADRATOT.png> <./
-fig/L2W_QUADRATOT.png> <./fig/L2T_QUADRATOT.png>]
+Package pdftex.def Info: fig/L2T_QUADRATOT.png used on input line 394.
+(pdftex.def)             Requested size: 108.09259pt x 144.12538pt.
+
+<fig/L1_ARGOV2.png, id=518, 406.51875pt x 362.10281pt>
+File: fig/L1_ARGOV2.png Graphic file (type png)
+ <use fig/L1_ARGOV2.png>
+Package pdftex.def Info: fig/L1_ARGOV2.png used on input line 406.
+(pdftex.def)             Requested size: 122.83182pt x 109.41074pt.
+
+<fig/L1W_ARGOV2.png, id=519, 256.96pt x 224.84pt>
+File: fig/L1W_ARGOV2.png Graphic file (type png)
+ <use fig/L1W_ARGOV2.png>
+Package pdftex.def Info: fig/L1W_ARGOV2.png used on input line 413.
+(pdftex.def)             Requested size: 108.09259pt x 94.5831pt.
+
+<fig/L1T_ARGOV2.png, id=520, 256.96pt x 224.84pt>
+File: fig/L1T_ARGOV2.png Graphic file (type png)
+ <use fig/L1T_ARGOV2.png>
+Package pdftex.def Info: fig/L1T_ARGOV2.png used on input line 420.
+(pdftex.def)             Requested size: 108.09259pt x 94.5831pt.
+
+<fig/L2_ARGOV2.png, id=521, 356.0803pt x 462.22687pt>
+File: fig/L2_ARGOV2.png Graphic file (type png)
+ <use fig/L2_ARGOV2.png>
+Package pdftex.def Info: fig/L2_ARGOV2.png used on input line 428.
+(pdftex.def)             Requested size: 122.83182pt x 159.44728pt.
+
+<fig/L2W_ARGOV2.png, id=522, 218.416pt x 291.489pt>
+File: fig/L2W_ARGOV2.png Graphic file (type png)
+ <use fig/L2W_ARGOV2.png>
+Package pdftex.def Info: fig/L2W_ARGOV2.png used on input line 435.
+(pdftex.def)             Requested size: 108.09259pt x 144.25414pt.
+
+<fig/L2T_ARGOV2.png, id=523, 218.416pt x 291.489pt>
+File: fig/L2T_ARGOV2.png Graphic file (type png)
+ <use fig/L2T_ARGOV2.png>
+Package pdftex.def Info: fig/L2T_ARGOV2.png used on input line 442.
+(pdftex.def)             Requested size: 108.09259pt x 144.25414pt.
+)
+[77] [78 <./fig/L1_QUADRATOT.png> <./fig/L1W_QUADRATOT.png> <./fig/L1T_QUADRATO
+T.png> <./fig/L2_QUADRATOT.png> <./fig/L2W_QUADRATOT.png> <./fig/L2T_QUADRATOT.
+png>] [79 <./fig/L1_ARGOV2.png> <./fig/L1W_ARGOV2.png> <./fig/L1T_ARGOV2.png> <
+./fig/L2_ARGOV2.png> <./fig/L2W_ARGOV2.png> <./fig/L2T_ARGOV2.png>]
 \openout2 = `cap8.aux'.
 
-
-(./cap8.tex
+ (./cap8.tex
 Cap\'{\i }tulo 8.
-[79
+[80
 
 
 
-]) [80]
+]) [81]
 \openout2 = `referencias.aux'.
 
  (./referencias.tex
@@ -1544,21 +1570,21 @@ Underfull \hbox (badness 1152) in paragraph at lines 8--9
  Ar-ti-fi-cial Li-fe,
  []
 
-[81
+[82
 
 
 
-]) [82] (./main.aux
+]) [83] (./main.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
  (./cap0.aux) (./cap1.aux) (./cap2.aux) (./cap3.aux)
 (./cap4.aux) (./cap5.aux) (./cap6.aux) (./cap7.aux) (./cap8.aux)
 (./referencias.aux)) ) 
 Here is how much of TeX's memory you used:
- 9326 strings out of 493304
- 135422 string characters out of 6139872
- 337480 words of memory out of 5000000
- 12427 multiletter control sequences out of 15000+600000
+ 9354 strings out of 493304
+ 136024 string characters out of 6139872
+ 337568 words of memory out of 5000000
+ 12451 multiletter control sequences out of 15000+600000
  46912 words of font info for 102 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  41i,19n,60p,2091b,1403s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1579,10 +1605,10 @@ ive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.
 pfb>
-Output written on main.pdf (87 pages, 22990151 bytes).
+Output written on main.pdf (88 pages, 23065526 bytes).
 PDF statistics:
- 606 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
+ 617 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 481 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 501 words of extra memory for PDF output out of 10000 (max. 10000000)
 

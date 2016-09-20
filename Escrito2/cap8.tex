@@ -1,0 +1,24 @@
+\section{DISCUSION Y COMPARACION DE LOS RESULTADOS OBTENIDOS}
+
+En este trabajo de memoria se ha implementado un nuevo método de neuroevolución, llamado \(\tau\)-HyperNEAT, con el objetivo de ponerlo a prueba en la tarde de generación de caminatas en robots con extremidades móviles. En particular, se ha planteado la hipótesis de que este nuevo método de neuroevolución, al incorporar retardos de tiempo en las conexiones a lo largo de la red principal, tendrá mejoras en su desempeño final y generará caminatas con características cualitativas superiores.
+
+Luego de analizar todos los resultados obtenidos a partir de los experimentos realizados es posible concluir lo siguiente.
+
+\begin{enumerate}
+\item En la tarea de generación de caminatas, no hubo diferencias cuantitativas en los resultados obtenidos a través de los métodos HyperNEAT y \(\tau\)-HyperNEAT, obteniéndose en ambos casos el mismo desempeño de a cuerdo a las variables involucradas en el proceso de calificación de las caminatas.
+\item En la tarea de generación de caminatas, \(\tau\)-HyperNEAT logró desarrollar, casi en un 100\%, caminatas con movimientos armónicos y coordinados, similares a comportamientos vistos en la naturaleza. Esto pudo ser observado en los gráficos de las señales de los motores generadas por \(\tau\)-HyperNEAT, evidenciandose las diferencias y similitudes de fases vistas entre distintas extremidades y motores de una misma extremidad respectivamente.
+\end{enumerate}
+
+Ya que las capacidades de HyperNEAT para generar caminatas con movimientos armónicos y coordinados fueron prácticamente nulas frente a las capacidades mostradas por el método \(\tau\)-HyperNEAT, es posible afirmar que este nuevo método, al incorporar retardos de tiempo a lo largo de su red principal, logra afrontar y resolver de mejor manera problemas dinámicos que involucran variables temporales, como lo es en particular, la generación de caminatas en robots con extremidades móviles.
+
+\section{TRABAJO FUTURO}
+
+Dados los resultados obtenidos en este trabajo de memoria, se considera que los siguientes
+son temas para trabajo futuro, enfocados tanto en la generación de caminatas como en la de cualquier tipo de experimento en donde se puedan aprovechar las capacidades de las redes HyperNEAT y \(\tau\)-HyperNEAT.
+
+\begin{itemize}
+\item Verificar las posibles variaciones en el desempeño del método \(\tau\)-HyperNEAT para distintos valores del retardo máximo ($\tau_{max}$) en las conexiones de la red.
+\item Experimentar con diferentes configuraciones geométricas en el substrato de las redes HyperNEAT y \(\tau\)-HyperNEAT, con el objetivo de explotar al máximo las capacidades de ambas redes.
+\item Formular y probar nuevas funciones de desempeño para lograr clasificar de manera óptima la correcta ejecución de una caminata, favoreciendo siempre el proceso de evolución de caminatas realmente efectivas y así obtener mejores resultados.
+\item Traspasar los resultados obtenidos en simulaciones a un entorno real, emulando de manera correcta las dinámicas presentes en cada robot.
+\end{itemize}

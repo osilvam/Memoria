@@ -1,0 +1,38 @@
+\select@language {spanish}
+\contentsline {chapter}{\uppercase {Agradecimientos}}{\es@scroman {i}}
+\contentsline {chapter}{\uppercase {Resumen}}{\es@scroman {iii}}
+\contentsline {chapter}{\uppercase {Abstract}}{\es@scroman {iv}}
+\contentsline {chapter}{\uppercase {Glosario}}{\es@scroman {vi}}
+\contentsline {chapter}{\numberline {1}\uppercase {Introducci\'on}}{1}
+\contentsline {section}{\numberline {1.1}OBJETIVOS DEL PROYECTO}{2}
+\contentsline {section}{\numberline {1.2}TRABAJOS A DESARROLLAR Y RESULTADOS ESPERADOS}{2}
+\contentsline {chapter}{\numberline {2}\uppercase {Estado del arte de m\'etodos evolutivos para la caminata de robots}}{4}
+\contentsline {chapter}{\numberline {3}\uppercase {Base Te\'orica}}{6}
+\contentsline {section}{\numberline {3.1}COMPOSITIONAL PATTERN PRODUCING NETWORKS (CPPNs)}{6}
+\contentsline {subsection}{\numberline {3.1.1}DESARROLLO DE PATRONES}{6}
+\contentsline {subsection}{\numberline {3.1.2}COMPLEJIZACI\'ON}{7}
+\contentsline {subsection}{\numberline {3.1.3}M\'ETODO DE CODIFICACI\'ON}{8}
+\contentsline {subsection}{\numberline {3.1.4}EVOLUCI\'ON DE UNA RED CPPN}{10}
+\contentsline {section}{\numberline {3.2}EVOLUCIONANDO REDES CPPN UTILIZANDO NEAT}{11}
+\contentsline {section}{\numberline {3.3}CPPN-NEAT}{12}
+\contentsline {section}{\numberline {3.4}HYPERNEAT}{12}
+\contentsline {subsection}{\numberline {3.4.1}MAPEANDO PATRONES ESPACIALES A PATRONES DE CONECTIVIDAD}{12}
+\contentsline {subsection}{\numberline {3.4.2}GENERACI\'ON DE PATRONES DE CONECTIVIDAD REGULARES}{14}
+\contentsline {subsection}{\numberline {3.4.3}CONFIGURACIONES DEL SUBSTRATO}{15}
+\contentsline {subsection}{\numberline {3.4.4}POSICIONAMIENTO DE ENTRADAS Y SALIDAS}{16}
+\contentsline {subsection}{\numberline {3.4.5}RESOLUCI\'ON DEL SUBSTRATO}{17}
+\contentsline {subsection}{\numberline {3.4.6}EVOLUCI\'ON DE LA RED CPPN}{19}
+\contentsline {chapter}{\numberline {4}\uppercase {$\tau $-HYPERNEAT}}{20}
+\contentsline {chapter}{\numberline {5}\uppercase {Dise\~no de plataformas rob\'oticas en el entorno virtual}}{23}
+\contentsline {chapter}{\numberline {6}\uppercase {RobotLib: Librer\'ia para el manejo de robots reales y simulados}}{38}
+\contentsline {chapter}{\numberline {7}\uppercase {Simulaci\'on de caminatas}}{43}
+\contentsline {section}{\numberline {7.1}FUNCIONES DE DESEMPE\~NO}{44}
+\contentsline {section}{\numberline {7.2}ESTRUCTURA B\'ASICA DE UN ENTRENAMIENTO}{46}
+\contentsline {section}{\numberline {7.3}PROGRAMA DE ENTRENAMIENTO}{47}
+\contentsline {section}{\numberline {7.4}RESULTADOS DE LOS ENTRENAMIENTOS}{48}
+\contentsline {subsection}{\numberline {7.4.1}QUADRATOT}{49}
+\contentsline {subsection}{\numberline {7.4.2}ARGOV2}{53}
+\contentsline {chapter}{\numberline {8}\uppercase {Conclusiones y Trabajo futuro}}{61}
+\contentsline {section}{\numberline {8.1}DISCUSION Y COMPARACION DE LOS RESULTADOS OBTENIDOS}{61}
+\contentsline {section}{\numberline {8.2}TRABAJO FUTURO}{62}
+\contentsline {chapter}{\uppercase { Referencias}}{63}

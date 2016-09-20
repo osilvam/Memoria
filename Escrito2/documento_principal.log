@@ -1,0 +1,1647 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.4)  20 SEP 2016 11:56
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**documento_principal.tex
+(./documento_principal.tex
+LaTeX2e <2011/06/27>
+Babel <3.9h> and hyphenation patterns for 78 languages loaded.
+(./phstylee.cls
+Document Class: phstylee 1997/02/20 Prentice Hall Book Class, February 1997
+(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\TestCount=\count88
+\c@exercisectr=\count89
+\c@computerctr=\count90
+\captsize=\skip43
+\captwidth=\skip44
+\beforetableskip=\skip45
+\c@probnum=\count91
+\headrulewidth=\dimen103
+\footrulewidth=\dimen104
+\plainheadrulewidth=\dimen105
+\plainfootrulewidth=\dimen106
+\headwidth=\dimen107
+) (./packages.tex
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2008/03/30 v1.1d Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2008/03/30 v1.1d Input encoding file
+))
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2014/01/29 v5.0m Spanish support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count92
+\U@D=\dimen108
+)
+\es@datefmt=\count93
+\es@quottoks=\toks16
+\es@quotdepth=\count94
+Package babel Info: Making " an active character on input line 496.
+Package babel Info: Making . an active character on input line 599.
+Package babel Info: Making < an active character on input line 644.
+Package babel Info: Making > an active character on input line 644.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen109
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen110
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count95
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count96
+\leftroot@=\count97
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count98
+\DOTSCASE@=\count99
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen111
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count100
+\c@MaxMatrixCols=\count101
+\dotsspace@=\muskip10
+\c@parentequation=\count102
+\dspbrk@lvl=\count103
+\tag@help=\toks18
+\row@=\count104
+\column@=\count105
+\maxfields@=\count106
+\andhelp@=\toks19
+\eqnshift@=\dimen112
+\alignsep@=\dimen113
+\tagshift@=\dimen114
+\tagwidth@=\dimen115
+\totwidth@=\dimen116
+\lineht@=\dimen117
+\@envbody=\toks20
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: dvips.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen118
+\Gin@req@width=\dimen119
+)
+\epsfxsize=\dimen120
+\epsfysize=\dimen121
+) (./setspace.sty
+Package: setspace 2000/12/01 6.7 Contributed and Supported LaTeX2e package
+Package: `setspace' 6.7 <2000/12/01>
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 373.
+Package: cite 2010/09/10  v 5.3
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsxtra.sty
+Package: amsxtra 1999/11/15 v1.2c
+LaTeX Info: Redefining \nobreakspace on input line 65.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count107
+\float@exts=\toks23
+\float@box=\box28
+\@float@everytoks=\toks24
+\@floatcapt=\box29
+) (./eso-pic.sty
+Package: eso-pic 2010/10/06 v2.0c eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+))
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+\Gread@gobject=\count108
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box30
+\multicol@leftmargin=\dimen122
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen123
+\page@free=\dimen124
+\premulticols=\dimen125
+\postmulticols=\dimen126
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box31
+\last@line=\box32
+\mult@rightbox=\box33
+\mult@grightbox=\box34
+\mult@gfirstbox=\box35
+\mult@firstbox=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\@tempa=\box53
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen127
+\multicolovershoot=\dimen128
+\multicolundershoot=\dimen129
+\mult@nat@firstbox=\box54
+\colbreak@box=\box55
+\multicol@sort@counter=\count117
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
+\@enLab=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (./soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks26
+\SOUL@lasttoken=\toks27
+\SOUL@cmds=\toks28
+\SOUL@buffer=\toks29
+\SOUL@token=\toks30
+\SOUL@spaceskip=\skip51
+\SOUL@ttwidth=\dimen130
+\SOUL@uldp=\dimen131
+\SOUL@ulht=\dimen132
+)
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen133
+\enit@toks=\toks31
+\enit@inbox=\box56
+\enitdp@description=\count118
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen135
+\captionmargin@=\dimen136
+\captionwidth=\dimen137
+\caption@tempdima=\dimen138
+\caption@indent=\dimen139
+\caption@parindent=\dimen140
+\caption@hangindent=\dimen141
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\vskip 10\p@ \setbox \@
+tempboxa \hbox {\textbf {#1.} #2}\ifdim \wd \@tempboxa >\hsize \textbf {#1.} #2
+\par \else \hbox to\hsize {\hfil \box \@tempboxa \hfil }\fi .
+\c@ContinuedFloat=\count119
+Package caption Info: float package is loaded.
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+\c@subfigure=\count120
+\c@subtable=\count121
+)
+(/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count122
+\lst@gtempboxa=\box57
+\lst@token=\toks32
+\lst@length=\count123
+\lst@currlwidth=\dimen142
+\lst@column=\count124
+\lst@pos=\count125
+\lst@lostspace=\dimen143
+\lst@width=\dimen144
+\lst@newlines=\count126
+\lst@lineno=\count127
+\lst@maxwidth=\dimen145
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+\c@lstnumber=\count128
+\lst@skipnumbers=\count129
+\lst@framebox=\box58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2013/08/26 1.5b listings configuration
+))
+Package: listings 2013/08/26 1.5b (Carsten Heinz)
+)
+\@indexfile=\write3
+\openout3 = `documento_principal.idx'.
+
+
+Writing index file documento_principal.idx
+(./documento_principal.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+
+LaTeX Warning: Label `cap:plat_rob' multiply defined.
+
+(./referencias.aux))
+\openout1 = `documento_principal.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 13.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+34.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box59
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count130
+\scratchdimen=\dimen146
+\scratchbox=\box60
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks33
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen147
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks34
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \celsius on input line 13.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 13.
+
+
+
+Package gensymb Warning: Not defining \perthousand.
+
+LaTeX Info: Redefining \ohm on input line 13.
+Package gensymb Info: Using \Omega for \ohm on input line 13.
+
+Package gensymb Warning: Not defining \micro.
+
+\c@lstlisting=\count136
+(./portada.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 13.
+LaTeX Font Info:    Try loading font information for U+msa on input line 13.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 13.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 31.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+] [3
+
+]) [4
+
+]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/sc' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/sc' tried instead on input line 40.
+ [1
+
+
+] [2
+
+] (./resumen.tex)
+[3
+
+
+] (./abstract.tex) [4
+
+] [5
+
+] (./glosario.tex) [6
+
+
+
+] (./documento_principal.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+
+[7
+
+])
+\tf@toc=\write4
+\openout4 = `documento_principal.toc'.
+
+LaTeX Info: Redefining \. on input line 76.
+LaTeX Info: Redefining \% on input line 76.
+ [8]
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 78.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+) (./cap1.tex
+<fig/QUADRATOT.png, id=46, 529.98pt x 454.69875pt>
+File: fig/QUADRATOT.png Graphic file (type png)
+ <use fig/QUADRATOT.png>
+Package pdftex.def Info: fig/QUADRATOT.png used on input line 7.
+(pdftex.def)             Requested size: 178.86702pt x 153.45767pt.
+
+<fig/ARGOV2.png, id=48, 529.98pt x 454.69875pt>
+File: fig/ARGOV2.png Graphic file (type png)
+ <use fig/ARGOV2.png>
+Package pdftex.def Info: fig/ARGOV2.png used on input line 14.
+(pdftex.def)             Requested size: 178.86702pt x 153.45767pt.
+ [1
+
+
+ <./fig/QUADRATOT.png> <./fig/ARGOV2.png>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+ [2
+
+])
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
+ [3]
+Cap\'{\i }tulo 2.
+(./cap2.tex [4
+
+
+]) [5]
+Cap\'{\i }tulo 3.
+(./cap3.tex
+Overfull \hbox (11.43805pt too wide) in paragraph at lines 3--3
+[]\sfblarge COMPOSITIONAL PAT-TERN PRO-DU-CING NET-WORKS (CPPNs) 
+ []
+
+[6
+
+
+]
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
+ [7] <fig/mapfenotipo.png, id=76, 820.5054pt x 348.8232pt>
+File: fig/mapfenotipo.png Graphic file (type png)
+
+<use fig/mapfenotipo.png>
+Package pdftex.def Info: fig/mapfenotipo.png used on input line 44.
+(pdftex.def)             Requested size: 317.9892pt x 135.18355pt.
+
+<fig/compfunciones.png, id=77, 744.8628pt x 591.6504pt>
+File: fig/compfunciones.png Graphic file (type png)
+
+<use fig/compfunciones.png>
+Package pdftex.def Info: fig/compfunciones.png used on input line 55.
+(pdftex.def)             Requested size: 317.9892pt x 252.58109pt.
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
+ [8 <./fig/mapfenotipo.png>]
+<fig/grafo.png, id=90, 516.9714pt x 513.5988pt>
+File: fig/grafo.png Graphic file (type png)
+ <use fig/grafo.png>
+Package pdftex.def Info: fig/grafo.png used on input line 66.
+(pdftex.def)             Requested size: 198.7425pt x 197.44226pt.
+LaTeX Info: Redefining \. on input line 78.
+LaTeX Info: Redefining \% on input line 78.
+ [9 <./fig/compfunciones.png>]
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
+ [10 <./fig/grafo.png>]
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+ [11]
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
+ [12]
+<fig/hyperneat.png, id=105, 864.831pt x 395.5578pt>
+File: fig/hyperneat.png Graphic file (type png)
+ <use fig/hyperneat.png>
+Package pdftex.def Info: fig/hyperneat.png used on input line 155.
+(pdftex.def)             Requested size: 317.9892pt x 145.44269pt.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+
+[13] <fig/patronescppn1.png, id=112, 347.8596pt x 345.9324pt>
+File: fig/patronescppn1.png Graphic file (type png)
+
+<use fig/patronescppn1.png>
+Package pdftex.def Info: fig/patronescppn1.png used on input line 170.
+(pdftex.def)             Requested size: 97.38509pt x 96.84457pt.
+
+<fig/patronescppn2.png, id=113, 345.4506pt x 343.5234pt>
+File: fig/patronescppn2.png Graphic file (type png)
+
+<use fig/patronescppn2.png>
+Package pdftex.def Info: fig/patronescppn2.png used on input line 177.
+(pdftex.def)             Requested size: 97.38509pt x 96.84111pt.
+
+<fig/patronescppn3.png, id=114, 395.5578pt x 315.0972pt>
+File: fig/patronescppn3.png Graphic file (type png)
+
+<use fig/patronescppn3.png>
+Package pdftex.def Info: fig/patronescppn3.png used on input line 184.
+(pdftex.def)             Requested size: 97.38509pt x 77.5721pt.
+
+<fig/patronescppn4.png, id=115, 343.0416pt x 345.9324pt>
+File: fig/patronescppn4.png Graphic file (type png)
+
+<use fig/patronescppn4.png>
+Package pdftex.def Info: fig/patronescppn4.png used on input line 191.
+(pdftex.def)             Requested size: 97.38509pt x 98.20114pt.
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+ [14 <./fig/hyperneat.png>]
+<fig/substrateconf1.png, id=120, 310.761pt x 321.3606pt>
+File: fig/substrateconf1.png Graphic file (type png)
+
+<use fig/substrateconf1.png>
+Package pdftex.def Info: fig/substrateconf1.png used on input line 213.
+(pdftex.def)             Requested size: 97.38509pt x 100.70444pt.
+
+<fig/substrateconf2.png, id=121, 386.8854pt x 388.8126pt>
+File: fig/substrateconf2.png Graphic file (type png)
+
+<use fig/substrateconf2.png>
+Package pdftex.def Info: fig/substrateconf2.png used on input line 220.
+(pdftex.def)             Requested size: 97.38509pt x 97.86737pt.
+
+<fig/substrateconf3.png, id=122, 471.2004pt x 516.4896pt>
+File: fig/substrateconf3.png Graphic file (type png)
+
+<use fig/substrateconf3.png>
+Package pdftex.def Info: fig/substrateconf3.png used on input line 227.
+(pdftex.def)             Requested size: 97.38509pt x 106.74007pt.
+
+<fig/substrateconf4.png, id=123, 307.3884pt x 309.3156pt>
+File: fig/substrateconf4.png Graphic file (type png)
+
+<use fig/substrateconf4.png>
+Package pdftex.def Info: fig/substrateconf4.png used on input line 234.
+(pdftex.def)             Requested size: 97.38509pt x 97.99657pt.
+LaTeX Info: Redefining \. on input line 254.
+LaTeX Info: Redefining \% on input line 254.
+ [15 <./fig/patronescppn1.png> <./fig/patronescppn2.png> <./fig/patronescppn3.p
+ng> <./fig/patronescppn4.png>]
+LaTeX Info: Redefining \. on input line 264.
+LaTeX Info: Redefining \% on input line 264.
+ [16 <./fig/substrateconf1.png> <./fig/substrateconf2.png> <./fig/substrateconf
+3.png> <./fig/substrateconf4.png>] <fig/posio1.png, id=138, 144.54pt x 144.54pt
+>
+File: fig/posio1.png Graphic file (type png)
+
+<use fig/posio1.png>
+Package pdftex.def Info: fig/posio1.png used on input line 269.
+(pdftex.def)             Requested size: 119.2467pt x 119.24695pt.
+ <fig/posio2.png, id=139, 255.8358pt x 215.3646pt>
+File: fig/posio2.png Graphic file (type png)
+
+<use fig/posio2.png>
+Package pdftex.def Info: fig/posio2.png used on input line 276.
+(pdftex.def)             Requested size: 119.2467pt x 100.38338pt.
+ <fig/posio3.png, id=140, 256.3176pt x 186.9384pt>
+File: fig/posio3.png Graphic file (type png)
+
+<use fig/posio3.png>
+Package pdftex.def Info: fig/posio3.png used on input line 283.
+(pdftex.def)             Requested size: 119.2467pt x 86.96823pt.
+ <fig/substrateres1.png, id=141, 343.0416pt x 345.9324pt>
+File: fig/substrateres1.png Graphic file (type png)
+
+<use fig/substrateres1.png>
+Package pdftex.def Info: fig/substrateres1.png used on input line 303.
+(pdftex.def)             Requested size: 119.2467pt x 120.24942pt.
+
+<fig/substrateres2.png, id=142, 342.5598pt x 344.0052pt>
+File: fig/substrateres2.png Graphic file (type png)
+
+<use fig/substrateres2.png>
+Package pdftex.def Info: fig/substrateres2.png used on input line 310.
+(pdftex.def)             Requested size: 119.2467pt x 119.74748pt.
+
+<fig/substrateres3.png, id=143, 272.6988pt x 328.5876pt>
+File: fig/substrateres3.png Graphic file (type png)
+
+<use fig/substrateres3.png>
+Package pdftex.def Info: fig/substrateres3.png used on input line 317.
+(pdftex.def)             Requested size: 119.2467pt x 143.68652pt.
+
+<fig/substrateres4.png, id=144, 345.4506pt x 343.0416pt>
+File: fig/substrateres4.png Graphic file (type png)
+
+<use fig/substrateres4.png>
+Package pdftex.def Info: fig/substrateres4.png used on input line 325.
+(pdftex.def)             Requested size: 119.2467pt x 118.41228pt.
+
+<fig/substrateres5.png, id=145, 343.0416pt x 343.0416pt>
+File: fig/substrateres5.png Graphic file (type png)
+
+<use fig/substrateres5.png>
+Package pdftex.def Info: fig/substrateres5.png used on input line 332.
+(pdftex.def)             Requested size: 119.2467pt x 119.24455pt.
+
+<fig/substrateres6.png, id=146, 274.626pt x 327.624pt>
+File: fig/substrateres6.png Graphic file (type png)
+
+<use fig/substrateres6.png>
+Package pdftex.def Info: fig/substrateres6.png used on input line 339.
+(pdftex.def)             Requested size: 119.2467pt x 142.25533pt.
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+ [17 <./fig/posio1.png> <./fig/posio2.png> <./fig/posio3.png>]
+LaTeX Info: Redefining \. on input line 352.
+LaTeX Info: Redefining \% on input line 352.
+ [18 <./fig/substrateres1.png> <./fig/substrateres2.png> <./fig/substrateres3.p
+ng> <./fig/substrateres4.png> <./fig/substrateres5.png> <./fig/substrateres6.pn
+g>])
+LaTeX Info: Redefining \. on input line 98.
+LaTeX Info: Redefining \% on input line 98.
+ [19]
+Cap\'{\i }tulo 4.
+(./cap4.tex <fig/tauhyperneat.png, id=168, 864.831pt x 395.5578pt>
+File: fig/tauhyperneat.png Graphic file (type png)
+
+<use fig/tauhyperneat.png>
+Package pdftex.def Info: fig/tauhyperneat.png used on input line 7.
+(pdftex.def)             Requested size: 317.9892pt x 145.44269pt.
+ [20
+
+
+]
+<fig/buffer1.png, id=172, 360.3864pt x 93.951pt>
+File: fig/buffer1.png Graphic file (type png)
+ <use fig/buffer1.png>
+Package pdftex.def Info: fig/buffer1.png used on input line 26.
+(pdftex.def)             Requested size: 119.2467pt x 31.08707pt.
+
+<fig/buffer2.png, id=173, 360.3864pt x 93.951pt>
+File: fig/buffer2.png Graphic file (type png)
+ <use fig/buffer2.png>
+Package pdftex.def Info: fig/buffer2.png used on input line 33.
+(pdftex.def)             Requested size: 119.2467pt x 31.08707pt.
+
+<fig/buffer3.png, id=174, 360.3864pt x 93.951pt>
+File: fig/buffer3.png Graphic file (type png)
+ <use fig/buffer3.png>
+Package pdftex.def Info: fig/buffer3.png used on input line 40.
+(pdftex.def)             Requested size: 119.2467pt x 31.08707pt.
+ [21 <./fig/tauhyperneat.png> <./fig/buffer1.png> <./fig/buffer2.png> <./fig/bu
+ffer3.png>]) [22]
+Cap\'{\i }tulo 5.
+(./cap5.tex <fig/import1.png, id=185, 451.6875pt x 451.6875pt>
+File: fig/import1.png Graphic file (type png)
+
+<use fig/import1.png>
+Package pdftex.def Info: fig/import1.png used on input line 10.
+(pdftex.def)             Requested size: 158.99156pt x 158.99586pt.
+ <fig/import2.png, id=186, 631.35875pt x 485.815pt>
+File: fig/import2.png Graphic file (type png)
+
+<use fig/import2.png>
+Package pdftex.def Info: fig/import2.png used on input line 17.
+(pdftex.def)             Requested size: 206.69388pt x 159.04442pt.
+ <fig/import3.png, id=187, 1927.2pt x 1058.95625pt>
+File: fig/import3.png Graphic file (type png)
+
+<use fig/import3.png>
+Package pdftex.def Info: fig/import3.png used on input line 25.
+(pdftex.def)             Requested size: 371.64748pt x 204.20923pt.
+ <fig/divide1.png, id=188, 843.15pt x 519.44063pt>
+File: fig/divide1.png Graphic file (type png)
+
+<use fig/divide1.png>
+Package pdftex.def Info: fig/divide1.png used on input line 39.
+(pdftex.def)             Requested size: 178.86702pt x 110.19539pt.
+ <fig/divide2.png, id=189, 843.15pt x 519.44063pt>
+File: fig/divide2.png Graphic file (type png)
+
+<use fig/divide2.png>
+Package pdftex.def Info: fig/divide2.png used on input line 46.
+(pdftex.def)             Requested size: 178.86702pt x 110.19539pt.
+ [23
+
+
+]
+<fig/selectutil1.png, id=193, 632.3625pt x 451.6875pt>
+File: fig/selectutil1.png Graphic file (type png)
+
+<use fig/selectutil1.png>
+Package pdftex.def Info: fig/selectutil1.png used on input line 60.
+(pdftex.def)             Requested size: 178.86702pt x 127.76047pt.
+
+<fig/selectutil2.png, id=194, 632.3625pt x 451.6875pt>
+File: fig/selectutil2.png Graphic file (type png)
+
+<use fig/selectutil2.png>
+Package pdftex.def Info: fig/selectutil2.png used on input line 67.
+(pdftex.def)             Requested size: 178.86702pt x 127.76047pt.
+
+<fig/selectutil3.png, id=195, 969.6225pt x 692.5875pt>
+File: fig/selectutil3.png Graphic file (type png)
+
+<use fig/selectutil3.png>
+Package pdftex.def Info: fig/selectutil3.png used on input line 75.
+(pdftex.def)             Requested size: 357.73405pt x 255.52417pt.
+ [24 <./fig/import1.png> <./fig/import2.png> <./fig/import3.png>] <fig/convexsh
+ape1.png, id=199, 767.86874pt x 557.08125pt>
+File: fig/convexshape1.png Graphic file (type png)
+
+<use fig/convexshape1.png>
+Package pdftex.def Info: fig/convexshape1.png used on input line 89.
+(pdftex.def)             Requested size: 178.86702pt x 129.76656pt.
+
+<fig/convexshape2.png, id=200, 767.86874pt x 557.08125pt>
+File: fig/convexshape2.png Graphic file (type png)
+
+<use fig/convexshape2.png>
+Package pdftex.def Info: fig/convexshape2.png used on input line 96.
+(pdftex.def)             Requested size: 178.86702pt x 129.76656pt.
+
+<fig/simpleshape1.png, id=201, 730.22812pt x 542.025pt>
+File: fig/simpleshape1.png Graphic file (type png)
+
+<use fig/simpleshape1.png>
+Package pdftex.def Info: fig/simpleshape1.png used on input line 110.
+(pdftex.def)             Requested size: 178.86702pt x 132.76833pt.
+
+<fig/simpleshape2.png, id=202, 730.22812pt x 542.025pt>
+File: fig/simpleshape2.png Graphic file (type png)
+
+<use fig/simpleshape2.png>
+Package pdftex.def Info: fig/simpleshape2.png used on input line 117.
+(pdftex.def)             Requested size: 178.86702pt x 132.76833pt.
+
+<fig/simpleshape3.png, id=203, 608.2725pt x 451.6875pt>
+File: fig/simpleshape3.png Graphic file (type png)
+
+<use fig/simpleshape3.png>
+Package pdftex.def Info: fig/simpleshape3.png used on input line 125.
+(pdftex.def)             Requested size: 178.86702pt x 132.81934pt.
+
+<fig/simpleshape4.png, id=204, 608.2725pt x 451.6875pt>
+File: fig/simpleshape4.png Graphic file (type png)
+
+<use fig/simpleshape4.png>
+Package pdftex.def Info: fig/simpleshape4.png used on input line 132.
+(pdftex.def)             Requested size: 178.86702pt x 132.81934pt.
+ [25 <./fig/divide1.png> <./fig/divide2.png>]
+[26 <./fig/selectutil1.png> <./fig/selectutil2.png> <./fig/selectutil3.png>]
+<fig/addjoint1.png, id=217, 888.31876pt x 421.575pt>
+File: fig/addjoint1.png Graphic file (type png)
+ <use fig/addjoint1.png>
+Package pdftex.def Info: fig/addjoint1.png used on input line 146.
+(pdftex.def)             Requested size: 178.86702pt x 84.886pt.
+
+<fig/addjoint2.png, id=218, 888.31876pt x 421.575pt>
+File: fig/addjoint2.png Graphic file (type png)
+ <use fig/addjoint2.png>
+Package pdftex.def Info: fig/addjoint2.png used on input line 153.
+(pdftex.def)             Requested size: 178.86702pt x 84.886pt.
+
+<fig/addjoint3.png, id=219, 828.09375pt x 376.40625pt>
+File: fig/addjoint3.png Graphic file (type png)
+ <use fig/addjoint3.png>
+Package pdftex.def Info: fig/addjoint3.png used on input line 161.
+(pdftex.def)             Requested size: 357.73405pt x 162.60966pt.
+
+<fig/jointg1.png, id=220, 685.05937pt x 504.38437pt>
+File: fig/jointg1.png Graphic file (type png)
+ <use fig/jointg1.png>
+Package pdftex.def Info: fig/jointg1.png used on input line 177.
+(pdftex.def)             Requested size: 178.86702pt x 131.69096pt.
+
+<fig/jointg2.png, id=221, 685.05937pt x 504.38437pt>
+File: fig/jointg2.png Graphic file (type png)
+ <use fig/jointg2.png>
+Package pdftex.def Info: fig/jointg2.png used on input line 184.
+(pdftex.def)             Requested size: 178.86702pt x 131.69096pt.
+
+[27 <./fig/convexshape1.png> <./fig/convexshape2.png>]
+<fig/copy_rot1.png, id=227, 1097.60063pt x 504.38437pt>
+File: fig/copy_rot1.png Graphic file (type png)
+
+<use fig/copy_rot1.png>
+Package pdftex.def Info: fig/copy_rot1.png used on input line 198.
+(pdftex.def)             Requested size: 178.86702pt x 82.18852pt.
+
+<fig/copy_rot2.png, id=228, 1099.10625pt x 504.38437pt>
+File: fig/copy_rot2.png Graphic file (type png)
+
+<use fig/copy_rot2.png>
+Package pdftex.def Info: fig/copy_rot2.png used on input line 205.
+(pdftex.def)             Requested size: 178.86702pt x 82.08078pt.
+
+<fig/copy_rot3.png, id=229, 1099.10625pt x 502.87875pt>
+File: fig/copy_rot3.png Graphic file (type png)
+
+<use fig/copy_rot3.png>
+Package pdftex.def Info: fig/copy_rot3.png used on input line 213.
+(pdftex.def)             Requested size: 357.73405pt x 163.67152pt.
+ [28 <./fig/simpleshape1.png> <./fig/simpleshape2.png> <./fig/simpleshape3.png>
+ <./fig/simpleshape4.png>]
+<fig/enablejoint1.png, id=237, 383.4325pt x 519.9425pt>
+File: fig/enablejoint1.png Graphic file (type png)
+
+<use fig/enablejoint1.png>
+Package pdftex.def Info: fig/enablejoint1.png used on input line 227.
+(pdftex.def)             Requested size: 166.94296pt x 226.37944pt.
+
+<fig/enablejoint2.png, id=238, 383.4325pt x 484.81125pt>
+File: fig/enablejoint2.png Graphic file (type png)
+
+<use fig/enablejoint2.png>
+Package pdftex.def Info: fig/enablejoint2.png used on input line 234.
+(pdftex.def)             Requested size: 178.86702pt x 226.15987pt.
+ [29 <./fig/addjoint1.png> <./fig/addjoint2.png> <./fig/addjoint3.png>] [30 <./
+fig/jointg1.png> <./fig/jointg2.png>]
+<fig/changevis1.png, id=250, 1099.10625pt x 496.85625pt>
+File: fig/changevis1.png Graphic file (type png)
+
+<use fig/changevis1.png>
+Package pdftex.def Info: fig/changevis1.png used on input line 250.
+(pdftex.def)             Requested size: 357.73405pt x 161.71138pt.
+
+<fig/changevis2.png, id=251, 287.57437pt x 166.37157pt>
+File: fig/changevis2.png Graphic file (type png)
+
+<use fig/changevis2.png>
+Package pdftex.def Info: fig/changevis2.png used on input line 258.
+(pdftex.def)             Requested size: 178.86702pt x 103.48439pt.
+
+<fig/changevis3.png, id=252, 287.57437pt x 166.37157pt>
+File: fig/changevis3.png Graphic file (type png)
+
+<use fig/changevis3.png>
+Package pdftex.def Info: fig/changevis3.png used on input line 265.
+(pdftex.def)             Requested size: 178.86702pt x 103.48439pt.
+
+<fig/changevis4.png, id=253, 1099.10625pt x 496.85625pt>
+File: fig/changevis4.png Graphic file (type png)
+
+<use fig/changevis4.png>
+Package pdftex.def Info: fig/changevis4.png used on input line 273.
+(pdftex.def)             Requested size: 357.73405pt x 161.71138pt.
+
+<fig/accesschancol1.png, id=254, 1099.10625pt x 496.85625pt>
+File: fig/accesschancol1.png Graphic file (type png)
+
+<use fig/accesschancol1.png>
+Package pdftex.def Info: fig/accesschancol1.png used on input line 287.
+(pdftex.def)             Requested size: 357.73405pt x 161.71138pt.
+
+<fig/accesschancol2.png, id=255, 1099.10625pt x 496.85625pt>
+File: fig/accesschancol2.png Graphic file (type png)
+
+<use fig/accesschancol2.png>
+Package pdftex.def Info: fig/accesschancol2.png used on input line 295.
+(pdftex.def)             Requested size: 357.73405pt x 161.71138pt.
+ [31 <./fig/copy_rot1.png> <./fig/copy_rot2.png> <./fig/copy_rot3.png>] <fig/ch
+ancol1.png, id=263, 1099.10625pt x 496.85625pt>
+File: fig/chancol1.png Graphic file (type png)
+
+<use fig/chancol1.png>
+Package pdftex.def Info: fig/chancol1.png used on input line 309.
+(pdftex.def)             Requested size: 178.86702pt x 80.85568pt.
+ <fig/chancol2.png, id=264, 1099.10625pt x 496.85625pt>
+File: fig/chancol2.png Graphic file (type png)
+
+<use fig/chancol2.png>
+Package pdftex.def Info: fig/chancol2.png used on input line 316.
+(pdftex.def)             Requested size: 178.86702pt x 80.85568pt.
+ <fig/chancol3.png, id=265, 1099.10625pt x 496.85625pt>
+File: fig/chancol3.png Graphic file (type png)
+
+<use fig/chancol3.png>
+Package pdftex.def Info: fig/chancol3.png used on input line 324.
+(pdftex.def)             Requested size: 178.86702pt x 80.85568pt.
+ <fig/chancol4.png, id=266, 1099.10625pt x 496.85625pt>
+File: fig/chancol4.png Graphic file (type png)
+
+<use fig/chancol4.png>
+Package pdftex.def Info: fig/chancol4.png used on input line 331.
+(pdftex.def)             Requested size: 178.86702pt x 80.85568pt.
+ <fig/chanjpos1.png, id=267, 903.375pt x 412.54124pt>
+File: fig/chanjpos1.png Graphic file (type png)
+
+<use fig/chanjpos1.png>
+Package pdftex.def Info: fig/chanjpos1.png used on input line 345.
+(pdftex.def)             Requested size: 357.73405pt x 163.36432pt.
+ <fig/chanjpos2.png, id=268, 903.375pt x 414.04688pt>
+File: fig/chanjpos2.png Graphic file (type png)
+
+<use fig/chanjpos2.png>
+Package pdftex.def Info: fig/chanjpos2.png used on input line 353.
+(pdftex.def)             Requested size: 357.73405pt x 163.96053pt.
+ [32 <./fig/enablejoint1.png> <./fig/enablejoint2.png>]
+
+LaTeX Warning: Text page 33 contains only floats.
+
+[33 <./fig/changevis1.png> <./fig/changevis2.png> <./fig/changevis3.png> <./fig
+/changevis4.png>] <fig/robotlisto.png, id=279, 978.65625pt x 557.08125pt>
+File: fig/robotlisto.png Graphic file (type png)
+
+<use fig/robotlisto.png>
+Package pdftex.def Info: fig/robotlisto.png used on input line 365.
+(pdftex.def)             Requested size: 317.9892pt x 181.00676pt.
+) [34 <./fig/accesschancol1.png> <./fig/accesschancol2.png>] [35 <./fig/chancol
+1.png> <./fig/chancol2.png> <./fig/chancol3.png> <./fig/chancol4.png>] [36 <./f
+ig/chanjpos1.png> <./fig/chanjpos2.png>] [37 <./fig/robotlisto.png>]
+Cap\'{\i }tulo 6.
+(./cap6.tex [38
+
+
+]
+Overfull \hbox (140.39302pt too wide) in paragraph at lines 20--21
+[]\OT1/ptm/m/n/10 Informar al Joint la po-si-ci[]on que ne-ce-si-ta al-can-zar,
+ usan-do la fun-ci[]on \OT1/pcr/m/n/10 setJointNextPosition((double)3.1415)\OT1
+/ptm/m/n/10 ,
+ []
+
+[39]
+Overfull \hbox (37.99266pt too wide) in paragraph at lines 22--23
+\OT1/ptm/m/n/10 que ac-tua-li-ce la po-si-ci[]on de ca-da uno de los mo-to-res 
+usan-do la fun-ci[]on \OT1/pcr/m/n/10 Controlador.move()\OT1/ptm/m/n/10 . 
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+) [40]
+(./code/example_vrep.cpp
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 6.
+) [41]
+<fig/prueba.png, id=317, 982.67125pt x 664.4825pt>
+File: fig/prueba.png Graphic file (type png)
+ <use fig/prueba.png>
+Package pdftex.def Info: fig/prueba.png used on input line 64.
+(pdftex.def)             Requested size: 317.9892pt x 215.02144pt.
+)
+[42
+
+ <./fig/prueba.png>]
+Cap\'{\i }tulo 7.
+(./cap7.tex [43
+
+
+] <fig/hsubstrate.png, id=325, 644.62259pt x 203.90465pt>
+File: fig/hsubstrate.png Graphic file (type png)
+
+<use fig/hsubstrate.png>
+Package pdftex.def Info: fig/hsubstrate.png used on input line 11.
+(pdftex.def)             Requested size: 282.217pt x 89.27339pt.
+ <fig/hcppn.png, id=326, 231.65115pt x 203.90465pt>
+File: fig/hcppn.png Graphic file (type png)
+
+<use fig/hcppn.png>
+Package pdftex.def Info: fig/hcppn.png used on input line 17.
+(pdftex.def)             Requested size: 101.36061pt x 89.2205pt.
+ <fig/tauhsubstrate.png, id=327, 644.62259pt x 203.90465pt>
+File: fig/tauhsubstrate.png Graphic file (type png)
+
+<use fig/tauhsubstrate.png>
+Package pdftex.def Info: fig/tauhsubstrate.png used on input line 24.
+(pdftex.def)             Requested size: 282.217pt x 89.27339pt.
+
+<fig/tauhcppn.png, id=328, 231.65115pt x 203.90465pt>
+File: fig/tauhcppn.png Graphic file (type png)
+ <use fig/tauhcppn.png>
+Package pdftex.def Info: fig/tauhcppn.png used on input line 30.
+(pdftex.def)             Requested size: 101.36061pt x 89.2205pt.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
+
+[44 <./fig/hsubstrate.png> <./fig/hcppn.png> <./fig/tauhsubstrate.png> <./fig/t
+auhcppn.png>]
+Package epstopdf Info: Source file: <fig/FITNESS_FREC.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 11842 bytes
+(epstopdf)             Output file: <fig/FITNESS_FREC-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 8288 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/FITNESS_FREC-eps-conve
+rted-to.pdf fig/FITNESS_FREC.eps>
+(epstopdf)             \includegraphics on input line 49.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/FITNESS_FREC-eps-converted-to.pdf, id=336, 547.04375pt x 479.7925pt>
+File: fig/FITNESS_FREC-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/FITNESS_FREC-eps-converted-to.pdf>
+Package pdftex.def Info: fig/FITNESS_FREC-eps-converted-to.pdf used on input li
+ne 49.
+(pdftex.def)             Requested size: 190.79109pt x 167.33687pt.
+Package epstopdf Info: Source file: <fig/FITNESS_DIST.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 9801 bytes
+(epstopdf)             Output file: <fig/FITNESS_DIST-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 6992 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/FITNESS_DIST-eps-conve
+rted-to.pdf fig/FITNESS_DIST.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/FITNESS_DIST-eps-converted-to.pdf, id=337, 547.04375pt x 496.85625pt>
+File: fig/FITNESS_DIST-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/FITNESS_DIST-eps-converted-to.pdf>
+Package pdftex.def Info: fig/FITNESS_DIST-eps-converted-to.pdf used on input li
+ne 56.
+(pdftex.def)             Requested size: 190.79109pt x 173.2882pt.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
+ [45 <./fig/FITNESS_FREC-eps-converted-to.pdf> <./fig/FITNESS_DIST-eps-converte
+d-to.pdf>]
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+ [46]
+LaTeX Info: Redefining \. on input line 148.
+LaTeX Info: Redefining \% on input line 148.
+ [47]
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [48]
+Package epstopdf Info: Source file: <fig/QUADRATOT_FITNESS.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 13055 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_FITNESS-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 10452 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_FITNESS-eps-
+converted-to.pdf fig/QUADRATOT_FITNESS.eps>
+(epstopdf)             \includegraphics on input line 177.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_FITNESS-eps-converted-to.pdf, id=362, 547.04375pt x 479.7925pt>
+File: fig/QUADRATOT_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/QUADRATOT_FITNESS-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_FITNESS-eps-converted-to.pdf used on inp
+ut line 177.
+(pdftex.def)             Requested size: 298.11374pt x 261.46341pt.
+Package epstopdf Info: Source file: <fig/QUADRATOT_JP_HYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 29731 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_JP_HYPERNEAT-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 18221 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_JP_HYPERNEAT
+-eps-converted-to.pdf fig/QUADRATOT_JP_HYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 186.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf, id=363, 1096.095pt x 530.9837
+5pt>
+File: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf used o
+n input line 186.
+(pdftex.def)             Requested size: 397.48499pt x 192.55566pt.
+Package epstopdf Info: Source file: <fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 29708 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 18374 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_JP_TAUHYPERN
+EAT-eps-converted-to.pdf fig/QUADRATOT_JP_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 193.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=364, 1096.095pt x 530.9
+8375pt>
+File: fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_JP_TAUHYPERNEAT-eps-converted-to.pdf use
+d on input line 193.
+(pdftex.def)             Requested size: 397.48499pt x 192.55566pt.
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+ [49
+
+ <./fig/QUADRATOT_FITNESS-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 201.
+LaTeX Info: Redefining \% on input line 201.
+ [50 <./fig/QUADRATOT_JP_HYPERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT_JP_TA
+UHYPERNEAT-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_HYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 50350 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_POSITION_HYPERNEAT-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 13289 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_HYP
+ERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_HYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 211.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf, id=391, 1444.39626pt x 
+701.62125pt>
+File: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf 
+used on input line 211.
+(pdftex.def)             Requested size: 397.48499pt x 193.08026pt.
+Package epstopdf Info: Source file: <fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 50936 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-co
+nverted-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 13497 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_POSITION_TAU
+HYPERNEAT-eps-converted-to.pdf fig/QUADRATOT_POSITION_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=392, 1444.39626pt
+ x 701.62125pt>
+File: fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (ty
+pe pdf)
+ <use fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_POSITION_TAUHYPERNEAT-eps-converted-to.p
+df used on input line 218.
+(pdftex.def)             Requested size: 397.48499pt x 193.08026pt.
+
+Underfull \hbox (badness 1275) in paragraph at lines 222--222
+[]\OT1/ptm/m/n/10 Figura 7.5: |\OT1/ptm/b/n/10 Des-pla-za-mien-to de Qua-dra-to
+t en el es-ce-na-rio da-do por Hy-per-NEAT y $\OML/cmm/m/it/10 ^^\$\OT1/ptm/b/n
+/10 -
+ []
+
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+[51
+
+]
+LaTeX Info: Redefining \. on input line 226.
+LaTeX Info: Redefining \% on input line 226.
+ [52 <./fig/QUADRATOT_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/QUADRATOT
+_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/ARGOV2_FITNESS.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 13014 bytes
+(epstopdf)             Output file: <fig/ARGOV2_FITNESS-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 10509 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_FITNESS-eps-con
+verted-to.pdf fig/ARGOV2_FITNESS.eps>
+(epstopdf)             \includegraphics on input line 236.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_FITNESS-eps-converted-to.pdf, id=409, 547.04375pt x 479.7925pt>
+File: fig/ARGOV2_FITNESS-eps-converted-to.pdf Graphic file (type pdf)
+
+<use fig/ARGOV2_FITNESS-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_FITNESS-eps-converted-to.pdf used on input 
+line 236.
+(pdftex.def)             Requested size: 298.11374pt x 261.46341pt.
+Package epstopdf Info: Source file: <fig/ARGOV2_JP_HYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 37061 bytes
+(epstopdf)             Output file: <fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.p
+df>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 21983 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_HYPERNEAT-ep
+s-converted-to.pdf fig/ARGOV2_JP_HYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 245.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf, id=410, 1095.09125pt x 530.98375
+pt>
+File: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf used on i
+nput line 245.
+(pdftex.def)             Requested size: 397.48499pt x 192.73392pt.
+Package epstopdf Info: Source file: <fig/ARGOV2_JP_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 37529 bytes
+(epstopdf)             Output file: <fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2016-09-15 00:34:57
+(epstopdf)                    size: 22492 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_JP_TAUHYPERNEAT
+-eps-converted-to.pdf fig/ARGOV2_JP_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 252.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf, id=411, 1095.09125pt x 530.98
+375pt>
+File: fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_JP_TAUHYPERNEAT-eps-converted-to.pdf used o
+n input line 252.
+(pdftex.def)             Requested size: 397.48499pt x 192.73392pt.
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
+ [53
+
+ <./fig/ARGOV2_FITNESS-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 260.
+LaTeX Info: Redefining \% on input line 260.
+ [54 <./fig/ARGOV2_JP_HYPERNEAT-eps-converted-to.pdf> <./fig/ARGOV2_JP_TAUHYPER
+NEAT-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_HYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 50444 bytes
+(epstopdf)             Output file: <fig/ARGOV2_POSITION_HYPERNEAT-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 13197 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_HYPERN
+EAT-eps-converted-to.pdf fig/ARGOV2_POSITION_HYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 270.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf, id=436, 1444.39626pt x 701
+.62125pt>
+File: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf use
+d on input line 270.
+(pdftex.def)             Requested size: 397.48499pt x 193.08026pt.
+Package epstopdf Info: Source file: <fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 50257 bytes
+(epstopdf)             Output file: <fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 13216 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_POSITION_TAUHYP
+ERNEAT-eps-converted-to.pdf fig/ARGOV2_POSITION_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 277.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf, id=437, 1444.39626pt x 
+701.62125pt>
+File: fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_POSITION_TAUHYPERNEAT-eps-converted-to.pdf 
+used on input line 277.
+(pdftex.def)             Requested size: 397.48499pt x 193.08026pt.
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+
+[55
+
+]
+LaTeX Info: Redefining \. on input line 285.
+LaTeX Info: Redefining \% on input line 285.
+ [56 <./fig/ARGOV2_POSITION_HYPERNEAT-eps-converted-to.pdf> <./fig/ARGOV2_POSIT
+ION_TAUHYPERNEAT-eps-converted-to.pdf>]
+<fig/QUADRATOT_HYPERNEAT_CPPN_FINAL.png, id=455, 277.5168pt x 333.8874pt>
+File: fig/QUADRATOT_HYPERNEAT_CPPN_FINAL.png Graphic file (type png)
+
+<use fig/QUADRATOT_HYPERNEAT_CPPN_FINAL.png>
+Package pdftex.def Info: fig/QUADRATOT_HYPERNEAT_CPPN_FINAL.png used on input l
+ine 291.
+(pdftex.def)             Requested size: 127.19373pt x 153.02965pt.
+
+<fig/QUADRATOT_TAUHYPERNEAT_CPPN_FINAL.png, id=456, 304.9794pt x 319.9152pt>
+File: fig/QUADRATOT_TAUHYPERNEAT_CPPN_FINAL.png Graphic file (type png)
+
+<use fig/QUADRATOT_TAUHYPERNEAT_CPPN_FINAL.png>
+Package pdftex.def Info: fig/QUADRATOT_TAUHYPERNEAT_CPPN_FINAL.png used on inpu
+t line 298.
+(pdftex.def)             Requested size: 127.19373pt x 133.42133pt.
+
+<fig/ARGOV2_HYPERNEAT_CPPN_FINAL.png, id=457, 280.4076pt x 333.8874pt>
+File: fig/ARGOV2_HYPERNEAT_CPPN_FINAL.png Graphic file (type png)
+
+<use fig/ARGOV2_HYPERNEAT_CPPN_FINAL.png>
+Package pdftex.def Info: fig/ARGOV2_HYPERNEAT_CPPN_FINAL.png used on input line
+ 306.
+(pdftex.def)             Requested size: 127.19373pt x 151.45029pt.
+
+<fig/ARGOV2_TAUHYPERNEAT_CPPN_FINAL.png, id=458, 289.5618pt x 327.1422pt>
+File: fig/ARGOV2_TAUHYPERNEAT_CPPN_FINAL.png Graphic file (type png)
+
+<use fig/ARGOV2_TAUHYPERNEAT_CPPN_FINAL.png>
+Package pdftex.def Info: fig/ARGOV2_TAUHYPERNEAT_CPPN_FINAL.png used on input l
+ine 313.
+(pdftex.def)             Requested size: 127.19373pt x 143.7034pt.
+LaTeX Info: Redefining \. on input line 324.
+LaTeX Info: Redefining \% on input line 324.
+ [57
+
+ <./fig/QUADRATOT_HYPERNEAT_CPPN_FINAL.png> <./fig/QUADRATOT_TAUHYPERNEAT_CPPN_
+FINAL.png> <./fig/ARGOV2_HYPERNEAT_CPPN_FINAL.png> <./fig/ARGOV2_TAUHYPERNEAT_C
+PPN_FINAL.png>]
+Package epstopdf Info: Source file: <fig/QUADRATOT_HIST_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 9890 bytes
+(epstopdf)             Output file: <fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 7043 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/QUADRATOT_HIST_TAUHYPE
+RNEAT-eps-converted-to.pdf fig/QUADRATOT_HIST_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 329.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf, id=466, 547.04375pt x 49
+6.85625pt>
+File: fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type p
+df)
+ <use fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf u
+sed on input line 329.
+(pdftex.def)             Requested size: 178.86702pt x 162.45436pt.
+Package epstopdf Info: Source file: <fig/ARGOV2_HIST_TAUHYPERNEAT.eps>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 10131 bytes
+(epstopdf)             Output file: <fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-09-19 22:12:39
+(epstopdf)                    size: 7079 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/ARGOV2_HIST_TAUHYPERNE
+AT-eps-converted-to.pdf fig/ARGOV2_HIST_TAUHYPERNEAT.eps>
+(epstopdf)             \includegraphics on input line 336.
+Package epstopdf Info: Output file is already uptodate.
+
+<fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted-to.pdf, id=467, 547.04375pt x 479.7
+925pt>
+File: fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted-to.pdf>
+Package pdftex.def Info: fig/ARGOV2_HIST_TAUHYPERNEAT-eps-converted-to.pdf used
+ on input line 336.
+(pdftex.def)             Requested size: 178.86702pt x 156.87512pt.
+
+<fig/L1_QUADRATOT.png, id=468, 358.33875pt x 328.97906pt>
+File: fig/L1_QUADRATOT.png Graphic file (type png)
+
+<use fig/L1_QUADRATOT.png>
+Package pdftex.def Info: fig/L1_QUADRATOT.png used on input line 356.
+(pdftex.def)             Requested size: 119.2467pt x 109.47702pt.
+
+<fig/L1W_QUADRATOT.png, id=469, 218.416pt x 199.947pt>
+File: fig/L1W_QUADRATOT.png Graphic file (type png)
+
+<use fig/L1W_QUADRATOT.png>
+Package pdftex.def Info: fig/L1W_QUADRATOT.png used on input line 363.
+(pdftex.def)             Requested size: 104.93767pt x 96.06194pt.
+
+<fig/L1T_QUADRATOT.png, id=470, 218.416pt x 199.947pt>
+File: fig/L1T_QUADRATOT.png Graphic file (type png)
+
+<use fig/L1T_QUADRATOT.png>
+Package pdftex.def Info: fig/L1T_QUADRATOT.png used on input line 370.
+(pdftex.def)             Requested size: 104.937pt x 96.06194pt.
+
+<fig/L2_QUADRATOT.png, id=471, 303.38344pt x 386.19281pt>
+File: fig/L2_QUADRATOT.png Graphic file (type png)
+
+<use fig/L2_QUADRATOT.png>
+Package pdftex.def Info: fig/L2_QUADRATOT.png used on input line 378.
+(pdftex.def)             Requested size: 119.2467pt x 151.79904pt.
+
+<fig/L2W_QUADRATOT.png, id=472, 183.084pt x 244.112pt>
+File: fig/L2W_QUADRATOT.png Graphic file (type png)
+
+<use fig/L2W_QUADRATOT.png>
+Package pdftex.def Info: fig/L2W_QUADRATOT.png used on input line 385.
+(pdftex.def)             Requested size: 104.93767pt x 139.92004pt.
+
+<fig/L2T_QUADRATOT.png, id=473, 183.084pt x 244.112pt>
+File: fig/L2T_QUADRATOT.png Graphic file (type png)
+
+<use fig/L2T_QUADRATOT.png>
+Package pdftex.def Info: fig/L2T_QUADRATOT.png used on input line 392.
+(pdftex.def)             Requested size: 104.937pt x 139.92004pt.
+LaTeX Info: Redefining \. on input line 398.
+LaTeX Info: Redefining \% on input line 398.
+ [58 <./fig/QUADRATOT_HIST_TAUHYPERNEAT-eps-converted-to.pdf> <./fig/ARGOV2_HIS
+T_TAUHYPERNEAT-eps-converted-to.pdf>]
+<fig/L1_ARGOV2.png, id=488, 406.51875pt x 362.10281pt>
+File: fig/L1_ARGOV2.png Graphic file (type png)
+ <use fig/L1_ARGOV2.png>
+Package pdftex.def Info: fig/L1_ARGOV2.png used on input line 404.
+(pdftex.def)             Requested size: 119.2467pt x 106.21715pt.
+
+<fig/L1W_ARGOV2.png, id=489, 256.96pt x 224.84pt>
+File: fig/L1W_ARGOV2.png Graphic file (type png)
+ <use fig/L1W_ARGOV2.png>
+Package pdftex.def Info: fig/L1W_ARGOV2.png used on input line 411.
+(pdftex.def)             Requested size: 109.70674pt x 95.99315pt.
+
+<fig/L1T_ARGOV2.png, id=490, 256.96pt x 224.84pt>
+File: fig/L1T_ARGOV2.png Graphic file (type png)
+ <use fig/L1T_ARGOV2.png>
+Package pdftex.def Info: fig/L1T_ARGOV2.png used on input line 418.
+(pdftex.def)             Requested size: 110.18295pt x 96.41171pt.
+
+<fig/L2_ARGOV2.png, id=491, 356.0803pt x 462.22687pt>
+File: fig/L2_ARGOV2.png Graphic file (type png)
+ <use fig/L2_ARGOV2.png>
+Package pdftex.def Info: fig/L2_ARGOV2.png used on input line 426.
+(pdftex.def)             Requested size: 119.2467pt x 154.7923pt.
+
+<fig/L2W_ARGOV2.png, id=492, 218.416pt x 291.489pt>
+File: fig/L2W_ARGOV2.png Graphic file (type png)
+ <use fig/L2W_ARGOV2.png>
+Package pdftex.def Info: fig/L2W_ARGOV2.png used on input line 433.
+(pdftex.def)             Requested size: 106.12949pt x 141.6344pt.
+
+<fig/L2T_ARGOV2.png, id=493, 218.416pt x 291.489pt>
+File: fig/L2T_ARGOV2.png Graphic file (type png)
+ <use fig/L2T_ARGOV2.png>
+Package pdftex.def Info: fig/L2T_ARGOV2.png used on input line 440.
+(pdftex.def)             Requested size: 106.24799pt x 141.79453pt.
+)
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
+
+[59 <./fig/L1_QUADRATOT.png> <./fig/L1W_QUADRATOT.png> <./fig/L1T_QUADRATOT.png
+> <./fig/L2_QUADRATOT.png> <./fig/L2W_QUADRATOT.png> <./fig/L2T_QUADRATOT.png>]
+LaTeX Info: Redefining \. on input line 123.
+LaTeX Info: Redefining \% on input line 123.
+[60 <./fig/L1_ARGOV2.png> <./fig/L1W_ARGOV2.png> <./fig/L1T_ARGOV2.png> <./fig/
+L2_ARGOV2.png> <./fig/L2W_ARGOV2.png> <./fig/L2T_ARGOV2.png>]
+Cap\'{\i }tulo 8.
+(./cap8.tex [61
+
+
+])
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [62]
+\openout2 = `referencias.aux'.
+
+ (./referencias.tex [63
+
+
+])
+LaTeX Info: Redefining \. on input line 130.
+LaTeX Info: Redefining \% on input line 130.
+ [64] (./documento_principal.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+(./referencias.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 8793 strings out of 493304
+ 128768 string characters out of 6139872
+ 317086 words of memory out of 5000000
+ 11917 multiletter control sequences out of 15000+600000
+ 46046 words of font info for 116 fonts, out of 8000000 for 9000
+ 957 hyphenation exceptions out of 8191
+ 38i,18n,58p,2108b,1401s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
+ourier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8
+a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/urw/times/utmri8a.pfb>
+Output written on documento_principal.pdf (76 pages, 23027110 bytes).
+PDF statistics:
+ 602 PDF objects out of 1000 (max. 8388607)
+ 305 compressed objects within 4 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 496 words of extra memory for PDF output out of 10000 (max. 10000000)
+
