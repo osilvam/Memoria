@@ -32,7 +32,9 @@ Gaits generation for legged robots is an important task to allow the right robot
 
 \item[\textbf{CPPN}] Compositional Pattern Producing Networks
 
-\item[\textbf{NEAT}] Inteligencia Artificial
+\item[\textbf{NEAT}] NeuroEvolution of Augmenting Topologies
+
+\item[\textbf{HyperNEAT}] Hypercube-based Neuroevolution of Augmenting Topologies
 
 
 
